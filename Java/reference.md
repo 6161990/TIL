@@ -60,17 +60,17 @@ public class Student {
 public class StudentTest {
 
  	public static void main(String[] args) {
-      Student studentLee = new Student(101, "이말년")
-      studentLee.setKoreaSubject("국어", 75);
-      studentLee.setMathSubject("수학", 65);
+   	   Student studentLee = new Student(101, "이말년")
+     	   studentLee.setKoreaSubject("국어", 75);
+           studentLee.setMathSubject("수학", 65);
       
-      studentLee.showStudentScore();
+           studentLee.showStudentScore();
 		
-	  	Student studentKim = new Student(102, "김풍");
-		  studentKim.setKoreaSubject("국어", 50);
-		  studentKim.setMathSubject("수학", 38);
+           Student studentKim = new Student(102, "김풍");
+	   studentKim.setKoreaSubject("국어", 50);
+	   studentKim.setMathSubject("수학", 38);
 		
-		  studentKim.showStudentScore();
+	   studentKim.showStudentScore();
       
       }
   
