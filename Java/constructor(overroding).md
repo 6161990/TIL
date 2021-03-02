@@ -73,7 +73,7 @@ public class Student {
 * ###### 사용하는 코드에서 여러 생성자 중 선택하여 사용할 수 있음.
 * ###### private 변수도 생성자를 이용하여 초기화를 할 수도 있음(객체 초기화 작업을 할 때 생성자를 가져다 쓰기도 함).
 
-** 생성자 오버로딩 Constructor Overroding**
+**생성자 오버로딩 Constructor Overroding**
 ```java
 public class Student {
 
