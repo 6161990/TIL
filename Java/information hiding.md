@@ -60,7 +60,7 @@ public class MyDate {
       Systme.out.println(year+ "년" + month + "월" + day + "일 입니다.");
     }  
     else {
-      Systme.out.println("유요하지 않은 날짜입니다.");
+      Systme.out.println("유효하지 않은 날짜입니다.");
     }
   } 
 }
@@ -85,3 +85,6 @@ public class MyDateTest {
     }
 }
 ```
+
+
+
