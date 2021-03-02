@@ -99,7 +99,7 @@ public class Person {
         Person p = personLee.getSelf();
         System.out.println(p); //인스턴스 주소값 출력 : chapter5.Person@2ff4acd0   
         
-        // 주소 값  : 참조변수와 this가 가리키는 것은 같다.  
+        // 주소 값  : 참조변수와 this가 가리키는 힙 메모리는 같다. 
 	}
     
 }
