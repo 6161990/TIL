@@ -59,7 +59,7 @@ public class Student {
   
   public static void main(String[] args) {
    Student studentLee = new Student(Jenny); 
-   ----studentLee.studentName = "Jenny";----- 필요없음. 필수 메소드로 구현해놓았기때문.
+ //studentLee.studentName = "Jenny"; 필요없음. 필수 메소드로 구현해놓았기때문.
    studnetLee.address = "한남동";
   }
 }
@@ -102,15 +102,15 @@ public class Student {
   public static void main(String[] args) {
   
       Student studentKim = new Student("Jenny"); 
-  ----studentKim.studentName = "Jenny";----- 필요없음. 필수 메소드로 구현해놓았기때문.
+    //studentKim.studentName = "Jenny"; 필수메소드로 구현
       studentKim.address = "한남동";
       
       studentKim.showStudentInfo();
       
       
       Student studentBlack = new Student(100,"블랙핑크","합정동"); 
-   ----studentBlack.studentName = "블랙핑크";----- 필요없음. 필수 메소드로 구현해놓았기때문.
-   ----studentBlack.address = "합정동";----- 필요없음. 필수 메소드로 구현해놓았기때문.
+    //studentBlack.studentName = "블랙핑크";  필수메소드로 구현
+    //studentBlack.address = "합정동"; 필수메소드로 구현
       
      studentBlack.showStudentInfo();
       
