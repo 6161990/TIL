@@ -101,3 +101,26 @@ public class ArrayTest {
 	}
 }
 ```   
+
+**다차원배열** 
+* ###### 2차원 이상의 배열. 지도, 게임 등의 공간을 구현할 때 사용
+* ###### int[][] arr = new int[][];
+* ###### 사용시, 행을 기준으로 열을 돌리면 된다. 
+
+```java
+public class MultiArray {
+
+	public static void main(String[] args) {
+		String[][] arr = {{"101호","102호","103호"},{"104호","105호","106호"}};
+		for(int i=0; i<arr.length;i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+```   
+
+
