@@ -58,26 +58,7 @@ public class ArrayTest {
   }
 
 }
-```   
-**array 선언, 사용해보기 (1~10까지 모두 더해 출력)**   
-
-```java
-public class ArrayTest {
-
-	public static void main(String[] args) {
-		  int[] arr = new int[10];
-		  int total = 0;
-		
-		  for(int i=0, num=1; i<arr.length; i++, num++) {
-		  	arr[i]=num;
-		  }
-		  for(int i=0; i<arr.length; i++) {
-		  	total += arr[i];
-		  }
-		  System.out.println(total);
-  }
-}
-```   
+```     
 **arr.length 사용시, 유효한 값의 범위 주의** 
 ######  arr.length[5]인데, [0]~[2]까지만 초기화를 하면 나머지 [4],[5] 는 0 임.    
 ######  그래서 arr.length[5]을 기준으로 for문(곱하기)을 돌리면 값이 0. ([4],[5]가 0 이기 때문에 다른 값과 곱하면 0)
@@ -101,7 +82,7 @@ public class ArrayTest {
 	}
 ```   
 
-**array로 알바벳 출력해보기**   
+**array로 알파벳 출력해보기**   
 
 ```java
 public class ArrayTest {
