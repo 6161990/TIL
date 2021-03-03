@@ -15,7 +15,7 @@
 ######  한 카드회사(KBCardCompany)가 있다고 하자. KBCardCompany 클래스를 이용해 카드회사에서 카드를 발급하려면 new KBCardCompany가   
 ######  반드시 한번만 호출되어야한다. 
 * ######  단계 1. KBCardCompany는 전 세계 유일한 딱 하나이기 때문에. 생성자를 외부에서 호출할 수 없게 해야한다. 
-###### 	          KBCardCompany를 사칭할 수 없도록. KBCardCompany를 private으로 선언.
+	###### 	 (KBCardCompany를 사칭할 수 없도록. KBCardCompany를 private으로 선언.)
 * ######  단계 2. 내부적으로 자기 자신을 가진 변수 instance를 만듦.
 * ###### 단계 2. KBCardCompany에 대한 인스턴스를 하나 만들어 외부에 제공해줄 메서드 필요 (static 변수, 메서드 활용해 get())
     
