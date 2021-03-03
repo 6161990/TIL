@@ -5,9 +5,9 @@
 	######  static 변수는 처음 프로그램이 로드될 때 데이터 영역 메모리에 생성됨.   
 	######  인스턴스의 생성과 상관없이 사용할 수 있으므로 클래스 이름으로 참조. 그래서 클래스 변수, 정적 변수라고도 함. 
 2. ######  인스턴스를 생성할 필요가 없는 값을 class에 저장하고 싶은 경우.
-3. ######  값의 변경사항을 모든 인스턴스가 공유해야하는 경우.   
- 
- 
+3. ######  값의 변경사항을 모든 인스턴스가 공유해야하는 경우.      
+
+  
 **static변수를 이용한 학생 id값 부여하기**   
 
 
@@ -82,4 +82,23 @@ System.out.println(Student.serialNum++); //해버리면 원하는 기준값 적�
  public class Student {
   //public static int serialNum =1000;
   private static int serialNum =1000;
-```
+```  
+
+**static변수를 private으로 설정했을 때 메인메소드에서 쓸 수 있도록 get,set설정**   
+
+```java
+public class Student {
+  public static int serialNum =1000; // 1000을 기준으로 
+  private int studentID;
+  public String studentName;
+  public String address;
+
+
+public static int getSerialNum() {
+		return serialNum;
+	}
+
+	public static void setSerialNum(int serialNum) {
+		Static.serialNum = serialNum;
+	}
+``` 
