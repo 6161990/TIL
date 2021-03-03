@@ -11,4 +11,5 @@
 
 --------------   
 
-### [Design Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/singleton%20Pattern)   
+### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)   
+### [Singleton Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/singleton%20Pattern)
