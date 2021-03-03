@@ -1,1 +1,34 @@
-d
+### 싱글톤 패턴 singleton Pattern
+* 단 하나만 존재하는 인스턴스 : 싱글톤
+* 단 하나만 존재해야하는 객체를 만들 때 생성 : 날짜, 국가 등
+* private으로, static 으로, 유일한 객체 생성
+* 외부에서의 사용은 싱글톤을 참조할 수 있는 static get 메서드 구현 
+
+**static과 싱글톤 패턴을 조합해**  
+    
+    
+```java
+public class Student {
+	public static int serialNum =1000; // 1000을 기준으로 
+	private int studentID;
+	public String studentName;
+	public String address;
+  
+  public Student(String name){
+	studentName = name;
+	serialNum++;           // 한번 생성자가 생성될 때마다 기준치에서 +1 하기로 설정.
+	studentID = serialNum; // 그 값을 id로. 
+  }
+  
+  public Student(int id, String name){
+  	studentID= id;
+	studentName =name;
+	address = "주소 없음";
+	serialNum++;             // 한번 생성된 생성자에서 +1
+	studentID = serialNum;  // 그 값을 id로. 
+  }
+  public int getStudentID(){
+    return studentID;
+  }  
+}
+```
