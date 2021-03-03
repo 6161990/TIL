@@ -13,23 +13,23 @@
 
 ```java
 public class Student {
-  public static int serialNum =1000; // 1000을 기준으로 
-  private int studentID;
-  public String studentName;
-  public String address;
+	public static int serialNum =1000; // 1000을 기준으로 
+	private int studentID;
+	public String studentName;
+	public String address;
   
   public Student(String name){
-    studentName = name;
-    serialNum++;           // 한번 생성자가 생성될 때마다 기준치에서 +1 하기로 설정.
-    studentID = serialNum; // 그 값을 id로. 
+	studentName = name;
+	serialNum++;           // 한번 생성자가 생성될 때마다 기준치에서 +1 하기로 설정.
+	studentID = serialNum; // 그 값을 id로. 
   }
   
   public Student(int id, String name){
-    studentID= id;
-    studentName =name;
-    address = "주소 없음";
-    serialNum++;             // 한번 생성된 생성자에서 +1
-    studentID = serialNum;  // 그 값을 id로. 
+  	studentID= id;
+	studentName =name;
+	address = "주소 없음";
+	serialNum++;             // 한번 생성된 생성자에서 +1
+	studentID = serialNum;  // 그 값을 id로. 
   }
   public int getStudentID(){
     return studentID;
