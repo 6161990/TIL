@@ -11,7 +11,11 @@
 * [Static 변수, 메소드](https://github.com/6161990/TIL/blob/main/Java/static.md)
 * [배열](https://github.com/6161990/TIL/blob/main/Java/Array.md)
 * [객체배열](https://github.com/6161990/TIL/blob/main/Java/Object%20Array.md)
-* [Array List](https://github.com/6161990/TIL/blob/main/Java/Object%20Array.md)
+* [상속](https://github.com/6161990/TIL/blob/main/Java/inheritance.md)
+* [오버라이딩 , 오버로딩](https://github.com/6161990/TIL/blob/main/Java/Overriding%2C%20Overroading.md)
+* [다형성](https://github.com/6161990/TIL/blob/main/Java/Polymorphism.md)
+* [다운캐스팅과 instanceof](https://github.com/6161990/TIL/blob/main/Java/DownCasting%2C%20instanceof.md)
+* 
 
 --------------   
 
