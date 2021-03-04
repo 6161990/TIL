@@ -20,13 +20,13 @@
  ###### 2 상위 클래스의 생성자가 호출되고 하위 클래스의 생성자가 호출됨 
  ###### => 테스트 메소드에서 상위클래스 생성자없어도 오류가 안나는 이유 
  ```java
-	// Customer customerLee = new Customer(10010, "이순신"); // 상속한 상위 클래스 생성자호출 없이도 오류가 안남
-	// customerLee.setCustomerName("이순신");
+	// Customer customerLee = new Customer(10010, "박민아"); // 상속한 상위 클래스 생성자호출 없이도 오류가 안남
+	// customerLee.setCustomerName("박민아");
 	// customerLee.setCustomerID(10010);
 	// customerLee.bonusPoint = 1000;
 	// System.out.println(customerLee.showCustomerInfo());
 		
-	Customer customerKim = new VIPCustomer(10020, "김유신");   //이 안의 내부적으로 상위클래스 생성자가 호출되고 하위클래스가 호출된 과정이 숨어있기 때문.
+	Customer customerKim = new VIPCustomer(10020, "송혜교");   //이 안의 내부적으로 상위클래스 생성자가 호출되고 하위클래스가 호출된 과정이 숨어있기 때문.
 	//customerKim.setCustomerName("김유신");			
 	//customerKim.setCustomerID(10020);
 	customerKim.bonusPoint = 10000;
