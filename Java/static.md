@@ -7,7 +7,7 @@
 2. ######  인스턴스를 생성할 필요가 없는 값을 class에 저장하고 싶은 경우.
 3. ######  값의 변경사항을 모든 인스턴스가 공유해야하는 경우.      
 
-  
+   #
 **static변수를 이용한 학생 id값 부여하기**   
 
 
@@ -52,9 +52,9 @@ public class  StudentTest {
 		System.out.println(studentYun.getStudentID()); // id = 1002
 		System.out.println(studentKim.getStudentID()); // id = 1003
   }
-} 
-```   
-
+}   
+```     
+#
 **static변수는 객체 생성과 상관없기 때문에 객체 생성시 나오는 참조변수가 아니라 클래스 이름으로 접근**   
    
 ```java
@@ -75,7 +75,7 @@ public class  StudentTest {
   }
 }
 ```    
-
+   #
 ###### but, 이 경우. 메인 메소드에서 
 ###### System.out.println(Student.serialNum++); 해버리면 원하는 기준값 적용이 안됨. 
 ###### 그래서 static은 private으로 설정하는 게 좋음. 
@@ -86,7 +86,7 @@ public class  StudentTest {
   private static int serialNum =1000;
  }
 ``` 
-
+   #
 **static변수를 private으로 설정했을 때 메인메소드에서 쓸 수 있도록 get,set설정(static 메소드)**   
 
 ```java
@@ -104,7 +104,8 @@ public static int getSerialNum() {
 public static void setSerialNum(int serialNum) {
 	Static.serialNum = serialNum;
 }
-``` 
+```   
+   #
 ### static 메서드
 * ###### static 변수를 위한 기능을 제공하는 static 메서드 
 * ###### static 메서드에서는 인스턴스 변수를 사용할 필요 없음 
