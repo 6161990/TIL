@@ -3,7 +3,7 @@
 * ###### 인스턴스를 초기화 하는 코드가 구현됨 (주로 멤버 변수 초기화)
 * ###### 반환 값이 없음, 상속되지 않음.
 * ###### 생성자는 클래스 이름과 동일.   
-   
+      #
 #### **기본생성자(default constructor)**
 하나의 클래스에는 반드시 하나 이상의 생성자가 존재해야함.    
 프로그래머가 생성자를 구현하지 않으면 컴파일러가 생성자 코드를 넣어줌. => 기본 생성자   
@@ -20,7 +20,7 @@ public class Student {
   public Student(){}
 }
 ```
-
+   #
 **클래스에 다른 생성자가 있는 경우 디폴트 생성자는 제공되지 않음**
 ```java
 public class Student {
@@ -36,6 +36,7 @@ public class Student {
   }
 }
 ```
+   #
 **다른 생성자를 만들경우 main에서의 오류**
 ```java
 public class StudentTest {
@@ -46,6 +47,7 @@ public class StudentTest {
   }
 }
 ```
+   #
 **구현할 때 반드시 필요한 메서드가 필요한 경우("이름은 반드시 매번 구현을 할거야")**
 ```java
 public class Student {
@@ -66,8 +68,7 @@ public class Student {
 ```
     
        
-       
-------------------
+   #
 ### 생성자 오버로딩 Constructor Overroding
 * ###### 생성자를 두 개 이상 구현하는 경우
 * ###### 사용하는 코드에서 여러 생성자 중 선택하여 사용할 수 있음.
