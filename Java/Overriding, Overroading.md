@@ -88,9 +88,9 @@ public class VIPCustomer extends Customer {
    
   #
             
-**형 변환과 Overriding 메서드 호출(가상함수)**
- 	   Customer vc = new VIPCustomer();
-   	    vc.calcPrice(10000);
+**형 변환과 Overriding 메서드 호출(가상함수)**   
+     	>  Customer vc = new VIPCustomer();
+    	 >  vc.calcPrice(10000);
 ###### 위 코드에서 calcPrice(10000)메서드는 VIPCustomer 메서드가 호출된다. 
 ###### 여기서 Customer 는 Type , VIPCustomer는 인스턴스. 
 ###### vc의 타입이 Customer이기 때문에 Customer의 것만 보임.
