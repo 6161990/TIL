@@ -23,7 +23,7 @@ public class Animal {
 
 class Human extends Animal{
 	public void eat() {
-		System.out.println("사람은 젓가락을 사용합니다");               // 1. 상속-> Animal을 Human,Rabbit,Fish가 각각 상속.
+		System.out.println("사람은 젓가락을 사용합니다");         // 1. 상속-> Animal을 Human,Rabbit,Fish가 각각 상속.
 	}                                                               // 2. overriding을 통한 재정의 
 }
 class Rabbit extends Animal{
@@ -40,8 +40,8 @@ class Fish extends Animal{
 ```java    
 public class AnimalTest {
 	public static void main(String[] args) {
-		Animal human = new Human();                                   // 3. 형 변환 (업 캐스팅) -> Animal human = new Human(); 상위 클래스로 묶어서 UPCASTING
-		Animal rabbit = new Rabbit();                                 // 4. 가상함수 : 오버라이딩 되었을 때 메소드의 호출리 인스턴스에서 불려진다.
+		Animal human = new Human();                        // 3. 형 변환 (업 캐스팅) -> Animal human = new Human(); 상위 클래스로 묶어서 UPCASTING
+		Animal rabbit = new Rabbit();                      // 4. 가상함수 : 오버라이딩 되었을 때 메소드의 호출리 인스턴스에서 불려진다.
 		Animal fish = new Fish();
 		
 		AnimalTest test = new AnimalTest();
