@@ -92,10 +92,9 @@ public class VIPCustomer extends Customer {
 
 	Customer vc = new VIPCustomer();
 	vc.calcPrice(10000);
-###### 위 코드에서 calcPrice(10000)메서드는 VIPCustomer 메서드가 호출된다. 
 ###### 여기서 Customer 는 Type , VIPCustomer는 인스턴스. 
 ###### vc의 타입이 Customer이기 때문에 Customer의 것만 보임.
-###### 그러나 calcPrice(10000)메서드는 VIPCustomer 것이 호출. 
+###### 그러나 calcPrice(10000)메서드는 VIPCustomer 메서드가 호출된다. 
 ###### why? 자바에서는 항상 인스턴스(VIPCustomer)의 메서드가 호출되기 때문에 => 가.상.함.수
  #
 ###### 가상함수(virtual method)?
