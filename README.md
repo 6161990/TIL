@@ -1,6 +1,6 @@
 # TIL
 ### Today I Learn 🌏
-#### 오늘, 학습한 내용을 내가 이해한대로 내가 적기   
+#### 오늘, 학습한 내용을 내가 이해한대로 정리하기
 --------------   
 
 ### [JAVA](https://github.com/6161990/TIL/tree/main/Java)   
