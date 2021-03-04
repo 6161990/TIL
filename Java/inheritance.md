@@ -27,7 +27,7 @@
 	// System.out.println(customerLee.showCustomerInfo());
 		
 	Customer customerKim = new VIPCustomer(10020, "송혜교");   //이 안의 내부적으로 상위클래스 생성자가 호출되고 하위클래스가 호출된 과정이 숨어있기 때문.
-	//customerKim.setCustomerName("김유신");			
+	//customerKim.setCustomerName("송혜교");			
 	//customerKim.setCustomerID(10020);
 	customerKim.bonusPoint = 10000;
 	System.out.println(customerKim.showCustomerInfo());   
