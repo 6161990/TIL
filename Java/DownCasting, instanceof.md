@@ -40,80 +40,80 @@ class Fish extends Animal{
 } 
  ```   
   ```java    
-  public class AnimalTest {
+public class AnimalTest {
 
-	public static void main(String[] args) {
-		Animal human = new Human();                   //변수 human은 Human소속.
-		Animal rabbit = new Rabbit();
-		Animal fish = new Fish();
+     public static void main(String[] args) {
+	Animal human = new Human();           //변수 human은 Human소속.
+	Animal rabbit = new Rabbit();
+	Animal fish = new Fish();
 		
-		Human humanWalk = (Human)human;               //Animal에서 Human으로 다운 캐스팅.
-		humanWalk.walking();
+	Human humanWalk = (Human)human;        //Animal에서 Human으로 다운 캐스팅.
+	humanWalk.walking();
     
-    Rabbit humanWalking = (Rabbit)human;          //But, Rabbit으로 다운 캐스팅 시도하려고 하면, 빨간색 줄은 안뜨지만 컴파일 에러가 남. 
-	}
+   	Rabbit humanWalking = (Rabbit)human;   //But, Rabbit으로 다운 캐스팅 시도하려고 하면, 빨간색 줄은 안뜨지만 컴파일 에러가 남. 
+    }
 }
  ```   
  #
 ###### 그래서 쓰이는 방법이 **'instanceof'** true/false를 반환. 
  ```java    
-  public class AnimalTest {
+ public class AnimalTest {
 
-	public static void main(String[] args) {
-		Animal human = new Human();                   
-		Animal rabbit = new Rabbit();
-		Animal fish = new Fish();
+    public static void main(String[] args) {
+	Animal human = new Human();                   
+	Animal rabbit = new Rabbit();
+	Animal fish = new Fish();
 		
-		Human humanWalk = (Human)human;             //instanceof를 사용하지 않은 것과 
-		humanWalk.walking();
+	Human humanWalk = (Human)human; 	//instanceof를 사용하지 않은 것과 
+	humanWalk.walking();
     
-    if(human instanceof Human) {              //instanceof를 사용한 것.
-			Human humanWalking = (Human)human;    
-			humanWalking.walking();
-		}  
-	}
+    if(human instanceof Human) {              	//instanceof를 사용한 것.
+	Human humanWalking = (Human)human;    
+	humanWalking.walking();
+    }  
+  }
 }
  ``` 
-      instanceof가 하는 일 
+      **instanceof가 하는 일**
      A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
      매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
      
  **instanceof를 이용해 각자가 가진 차별 메소드 출력하기**
   ```java    
-  public class AnimalTest {
+public class AnimalTest {
 
-	public static void main(String[] args) {
-		Animal human = new Human();                   
-		Animal rabbit = new Rabbit();
-		Animal fish = new Fish();
+   public static void main(String[] args) {
+	Animal human = new Human();                   
+	Animal rabbit = new Rabbit();
+	Animal fish = new Fish();
 		
-		ArrayList<Animal> animalList = new ArrayList<Animal>();
-		animalList.add(human);
-		animalList.add(rabbit);
-		animalList.add(fish);
+	ArrayList<Animal> animalList = new ArrayList<Animal>();
+	animalList.add(human);
+	animalList.add(rabbit);
+	animalList.add(fish);
 		
-		AnimalTest test = new AnimalTest();
-		test.testDownCasting(animalList);
+	AnimalTest test = new AnimalTest();
+	test.testDownCasting(animalList);
 	}
     
   public void testDownCasting(ArrayList<Animal> list) {
-		for(int i=0; i<list.size(); i++) {
-			Animal animal = list.get(i);
+	for(int i=0; i<list.size(); i++) {
+	Animal animal = list.get(i);
 			
-			if(animal instanceof Human) {
-				Human humanWalking = (Human)animal;
-				humanWalking.walking();
-			}else if(animal instanceof Rabbit) {
-				Rabbit rabbitJumping = (Rabbit)animal;
-				rabbitJumping.jumping();
-			}else if(animal instanceof Fish) {
-				Fish fishSwimming =(Fish)animal;
-				fishSwimming.swimming();
-			}else {
-				System.out.println("error");
-			}
-		}
+	if(animal instanceof Human) {
+	  Human humanWalking = (Human)animal;
+	  humanWalking.walking();
+	}else if(animal instanceof Rabbit) {
+	  Rabbit rabbitJumping = (Rabbit)animal;
+	  rabbitJumping.jumping();
+	}else if(animal instanceof Fish) {
+	  Fish fishSwimming =(Fish)animal;
+	  fishSwimming.swimming();
+	}else {
+	  System.out.println("error");
 	}
+    }
+ }
   
 }
  ``` 
