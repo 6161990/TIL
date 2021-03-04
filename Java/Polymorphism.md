@@ -40,8 +40,8 @@ class Fish extends Animal{
 ```java    
 public class AnimalTest {
 	public static void main(String[] args) {
-		Animal human = new Human();         // 3. 형 변환 (업 캐스팅) -> Animal human = new Human(); 상위 클래스로 묶어서 UPCASTING
-		Animal rabbit = new Rabbit();      // 4. 가상함수 : 오버라이딩 되었을 때 메소드의 호출리 인스턴스에서 불려진다.
+		Animal human = new Human();       // 3. 형 변환 (업 캐스팅) -> Animal human = new Human(); 상위 클래스로 묶어서 UPCASTING
+		Animal rabbit = new Rabbit();     // 4. 가상함수 : 오버라이딩 되었을 때 메소드의 호출리 인스턴스에서 불려진다.
 		Animal fish = new Fish();
 		
 		AnimalTest test = new AnimalTest();
