@@ -75,7 +75,7 @@ public class  StudentTest {
   }
 }
 ```    
-   #
+   
 ###### but, 이 경우. 메인 메소드에서 
 ###### System.out.println(Student.serialNum++); 해버리면 원하는 기준값 적용이 안됨. 
 ###### 그래서 static은 private으로 설정하는 게 좋음. 
