@@ -67,8 +67,8 @@
    ###### => 상위클래스 집합보다 하위 클래스 집합의 원소가 더 많은 원리. 
         Customer vc= new VIPCustomer(); 에서 vc가 가리키는 것은 Customer의 타입의 것만 가능
    #
-
-**상속을 이용한 백화점 고객 보너스포인트 프로그래밍*    
+   
+**상속을 이용한 백화점 고객 보너스포인트 프로그래밍** 
 **일반 Customer** 
  ```java
    public class Customer {
