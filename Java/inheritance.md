@@ -37,6 +37,8 @@
  ###### 3 상위클래스의 생성자가 호출되지 않을 경우, 컴파일러는 상위 클래스 기본 생성자를 호출하기 위한 super를 호출함. 
  ###### super();로 호출되는 생성자는 상위 클래스의 기본 생성자. 
  ###### 4 만약 상위 클래스의 기본 생성자가 없는 경우(매개변수가 있는 생성자만 존재하는 경우), 하위 클래스는 명시적으로 상위 클래스의 생성자를 호출해야함.    
+ ###### => error message "Implicit super constructor ***상위.class()*** is undefined. Must explicitly invoke another constructor(생성자)"
+  ###### super();는 디폴트 생성자, 상위클래스에는 super(customerID, customerName); 생성자만 존재. 하위클래스에서  super(customerID, customerName); 라고 명시필요.
  ```java
    public class VIPCustomer extends Customer{
 	
@@ -66,7 +68,63 @@
         Customer vc= new VIPCustomer(); 에서 vc가 가리키는 것은 Customer의 타입의 것만 가능
    #
 
-test메서드 
-private 인 경우 get,set사용하고
-public인 경우 바로 대입 
+**상속을 이용한 백화점 고객 보너스포인트 프로그래밍*    
+**일반 Customer** 
+ ```java
+   public class Customer {
 
+	protected String customerName;
+	protected String customerGrade;
+	protected int customerID;
+	int bonusPoint;
+	double bonusRatio;
+	
+	public Customer(int customerID, String customerName) {
+		this.customerID= customerID;
+		this.customerName= customerName;
+		
+		customerGrade = "SILVER";
+		bonusRatio=0.01;
+	}
+	
+	public int CalPrice(int price) {
+		bonusPoint += price * bonusRatio;
+		return price;
+	}
+	public String showCustomerInfo() {
+		return customerName+ "님의 등급은" +customerGrade +"이며, 적립된 보너스 포인트는"+bonusPoint+" 점 입니다.";
+	}
+}		
+```   
+**VIP Customer** 
+ ```java
+   public class VIPCustomer extends Customer{
+	
+		double salesRatio;
+		private int agentID;
+		
+	public VIPCustomer(int customerID, String customerName) {
+		super(customerID, customerName);
+		
+		customerGrade = "VIP";
+		bonusRatio = 0.05;
+		salesRatio  =0.1;
+	}
+}	
+```   
+**Test** 
+ ```java
+   public class CustomerTest {
+
+	public static void main(String[] args) {
+
+		Customer customerLee = new Customer(10010,"박민아");
+		customerLee.bonusPoint=1000;
+		System.out.println(customerLee.showCustomerInfo());
+		
+		Customer customerKim = new VIPCustomer(100011,"송혜교");
+		customerKim.bonusPoint=15000;
+		System.out.println(customerKim.showCustomerInfo());
+	}
+}	
+```   
