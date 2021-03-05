@@ -20,8 +20,8 @@ public abstract class Car {
 **Abstract 추상클래스, 메소드 특징**
 * ###### abstract 예약어사용  
              
-             public abstract class ClassName {
-                 public abstract void methodName();  // 구현부 없음, 선언부만 존재 
+             public 'abstract' class ClassName {	//클래스에도 
+                 public 'abstract' void methodName();   //메소드에도
              }
 * ###### 추상 메소드는 바디를 구현하는 {중괄호} 부분이 존재하지 않음. 
   ###### 메서드의 바디가 없으니까 불려질 수 있는 게 없어서 추상 클래스는 new(인스턴스화)할 수 없음.
