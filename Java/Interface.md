@@ -106,7 +106,5 @@
 
 **인터페이스를 구현해 놓은 다양한 객체(다형성)**
 ###### JDBD를 구현한 오라클, MSSQL라이브러리 등.
-
-![KakaoTalk_20210305_154237041](https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg){: width="450" height="300"}
-<img src = "https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg" width="400px" height="300">
+<img src = "https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg" width="550px" height="380">
 
