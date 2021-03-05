@@ -25,33 +25,17 @@ public abstract class Car {
              }
 * ###### 추상 메소드는 바디를 구현하는 {중괄호} 부분이 존재하지 않음. 
   ###### 메서드의 바디가 없으니까 불려질 수 있는 게 없어서 추상 클래스는 new(인스턴스화)할 수 없음.
-* ###### 클래스 안에 추상 메서드가 하나라도 있으면 추상 클래스. 
+* ###### 클래스 안에 추상 메서드가 하나라도 있으면 추상 클래스.   
+
  
 **굳이, 구현코드가 없는 abstract 사용이유**
+* ###### 추상 클래스는 주로 상속의 상위 클래스로 사용됨
 * ###### 하위 클래스에서 구현하도록 강제하기위해, "구현의 책임을 하위 클래스에게 위임한다"
 * ###### 그니까 그 강제를 why? **"템플릿 메서드"**
------------------------------------------
-### 템플릿Template
-* ###### 템플릿Template : 틀이나 견본을 의미 
-* ###### 템플릿 메서드 : 추상 메서드나 구현된 메서드를 활용하여 전체의 흐름(시나리오)를 정의해놓은 메서드
-  ###### "이 로직대로 (변경하지말고) 수행해라" 정해놓은 ####‘선구적, 흐름 정의 메서드’####
-* ###### final로 선언하여 재정의 할 수 없게 함 
 #
-**템플릿 메서드 패턴 Template Method Pattern** 
-###### 디자인 패턴의 일종으로 프래임 워크에서 많이 사용되는 설계 패턴. 
-###### 추상 클래스로 선언된 상위 클래스에서 추상 메서드를 이용하여 전체 구현의 흐름을 정의하고 구체적인 각 메서드 구현은
-###### 구체적인 각 메서드 구현은 하위 클래스에 위임함. 하위클래스는 템플릿 메서드에 정의된 시나리오대로 수. 
-***프레임워크가 이런 것****
-###### 프레임 워크 로직의 흐름을 내가 제어할 수는 없음
-###### 이미 정해져있는 흐름에 내가 갖가지 방식들을 취사선택해 프로그램을 운영하는 것.
+#### 참고
+* [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
 #
-**final** 
-* ###### 파이널 변수는 값이 변경될 수 없는 상수
-          public static final double PI=3.14	
-  ###### 오직 한번만 값을 할당할 수 있음
-* ###### 파이널 메서드는 하위 클래스에서 재정의(오버라이딩)할 수 없음
-* ###### 파이널 클래스는 더이상 상속되지 않음 ex) java의 String 클래스 
-* ###### 프로젝트 구현 시 여러 파일에서 공유해야하는 상수 값은 하나의 파일에 선언하여 사용하면 편리함. 
  **final을 이용한 템플릿 메서드**
 ```java    
 public abstract class Car {
@@ -74,31 +58,99 @@ public abstract class Car {
 }
 ``` 
 #
-**추상클래스 사용하기**
-* ###### 추상 클래스는 주로 상속의 상위 클래스로 사용됨
+**추상클래스안에 추상 메소드가 아닌 메소드 ?**
 * ###### 추상 메서드는 하위 클래스가 구현해야하는 메서드로써 쓰이고, 
-* ###### 추상 클래스에서 이미 구현된 메서드는 하위 클래스가 공통으로 사용하는 기능의 메서드로 쓰이며 
+* ###### 추상 클래스에서 '이미 구현된 메서드'는 하위 클래스가 공통으로 사용하는 기능의 메서드로 쓰이며 
   ###### 하위 클래스에 따라 재정의할 수 있다. 
 ```java    
 public abstract class Car {
 
             //생략....
-            
-      public void washCar() {}
+      public void turnOff() {
+		System.out.println("시동은 끕니다."); 
+      }
+      
+      public void washCar() {}			
       
       final public void run(){
-         startCar();
+         startCar();		//이미 구현된 메서드
          drive();
          stop();
-         turnOff();
-         washCar(); 
+         turnOff();		//이미 구현된 메서드
+         washCar(); 		//이미 구현된 메서드
        }
 }
 ``` 
 ###### ->하위 클래스가 재정의하면 그제서야 기능을 구현하는 메소드
 ###### 기능을 확장할 수 있는 메소드. 
+#
+**추상클래스로 만든 Car 프로그래밍**
+```java    
+public abstract class Car {
 
+	public abstract void drive();
+	public abstract void stop();
+	
+	public void startCar() {
+		System.out.println("시동을 켭니다.");
+	}
+      public void turnOff() {
+		System.out.println("시동은 끕니다."); 
+      }
+      
+      public void washCar() {}			
+      
+      final public void run(){
+         startCar();		
+         drive();
+         stop();
+         turnOff();		
+         washCar(); 		
+       }
+       public static void main(String[] args) {
+		Car aiCar = new AICar();
+		aiCar.run();
+		System.out.println("=============");
+		Car manualCar = new ManualCar();
+		manualCar.run();
+	}
+}
+```
+```java
+public class ManualCar extends Car{
+
+	@Override
+	public void drive() {
+		System.out.println("사람이 운전합니다.");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("브레이크를 밟아 정지합니다.");		
+	}
+}
+```
+```java
+public class AICar extends Car{
+
+	@Override
+	public void drive() {
+		System.out.println("자율주행합니다.");
+	}
+
+	@Override
+	public void stop() {
+		System.out.println("차가 스스로 멈춥니다.");
+	}
+
+	@Override
+	public void washCar() {
+		System.out.println("자동 세차를 시작합니다");
+	}
+}
+```
+#
+**추상클래스에서 일반클래스로**
 * ###### 추상 메서드 2개를 포함하고있는 추상 클래스를 상속받을 때 둘 다 구현해야 일반 클래스가 된다. 
   ###### => 모든 메서드가 구현되었다고해도 클래스에 abstract 키워드를 사용하면 추상클래스,
-  ######    상속용으로만, 기반이 되기 위한 클래스를 만들기 위해 사용
-
+  ######    상속용으로만, 기반이 되기 위한 클래스를 만들기 위해 사용하기도함.
