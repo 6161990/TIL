@@ -15,7 +15,7 @@
 * [오버라이딩 , 오버로딩](https://github.com/6161990/TIL/blob/main/Java/Overriding%2C%20Overroading.md)
 * [다형성](https://github.com/6161990/TIL/blob/main/Java/Polymorphism.md)
 * [다운캐스팅과 instanceof](https://github.com/6161990/TIL/blob/main/Java/DownCasting%2C%20instanceof.md)
-* [인터페이스, 템플릿패턴](https://github.com/6161990/TIL/edit/main/Java/Abstract,%20Template.md)
+* [추상클래스, 템플릿패턴](https://github.com/6161990/TIL/edit/main/Java/Abstract,%20Template.md)
 * [인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 
 --------------   
