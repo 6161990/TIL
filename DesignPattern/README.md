@@ -7,7 +7,7 @@
 
 
 
-<img src=https://user-images.githubusercontent.com/74708028/110050759-ee829100-7d97-11eb-8753-e696489e7d37.jpg width="850" height="550">
+<img src=https://user-images.githubusercontent.com/74708028/110050759-ee829100-7d97-11eb-8753-e696489e7d37.jpg width="550" height="350">
 
 ##### A식으로 로직을 구성하면 템플릿 메소드 패턴.
 ##### B식으로 로직을 구성하면 옵저버 메소드 패턴.
