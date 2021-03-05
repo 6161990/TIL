@@ -34,7 +34,7 @@ public abstract class Car {
 * ###### 그니까 그 강제를 why? **"템플릿 메서드"**
 #
 #### 참고
-* [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
+* [Template Pattern, final](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
 #
  **final을 이용한 템플릿 메서드**
 ```java    
