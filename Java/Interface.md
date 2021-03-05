@@ -1,3 +1,4 @@
+
 ### 인터페이스Interface
 * ###### 인터페이스 : abstract,final 처럼 규제역할. 클라이언트 프로그램에 어떤 메서드를 제공하는지 알려주는 명세서역할.
 * ######              클라이언트 프로그램은 실제 구현내용은 몰라도 인터페이스 정의만 알면 그 객체를 사용할 수 있음.
@@ -108,5 +109,5 @@
 #
 **인터페이스를 구현해 놓은 다양한 객체(다형성)**
 ###### EX) JDBD를 구현한 오라클, MSSQL라이브러리 등.
-<img src = "https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg" width="670px" height="400">
+<img src = "https://user-images.githubusercontent.com/74708028/110082858-4689b980-7dd1-11eb-8dbe-95b552150097.jpg" width="670px" height="400">
 
