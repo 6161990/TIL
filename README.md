@@ -15,10 +15,11 @@
 * [오버라이딩 , 오버로딩](https://github.com/6161990/TIL/blob/main/Java/Overriding%2C%20Overroading.md)
 * [다형성](https://github.com/6161990/TIL/blob/main/Java/Polymorphism.md)
 * [다운캐스팅과 instanceof](https://github.com/6161990/TIL/blob/main/Java/DownCasting%2C%20instanceof.md)
-* 
+* [인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 
 --------------   
 
 ### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)   
 * [Singleton Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/singleton%20Pattern)
 * [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
+* [Strategy Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Strategy%20Pattern.md)
