@@ -1,2 +1,4 @@
 ### 전략패턴 Strategy Pattern
-<img src=https://user-images.githubusercontent.com/74708028/110081757-c1ea6b80-7dcf-11eb-9bce-a552ca6201ca.jpg width="650" height=400">
+![KakaoTalk_20210305_162449368](https://user-images.githubusercontent.com/74708028/110081950-07a73400-7dd0-11eb-94f1-ff8d722b1bba.jpg)
+
+
