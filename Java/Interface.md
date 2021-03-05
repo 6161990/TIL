@@ -103,8 +103,8 @@
 ###### => interface I,interface I, class All을 인스턴스화 시킬 때, 같은 데이터 타입(class All)을 공유하고 있지만, 
 ######    그 실제 클래스가 무엇이냐에 따라서 (interface I,interface I2 안에 있는 메소드가 무엇이냐에 따라서),
 ######    다르게 구현할 수 있는 ***'다형성'***
-
+#
 **인터페이스를 구현해 놓은 다양한 객체(다형성)**
 ###### JDBD를 구현한 오라클, MSSQL라이브러리 등.
-<img src = "https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg" width="550px" height="380">
+<img src = "https://user-images.githubusercontent.com/74708028/110077466-82208580-7dc9-11eb-8060-04758fd655d5.jpg" width="670px" height="400">
 
