@@ -1,5 +1,5 @@
 ### 인터페이스 요소 Interface Elements
-* ###### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
+* #### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
 **사칙연산 로직이 있는 인터페이스 Calc**
 ```java
  public interface Calc {
@@ -68,10 +68,11 @@ public class CalcTest {
 		
 		calc.description();  // "재정의 한 description" 출력됨. 
 	}
-}
-  
+}  
+```
 #
-* ###### 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
+
+* #### 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
   ###### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
   ###### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
 ```java
@@ -153,7 +154,7 @@ public class CalcTest {
 	}
 }
 ```
-**2. 정적 private
+**2. 정적 private**
 ```java
  public interface Calc {
 	
