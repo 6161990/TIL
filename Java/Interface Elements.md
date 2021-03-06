@@ -52,7 +52,7 @@ public class CompleteCalc extends Calculator{
 	}
 }
 ```  
-**디폴트 메서드 , 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출**
+**디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출**
 ```java
 public class CalcTest {
 
