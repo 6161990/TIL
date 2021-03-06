@@ -18,6 +18,7 @@
 * [추상클래스, 템플릿패턴](https://github.com/6161990/TIL/blob/main/Java/Abstract%2C%20Template.md)
 * [인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 * [인터페이스의 요소](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
+* [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 
 --------------   
 
