@@ -2,7 +2,7 @@
 ###### * 사전참고 :[인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md), [인터페이스의 요소](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
 #
 
-<img src="https://user-images.githubusercontent.com/74708028/110222330-c9fff380-7f14-11eb-818d-f2e52bf2695d.jpg" width="550" height="350">
+<img src="https://user-images.githubusercontent.com/74708028/110222330-c9fff380-7f14-11eb-818d-f2e52bf2695d.jpg" width="600" height="350">
 
 ### 인터페이스 구현과 클래스 상속 함께 사용하기
 ```java
