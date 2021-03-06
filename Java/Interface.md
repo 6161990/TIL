@@ -70,7 +70,9 @@
             public void x(){}          
             public void z(){}  
           }
-```           
+``` 
+#
+* 참고 : [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 #
 **추상 클래스와 인터페이스의 차이**
 ###### abstract vs. interface
