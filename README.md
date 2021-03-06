@@ -22,6 +22,6 @@
 --------------   
 
 ### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)   
-* [Singleton Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/singleton%20Pattern)
+* [Singleton Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Singleton%20Pattern.md)
 * [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
 * [Strategy Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Strategy%20Pattern.md)
