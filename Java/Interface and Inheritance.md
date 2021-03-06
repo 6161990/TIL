@@ -1,7 +1,5 @@
 #
-###### * 사전참고 :
-######   [인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
-######   [인터페이스의 요소](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
+###### * 사전참고 :[인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md), [인터페이스의 요소](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
 #
 
 ### 인터페이스 구현과 클래스 상속 함께 사용하기
