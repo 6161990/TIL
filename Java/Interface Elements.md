@@ -1,4 +1,7 @@
 ### 인터페이스 요소 Interface Elements
+#
+* ###### 사전참고 : [인터페이스 Interface](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
+#
 * #### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
 **사칙연산 로직이 있는 인터페이스 Calc**
 ```java
