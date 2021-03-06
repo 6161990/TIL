@@ -23,8 +23,8 @@
 
 --------------   
 
-### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)   
-    [디자인패턴의 ](https://github.com/6161990/TIL/blob/main/DesignPattern/README.md)
+### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)  
+**[디자인패턴의 효용](https://github.com/6161990/TIL/blob/main/DesignPattern/README.md)**
 * [Singleton Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Singleton%20Pattern.md)
 * [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
 * [Strategy Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Strategy%20Pattern.md)
