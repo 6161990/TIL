@@ -55,6 +55,8 @@
           }
 ```           
 * ###### 인터페이스는 상속이 가능하다. 
+  ###### 구현이 없으므로 extends 뒤에 여러 인터페이스를 상속받을 수 있음.
+  ###### 구현 내용이 없으므로 타입 상속(type inheritance)라고도 함.
 ```java
            interface I3 {
             public void x();    
