@@ -135,22 +135,23 @@ public class CalcTest {
 	
 	    //생략...
 	
-	default void description() {       //디폴트 메서드
-		System.out.println("정수 계산기를 구현합니다.");
-    myMethod();                      //디폴트 메서드 내에 일반 private메서드 
-  }
+     default void description() {   //디폴트 메서드
+	System.out.println("정수 계산기를 구현합니다.");
+   	myMethod();                //디폴트 메서드 내에 일반 private메서드 
+     }
   
-  static int total(int[] arr) {      //정적 메서드
-		int total = 0;
+     static int total(int[] arr) {      //정적 메서드
+	int total = 0;
 		
-		for(int i: arr) {
-			total += i;
-		}
-		return total;
+	for(int i: arr) {
+	  total += i;
+	}
+	
+	return total;
 	}
   
-  private void myMethod() {       //디폴트 메서드로 들어가는 일반 private메서드
-		System.out.println("private method");
+     private void myMethod() {      //디폴트 메서드로 들어가는 일반 private메서드
+	System.out.println("private method");
 	}
 }
 ```
@@ -160,28 +161,28 @@ public class CalcTest {
 	
 	    //생략...
 	
-	default void description() {      //디폴트 메서드
-		System.out.println("정수 계산기를 구현합니다.");
-    myMethod();                      //1. 디폴트 메서드 내에 일반 private메서드 
-  }
+    default void description() {      //디폴트 메서드
+	System.out.println("정수 계산기를 구현합니다.");
+    	myMethod();                      //1. 디폴트 메서드 내에 일반 private메서드 
+    }
   
-  static int total(int[] arr) {
-		int total = 0;
+    static int total(int[] arr) {
+	int total = 0;
 		
-		for(int i: arr) {
-			total += i;
-		}
-    mystaticMethod();             //2. static 메서드 내에 private static 메서드
-		return total;
+	for(int i: arr) {
+	  total += i;
+	}
+    	mystaticMethod();             //2. static 메서드 내에 private static 메서드
+	   return total;
 	}
   
-  private void myMethod() {       //1. 디폴트 메서드로 들어가는 일반 private메서드
-		System.out.println("private method");
+     private void myMethod() {       //1. 디폴트 메서드로 들어가는 일반 private메서드
+	System.out.println("private method");
 	}
-  private static void mystaticMethod() {      //2. static 메서드로 들어가는 정적 private 메서드
-		System.out.println("private static method");
+     private static void mystaticMethod() {      //2. static 메서드로 들어가는 정적 private 메서드
+	System.out.println("private static method");
 	}
-}
+   }
 ```
 
 
