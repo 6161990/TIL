@@ -29,15 +29,24 @@
 * 참고 : [인터페이스 요소 Interface Elements](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
 #
 **인터페이스의 규칙**
-* ###### 인터페이스는 그 안에 규정된 메소드들을 외부에서 조작하기 위한 장치이므로, public 메소드여야한다.
 * ###### 하나의 클래스는 여러 개의 인터페이스를 구현할 수 있다. (한편, 자바의 상속에서는 하나의 부모클래스만 상속받을 수 있다.)
+  ###### 여러 개의 인터페이스를 받을 때 디폴트 메서드의 이름이 중복되는 경우가 있다면? 
+              @Override
+              public void y() {
+                  해결방법 1. 여기서 재정의한다.
+                  해결방법 2. I1.super.y(); or
+                             I2.super.y();   I1 or I2 둘 중에 뭐 쓸 건지 결정한다. 
+              }
+* ###### 인터페이스는 그 안에 규정된 메소드들을 외부에서 조작하기 위한 장치이므로, public 메소드여야한다.
 ```java
           interface I1 {
-            public void x();    // 모든 인터페이스 메소드는 퍼블릭.
+            public void x();// 모든 인터페이스 메소드는 퍼블릭.
+            public void y(); //
           }
           
           interface I2 {
             public void z();
+            public void y();
           }
   
          class A implements I1, I2 {   
