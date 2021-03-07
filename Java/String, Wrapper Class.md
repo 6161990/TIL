@@ -27,7 +27,7 @@ public class StringTest {
 * ###### 한번 선언되거나 생성된 문자열을 변경할 수 없음 
 * ###### String 클래스의 concat()메서드 혹은 "+"를 이용하여 String을 연결하는 경우 문자열은 새로 생성됨.
 * ###### concat : 괄호 안 문자열을 전부 결합해서 반환하는 함수
-* 합쳐진 String hashCode()확인할 수 없는 이유 : overwrite, 어떤 장소에 기록되어 있는 정보 위에 중복 기록 함으로써
+* ###### 합쳐진 String hashCode()확인할 수 없는 이유 : overwrite, 어떤 장소에 기록되어 있는 정보 위에 중복 기록 함으로써
                                               원래의 정보가 소실되어(파괴되어)버리는 기록방법.
 ```java
 public class StringTest2 {
@@ -52,9 +52,9 @@ public class StringTest2 {
 * ###### 메모리를 계속 쓰는 게 아니라 처음 것에 연결해서 씀.
 * ###### 가변적인 char[] 배열을 멤버변수라 가지고 있는 클래스
 * ###### 문자열을 더하거나 빼거나 변경하거나 연결하는 경우 사용하면 편리한 클래스
-* String Buffer는 멀티 쓰레드프로그래밍에서 동기화(Synchronization)이 보장됨.
-  단일 쓰레드 프로그래밍에서는 String Builder를 사용하는 것이 더 좋음.
-  toString()메서드로 String변환.
+* ###### String Buffer는 멀티 쓰레드프로그래밍에서 동기화(Synchronization)이 보장됨.
+  ###### 단일 쓰레드 프로그래밍에서는 String Builder를 사용하는 것이 더 좋음.
+  ###### toString()메서드로 String변환.
 ```java
 public class StringBuilderTest {
 
