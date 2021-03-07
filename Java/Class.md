@@ -35,7 +35,7 @@ public class Class {
 	}
 }
  ```   
- => 클래스 가져오기의 다른 쉬운 방법이 있기 때문에 특별한 상황이 아닌 이상, 잘 쓰지 않음. 
+ ###### => 클래스 가져오기의 다른 쉬운 방법이 있기 때문에 특별한 상황이 아닌 이상, 잘 쓰지 않음. 
  
 #
 **reflection 프로그래밍**
@@ -82,7 +82,7 @@ public class ClassTest {
 **forName()메서드와 동적로딩**
 ##### Class 클래스 static 메서드
 ##### 동적로딩?
-##### => 컴파일 시에 데이터 타입이 모두 binding 되어 자료형이 로딩되는 것(static loding)이 아니라, (Person person = new Person("James");)
+##### => 컴파일 시에 데이터 타입이 모두 binding 되어 자료형이 로딩되는 것(static loding)이 아니라 (Person person = new Person("James");),
 #####    실행 중에 데이터 타입을 알고 binding 되는 방식.
 ##### => 실행 시에 로딩되므로 경우에 따라 다른 클래스가 사용될 수 있어 유용함
 ##### => 컴파일 타임에 체크할 수 없으므로 해당 문자열에 대한 클래스가 없는 경우,
