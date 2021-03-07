@@ -39,7 +39,7 @@ public class ToStringTest{
  ```   
 ###### => 근데 book과 str의 출력 값이 다른 이유?
 ######    String 안에 toString이 들어가 있기 때문에, 자동 문자변환이 된다. 
-######	  그래서 참조 변수 str에 str.toString메서드를 사용할 수 있게된다. Object의 toString을 재정의 한 것.
+######    그래서 참조 변수 str에 str.toString메서드를 사용할 수 있게된다. Object의 toString을 재정의 한 것.
 ###### => book도 문자로 변환하려면, 다음과 같이 Object 클래스가 갖고있는 toString 메소드를 재정의하여 사용하면 된다.
 **직접만든 참조 자료형의 참조변수 문자형으로 출력하기**
 ```java    
