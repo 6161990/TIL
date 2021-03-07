@@ -6,7 +6,7 @@
             class A  => 실상은 class A (extends Object) 
  * ###### 모든 클래스는 Object 클래스의 메서드를 사용할 수 있음.
  * ###### 모든 클래스는 Object 클래스의 일부 메서드를 재정의하여 사용할 수 있음(final로 선언된 메서드 제외하고!)
-# 
+--------------- 
  **toString()메서드**  
  
         원형 : getClass().getName().+'@'+Integer.toHexString(hashCode())
@@ -31,8 +31,8 @@ public class ToStringTest{
 
 	public static void main(String[] args) {				
 		Book book = new Book("토지","박경리");	
-		System.out.println(book);		// 출력 : 'chapter10.Book@54bedef2' 참조변수를 출력하면 인스턴스의 위치를 나타내는 참조 값이 나옴.
-		
+		System.out.println(book);		// 출력 : 'chapter10.Book@54bedef2' 
+							//  참조변수를 출력하면 인스턴스의 위치를 나타내는 참조 값이 나옴.
 		String str = new String("토지");
 		System.out.println(str);		// 출력 : '토지'  얘도 참조변수이긴 마찬가지
 	}
@@ -72,7 +72,7 @@ public class ToStringTest{
 }
  ``` 
 
-#
+--------------------------
  **equals()메서드**
 * ###### 두 객체의 동일함을 **논리적**으로 재정의 할 수 있음.
 * ###### 원시데이터형 비교와 같이 단순비교는 연산자 '=='를 이용 (물리적동일함)
