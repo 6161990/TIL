@@ -88,6 +88,7 @@ public class ToStringTest{
            studentKimWooBin은 다른 힙메모리에 저장됨. 
            But, 물리적으로는 다른 위치에 있지만 논리적으로는 같은 학생임.
                  equals로 구현.
+#
 **이미 equals가 재정의되어있는 String 참조자료형 클래스**
 ###### => String 안에 equals를 재정의함. 클래스 String 이 equals를 오버라이딩해서 재정의를 하게 되면(각각의 클래스에 맞게 재정의하게되면),
 ######    String 같은 경우는 "문자열이 같으면 같은 놈이당!!" 라고 true를 반환하게 이미 해놓음. 사용자가 재정의할 필요 없음.
@@ -103,7 +104,8 @@ public class EqualsTest {
 	
 	}
 }
- ```    
+ ```   
+ #
 **equals재정의가 필요한 일반 참조자료형(Student) 클래스**
 ```java    
 
@@ -125,10 +127,12 @@ public class EqualsTest {
 		
 		System.out.println(Kim == Soo);			//false : 물리적으로 동일하지 않음
 		System.out.println(Kim == Kim2);		//true 	: 물리적으로 동일함.
-		System.out.println(Kim.equals(Soo));		//false : 논리적으로 동일하지 않음 -> 실질적으로는 동일함. 입증을 위해 equals재정의필요.
+		System.out.println(Kim.equals(Soo));		//false : 논리적으로 동일하지 않음 -> 실질적으로는 동일함. 
+								//	  입증을 위해 equals재정의필요.
 	}
 }
  ``` 
+ #
 **일반 참조자료형(Student) 클래스에 equals재정의하기** 
 ```java    
 
@@ -163,7 +167,7 @@ public class EqualsTest {
 	}
 }
  ``` 
- #
+-----------------------------
 **hashCode()메서드**
  * ###### hashCode()메서드의 반환 값: 인스턴스가 저장된 가상머신의 주소를 10진수로 반환.  
  
@@ -178,7 +182,7 @@ public class EqualsTest {
    ######    일반적으로 equals 오버라이딩할 때 hashCode도 같이 오버라이딩한다.
 
 
-#
+-----------------------------
 **clone()메서드**
  * ###### 객체의 복사본을 만듧.
  * ###### protected 속성을 가지고 있음.
