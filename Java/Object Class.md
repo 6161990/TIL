@@ -14,7 +14,7 @@
  * ###### 객체의 정보를 String으로 바꾸어 사용할 때 유용함.
  * ###### 자바 클래스 중에는 이미 정의된 클래스가 많음. 많은 클래스에서 재정의하여 사용
    ###### ex)String, Integer,Calender 등
-  ```java    
+```java    
 class Book {
 
 	String title;
@@ -24,25 +24,50 @@ class Book {
 		this.title = title;
 		this.author = author;
 	}
- 
- @Override
-	public String toString() {
-		return author +","+title;
-	}
-	
 }
 public class ToStringTest{
 
-	public static void main(String[] args) {
-		Book book = new Book("토지","박경리");
-		System.out.println(book);
+	public static void main(String[] args) {				
+		Book book = new Book("토지","박경리");	
+		System.out.println(book);		// 출력 : 'chapter10.Book@54bedef2' 참조변수를 출력하면 인스턴스의 위치를 나타내는 참조 값이 나옴.
 		
 		String str = new String("토지");
-		System.out.println(str);
+		System.out.println(str);		// 출력 : '토지'  얘도 참조변수이긴 마찬가지
 	}
-
 }
  ```   
+###### => 근데 book과 str의 출력 값이 다른 이유?
+######    String 안에 toString이 들어가 있기 때문에, 자동 문자변환이 된다. 
+######	  그래서 참조 변수 str에 str.toString메서드를 사용할 수 있게된다. Object의 toString을 재정의 한 것.
+###### => book도 문자로 변환하려면, 다음과 같이 Object 클래스가 갖고있는 toString 메소드를 재정의하여 사용하면 된다. 
+```java    
+class Book {
+
+	String title;
+	String author;
+	
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	
+	@Override
+	public String toString() {		// toString 메소드 재정의하여 this.title과 this.author 받기
+		return author +","+title;
+	}
+}
+public class ToStringTest{
+
+	public static void main(String[] args) {				
+		Book book = new Book("토지","박경리");	
+		System.out.println(book);	// 출력 : "박경리,"토지"
+		
+		String str = new String("토지");
+		System.out.println(str);	// 출력 : "토지"	
+	}
+}
+ ``` 
+
 #
  **equals()메서드**
 * ###### 두 객체의 동일함을 **논리적**으로 재정의 할 수 있음.
