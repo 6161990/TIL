@@ -14,6 +14,7 @@
  * ###### 객체의 정보를 String으로 바꾸어 사용할 때 유용함.
  * ###### 자바 클래스 중에는 이미 정의된 클래스가 많음. 많은 클래스에서 재정의하여 사용
    ###### ex)String, Integer,Calender 등
+#
 **String 참조 자료형의 참조변수 출력하기**
 ```java    
 class Book {
@@ -41,6 +42,7 @@ public class ToStringTest{
 ######    String 안에 toString이 들어가 있기 때문에, 자동 문자변환이 된다. 
 ######    그래서 참조 변수 str에 str.toString메서드를 사용할 수 있게된다. Object의 toString을 재정의 한 것.
 ###### => book도 문자로 변환하려면, 다음과 같이 Object 클래스가 갖고있는 toString 메소드를 재정의하여 사용하면 된다.
+#
 **직접만든 참조 자료형의 참조변수 문자형으로 출력하기**
 ```java    
 class Book {
