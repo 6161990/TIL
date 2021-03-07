@@ -6,7 +6,7 @@
             class A  => 실상은 class A (extends Object) 
  * ###### 모든 클래스는 Object 클래스의 메서드를 사용할 수 있음.
  * ###### 모든 클래스는 Object 클래스의 일부 메서드를 재정의하여 사용할 수 있음(final로 선언된 메서드 제외하고!)
---------------- 
+
 ---------------
  **toString()메서드**  
  
@@ -136,7 +136,6 @@ public class EqualsTest {
  #
 **일반 참조자료형(Student) 클래스에 equals재정의하기** 
 ```java    
-
 class Student {
 	int studentNumber;
 	String studentName;
@@ -182,7 +181,43 @@ public class EqualsTest {
    ###### => 동일한 hashCode 값을 가짐 = hashCode()의 반환 값이 동일 (!!!실제 메모리 값이 같은 것은 아님!!!!)
    ###### => overriding 재정의를 통해 equals가 true일 때 hashCode도 같은 값이 반환될 수 있도록, 
    ######    일반적으로 equals 오버라이딩할 때 hashCode도 같이 오버라이딩한다.
+```java    
+class Student {
 
+		//생략..
+		
+	@Override
+	public boolean equals(Object obj) {     
+		if(obj instanceof Student) {	
+			Student std = (Student)obj;	
+			return (this.studentNumber == std.studentNumber);  
+		}
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		return studentNumber;		// 일반적으로 equals와 같이 오버라이딩 하는 경우가 많기 때문에,
+						// 미리 설정해둔 equals의 멤버를 이용한다. 
+	}
+	
+}
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		Integer i1 = new Integer(100);
+		Integer i2 = new Integer(100);
+		
+		System.out.println(i1.equals(i2));			//'true'
+		System.out.println(i1.hashCode());			//'100'
+		System.out.println(i2.hashCode());			//'100'
+		
+		//진짜 hashCode 알 수 있는 방법 : identityHashCode()
+		System.out.println(System.identityHashCode(i1));	//'804564176' 
+		System.out.println(System.identityHashCode(i2));	//'1421795058'
+	}
+}
+ ``` 
 -----------------------------
 -----------------------------
 **clone()메서드**
