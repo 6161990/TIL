@@ -14,6 +14,35 @@
  * ###### 객체의 정보를 String으로 바꾸어 사용할 때 유용함.
  * ###### 자바 클래스 중에는 이미 정의된 클래스가 많음. 많은 클래스에서 재정의하여 사용
    ###### ex)String, Integer,Calender 등
+  ```java    
+class Book {
+
+	String title;
+	String author;
+	
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+ 
+ @Override
+	public String toString() {
+		return author +","+title;
+	}
+	
+}
+public class ToStringTest{
+
+	public static void main(String[] args) {
+		Book book = new Book("토지","박경리");
+		System.out.println(book);
+		
+		String str = new String("토지");
+		System.out.println(str);
+	}
+
+}
+ ```   
 #
  **equals()메서드**
 * ###### 두 객체의 동일함을 **논리적**으로 재정의 할 수 있음.
@@ -35,9 +64,9 @@
 **hashCode()메서드**
  * ###### hashCode()메서드의 반환 값: 인스턴스가 저장된 가상머신의 주소를 10진수로 반환.
  * ###### 두 개의 서로 다른 메모리에 위치한 인스턴스가 동일하다는 것은? 
-   ###### 논리적으로 동일 : equals의 반환값이 true
-   ###### 동일한 hashCode 값을 가짐 = hashCode()의 반환 값이 동일 
-   ###### =>overriding 재정의를 통해 equals가 true일 때 hashCode도 같은 값이 반환될 수 있도록.
+   ###### => 논리적 동일 : equals의 반환값이 true
+   ###### => 동일한 hashCode 값을 가짐 = hashCode()의 반환 값이 동일 
+   ###### => overriding 재정의를 통해 equals가 true일 때 hashCode도 같은 값이 반환될 수 있도록.
  * ###### 일반적으로 equals 오버라이딩할 때 hashCode도 같이 오버라이딩된다. 
 
 #
