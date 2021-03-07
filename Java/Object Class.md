@@ -226,8 +226,65 @@ public class EqualsTest {
  * ###### 기본 틀(prototype)으로 부터 같은 속성 값을 가진 객체의 복사본을 생성할 수 있음.
  * ###### 복제 가능한 인터페이스를 생성하고(java virtual machine에게 알려줘야하니까) 구현해주어야함. 
  * ###### 객체지향 프로그래밍의 정보은닉에 위배되는 가능성이 있으므로 복제할 객체는 clonealbe 인터페이스를 명시해야함.
+```java    
+class Book implements Cloneable{			// "복제할 수 있다" 달아주기 
+
+	String title;
+	String author;
+	
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	@Override
+	public String toString() {
+		return author +","+title;
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {	
+		return super.clone();
+	}	
+}
+public class ToStringTest{
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Book book = new Book("토지","박경리");
+		System.out.println(book);		//'박경리', '토지' 
+		
+		Book book2 = (Book)book.clone(); //Object에서 Book으로 명시적 형변환필요. 
+		System.out.println(book2);		//'박경리', '토지' 
+	}
+}
+ ``` 
+
 ----------------------------
 ----------------------------
 **finalize()**
-* ###### 객체가 소멸될 때 호출하기로 한 메소드.
-* ###### 참고 :garbage collection 인스턴스를 만들고 변수를 사용한 뒤, 더 이상 사용하지 않는다는 것을 인지해서 자동으로 쓰지않는 data를 삭제한다. 
+* ###### 객체가 소멸될 때 garbage collector에서 호출하기로 한 메소드.
+* ###### 사용가자 부르는 메서드아님. garbage collector가 수행함.
+* ###### garbage collection : 인스턴스를 만들고 변수를 사용한 뒤, 더 이상 사용하지 않는다는 것을 인지해서 자동으로 쓰지않는 data를 삭제한다. 
+```java    
+class Book implements Cloneable{			
+
+	String title;
+	String author;
+	
+	public Book(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	@Override
+	public String toString() {
+		return author +","+title;
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {	
+		return super.clone();
+	}
+	@Override
+	protected void finalize() throws Throwable {			//객체가 힙 메모리에서 해제될 때 자동을 호출.
+		// TODO Auto-generated method stub
+		super.finalize();
+	}
+}
+}
