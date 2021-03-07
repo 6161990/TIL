@@ -282,7 +282,7 @@ class Book implements Cloneable{
 		return super.clone();
 	}
 	@Override
-	protected void finalize() throws Throwable {			//객체가 힙 메모리에서 해제될 때 자동을 호출.
+	protected void finalize() throws Throwable {			//객체가 힙 메모리에서 해제될 때 자동으로 호출.
 		// TODO Auto-generated method stub
 		super.finalize();
 	}
