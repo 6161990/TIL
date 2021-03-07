@@ -14,6 +14,7 @@
  * ###### 객체의 정보를 String으로 바꾸어 사용할 때 유용함.
  * ###### 자바 클래스 중에는 이미 정의된 클래스가 많음. 많은 클래스에서 재정의하여 사용
    ###### ex)String, Integer,Calender 등
+**String 참조 자료형의 참조변수 출력하기**
 ```java    
 class Book {
 
@@ -39,7 +40,8 @@ public class ToStringTest{
 ###### => 근데 book과 str의 출력 값이 다른 이유?
 ######    String 안에 toString이 들어가 있기 때문에, 자동 문자변환이 된다. 
 ######	  그래서 참조 변수 str에 str.toString메서드를 사용할 수 있게된다. Object의 toString을 재정의 한 것.
-###### => book도 문자로 변환하려면, 다음과 같이 Object 클래스가 갖고있는 toString 메소드를 재정의하여 사용하면 된다. 
+###### => book도 문자로 변환하려면, 다음과 같이 Object 클래스가 갖고있는 toString 메소드를 재정의하여 사용하면 된다.
+**직접만든 참조 자료형의 참조변수 문자형으로 출력하기**
 ```java    
 class Book {
 
@@ -84,15 +86,95 @@ public class ToStringTest{
            studentKimWooBin은 다른 힙메모리에 저장됨. 
            But, 물리적으로는 다른 위치에 있지만 논리적으로는 같은 학생임.
                  equals로 구현.
-                 
+**이미 equals가 재정의되어있는 String 참조자료형 클래스**
+###### => String 안에 equals를 재정의함. 클래스 String 이 equals를 오버라이딩해서 재정의를 하게 되면(각각의 클래스에 맞게 재정의하게되면),
+######    String 같은 경우는 "문자열이 같으면 같은 놈이당!!" 라고 true를 반환하게 이미 해놓음. 사용자가 재정의할 필요 없음.
+```java    
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		String str1 = new String("abc");
+		String str2 = new String("abc");
+		
+		System.out.println(str1 == str2);
+		System.out.println(str1.equals(str2));
+	
+	}
+}
+ ```    
+**equals재정의가 필요한 일반 참조자료형(Student) 클래스**
+```java    
+
+class Student {
+	int studentNumber;
+	String studentName;
+	
+	public Student (int studentNumber, String studentName) {
+		this.studentNumber = studentNumber;
+		this.studentName = studentName;
+	}
+}
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		Student Kim = new Student(1004,"김순수");
+		Student Kim2 = Kim;
+		Student Soo = new Student(1004,"김순수");
+		
+		System.out.println(Kim == Soo);			//false : 물리적으로 동일하지 않음
+		System.out.println(Kim == Kim2);		//true 	: 물리적으로 동일함.
+		System.out.println(Kim.equals(Soo));		//false : 논리적으로 동일하지 않음 -> 실질적으로는 동일함. 입증을 위해 equals재정의필요.
+	}
+}
+ ``` 
+**일반 참조자료형(Student) 클래스에 equals재정의하기** 
+```java    
+
+class Student {
+	int studentNumber;
+	String studentName;
+	
+	public Student (int studentNumber, String studentName) {
+		this.studentNumber = studentNumber;
+		this.studentName = studentName;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {     //여기서 obj는 넘어온 변수(Soo)
+		if(obj instanceof Student) {	// A instanceof B : A가 정말 B 타입의 인스턴스 였느냐!
+			Student std = (Student)obj;	// 그럼 obj의 다운캐스팅 형변환필요 
+			return (this.studentNumber == std.studentNumber);  // => 기준점.equals(넘어온 애)
+		}
+		return false;
+	}
+}
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		Student Kim = new Student(1004,"김순수");
+		Student Kim2 = Kim;
+		Student Soo = new Student(1004,"김순수");
+		
+		System.out.println(Kim == Soo);			//false : 물리적으로 동일하지 않음
+		System.out.println(Kim == Kim2);		//true 	: 물리적으로 동일함.
+		System.out.println(Kim.equals(Soo));		//true : equals 재정의를 통해 논리적 동일함 입증.
+	}
+}
+ ``` 
  #
 **hashCode()메서드**
- * ###### hashCode()메서드의 반환 값: 인스턴스가 저장된 가상머신의 주소를 10진수로 반환.
+ * ###### hashCode()메서드의 반환 값: 인스턴스가 저장된 가상머신의 주소를 10진수로 반환.  
+ 
+  		System.out.println(Kim);      //chapter10.Student@54bedef2   : 패키지이름.인스턴스 메모리 주소
+		
+		System.out.println(Kim.hashCode());	//1421795058  : 인스턴스 메모리 주소를 10진수로 반환
+		
  * ###### 두 개의 서로 다른 메모리에 위치한 인스턴스가 동일하다는 것은? 
    ###### => 논리적 동일 : equals의 반환값이 true
-   ###### => 동일한 hashCode 값을 가짐 = hashCode()의 반환 값이 동일 
-   ###### => overriding 재정의를 통해 equals가 true일 때 hashCode도 같은 값이 반환될 수 있도록.
- * ###### 일반적으로 equals 오버라이딩할 때 hashCode도 같이 오버라이딩된다. 
+   ###### => 동일한 hashCode 값을 가짐 = hashCode()의 반환 값이 동일 (!!!실제 메모리 값이 같은 것은 아님!!!!)
+   ###### => overriding 재정의를 통해 equals가 true일 때 hashCode도 같은 값이 반환될 수 있도록, 
+   ######    일반적으로 equals 오버라이딩할 때 hashCode도 같이 오버라이딩한다.
+
 
 #
 **clone()메서드**
