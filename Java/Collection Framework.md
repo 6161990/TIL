@@ -25,7 +25,7 @@
 **맛보기**
 <img src="https://user-images.githubusercontent.com/74708028/110287801-7089e880-802a-11eb-8b7f-e2651aa0f794.png" width="550" height="700">
 #
-**컬렉션 프레임워크 생활코딩 **
+**컬렉션 프레임워크 생활코딩**
 ![Chapter 11 컬렉션 프레임워크 - 02 컬렉션 프레임워크란_페이지_07](https://user-images.githubusercontent.com/74708028/110283485-821bc200-8023-11eb-9334-b9c8874d776f.png)
 
 ![Chapter 11 컬렉션 프레임워크 - 02 컬렉션 프레임워크란_페이지_08](https://user-images.githubusercontent.com/74708028/110283528-9495fb80-8023-11eb-8b21-dea052df6ef5.png)
