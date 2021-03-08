@@ -8,7 +8,7 @@
 * ###### 실제 사용되는 참조 자료형으로의 변환은 컴파일러가 검증하므로 안정적인 프로그래밍 방식
 * ###### 제네릭 프로그래밍의 효용:
   ###### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
-  ###### 그건 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
+  ###### 그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
   ###### 타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
 * ###### 주의 ) 제네릭은 참조 자료형만 가능, 기본 자료형 (int, char ...) 은 자바 안에서 객체가 아니기 때문에 불가능. 
   ######     => 기본 데이터 타입의 제네릭 사용법?
@@ -29,9 +29,61 @@
                     return material;
             }
 #
-**제네릭과 상속 <T extends 클래스>** 
-###### T 대신에 사용될 자료형을 제한하기 위해 사용. 
 
+
+**제네릭과 상속 <T extends 클래스> (interface)** 
+###### T 대신에 사용될 자료형을 제한하기 위해 사용. 
+**class extends**
+```java
+abstract class Info{                   //abstract 
+  public abstract int getLevel();
+}
+class EmployeeInfo extends Info{      //추상 클래스를 상속하기
+  public int rank;
+  EmployeeInfo(int rank){ 
+    this.rank = rank;
+  }
+  public int getLevel(){
+    return this.rank; 
+  }
+}
+class Person<T extends Info> {      //제네릭 T로 올 수 있는 데이터타입은 1. Info 2. EmployeeInfo
+  public T info;
+  Person (T info){
+    this.info = info;
+  }
+  
+  public class GenericDemo{
+    public static void main(String[] args){
+      Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));        
+      Person<String> p2 = new Person<String>("부정");       //but, <String> 은 아님. Person은 Info의 상속이니까. Error
+     } 
+  }
+```
+**interface extends**
+```java
+interface Info{         //interface
+  int getLevel();
+}
+class EmployeeInfo implements Info{      //interface를 실현하는 implements
+  public int rank;
+  EmployeeInfo(int rank){ 
+    this.rank = rank;
+  }
+}
+class Person<T extends Info> {          //그럼 얘도 implements여야 하는거 아닌가?
+  public T info;                        //Nope! 서 'extends'는 상속이 아니라 부모가 누군지 알려주는 역할
+  Person (T info){
+    this.info = info;
+  }
+  
+  public class GenericDemo{
+    public static void main(String[] args){
+      Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
+      Person<String> p2 = new Person<String>("부정");
+     } 
+  }
+```
 
 **자료형 매개 변수가 두 개 이상일 때**
 ```java
@@ -53,6 +105,7 @@ public class Point<T, V>{
 }
 ```
 **제너릭 메서드**
+* ###### 일반 클래스에서 쓰일 수 있음. 
 * ###### 메서드의 매개 변수를 자료형 매개 변수로 사용하는 메서드
 ```java
 public class GenericMethod{
@@ -108,55 +161,94 @@ class Person<T, S> {
 }
 ```
 #
-**제네릭과 extends(interface)**
-**class extends**
+-------------------------------
+#### 제네릭을 이용한 3D 프린팅 프로그래밍**
+**전체 재료 관리 : 여기서 상속 받은 재료만 3D프린팅 가능하도록 제한하기 위해**
 ```java
-abstract class Info{                   //abstract 
-  public abstract int getLevel();
+public abstract class Meterial {
+	public abstract void doPrinting(); 
 }
-class EmployeeInfo extends Info{      //추상 클래스를 상속하기
-  public int rank;
-  EmployeeInfo(int rank){ 
-    this.rank = rank;
-  }
-  public int getLevel(){
-    return this.rank; 
-  }
-}
-class Person<T extends Info> {      //제네릭 T로 올 수 있는 데이터타입은 1. Info 2. EmployeeInfo
-  public T info;
-  Person (T info){
-    this.info = info;
-  }
-  
-  public class GenericDemo{
-    public static void main(String[] args){
-      Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));        
-      Person<String> p2 = new Person<String>("부정");       //but, <String> 은 아님. Person은 Info의 상속이니까. Error
-     } 
-  }
 ```
-**interface extends**
+**플라스틱 재료**
 ```java
-interface Info{         //interface
-  int getLevel();
+public class Plastic extends Meterial{
+
+	public String toString() {
+		return "재료는 Plastic 입니다";
+	}
+
+	@Override
+	public void doPrinting() {
+		System.out.println("Plastic으로 프린팅 합니다");		
+	}
 }
-class EmployeeInfo implements Info{      //interface를 실현하는 implements
-  public int rank;
-  EmployeeInfo(int rank){ 
-    this.rank = rank;
-  }
-}
-class Person<T extends Info> {          //그럼 얘도 implements여야 하는거 아닌가?
-  public T info;                        //Nope! 서 'extends'는 상속이 아니라 부모가 누군지 알려주는 역할
-  Person (T info){
-    this.info = info;
-  }
-  
-  public class GenericDemo{
-    public static void main(String[] args){
-      Person<EmployeeInfo> p1 = new Person<EmployeeInfo>(new EmployeeInfo(1));
-      Person<String> p2 = new Person<String>("부정");
-     } 
-  }
 ```
+**파우더 재료**
+```java
+public class Powder extends Meterial{
+
+	public String toString() {
+		return "재료는 Powder 입니다";
+	}
+
+	@Override
+	public void doPrinting() {
+
+		System.out.println("Powder로 프린팅 합니다");
+	}
+}
+```
+
+**물 재료(3D로 프린팅 불가능한 재료. 즉, 제한되어야 하는 제네릭)**
+```java
+  public class Water {}   //Meterial 상속 받지 못함.
+```
+**3D 프린터기**
+```java
+public class GenericPrinter<T extends Meterial> {
+
+	private T material;
+
+	public T getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(T material) {
+		this.material = material;
+	}
+	
+	public String toString() {
+		return material.toString();
+	}
+	
+	public void printing() {
+		material.doPrinting();
+	}
+}
+```
+**테스트**
+```java
+public class GenericPrinterTest {
+
+	public static void main(String[] args) {
+
+		GenericPrinter<Powder> powderPrinter = new GenericPrinter<Powder>();
+		Powder powder = new Powder();
+		powderPrinter.setMaterial(powder);
+		System.out.println(powderPrinter);
+		
+		GenericPrinter<Plastic> plasticPrinter = new GenericPrinter<Plastic>();
+		Plastic plastic = new Plastic();
+		plasticPrinter.setMaterial(plastic);
+		System.out.println(plasticPrinter);
+		
+		powderPrinter.printing();
+		plasticPrinter.printing();
+		
+		GenericPrinter printer = new GenericPrinter();  //제네릭 생략, 많이 쓰이진 않음.
+	}
+}
+```
+
+
+
