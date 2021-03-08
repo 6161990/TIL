@@ -19,6 +19,7 @@
   ###### size는 그 안에 들어간 요소 갯수
  <img src="https://user-images.githubusercontent.com/74708028/110307804-ad61d980-8042-11eb-9199-66117b41e77f.jpg" width="900" height="550">   
 
+#
 #### ArrayList와 LinkedList
 * ###### 둘 다 자료의 순차적 구조를 구현한 클래스
 * ###### ArrayList는 배열을 구현한 클래스로 논리적 순서와 물리적 순서가 동일함
@@ -27,3 +28,27 @@
 * ###### LinkedList의 장점 : 자료의 추가와 삭제가 빠름  
 * ###### LinkedList의 구조 
 <img src="https://user-images.githubusercontent.com/74708028/110307717-958a5580-8042-11eb-8fec-f039a4f7b9bd.jpg" width="700" height="450">
+```java
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+
+		LinkedList<String> myList = new LinkedList<String>();
+		
+		myList.add("A");
+		myList.add("B");
+		myList.add("C");
+		
+		System.out.println(myList);
+		myList.add(1, "D");
+		System.out.println(myList);
+		myList.removeLast();
+		System.out.println(myList);
+		
+		for(int i=0; i<myList.size(); i++) {
+			String s = myList.get(i);
+			System.out.println(s);
+		}
+	}
+}
+```
