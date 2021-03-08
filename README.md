@@ -22,6 +22,8 @@
 * [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 * [Object 클래스](https://github.com/6161990/TIL/blob/main/Java/Object%20Class.md)
 * [Class 클래스](https://github.com/6161990/TIL/blob/main/Java/Class.md)
+* [String, Wrapper ](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
+* [제네릭 프로그래밍](https://github.com/6161990/TIL/blob/main/Java/Generic%20Programming.md)
 
 --------------   
 
