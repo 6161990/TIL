@@ -22,8 +22,11 @@
 ###### Map을 사용하는 객체는 key-value 쌍으로 되어 있고 key는 중복될 수 없음
 ###### 하위에 Hashtable, HashMap, TreeMap이 있음.
 #
-**맛보기**
+
+**맛보기 정리**
+
 <img src="https://user-images.githubusercontent.com/74708028/110287801-7089e880-802a-11eb-8b7f-e2651aa0f794.png" width="550" height="700">
+
 #
 **컬렉션 프레임워크 생활코딩**
 ![Chapter 11 컬렉션 프레임워크 - 02 컬렉션 프레임워크란_페이지_07](https://user-images.githubusercontent.com/74708028/110283485-821bc200-8023-11eb-9334-b9c8874d776f.png)
