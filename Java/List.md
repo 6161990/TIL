@@ -27,7 +27,8 @@
 * ###### LinkedList는 논리적으로 순차적인 구조지만, 물리적으로는 순차적이지 않을 수 있음
 * ###### LinkedList의 장점 : 자료의 추가와 삭제가 빠름  
 * ###### LinkedList의 구조 
-<img src="https://user-images.githubusercontent.com/74708028/110307717-958a5580-8042-11eb-8fec-f039a4f7b9bd.jpg" width="700" height="450">
+<img src="https://user-images.githubusercontent.com/74708028/110307717-958a5580-8042-11eb-8fec-f039a4f7b9bd.jpg" width="700" height="450"> 
+
 ```java
 public class LinkedListTest {
 
