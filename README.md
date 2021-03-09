@@ -29,7 +29,7 @@
 * [Stack, Queue](https://github.com/6161990/TIL/blob/main/Java/Stack%2C%20Queue.md)
 * [Set 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Set%20Interface.md)
 * [Map 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Map%20Interface.md)
-
+* [Inner Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
 
 
 
