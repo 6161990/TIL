@@ -1,4 +1,5 @@
 ### Map 인터페이스
+###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
 * #### key-value pair 의 객체를 관리하는데 필요한 메서드가 정의됨
 * #### key는 중복될 수 없음
 * #### 검색을 위한 자료구조
