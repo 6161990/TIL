@@ -30,6 +30,8 @@
 * [Set 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Set%20Interface.md)
 * [Map 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Map%20Interface.md)
 * [Inner Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
+* [람다식](https://github.com/6161990/TIL/blob/main/Java/Lambda%20Expression.md)
+
 
 
 
