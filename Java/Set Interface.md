@@ -306,6 +306,7 @@ public class MemberTreeSetTest {
                 //Lee회원님의 아이디는 300입니다.
 	}
 }
+```
 #
 **이미 Comparable이 구현된 경우, Comparator를 이용하여 다른 정렬 방식을 정의해보기**
 ###### 원래 구현은 오름차순이었지만 여기서는 내림차순으로 구현하고 싶을 때,  Comparator로 다시 정의
