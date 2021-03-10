@@ -64,12 +64,12 @@ public class ExceptionTest {
     	fis = new FileInputStream("a.txt");	
     } catch (FileNotFoundException e) {
 	System.out.println(e);
-        return;  //-----------finally수행 후 , 바로 return
+        return;  //---finally수행 후 , 바로 return
     }finally{
       	try{
           fis.close();//-------null인 상태에서 open안되고 close수행하면 nullPointException뜸
           System.out.println("finally");
-        } catch (Exception e) { //-----IOException에서 Exception으로 변경한 이유.
+        } catch (Exception e) { //--IOException에서 Exception으로 변경한 이유.
 	  System.out.println(e);
 	}
     }
@@ -108,7 +108,7 @@ public class AutoCloseTest {
   public static void main(String[] args) {
 				 
 	try(AutoCloseObj obj = new AutoCloseObj()){
-		throw new Exception();  //---------예외 일부러발생시켜도 
+		throw new Exception();  //예외 일부러발생시켜도 
 			
 	}catch(Exception e) {
 		System.out.println(e);  //예외가 있어도 없어도 close호출. 출력, "close()가 호출되었습니다."
@@ -128,7 +128,7 @@ public class AutoCloseTest {
           }
   * ###### 자바 9 이후
           AutoCloseObj obj = new AutoCloseObj();
-          try (obj){---------------------------------------------외부에서 선언한 변수를 그대로 쓸 수 있음 
+          try (obj){--------------외부에서 선언한 변수를 그대로 쓸 수 있음 
             throw new Exception( );
           }catch(Exception e){
             System.out.println("예외 부분입니다");
@@ -257,3 +257,16 @@ public class IDFormatTest {
 
 }
 ```
+
+-------------------------------------------
+#### 예외 총정리
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_13](https://user-images.githubusercontent.com/74708028/110584864-3e57c280-81b3-11eb-999b-93e68e6f7be7.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_14](https://user-images.githubusercontent.com/74708028/110584872-4283e000-81b3-11eb-8c76-e26327713ae9.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_15](https://user-images.githubusercontent.com/74708028/110584875-444da380-81b3-11eb-8f62-4bae0cb80ab8.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_16](https://user-images.githubusercontent.com/74708028/110584882-46affd80-81b3-11eb-9480-0ee48284bd98.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_17](https://user-images.githubusercontent.com/74708028/110584892-49aaee00-81b3-11eb-9121-8a2e165b35ed.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_18](https://user-images.githubusercontent.com/74708028/110584897-4c0d4800-81b3-11eb-8550-8cd51b7dd39e.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_19](https://user-images.githubusercontent.com/74708028/110584901-4e6fa200-81b3-11eb-96f8-6cd64ac89dcc.png)
+![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_20](https://user-images.githubusercontent.com/74708028/110584909-50d1fc00-81b3-11eb-9669-a0c92cb8e73c.png)
+
+
