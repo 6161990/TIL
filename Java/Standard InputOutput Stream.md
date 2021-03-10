@@ -1,4 +1,5 @@
 ### 표준 입출력 스트림 Standard InputOutput Stream
+###### 참고 : [I/O 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/IO%20Stream.md)
 #### System 클래스의 표준 입출력 멤버 : static이기 때문에 생성자없이 쓸 수 있었음
 
     public class System{
