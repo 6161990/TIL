@@ -22,6 +22,9 @@
    ###### 접두사 Buffered는 버퍼링 제공하는 보조스트림.
 #
 **자료의 종류에 따른 스트림**
+
+<img src="https://user-images.githubusercontent.com/74708028/110588601-9513cb00-81b8-11eb-9479-cb74e6afc7a4.jpg" width="450" height="290"/>
+
 * ##### 바이트 단위 스트림 : 바이트 단위로 자료를 읽고 씀 (동영상, 음악파일 등)
 * ##### 문자 단위 스트림 : 문자는 2 바이트씩 처리해야함
 * ##### 스트림의 예 
@@ -29,6 +32,10 @@
 * ###### 문자 단위 스트림 : FileReader, FileWriter, BufferedReader, BufferedWriter 등
 #
 **기능에 따른 스트림**
+
+<img src="https://user-images.githubusercontent.com/74708028/110588681-b5dc2080-81b8-11eb-84cc-0ef99ca58181.jpg" width="470" height="290"/>
+
+
 * ##### 기반스트림 : 대상에 직접 자료를 읽고 쓰는 기능의 스트림
 * ##### 보조스트림 : 직접 읽고 쓰는 기능은 없고 추가적인 기능을 제공해주는 스트림
   #####             기반 스트림이나 또 다른 보조 스트림을 생성자의 매개변수로 포함함
