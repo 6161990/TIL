@@ -201,11 +201,12 @@ public static void main(String[] args){
 * ###### JDK에서 제공되는 예외 클래스 외에 사용자가 필요에 의해 클래스를 정의하여 사용
 * ###### 기존 JDK 클래스에서 상속받아 예외 클래스 만듦.
 * ###### throw 키워드로 예외를 발생시킴, throws는 던지는 것.
-	public class IDFormatException extends Exception{
-	 public IDFormatException(String message){--------생성자의 매개변수로, 예외 상황 메세지를 받음
-	   super(message);
-	 }
-	}
+
+	   public class IDFormatException extends Exception{
+	     public IDFormatException(String message){--------생성자의 매개변수로, 예외 상황 메세지를 받음
+	     super(message);
+	     }
+	   }
 ```java
 public class IDFormatException extends Exception{
 	
