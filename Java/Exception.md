@@ -259,7 +259,8 @@ public class IDFormatTest {
 ```
 
 -------------------------------------------
-#### 예외 총정리
+## 예외 총정리
+#
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_13](https://user-images.githubusercontent.com/74708028/110584864-3e57c280-81b3-11eb-999b-93e68e6f7be7.png)
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_14](https://user-images.githubusercontent.com/74708028/110584872-4283e000-81b3-11eb-8c76-e26327713ae9.png)
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_15](https://user-images.githubusercontent.com/74708028/110584875-444da380-81b3-11eb-8f62-4bae0cb80ab8.png)
