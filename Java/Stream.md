@@ -19,13 +19,13 @@
 
 		int[] arr = {1,2,3,4,5};
 		
-		int sum = Arrays.stream(arr).sum();
-		int count = (int)Arrays.stream(arr).count();
+		int sum = Arrays.stream(arr).sum();   
+		int count = (int)Arrays.stream(arr).count(); //재활용이 안되기 때문에 필요시마다 Arrays.stream(arr)스트림 생성
 		
 		System.out.println(sum);
 		System.out.println(count);
 		
-		System.out.println(Arrays.stream(arr).reduce(0, (a,b)->a+b));
+		System.out.println(Arrays.stream(arr).reduce(0, (a,b)->a+b));   //reduce
 		
 	}
 }
@@ -41,13 +41,20 @@
 		sList.add("Edward");
 		sList.add("Jack");
 		
-		Stream<String> stream = sList.stream();
-		stream.forEach(s->System.out.print(s + " "));
+		
+		//배열과는 다르게 stream 메서드를 바로 사용할 수 있음. 배열에서는 Arrays.stream(arr)으로 안에다 배열의 종류(arr)를 넣어주었음
+		Stream<String> stream = sList.stream();  
+		stream.forEach(s->System.out.print(s + " "));  //'Tomas Edward Jack'
 		System.out.println();
 		
-		sList.stream().sorted().forEach(s->System.out.print(s + " "));
+		//sorted(). -> 중간 연산에서 사용(정렬. String은 comparable이 구현되어있어서 sort이용가능. 다른 곳에서는 구현필요)
+		sList.stream().sorted().forEach(s->System.out.print(s + " ")); //'Edward Jack Tomas'
+		
+		
 		System.out.println();
-		sList.stream().map(s->s.length()).forEach(n->System.out.println(n));
+		
+		//map -> 중간 연산에서 이름꺼내올 때 사용
+		sList.stream().map(s->s.length()).forEach(n->System.out.println(n)); // '5' '6' '4'
 		
 	}
 }
@@ -83,6 +90,45 @@
 
           Array.stream(arr).reduce(초기값, (전달되는 요소) -> (각 요소가 수행해야 할 기능)); 
           Array.stream(arr).reduce(0, (a,b) -> (a+b));
+#### reduce()이용해 길이 제일 긴 단어 고르기
+**reduce 연산 사용법 1**
+```java
+public class ReduceTest{
+
+public static void main(String[] args) {
+	String[] greetings = {"안녕하세요~~~~~", "hello", "Good moring", "반갑습니다"};
+	
+	System.out.println(Arrays.stream(greetings).reduce("", (s1, s2)->
+		{if (s1.getBytes().length >= s2.geyBytes().length) //람다식
+			return s1;
+		 else return s2;
+	
+		}));
+	}
+}
+
+```
+**reduce 연산 사용법 2**
+```java
+class CompareString implements BinaryOperator<String>{
+
+	//강제구현 메소드
+	@Override
+	public String apply(String s1, String s2) {  
+		if(s1.getBytes().length >= s2.getBytes().length) //람다식
+			return s1;
+		else return s2;
+	}
+}
+
+public class ReduceTestVerTwo{
+
+public static void main(String[] args) {
+	String[] greetings = {"안녕하세요~~~~~", "hello", "Good moring", "반갑습니다"};
+	
+	//reduce(BinaryOperator가 구현된 클래스를 get으로 받는다.)
+	System.out.println(Arrays.stream(greetings).reduce(new CompareString()).get());
+```
           
 
                                  
