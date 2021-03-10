@@ -134,3 +134,126 @@ public class AutoCloseTest {
             System.out.println("예외 부분입니다");
           }
             
+#
+#### 예외 처리 미루기
+###### throws를 사용하여 예외처리 미루기
+* ###### try{} 블록으로 예외를 처리하지않고, 메서드 선언부에 throws 를 추가
+* ###### 예외가 발생한 메서드에서 예외 처리를 하지 않고 이 메서드를 호출한 곳에서 예외처리를 한다는 의미
+* ###### main()에서 throws를 사용하면 가상머신에서 처리됨
+```java
+public class ThrowsException {
+
+	public Class loadClass(String fileName, String className) throws FileNotFoundException, ClassNotFoundException {
+		FileInputStream fis = new FileInputStream(fileName);
+		Class c = Class.forName(className);
+		return c;
+	}
+	
+	public static void main(String[] args)  {
+
+		ThrowsException test = new ThrowsException();
+		
+		try {
+			test.loadClass("a.txt", "java.lang.string"); //'s'소문자로 잘못입력해 예외발생시킴
+	
+		
+		} catch (FileNotFoundException e) {
+			System.out.println(e);   //"java.io.FileNotFoundException: b.txt 지정된 파일을 찾을 수 없습니다"
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} 
+		
+	}
+
+}
+```
+#
+#### 다중 예외처리하기
+* ###### 하나의 try{}블록에서 여러 예외가 발생하는 경우 catch{} 블록 한곳에서 처리하거나 
+###### 여러 catch{} 블록으로 나누어 처리할 수 있음
+* ###### 가장 최상위 클래스인 Exception 클래스는 가장 마지막 블록에 위치해야함.
+###### => 모든 것을 포함하는 예외클래스이지만, 상황에 맞는 log를 남기기위해 하위 예외를 사용하는 것임
+  
+   	public static void main(String[] args){
+	  ThrowsException test = new ThrowsException();
+	  try {
+	   test.loadClass("a.txt","java.lang.String");
+	  } catch (FileNotFoundException e){
+	   e.printStackTrace( );
+	  } catch (ClassNotFoundException e){
+	   e.printStackTrace( );
+	  } catch(Exception e){ ---------Exception 클래스로 그 외 예외상황처리
+	   e.printStackTrace( );
+	  }
+	 } 
+**한꺼번에 다중처리**	 
+```java
+public static void main(String[] args){
+	  ThrowsException test = new ThrowsException();
+	  try {
+	   test.loadClass("a.txt","java.lang.String");
+	  } catch (FileNotFoundException | ClassNotFoundException e){
+	   e.printStackTrace( );
+	  }
+```
+#	 
+#### 사용자 정의 예외	 
+* ###### JDK에서 제공되는 예외 클래스 외에 사용자가 필요에 의해 클래스를 정의하여 사용
+* ###### 기존 JDK 클래스에서 상속받아 예외 클래스 만듦.
+* ###### throw 키워드로 예외를 발생시킴, throws는 던지는 것.
+	public class IDFormatException extends Exception{
+	 public IDFormatException(String message){--------생성자의 매개변수로, 예외 상황 메세지를 받음
+	   super(message);
+	 }
+	}
+```java
+public class IDFormatException extends Exception{
+	
+	public IDFormatException(String message) {
+		super(message);
+	}
+}
+```
+```java
+public class IDFormatTest {
+	
+	private String userID;
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) throws IDFormatException {
+	
+		if (userID == null) {
+			throw new IDFormatException("아이디는 null 일수 없습니다");
+		}
+		else if( userID.length() < 8 || userID.length() > 20) {
+			throw new IDFormatException("아이디는 8자 이상 20자 이하로 쓰세요");
+		}
+				
+		this.userID = userID;
+	}
+
+	public static void main(String[] args) {
+		
+		IDFormatTest idTest = new IDFormatTest();
+		
+		String myId = null;
+		
+		try {
+			idTest.setUserID(myId);
+		} catch (IDFormatException e) {
+			System.out.println(e);
+		}
+		
+		myId = "123456";
+		try {
+			idTest.setUserID(myId);
+		} catch (IDFormatException e) {
+			System.out.println(e);
+		}
+	}
+
+}
+```
