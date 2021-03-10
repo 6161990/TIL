@@ -16,11 +16,12 @@
 #
 **try - catch 문으로 예외 처리 하기**
 
-              try{
-                예외가 발생할 수 있는 코드 부분    // 예외가 발생하면 바로 중단되고 catch의 예외 타입과 매치가되면 거기로 넘어감
-              } catch(처리할 예외 타입 e){
-                try 블록 안에서 예외가 발생했을 때 수행되는 부분
-              }
+      try{
+        예외가 발생할 수 있는 코드 부분    
+	// 예외가 발생하면 바로 중단되고 catch의 예외 타입과 매치가되면 거기로 넘어감
+      } catch(처리할 예외 타입 e){
+         try 블록 안에서 예외가 발생했을 때 수행되는 부분
+      }
 ```java
 public class ArrayExceptionTest {
 
@@ -52,24 +53,25 @@ public class ArrayExceptionTest {
 ```java
 public class ExceptionTest {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		
     FileInputStream fis = null;
-    try{
-	     fis = new FileInputStream("a.txt");	
-		} catch (FileNotFoundException e) {
-			System.out.println(e);
-      return;  //---------------------------finally수행 후 , 바로 return
-		}finally{
-      try{
-        fis.close();//------------------null인 상태에서 open안되고 close수행하면 nullPointException뜸
-        System.out.println("finally");
-      }
-    } catch (Exception e) { //------------IOException에서 Exception으로 변경한 이유.
-			System.out.println(e);
-		}
+    
+    try {
+    	fis = new FileInputStream("a.txt");	
+    } catch (FileNotFoundException e) {
+	System.out.println(e);
+        return;  //-----------finally수행 후 , 바로 return
+    }finally{
+      	try{
+          fis.close();//-------null인 상태에서 open안되고 close수행하면 nullPointException뜸
+          System.out.println("finally");
+        } catch (Exception e) { //-----IOException에서 Exception으로 변경한 이유.
+	  System.out.println(e);
 	}
-  System.out.println("end");  // 여기는 출력기 안됨. finally수행하고 바로 return이 됐기때문. return없으면 end가 출력된다.
+    }
+  // 여기는 출력이 안됨. finally수행하고 바로 return이 됐기때문. return없으면 end가 출력된다.
+  System.out.println("end");  
 }
 ```
  #            
@@ -100,15 +102,15 @@ public class ExceptionTest {
 ```java
 public class AutoCloseTest {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 				 
-		try(AutoCloseObj obj = new AutoCloseObj()){
-			throw new Exception();  //----------------예외 일부러발생시켜도 
+	try(AutoCloseObj obj = new AutoCloseObj()){
+		throw new Exception();  //---------예외 일부러발생시켜도 
 			
-		}catch(Exception e) {
-			System.out.println(e);  //예외가 있어도 없어도 close호출. 출력, "close()가 호출되었습니다."
-		}
+	}catch(Exception e) {
+		System.out.println(e);  //예외가 있어도 없어도 close호출. 출력, "close()가 호출되었습니다."
 	}
+   }
 }
 ```
       
