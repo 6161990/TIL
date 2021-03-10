@@ -13,18 +13,18 @@
 **입출력 스트림과 출력 스트림(I/O 대상 기준에 따른 스트림)**
 * ##### 입력 스트림: 대상으로부터 자료를 읽어들이는 스트림
 * ##### 출력 스트림: 대상으로부터 자료를 출력하는 스트림
-  ##### 스트림의 예 
+* ##### 스트림의 예 
 * ###### 입력 스트림 : FileInPutStream, FileReader, BufferedInputStream, BufferedReader 등
 * ###### 출력 스트림 : FileOutputStream, FileWriter, BufferedOutputStream, BufferedWriter 등
-  ###### 접미사 InPutStream, FileOutputStream 은 Byte 단위.
-  ###### 접미사 Reader, Writer 는 문자 단위. 
-  ###### 접두사 File은 어떤 목적지가 있는 기반스트림.
-  ###### 접두사 Buffered는 버퍼링 제공하는 보조스트림.
+   ###### 접미사 InPutStream, FileOutputStream 은 Byte 단위.
+   ###### 접미사 Reader, Writer 는 문자 단위. 
+   ###### 접두사 File은 어떤 목적지가 있는 기반스트림.
+   ###### 접두사 Buffered는 버퍼링 제공하는 보조스트림.
 #
 **자료의 종류에 따른 스트림**
 * ##### 바이트 단위 스트림 : 바이트 단위로 자료를 읽고 씀 (동영상, 음악파일 등)
 * ##### 문자 단위 스트림 : 문자는 2 바이트씩 처리해야함
-  ##### 스트림의 예 
+* ##### 스트림의 예 
 * ###### 바이트 스트림 : FileInPutStream, FileOutputStream, BufferedInputStream, BufferedOutputStream 등
 * ###### 문자 단위 스트림 : FileReader, FileWriter, BufferedReader, BufferedWriter 등
 #
@@ -32,6 +32,6 @@
 * ##### 기반스트림 : 대상에 직접 자료를 읽고 쓰는 기능의 스트림
 * ##### 보조스트림 : 직접 읽고 쓰는 기능은 없고 추가적인 기능을 제공해주는 스트림
   #####             기반 스트림이나 또 다른 보조 스트림을 생성자의 매개변수로 포함함
-  ##### 스트림의 예 
+* ##### 스트림의 예 
 * ###### 기반스트림 : FileInPutStream, FileOutputStream, FileReader, FileWriter 등
 * ###### 보조스트림 : InPutStreamReader, OutputStreamWriter, BufferedInputStream, BufferedOutputStream 등
