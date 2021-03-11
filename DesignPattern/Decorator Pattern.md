@@ -14,4 +14,5 @@
 **데코레이터 패턴을 활용하여 프로그래밍**
 
 <img src="https://user-images.githubusercontent.com/74708028/110743992-4def0e00-827c-11eb-95d3-3c82c6262296.jpg" width="700" height="430"/>
+
 ![Chapter 14 자바 입출력 - 07 그 외 입출력 클래스와 데코레이터 패턴 (1)_페이지_9](https://user-images.githubusercontent.com/74708028/110744000-50516800-827c-11eb-86e0-ddb67421cf0d.png)
