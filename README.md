@@ -37,7 +37,7 @@
 * [표준 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Standard%20InputOutput%20Stream.md)
 * [바이트 단위 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Byte%20IO%20Stream.md)
 * [문자 단위 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/String%20IO%20Stream.md)
-* [표준 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Standard%20InputOutput%20Stream.md)
+* [보조 스트림](https://github.com/6161990/TIL/blob/main/Java/Decorator%20Stream.md)
 
 
 
