@@ -1,7 +1,7 @@
 ### 보조 스트림 Decorator Stream
-#
-참고: [데코레이터 패턴](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
-#
+
+###### 참고: [데코레이터 패턴](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
+
 #### 실제 읽고 쓰는 스트림이 아닌 보조적인 기능을 추가하는 스트림 
 * #### FilterInputStream 과 FilterOutputStream이 보조스트림의 상위 클래스
 * #### 생성자의 매개 변수로 또 다른 스트림을 가짐
