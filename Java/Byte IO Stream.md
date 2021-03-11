@@ -18,7 +18,7 @@
 * ###### 문자는 읽지못하기 때문에 한글처럼 멀티바이트로 fileReader, fileWriter를 써야한다.
 * ###### 입력 스트림은 파일이 없는 경우 예외 발생
 * ###### 출력 스트림은 파일이 없는 경우 '파일 생성하여' 출력
-##### FileInputStream
+#### FileInputStream
 ```java
 public class FileInputTest1 {
 
@@ -95,7 +95,9 @@ public class FileInputTest1 {
 	}
 }
 ```
-**try-with-resources(Auto Close)**
+#
+
+#### try-with-resources(Auto Close)
 ```java
 public class FileInputTest2 {
 
@@ -114,7 +116,9 @@ public class FileInputTest2 {
 	}
 }
 ```
-**read 메소드 byte array(한 바이트씩 읽는 것보다 빠름)**
+#
+
+#### read 메소드 byte array(한 바이트씩 읽는 것보다 빠름)
 ```java
 public class FileInputTest3 {
 
@@ -142,7 +146,7 @@ public class FileInputTest3 {
 }
 ```
 #
-##### FileOutputStream
+#### FileOutputStream
 ```java
 public class FileOutputTest1 {
 
@@ -161,7 +165,7 @@ public class FileOutputTest1 {
 	}
 }
 ```
-##### FileInputStrea & FileOutputStream
+#### FileInputStrea & FileOutputStream 같이 
 ```java
 public class FileOutputTest2 {
 
