@@ -22,48 +22,48 @@
 ```java
 public class FileInputTest1 {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		FileInputStream fis = null;  // finally에서도 읽을 수 있게 전역변수
-		try {
-			 fis = new FileInputStream("input.txt");
-		} catch (FileNotFoundException e) {   //input.txt 파일이 없을 때 , FileNotFoundException -> Unknown Source
-			e.printStackTrace();
-		} finally {
-			try {
-				fis.close();
-			} catch (IOException e) {  //close의 오류를 잡으려면 Exception 로.
-				e.printStackTrace();
-			}
-		}
-	}
+	FileInputStream fis = null;  // finally에서도 읽을 수 있게 전역변수
+	    try {
+	      fis = new FileInputStream("input.txt");
+	    } catch (FileNotFoundException e) {   //input.txt 파일이 없을 때 , FileNotFoundException -> Unknown Source
+	      e.printStackTrace();
+	    } finally {
+	      try {
+		fis.close();
+	      } catch (IOException e) {  //close의 오류를 잡으려면 Exception 로.
+		e.printStackTrace();
+	      }
+	 }
+     }
 }
 ```
 ```java
 public class FileInputTest1 {
 
-	public static void main(String[] args) {
+        public static void main(String[] args) {
 
-		FileInputStream fis = null;
+	    FileInputStream fis = null;
+	    
 		try {
-			 fis = new FileInputStream("input.txt"); //파일안에는 'ABC'
+		fis = new FileInputStream("input.txt"); //파일안에는 'ABC'
 			 			 
-			 int i = fis.read(); //한 바이트씩 처리 
-			 System.out.print((char)i);   //A
-			 i = fis.read();
-       System.out.print((char)i);   //B
-       i = fis.read();
-       System.out.print((char)i);   //C
-      
-		} catch (IOException e) {   //FileNotFoundException를 내포하는 예외로 처리, read에서도 예외처리를 해야하니까 더 큰 걸로 다중예외처리
-			e.printStackTrace();
+		int i = fis.read(); //한 바이트씩 처리 
+		System.out.print((char)i);   //A
+		i = fis.read();
+       		System.out.print((char)i);   //B
+     		i = fis.read();
+       		System.out.print((char)i);   //C
+      		} catch (IOException e) {   //FileNotFoundException를 내포하는 예외로 처리, read에서도 예외처리를 해야하니까 더 큰 걸로 다중예외처리
+		   e.printStackTrace();
 		} finally {
-			try {
-				fis.close();
+		    try {
+			fis.close();
 			} catch (Exception e) {
-				e.printStackTrace();
+			e.printStackTrace();
 			}
-		}
+		   }
 		System.out.println("end");
 	}
 }
@@ -74,21 +74,22 @@ public class FileInputTest1 {
 	public static void main(String[] args) {
 
 		FileInputStream fis = null;
+		
 		try {
-			 fis = new FileInputStream("input.txt");
+		   fis = new FileInputStream("input.txt");
 			 			 
-			 int i;
-			 while ( (i = fis.read()) != -1) {  //But, 파일을 끝까지 쭉 읽고싶다면 while //-1 : end Of File
-			 		 System.out.print((char)i);     //But,한글은 깨짐 
+		   int i;
+		   while ( (i = fis.read()) != -1) {  //But, 파일을 끝까지 쭉 읽고싶다면 while //-1 : end Of File
+			 System.out.print((char)i);     //But,한글은 깨짐 
 			 }
 			 
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				fis.close();
+		    try {
+			 fis.close();
 			} catch (Exception e) {
-				e.printStackTrace();
+			 e.printStackTrace();
 			}
 		}
 		System.out.println("end");
