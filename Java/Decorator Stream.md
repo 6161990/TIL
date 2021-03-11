@@ -21,3 +21,8 @@
 
 ![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_5](https://user-images.githubusercontent.com/74708028/110728099-c693a180-825f-11eb-90fb-462e242bbe79.png)
 ![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_6](https://user-images.githubusercontent.com/74708028/110728114-ceebdc80-825f-11eb-928b-d6fe8869d18a.png)
+
+#
+**데코레이터 패턴을 활용하여 프로그래밍**
+![KakaoTalk_20210311_150859266](https://user-images.githubusercontent.com/74708028/110743992-4def0e00-827c-11eb-95d3-3c82c6262296.jpg)
+![Chapter 14 자바 입출력 - 07 그 외 입출력 클래스와 데코레이터 패턴 (1)_페이지_9](https://user-images.githubusercontent.com/74708028/110744000-50516800-827c-11eb-86e0-ddb67421cf0d.png)
