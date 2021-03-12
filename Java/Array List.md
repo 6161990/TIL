@@ -9,7 +9,7 @@
        
 <br>
 
-#### ArrayList(제네릭이용) 
+#### ArrayList , 제네릭이용
 ```java
  public class ArrayListTest {
 
@@ -37,7 +37,7 @@
    <br>
    
 ----------------------------------------------------------------------   
-
+#### :computer: 
 #### ArrayList를 이용해서 성적 산출 프로그래밍(과목 클래스)
 ```java
 public class Subject {
