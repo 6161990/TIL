@@ -200,6 +200,7 @@ public class MemberHashSetTest {
 
 <br>
 
+### :computer: 프로그래밍해보기
 #### :round_pushpin: TreeSet으로 멤버 정렬해보기
 ```java
 public class Member implements Comparator<Member>{    //Comparable 인터페이스에는 밑에 /*compareTo*/
