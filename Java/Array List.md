@@ -1,14 +1,14 @@
-### Array List
-* ###### 일반 배열의 한계에서 탄생, 배열이 차지하는 범위[]를 넘어서는 곳에 값을 추가하려고 할 때, 그 범위를 알지 못하면 사용하기 어려움. 
-* ###### Collection Framework에서 Array List 제공. java.util 패키지 안에 Array List 클래스를 import해야 한다. 
-* ###### 자바에서 제공되는 객체 배열이 구현된  Array List 클래스. 객체 배열을 사용하는데 필요한 여러 메서드들이 구현되어있음. 
-* ###### 몇개의 값을 담을 것 인지 명시 필요 없음. 
-* ###### 주요메서드 : add, int size, get(index), remove(index)
-* ###### '제네릭'을 이용해 ArrayList 타입의 인스턴스를 생성할 때, 뒤에 <데이터 타입>을 지정. 
-       "변수를 통해 들어오는 값이 <지정한 데이터 타입>이다" 명시해 두었기 때문에 값을 꺼낼 때 데이터타입 (강제변환) 할 필요없음   
+### :pushpin: Array List
+* #### 일반 배열의 한계에서 탄생, 배열이 차지하는 범위[]를 넘어서는 곳에 값을 추가하려고 할 때, 그 범위를 알지 못하면 사용하기 어려움. 
+* #### Collection Framework에서 Array List 제공. java.util 패키지 안에 Array List 클래스를 import해야 한다. 
+* #### 자바에서 제공되는 객체 배열이 구현된  Array List 클래스. 객체 배열을 사용하는데 필요한 여러 메서드들이 구현되어있음. 
+* #### 몇개의 값을 담을 것 인지 명시 필요 없음. 
+* #### 주요메서드 : add, int size, get(index), remove(index)
+* #### '제네릭'을 이용해 ArrayList 타입의 인스턴스를 생성할 때, 뒤에 <데이터 타입>을 지정. 
+  #### "변수를 통해 들어오는 값이 <지정한 데이터 타입>이다" 명시해 두었기 때문에 값을 꺼낼 때 데이터타입 (강제변환) 할 필요없음   
        
 
-**ArrayList(제네릭이용)**   
+#### ArrayList(제네릭이용) 
 ```java
  public class ArrayListTest {
 
@@ -33,8 +33,9 @@
 	}
 }
 ``` 
-   #
-**ArrayList를 이용해서 성적 산출 프로그래밍(과목 클래스)** 
+   <br>
+   
+#### ArrayList를 이용해서 성적 산출 프로그래밍(과목 클래스)
 ```java
 public class Subject {
 
@@ -64,7 +65,8 @@ public class Subject {
 	}
 }
 ``` 
-**ArrayList를 이용해서 성적 산출 프로그래밍(학생 클래스)** 
+
+#### ArrayList를 이용해서 성적 산출 프로그래밍(학생 클래스)
 ```java
 public class Student {
 	
@@ -98,7 +100,7 @@ public class Student {
 
 }
 ``` 
-**ArrayList를 이용해서 성적 산출 프로그래밍(메인 메소드)** 
+#### ArrayList를 이용해서 성적 산출 프로그래밍(메인 메소드)
 ```java
 public class StudentTest {
 
