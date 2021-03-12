@@ -1,10 +1,11 @@
-### 접근제어자 access modifier
+### :pushpin: 접근제어자 access modifier
 * ###### 변수, 메서드, 생성자에 대한 접근 권한 지정.
 * ###### private, public, protected, 아무것도 안쓰는 경우(기본 접근 제어자: 같은 패키지 내에서만 사용).
 * ###### private을 사용하면 클래스 외부에서는 접근할 수 없음.
   
-     #
-### 정보은닉 information hiding
+     <br>
+     
+### :pushpin: 정보은닉 information hiding
 * ###### private키워드를 지정해 외부에서 클래스 내부의 정보에 접근하지 못하도록함.
 * ###### private변수를 외부에서 접근하게 하려면 public 메서드 제공함. 주로 get,set.
 * ###### public 메소드의 기능을 활용해서 정보를 핸들링하면 된다. 
@@ -15,10 +16,10 @@
    ###### 2. data를 보호할 수 있다   
       
       
-   #
+   <br>
    
    
-**접근 제어자를 이용한 정보은닉**
+#### 접근 제어자를 이용한 정보은닉
 ```java
 public class MyDate {
 
