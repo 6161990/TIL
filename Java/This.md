@@ -11,8 +11,8 @@
 ```java
 public class MyDateTest {
 
- 	public static void main(String[] args) {
-   	   MyDate date = new MyDate(); // 여기 date 
+      public static void main(String[] args) {
+      MyDate date = new MyDate(); // 여기 date 
        
       date.setYear(2019);
       date.setMonth(77);
@@ -39,19 +39,20 @@ public class Person {
     	int age;
     	
     	public Person() {
-    		this("이름없음" ,1);  // 여기서 다른 Person 생성자를 호출. 
+    	  this("이름없음" ,1);  // 여기서 다른 Person 생성자를 호출. 
     	}
     	
     	public Person(String name, int age) {
-    		this.name = name;
-    		this.age = age;
+    	  this.name = name;
+          this.age = age;
     	}
     	
     	public void showInfo() {
-    		System.out.println(name+","+age);
+    	  System.out.println(name+","+age);
     	}
       
-      public static void main(String[] args) {
+      
+        public static void main(String[] args) {
 		
 	      Person personNoName=new Person();
 	      personNoName.showInfo();
@@ -59,7 +60,7 @@ public class Person {
 	      Person personLee = new Person("Lee",20);
 	      personLee.showInfo();
 	      
-    
+    }
 }
 ```    
    <br>
@@ -86,23 +87,23 @@ public class Person {
     		System.out.println(name+","+age);
     	}
       
-      public Person getSelf(){ // this를 반환하는 메소드의 반환타입은 자기자신
-        return this;
-      }
+         public Person getSelf(){ // this를 반환하는 메소드의 반환타입은 자기자신
+           return this;
+         }
       
       public static void main(String[] args) {
 		
-	      Person personNoName=new Person();
-	      personNoName.showInfo();
+	     Person personNoName=new Person();
+	     personNoName.showInfo();
 	      	
-	      Person personLee = new Person("Lee",20);
-	      personLee.showInfo();
-	      System.out.println(personLee);  //인스턴스 주소값 출력 : chapter5.Person@2ff4acd0   
+	     Person personLee = new Person("Lee",20);
+	     personLee.showInfo();
+	     System.out.println(personLee);  //인스턴스 주소값 출력 : chapter5.Person@2ff4acd0   
         
-        Person p = personLee.getSelf();
-        System.out.println(p); //인스턴스 주소값 출력 : chapter5.Person@2ff4acd0   
+             Person p = personLee.getSelf();
+             System.out.println(p); //인스턴스 주소값 출력 : chapter5.Person@2ff4acd0   
         
-        // 주소 값  : 참조변수와 this가 가리키는 힙 메모리는 같다. 
+             // 주소 값  : 참조변수와 this가 가리키는 힙 메모리는 같다. 
 	}
     
 }
