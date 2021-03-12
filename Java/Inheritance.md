@@ -18,8 +18,8 @@
   <br>
   
 #### :round_pushpin: 하위클래스가 생성되는 과정
- #### 1 하위 클래스가 생성될 때 상위 클래스가 먼저 생성됨
- #### 2 상위 클래스의 생성자가 호출되고 하위 클래스의 생성자가 호출됨 
+ #### 1. 하위 클래스가 생성될 때 상위 클래스가 먼저 생성됨
+ #### 2. 상위 클래스의 생성자가 호출되고 하위 클래스의 생성자가 호출됨 
  #### => 테스트 메소드에서 상위클래스 생성자없어도 오류가 안나는 이유 
  ```java
 	// Customer customerLee = new Customer(10010, "박민아"); // 상속한 상위 클래스 생성자호출 없이도 오류가 안남
@@ -35,10 +35,12 @@
 	System.out.println(customerKim.showCustomerInfo());   
 ```   
 
- #### 3 상위클래스의 생성자가 호출되지 않을 경우, 컴파일러는 상위 클래스 기본 생성자를 호출하기 위한 super를 호출함. 
+ #### 3. 상위클래스의 생성자가 호출되지 않을 경우, 컴파일러는 상위 클래스 기본 생성자를 호출하기 위한 super를 호출함. 
   #####   => super();로 호출되는 생성자는 상위 클래스의 기본 생성자. 
  
- #### 4 만약 상위 클래스의 기본 생성자가 없는 경우(매개변수가 있는 생성자만 존재하는 경우), 
+ <br>
+ 
+ #### 4. 만약 상위 클래스의 기본 생성자가 없는 경우(매개변수가 있는 생성자만 존재하는 경우), 
  ####    하위 클래스는 명시적으로 상위 클래스의 생성자를 호출해야함. 
    ##### => super();는 디폴트 생성자, 상위클래스에는 super(customerID, customerName); 생성자만 존재. 
    #####    하위클래스에서 super(customerID, customerName); 라고 명시필요.
@@ -46,6 +48,7 @@
      	 => error message "Implicit super constructor ***상위.class()*** is undefined.
          	                 Must explicitly invoke another constructor(생성자)"
 				 
+<br>
 
  ```java
    public class VIPCustomer extends Customer{
@@ -65,7 +68,7 @@
    
    <br>
 
-#### :round_pushpin: this와 super
+### :round_pushpin: this와 super
  * ##### this는 자기 자신을 가지고있는 메모리를 가리키고, super는 상위클래스의 메모리 위치, 참조값을 가리킨다.        
    
    <br>
