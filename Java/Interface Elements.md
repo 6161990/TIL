@@ -1,13 +1,13 @@
 ## :pushpin: 인터페이스 요소 Interface Elements
-#
+
 * ###### 선 참고 : [인터페이스 Interface](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 * ###### 후 참고 : [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 #
 * #### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
 
 <br>
-
-#### :round_pushpin: 사칙연산 로직이 있는 인터페이스 Calc
+#### :round_pushpin:
+#### 사칙연산 로직이 있는 인터페이스 Calc
 ```java
  public interface Calc {
 	
@@ -62,7 +62,7 @@ public class CompleteCalc extends Calculator{
 
 <br>
 
-#### 디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출
+#### :round_pushpin: 디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출
 ```java
 public class CalcTest {
 
@@ -84,7 +84,7 @@ public class CalcTest {
 <br>
 
 
-* #### :triangular_flag_on_post: 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
+* #### :round_pushpin: 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
   ##### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
   ##### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
 ```java
