@@ -6,7 +6,7 @@
   
    <br>
    
- #### this역할1. 자신의 메모리를 가리킴. 같은 생성자를 만들어도 둘의 인스턴스 주소는 다름(date & date2)
+ #### :round_pushpin: this역할1. 자신의 메모리를 가리킴. 같은 생성자를 만들어도 둘의 인스턴스 주소는 다름(date & date2)
 
 ```java
 public class MyDateTest {
@@ -30,7 +30,7 @@ public class MyDateTest {
 
    <br>
    
-#### this역할2. 생성자에 다른 생성자를 호출
+#### :round_pushpin: this역할2. 생성자에 다른 생성자를 호출
 
 ```java
 public class Person {
@@ -64,7 +64,7 @@ public class Person {
 ```    
    <br>
    
-#### this역할3. 자신의 주소를 반환하는 this
+#### :round_pushpin: this역할3. 자신의 주소를 반환하는 this
 
 ```java
 public class Person {
