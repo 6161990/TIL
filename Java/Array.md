@@ -6,8 +6,8 @@
 * ##### arr[1]=0; 에서 '[1]'은 배열의 주소, index / '0'은 [1] 에 담긴 값, 원소.    
   
      <br>
-     
-#### :round_pushpin:  array 선언하는 3가지 방법
+#### :round_pushpin:  Array 선언
+#### array 선언하는 3가지 방법
 ```java
 public class ArrayTest {
 
