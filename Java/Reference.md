@@ -1,14 +1,14 @@
-### 참조자료형 reference data type
-* ###### 클래스형으로 변수를 선언함.
-* ###### 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조자료형은 클래스에 따라 다름.
+### :pushpin: 참조자료형 reference data type
+* #### 클래스형으로 변수를 선언함.
+* #### 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조자료형은 클래스에 따라 다름.
 
    
-#### **참조자료형 직접 만들어 사용하기**
-학생클래스Student 에 있는 과목 이름, 과목 성적 속성을 과목 클래스Subject 로 분리하고   
-Subject 참조 자료형 멤버변수를 Student에 정의하여 사용함.
+#### :round_pushpin: 참조자료형 직접 만들어 사용하기
+##### 학생클래스Student 에 있는 과목 이름, 과목 성적 속성을 과목 클래스Subject 로 분리하고   
+##### Subject 참조 자료형 멤버변수를 Student에 정의하여 사용함.
    
    
-**과목 클래스**
+##### 과목 클래스
 ```java
 public class Subject {
 
@@ -19,7 +19,7 @@ public class Subject {
 }
 ```
 
-**학생클래스**
+##### 학생클래스
 ```java
 public class Student {
 
@@ -55,7 +55,7 @@ public class Student {
 }
 ```
 
-**성적 테스트**
+##### 성적 테스트
 ```java
 public class StudentTest {
 
