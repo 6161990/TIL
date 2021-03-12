@@ -117,7 +117,7 @@ public class EqualsTest {
  
  <br>
  
-####:round_pushpin: equals재정의가 필요한 일반 참조자료형(Student) 클래스
+#### :round_pushpin: equals재정의가 필요한 일반 참조자료형(Student) 클래스
 ```java    
 
 class Student {
