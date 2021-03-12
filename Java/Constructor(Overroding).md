@@ -10,7 +10,7 @@
    ##### 기본 생성자는 매개 변수가 없고, 구현부가 없음   
    
  
-#### 기본 생성자
+##### 기본 생성자
 ```java
 public class Student {
   public int studentID;
@@ -21,7 +21,7 @@ public class Student {
 }
 ```
    #
-#### 클래스에 다른 생성자가 있는 경우 디폴트 생성자는 제공되지 않음
+##### 클래스에 다른 생성자가 있는 경우 디폴트 생성자는 제공되지 않음
 ```java
 public class Student {
   public int studentID;
@@ -37,7 +37,7 @@ public class Student {
 }
 ```
    #
-#### 다른 생성자를 만들경우 main에서의 오류
+##### 다른 생성자를 만들경우 main에서의 오류
 ```java
 public class StudentTest {
   public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class StudentTest {
 }
 ```
    #
-#### 구현할 때 반드시 필요한 메서드가 필요한 경우("이름은 반드시 매번 구현을 할거야")
+##### 구현할 때 반드시 필요한 메서드가 필요한 경우("이름은 반드시 매번 구현을 할거야")
 ```java
 public class Student {
   public int studentID;
@@ -74,7 +74,7 @@ public class Student {
 * ###### 사용하는 코드에서 여러 생성자 중 선택하여 사용할 수 있음.
 * ###### private 변수도 생성자를 이용하여 초기화를 할 수도 있음(객체 초기화 작업을 할 때 생성자를 가져다 쓰기도 함).
 
-#### :round_pushpin: 생성자 오버로딩 Constructor Overroding
+##### 생성자 오버로딩 Constructor Overroding
 ```java
 public class Student {
 
