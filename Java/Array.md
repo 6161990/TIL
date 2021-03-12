@@ -1,12 +1,13 @@
-### Array 배열
-* ###### 여러 개의 data를 하나의 변수에 담기 위해 연관된 정보를 그룹화하는데 사용. 배열 또한 data type.
-* ###### int[] arr = new int[10]; 에서 [10]는 배열의 그릇, 10개만큼 방이 생긴다는 의미 = 배열의 길이 length
-* ###### 배열의 길이 length는 말 그대로 그만큼만 담을 수 있다. 데이터를 수용할 수 있는 최대 개수가 [n] 만큼이다.
-* ###### 배열은 순차적이라 [2]자리에 있는 data를 빼면, [3]자리에 있던 데이터가 [2]자리로 옮김. 
-* ###### arr[1]=0; 에서 '[1]'은 배열의 주소, index / '0'은 [1] 에 담긴 값, 원소.    
+###: pushpin: Array 배열
+* ##### 여러 개의 data를 하나의 변수에 담기 위해 연관된 정보를 그룹화하는데 사용. 배열 또한 data type.
+* ##### int[] arr = new int[10]; 에서 [10]는 배열의 그릇, 10개만큼 방이 생긴다는 의미 = 배열의 길이 length
+* ##### 배열의 길이 length는 말 그대로 그만큼만 담을 수 있다. 데이터를 수용할 수 있는 최대 개수가 [n] 만큼이다.
+* ##### 배열은 순차적이라 [2]자리에 있는 data를 빼면, [3]자리에 있던 데이터가 [2]자리로 옮김. 
+* ##### arr[1]=0; 에서 '[1]'은 배열의 주소, index / '0'은 [1] 에 담긴 값, 원소.    
   
-     #
-**array 선언하는 3가지 방법**
+     <br>
+     
+#### :round_pushpin:  array 선언하는 3가지 방법
 ```java
 public class ArrayTest {
 
@@ -25,8 +26,9 @@ public class ArrayTest {
 	}
 }
 ```
+
    
-**array 선언, 사용해보기 (1~10까지 출력)**   
+#### array 선언, 사용해보기 (1~10까지 출력)  
 
 ```java
 public class ArrayTest {
@@ -40,7 +42,7 @@ public class ArrayTest {
 		  }
 }
 ```
-**array 선언, 사용해보기 (1~10까지 모두 더해 출력)**   
+#### array 선언, 사용해보기 (1~10까지 모두 더해 출력)
 
 ```java
 public class ArrayTest {
@@ -60,11 +62,12 @@ public class ArrayTest {
 
 }
 ```    
-   #
-**arr.length 사용시, 유효한 값의 범위 주의** 
-######  arr.length[5]인데, [0]~[2]까지만 초기화를 하면 나머지 [4],[5] 는 0 임.    
-######  그래서 arr.length[5]을 기준으로 for문(곱하기)을 돌리면 값이 0. ([4],[5]가 0 이기 때문에 다른 값과 곱하면 0)
-######  i<arr.length[5] 로 하는 게 아니라 변수('count')를 하나 두고, 인덱스가 초기화 될때마다 ++ 하는 카운팅 필요. 
+   <br> 
+   
+#### :round_pushpin:  arr.length 사용시, 유효한 값의 범위 주의
+#####  arr.length[5]인데, [0]~[2]까지만 초기화를 하면 나머지 [4],[5] 는 0 임.    
+#####  그래서 arr.length[5]을 기준으로 for문(곱하기)을 돌리면 값이 0. ([4],[5]가 0 이기 때문에 다른 값과 곱하면 0)
+#####  i<arr.length[5] 로 하는 게 아니라 변수('count')를 하나 두고, 인덱스가 초기화 될때마다 ++ 하는 카운팅 필요. 
 ```java
 public class ArrayTest {
 
@@ -83,8 +86,9 @@ public class ArrayTest {
 		  System.out.println(mtotal);
 	}
 ```   
-   #
-**array로 알파벳 출력해보기**   
+   <br>
+   
+#### array로 알파벳 출력해보기   
 
 ```java
 public class ArrayTest {
@@ -103,11 +107,12 @@ public class ArrayTest {
 	}
 }
 ```   
-   #
-**다차원배열** 
-* ###### 2차원 이상의 배열. 지도, 게임 등의 공간을 구현할 때 사용
-* ###### int[][] arr = new int[][];
-* ###### 사용시, 행을 기준으로 열을 돌리면 된다. 
+   <br>
+   
+#### :round_pushpin: 다차원배열
+* ##### 2차원 이상의 배열. 지도, 게임 등의 공간을 구현할 때 사용
+* ##### int[][] arr = new int[][];
+* ##### 사용시, 행을 기준으로 열을 돌리면 된다. 
 
 ```java
 public class MultiArray {
