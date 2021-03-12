@@ -32,7 +32,7 @@
  #
 #### But, 중복이 존재. 제거하기 
 	this.left = left;
-        this.right = right;
+    this.right = right;
 ```java    
     public void setOperands(int left, int right){     
       System.out.println("setOperands(int left, int right)");
@@ -49,7 +49,7 @@
 
 <br>
 
-#### Overroading 오버로딩의 조건(오버라이딩과의 차이)
+#### :round_pushpin: Overroading 오버로딩의 조건(오버라이딩과의 차이)
  * ##### 오버로딩은 공통점은 메소드이름,리턴값 / 차이점은 매개변수의 형식 
  * ##### 오버라이딩은 메소드이름, 리턴값, 매개변수의 형식 모든 것이 일치해야함. 
    ##### :triangular_flag_on_post: 완벽히 일치하면 그건 중복이 되기 때문에 super()를 이용해 코드를 줄이고, 수정할건하고 추가할 건 밑에 로직을 작성하면됨. 
@@ -92,7 +92,7 @@ public class VIPCustomer extends Customer {
 
 <br>
 
-#### Overriding 오버라이딩의 조건
+#### :round_pushpin: Overriding 오버라이딩의 조건
 * ##### 메소드의 서명(return 데이터 타입, 메소드 이름, 매개변수의 데이터 타입)이 부모의 것과 자식의 것이 일치해야함.
 * ##### 자식 메소드에서 오버라이딩할 때는 
 
@@ -101,7 +101,7 @@ public class VIPCustomer extends Customer {
    
  <br>
             
-#### 형 변환과 Overriding 메서드 호출(가상함수)   
+#### :round_pushpin: 형 변환과 Overriding 메서드 호출(가상함수)   
 
 	Customer vc = new VIPCustomer();
 	vc.calcPrice(10000);
