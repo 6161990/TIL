@@ -1,4 +1,4 @@
-### Stack
+## :pushpin: Stack
 ###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
 
 <img src="https://user-images.githubusercontent.com/74708028/110317392-7219d780-804f-11eb-9101-0e21ebc69fd3.jpg" width="400" height="200">
@@ -44,8 +44,9 @@ public class StackTest{
 	}
 }
 ```
+-------------------------------------------------------
 
-### Queue
+### :pushpin: Queue
 <img src="https://user-images.githubusercontent.com/74708028/110317566-aee5ce80-804f-11eb-8cd4-8e57a2654d87.jpg" width="400" height="350">
 
 * #### First In First Out(FIFO): 먼저 저장된 자료가 먼저 꺼내지는 자료구조
