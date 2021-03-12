@@ -60,7 +60,7 @@ public class  StudentTest {
 ```     
 <br>
 
-#### static변수는 객체 생성과 상관없기 때문에 객체 생성시 나오는 참조변수가 아니라 클래스 이름으로 접근
+#### static변수는 객체 생성과 상관없기 때문에 객체 생성시 나오는 참조변수가 아니라 ***클래스 이름으로 접근***
    
 ```java
 public class  StudentTest {
@@ -83,8 +83,7 @@ public class  StudentTest {
  
 ##### but, 이 경우. 메인 메소드에서 
 ##### System.out.println(Student.serialNum++); 해버리면 원하는 기준값 적용이 안됨. 
-##### 그래서 static은 private으로 설정하는 게 좋음. 
-
+##### :round_pushpin: 그래서 static은 private으로 설정하는 게 좋음. 
 	```java
  	public class Student {
   	//public static int serialNum =1000;
@@ -94,7 +93,7 @@ public class  StudentTest {
 
 <br>
    
-**static변수를 private으로 설정했을 때 메인메소드에서 쓸 수 있도록 get,set설정(static 메소드)**   
+#### static변수를 private으로 설정했을 때 메인메소드에서 쓸 수 있도록 get,set설정(static 메소드)
 
 ```java
 public class Student {
@@ -112,10 +111,11 @@ public static void setSerialNum(int serialNum) {
 	Static.serialNum = serialNum;
 }
 ```   
-   #
-### static 메서드
-* ###### static 변수를 위한 기능을 제공하는 static 메서드 
-* ###### static 메서드에서는 인스턴스 변수를 사용할 필요 없음 
-	###### : static은 인스턴스 생성과 상관 없이 사용되고, 인스턴스는 new 되어야 생성되기 때문에 static메서드 안에서 인스턴스 변수 사용불가
-	###### : but! 일반 메소드 안에서 static 변수 사용할 수 있음. static 변수는 그 전에 생성되기 때문에 (로드될 때)
-* ###### 클래스 이름으로 참조하여 사용하는 메서드 (클래스 메서드, 정적 메서드라고도 함)
+ <br>
+ 
+### :pushpin:  static 메서드
+* #### static 변수를 위한 기능을 제공하는 static 메서드 
+* #### static 메서드에서는 인스턴스 변수를 사용할 필요 없음 
+	* ##### : static은 인스턴스 생성과 상관 없이 사용되고, 인스턴스는 new 되어야 생성되기 때문에 static메서드 안에서 인스턴스 변수 사용불가
+	* ##### : but! 일반 메소드 안에서 static 변수 사용할 수 있음. static 변수는 그 전에 생성되기 때문에 (로드될 때)
+* #### 클래스 이름으로 참조하여 사용하는 메서드 (클래스 메서드, 정적 메서드라고도 함)
