@@ -106,3 +106,37 @@ public class ThreadTest {
 ###### 이런 영역에 대해 순서를 지켜주자는 것이 동기화 synchronization.
 ###### "네가 먼저 ~하고, 내가 나중에 ~할게" 하면서 race condition
 ###### 그래서 critical section에는 한번에 하나만 들어갈 수 있음
+
+----------------------
+#### Thread의 여러가지 메서드 활용
+**Thread status**
+
+<img src="https://user-images.githubusercontent.com/74708028/110876513-f6ec4600-831a-11eb-9236-72b117739c4e.jpg" width="700" height="480"/>
+
+**Thread 우선순위**
+##### Thread.MIN PRIORITY(=1) ~ Thread.MAX PRIORITY(=10)
+##### 디폴트 우선 순위 : Thread.NORM_PRIORITY (=5)
+###### setPriority(int newPriority)
+###### int getPriority()
+###### 우선 순위가 높은 thread는 CPU를 배분 받을 확률이 높음(주려면 높게 확 주어야함)
+```java
+
+     //생략...
+
+public class ThreadTest {
+
+	public static void main(String[] args) {
+
+		Thread t = Thread.currentThread();  // Thread[main,5,main] => [쓰레드 이름, 디폴트 우선순위 5, thread가 속해있는 곳]
+		System.out.println(t);
+		
+	}
+}
+```
+**join() 메서드**
+<img src="https://user-images.githubusercontent.com/74708028/110876621-34e96a00-831b-11eb-88ef-11e7942185b5.jpg" width="430" height="300"/>
+
+##### 다른 thread의 결과를 보고 진행해야하는 일이 있는 경우 join() 메서드를 활용
+##### join() 메서드를 호출한 thread가 non-runnable 상태가 됨
+
+
