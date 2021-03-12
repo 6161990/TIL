@@ -80,6 +80,8 @@ public class AnimalTest {
   }
 }
  ``` 
+ 
+ <br>
  #### :triangular_flag_on_post: instanceof가 하는 일
  #### A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
  #### 매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
