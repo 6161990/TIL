@@ -1,5 +1,8 @@
 ### :pushpin: static 변수
 * #### 클래스 소속 변수 "해당 변수를 모든 인스턴스에서 공유한다."
+
+<br>
+
 #### :round_pushpin: 사용이유   
 1. #####  인스턴스마다 변하지 않는 값이 필요한 경우.   
 	#####  static 변수는 처음 프로그램이 로드될 때 데이터 영역 메모리에 생성됨.   
@@ -77,19 +80,20 @@ public class  StudentTest {
   }
 }
 ```    
- <br>  
  
 ##### but, 이 경우. 메인 메소드에서 
 ##### System.out.println(Student.serialNum++); 해버리면 원하는 기준값 적용이 안됨. 
 ##### 그래서 static은 private으로 설정하는 게 좋음. 
 
-```java
- public class Student {
-  //public static int serialNum =1000;
-  private static int serialNum =1000;
- }
-``` 
-   #
+	```java
+ 	public class Student {
+  	//public static int serialNum =1000;
+  	private static int serialNum =1000;
+ 	}
+	``` 
+
+<br>
+   
 **static변수를 private으로 설정했을 때 메인메소드에서 쓸 수 있도록 get,set설정(static 메소드)**   
 
 ```java
