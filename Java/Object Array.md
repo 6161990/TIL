@@ -5,7 +5,7 @@
 
 <br>
 
-#### 객체배열 클래스
+#### :round_pushpin:  객체배열 클래스
 ```java
 public class Book {
 	
@@ -42,7 +42,7 @@ public class Book {
 ```  
    <br>
    
-#### 객체배열에서의 주의점(메인 메소드)
+#### :round_pushpin: 객체배열에서의 주의점(메인 메소드)
 ```java
 public class BookArrayTest {
 
@@ -52,7 +52,7 @@ public class BookArrayTest {
     	}
 }
 ``` 
-#####  :round_pushpin: ( 주의 ) 해당 메소드 구문은
+##### (((( 주의 )))) 해당 메소드 구문은
 ##### 다섯개를 담을 수 있는 그릇만 생성된 것. 
 ##### 다섯개 데이터는 생성자로 생성해야 생성되는 것. 
 ##### 그래서 
@@ -65,7 +65,7 @@ public class BookArrayTest {
 		
    <br>
    
-#### 객체배열에서의 데이터 생성 (메인 메소드)
+#### :round_pushpin: 객체배열에서의 데이터 생성 (메인 메소드)
 ```java
 public class BookArrayTest {
 
