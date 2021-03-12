@@ -7,6 +7,7 @@
 * #### '제네릭'을 이용해 ArrayList 타입의 인스턴스를 생성할 때, 뒤에 <데이터 타입>을 지정. 
   #### "변수를 통해 들어오는 값이 <지정한 데이터 타입>이다" 명시해 두었기 때문에 값을 꺼낼 때 데이터타입 (강제변환) 할 필요없음   
        
+<br>
 
 #### ArrayList(제네릭이용) 
 ```java
@@ -34,7 +35,7 @@
 }
 ``` 
    <br>
-   
+----------------------------------------------------------------------   
 #### ArrayList를 이용해서 성적 산출 프로그래밍(과목 클래스)
 ```java
 public class Subject {
@@ -64,7 +65,9 @@ public class Subject {
 		this.score = score;
 	}
 }
-``` 
+```
+
+<br>
 
 #### ArrayList를 이용해서 성적 산출 프로그래밍(학생 클래스)
 ```java
@@ -100,6 +103,8 @@ public class Student {
 
 }
 ``` 
+<br>
+
 #### ArrayList를 이용해서 성적 산출 프로그래밍(메인 메소드)
 ```java
 public class StudentTest {
