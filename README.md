@@ -16,7 +16,7 @@
 * [오버라이딩 , 오버로딩](https://github.com/6161990/TIL/blob/main/Java/Overriding%2C%20Overroading.md)
 * [다형성](https://github.com/6161990/TIL/blob/main/Java/Polymorphism.md)
 * [다운캐스팅과 instanceof](https://github.com/6161990/TIL/blob/main/Java/DownCasting%2C%20instanceof.md)
-* [추상클래스, 템플릿패턴](https://github.com/6161990/TIL/blob/main/Java/Abstract%2C%20Template.md)======================여기부터 수정
+* [추상클래스, 템플릿패턴](https://github.com/6161990/TIL/blob/main/Java/Abstract%2C%20Template.md)
 * [인터페이스](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 * [인터페이스의 요소](https://github.com/6161990/TIL/blob/main/Java/Interface%20Elements.md)
 * [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
@@ -32,7 +32,7 @@
 * [Inner Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
 * [람다식](https://github.com/6161990/TIL/blob/main/Java/Lambda%20Expression.md)
 * [연산 스트림](https://github.com/6161990/TIL/blob/main/Java/Stream.md)
-* [예외](https://github.com/6161990/TIL/blob/main/Java/Exception.md)
+* [예외](https://github.com/6161990/TIL/blob/main/Java/Exception.md)======================여기부터 수정
 * [I/O 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/IO%20Stream.md)
 * [표준 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Standard%20InputOutput%20Stream.md)
 * [바이트 단위 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Byte%20IO%20Stream.md)
