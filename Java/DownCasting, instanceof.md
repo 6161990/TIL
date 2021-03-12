@@ -1,12 +1,17 @@
-### DownCasting 다운캐스팅
- ###### 하위 클래스로의 형 변환.
- ###### 묵시적으로 상위 클래스 형변환된 인스턴스가 원래 자료형(하위 클래스)으로 변환되어야 할 때,
- ###### (가상함수 작용으로 원래 인스턴스의 메서드를 사용할 수 없을 때) 
- ###### 하위 클래스로의 형 변환은 명시적으로 되어야 함.
-    묵시적인 업 캐스팅: Customer vc = new VIPCustomer();
-    명시적인 다운캐스팅:VIPCustomer vCustomer = (VIPCustomer)vc;  
- ###### But, 위 방법은 오류가 날 수도 있음. 인스턴스에 맞지않는 형 변환을 하려고 시도할 때. 
+## :pushpin: DownCasting 다운캐스팅
+ * #### 하위 클래스로의 형 변환.
+ * #### 묵시적으로 상위 클래스 형변환된 인스턴스가 원래 자료형(하위 클래스)으로 변환되어야 할 때,
+ * #### (가상함수 작용으로 원래 인스턴스의 메서드를 사용할 수 없을 때) 
+ * #### 하위 클래스로의 형 변환은 명시적으로 되어야 함.
+     * #### 묵시적인 업 캐스팅: Customer vc = new VIPCustomer();
+     * #### 명시적인 다운캐스팅:VIPCustomer vCustomer = (VIPCustomer)vc;  
+   #### But, 위 방법은 오류가 날 수도 있음. 인스턴스에 맞지않는 형 변환을 하려고 시도할 때. 
             Rabbit humanWalking = (Rabbit)human;
+-----------------------------------------------------------------
+
+### :computer: 프로그래밍하기 
+#### 다형성을 이용해 다운캐스팅 적용하기
+	    
  ```java    
    public class Animal {
 
@@ -56,7 +61,7 @@ public class AnimalTest {
 }
  ```   
  #
-###### 그래서 쓰이는 방법이 **'instanceof'** true/false를 반환. 
+#### :triangular_flag_on_post: 컴파일 에러를 피하는 방법이 **'instanceof'** true/false를 반환. 
  ```java    
  public class AnimalTest {
 
@@ -75,11 +80,13 @@ public class AnimalTest {
   }
 }
  ``` 
-      **instanceof가 하는 일**
-     A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
-     매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
+ #### :triangular_flag_on_post: instanceof가 하는 일
+ #### A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
+ #### 매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
      
- **instanceof를 이용해 각자가 가진 차별 메소드 출력하기**
+     <br> 
+     
+#### instanceof를 이용해 각자가 가진 차별 메소드 출력하기
   ```java    
 public class AnimalTest {
 
