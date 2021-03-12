@@ -102,12 +102,11 @@ public class ThreadTest {
 
 #
 #### critical section(임계 영역)? 
-##### 두 개 이상의 thread가 동시에 접근하게 되는 리소스
-##### shared resource는 여러가지 thread가 있을 떄, 공유하는 자원.
-##### 같이 쓰다보니까 오류가 날 수도 있다. 
+##### 두 개 이상의 thread가 동시에 접근하게 되는 리소스(자바로 예를 들면 static 키워드를 가진 객체들)
+##### shared resource는 여러가지 thread가 있을 떄, 공유하는 자원. 같이 쓰다보니까 오류가 날 수도 있다.  
 ##### 이런 영역에 대해 순서를 지켜주자는 것이 동기화 synchronization.
-##### "네가 먼저 ~하고, 내가 나중에 ~할게" 하면서 race condition
-##### 그래서 critical section에는 한번에 하나만 들어갈 수 있음
+##### "네가 먼저 ~하고, 내가 나중에 ~할게" 하면서 race condition. 그래서 critical section에는 한번에 하나만 들어갈 수 있음
+
 #
 **순자척인 임계영역 접근**
 
@@ -115,22 +114,25 @@ public class ThreadTest {
 
 #
 #### 동기화 (synchronization)? 
-##### 임계 영역에 여러 thread가 접근하는 경우, 한 thread가 수행하는 동안 공유 자원을 lock하려 다른thread의 접근을 막음
+##### 임계 영역에 여러 thread가 접근하는 경우, 한 thread가 수행하는 동안 공유 자원을 lock하려 다른 thread의 접근을 막음
 ##### 잘못 구현하면 deadlock에 빠질 수 있음
 
 **자바에서 동기화구현**
 ##### synchronized 수행문과 synchronized 메서드를 이용
-##### synchronized 메서드 : 현재 이 메서드가 속해있는 객체에 lock을 건다. 
-#####                       synchronized메서드 내에서 다른 synchronized 메서드를 호출하지 않는다.(deadlock 방지위해)
-	 synchronized 수행문
+ * ##### synchronized 메서드 : 현재 이 메서드가 속해있는 객체에 lock을 건다. 
+   #####                       synchronized메서드 내에서 다른 synchronized 메서드를 호출하지 않는다.(deadlock 방지위해)
+	    synchronized 수행문
 		synchronized(*참조형 수식*){}
-	=> 참조형 수식에 해당되는 객체에 lock을 건다
+	    => 참조형 수식에 해당되는 객체에 lock을 건다
 	
 	
-**deadlock**	
+##### deadlock
 
 <img src="https://user-images.githubusercontent.com/74708028/110880759-792c3880-8322-11eb-9551-32e4a6841fa5.jpg" width="800" height="480"/>
 
+**동기화구현**
+[Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍.pdf](https://github.com/6161990/TIL/files/6127417/Chapter.15.Thread.-.03.multi-thread.pdf)
+	
 
 ----------------------
 #### Thread의 여러가지 메서드 활용
@@ -161,7 +163,7 @@ public class ThreadTest {
 }
 ```
 #
-**wait()/notify() 메서드**
+**wait()/notify() 메서드(Object의 메서드)**
 * ##### wait(): 리소스가 더 이상 유효하지 않은 경우 리소스가 사용 가능할 때까지 기다리기위해
   ##### thread를 non-runnable 상태로 전환.
   ##### wait()상태가 된 thread은 notify()가 호출될 때까지 기다린다.
@@ -169,6 +171,10 @@ public class ThreadTest {
 * ##### notifyAll() : wait()하고 있는 모든 thread가 runnable 한 상태가 되도록 함.
   ##### notify() 보다 notifyAll()사용권장. 
   ##### 특정 thread가 통지를 받도록 제어할 수 없으므로 모두 깨운 후 scheduler에 CPU를 점유하는 것이 좀 더 공평하다고함.
+  
+  **wait()/notify() 메서드 사용해보기**
+  ![Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍_페이지_11](https://user-images.githubusercontent.com/74708028/110888090-d1693780-832e-11eb-9e63-aca5f0ec4361.png)
+
 #
 **join() 메서드**
 
