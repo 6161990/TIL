@@ -1,23 +1,25 @@
-### 제네릭 프로그래밍 Generic Programming
-#### Generic : 일반적인, 포괄적인
-#### 클래스 내부에서 사용할 데이터 타입을 외부에서 확정하는 기법
+## :pushpin: 제네릭 프로그래밍 Generic Programming
+### Generic : 일반적인, 포괄적인
+### 클래스 내부에서 사용할 데이터 타입을 외부에서 확정하는 기법
 
 <img src="https://user-images.githubusercontent.com/74708028/110271099-ad45e780-800a-11eb-90a4-a71e5971dbb6.jpg" width="850" height="300">
 
-* ###### 변수의 선언이나 메서드의 매개변수를 하나의 참조 자료형이 아닌 여러 자료형으로 변환될 수 있도록 프로그래밍 하는 방식
-* ###### 실제 사용되는 참조 자료형으로의 변환은 컴파일러가 검증하므로 안정적인 프로그래밍 방식
-* ###### 제네릭 프로그래밍의 효용:
-  ###### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
-  ###### 그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
-  ###### 타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
-* ###### 주의 ) 제네릭은 참조 자료형만 가능, 기본 자료형 (int, char ...) 은 자바 안에서 객체가 아니기 때문에 불가능. 
-  ######     => 기본 데이터 타입의 제네릭 사용법?
-  ######        객체인 것 처럼 꾸미는 객체를 이용 [Wrapper](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
+* #### 변수의 선언이나 메서드의 매개변수를 하나의 참조 자료형이 아닌 여러 자료형으로 변환될 수 있도록 프로그래밍 하는 방식
+* #### 실제 사용되는 참조 자료형으로의 변환은 컴파일러가 검증하므로 안정적인 프로그래밍 방식
+* #### 제네릭 프로그래밍의 효용:
+  #### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
+  #### 그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
+  #### 타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
+* #### ((( 주의 ))) 제네릭은 참조 자료형만 가능, 기본 자료형 (int, char ...) 은 자바 안에서 객체가 아니기 때문에 불가능. 
+  ####     => 기본 데이터 타입의 제네릭 사용법?
+  ####        객체인 것 처럼 꾸미는 객체를 이용 [Wrapper](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
 
-#
-**자료형 매개변수 T**
-###### 여러 참조 자료형으로 대체될 수 있는 부분을 하나의 문자로 표현
-###### (type의 의미로 대개 T 사용)
+
+<br>
+
+#### :round_pushpin: 자료형 매개변수 <T>
+##### 여러 참조 자료형으로 대체될 수 있는 부분을 하나의 문자로 표현
+##### (type의 의미로 대개 T 사용)
             클래스형 : public class GenericPrinter<T>{
                        private T mateial;
             }
@@ -28,12 +30,13 @@
             반환형: public T getMaterial(){
                     return material;
             }
-#
+
+<br>
 
 
-**제네릭과 상속 <T extends 클래스> (interface)** 
-###### T 대신에 사용될 자료형을 제한하기 위해 사용. 
-**class extends**
+#### :round_pushpin: 제네릭과 상속 <T extends 클래스> (interface)
+##### T 대신에 사용될 자료형을 제한하기 위해 사용. 
+#### class extends
 ```java
 abstract class Info{                   //abstract 
   public abstract int getLevel();
@@ -85,7 +88,9 @@ class Person<T extends Info> {          //그럼 얘도 implements여야 하는�
   }
 ```
 
-**자료형 매개 변수가 두 개 이상일 때**
+<br>
+
+#### :round_pushpin: 자료형 매개 변수가 두 개 이상일 때
 ```java
 public class Point<T, V>{
   T x;
@@ -104,9 +109,12 @@ public class Point<T, V>{
   }
 }
 ```
-**제너릭 메서드**
-* ###### 일반 클래스에서 쓰일 수 있음. 
-* ###### 메서드의 매개 변수를 자료형 매개 변수로 사용하는 메서드
+
+<br>
+
+#### :round_pushpin: 제너릭 메서드
+* ##### 일반 클래스에서 쓰일 수 있음. 
+* ##### 메서드의 매개 변수를 자료형 매개 변수로 사용하는 메서드
 ```java
 public class GenericMethod{
   public static <T, V> double makeRectangle(Point<T, V> p1, Point<T, V> p2){
@@ -122,17 +130,18 @@ public class GenericMethod{
   }
 }
 ```
-* ###### 메세드 내에서의 매개 변수는 메서드 내에서만 유효함. (지역 변수와 같은 개념)  
+* ##### 메세드 내에서의 매개 변수는 메서드 내에서만 유효함. (지역 변수와 같은 개념)  
 
            class Shape<T>{
                 public static <T, V> double makeRectangle(Point<T, V>p1, Point<T, v> P2){
                     ...
                 }
             }
-######  => Shape의 makeRectangle의 T는 전혀 다른 의미 
+#####  => Shape의 makeRectangle의 T는 전혀 다른 의미 
 
-#
-**제네릭의 생략**
+<br>
+
+#### :round_pushpin: 제네릭의 생략
 ```java
 class EmployeeInfo{
   public int rank;
@@ -160,8 +169,9 @@ class Person<T, S> {
   }
 }
 ```
-#
--------------------------------
+
+<br>
+### :computer: 프로그래밍해보기
 #### 제네릭을 이용한 3D 프린팅 프로그래밍
 **전체 재료 관리 : 여기서 상속 받은 재료만 3D프린팅 가능하도록 제한하기 위해**
 ```java
