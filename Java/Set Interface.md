@@ -196,7 +196,7 @@ public class MemberHashSetTest {
   ##### TreeSet 생성자에 Comparator가 구현된 객체를 매개변수로 전달   
             TreeSet<Member> treeSet = new TreeSet<Member>(new Member( ));
   ##### 일반적으로 Comparable을 더 많이 사용
-* ###### 이미 Comparable이 구현된 경우 Comparator를 이용하여 다른 정렬 방식을 정의할 수 있음
+* ##### 이미 Comparable이 구현된 경우 Comparator를 이용하여 다른 정렬 방식을 정의할 수 있음
 
 <br>
 
