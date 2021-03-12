@@ -7,10 +7,10 @@
 <br>
 
 #### :round_pushpin: Class 클래스 가져오기
-##### 1.String s = new String();
-#####   Class c = s.getClass();  // getClass()는 Object의 메소드 
-##### 2. Class c = String.Class;  => 컴파일 된 상태로 있는 경우
-##### 3. Class c = Class.forName("java.lang.String");  // 동적로딩
+#### 1.String s = new String();
+####   Class c = s.getClass();  // getClass()는 Object의 메소드 
+#### 2. Class c = String.Class;  => 컴파일 된 상태로 있는 경우
+#### 3. Class c = Class.forName("java.lang.String");  // 동적로딩
 * ###### 장점 : runtime 시 로딩이 된다. 
   ######       쓰이는 경우) JDBC의 라이브러리 모두 링크할 수 없으니까, 내가 필요할 때 원하는 라이브러리를 불러올 수 있다. 
 * ###### 단점 : runtime시, 오타가 나있다면 로딩이 죽을 수도 있다. 
