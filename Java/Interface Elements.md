@@ -7,8 +7,8 @@
 
 <br>
 
-#### :round_pushpin:
-#### 사칙연산 로직이 있는 인터페이스 Calc
+
+#### :round_pushpin: 사칙연산 로직이 있는 인터페이스 Calc
 ```java
  public interface Calc {
 	
