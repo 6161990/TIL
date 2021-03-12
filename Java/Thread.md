@@ -3,9 +3,9 @@
 <img src="https://user-images.githubusercontent.com/74708028/110875195-85ab9380-8318-11eb-9b00-1c3f786c6478.jpg" width="500" height="300"/>
 
 
-#### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
+* #### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
 #### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
-#### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
+* #### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
 #### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
 
 **자바 Thread클래스로 부터 상속받아 구현**
@@ -97,10 +97,10 @@ public class ThreadTest {
 * ###### Thread는 각각의 작업공간(context)를 가짐 -> thread가 swith되면 작업공간도 swith 된다.
 * ###### 공유 자원이 있는 경우 race condition이 발생
 * ###### critical section에 대한 동기화(synchronization)의 구현이 필요, 아니면 충돌한다.
-<img src="https://user-images.githubusercontent.com/74708028/110875364-d3c09700-8318-11eb-95f3-571fc78c57fe.jpg" width="500" height="300"/>
+<img src="https://user-images.githubusercontent.com/74708028/110875364-d3c09700-8318-11eb-95f3-571fc78c57fe.jpg" width="350" height="200"/>
 
 
-###### critical section? 
+##### critical section? 
 ###### shared resource는 여러가지 thread가 있을 떄, 공유하는 자원.
 ###### 같이 쓰다보니까 오류가 날 수도 있다.
 ###### 이런 영역에 대해 순서를 지켜주자는 것이 동기화 synchronization.
