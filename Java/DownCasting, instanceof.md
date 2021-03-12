@@ -61,7 +61,7 @@ public class AnimalTest {
 }
  ```   
  #
-#### :triangular_flag_on_post: 컴파일 에러를 피하는 방법이 **'instanceof'** true/false를 반환. 
+#### :triangular_flag_on_post: 컴파일 에러를 피하는 방법:  **'instanceof'** true/false를 반환. 
  ```java    
  public class AnimalTest {
 
@@ -83,8 +83,8 @@ public class AnimalTest {
  #### :triangular_flag_on_post: instanceof가 하는 일
  #### A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
  #### 매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
-     
-     <br> 
+    
+ <br> 
      
 #### instanceof를 이용해 각자가 가진 차별 메소드 출력하기
   ```java    
