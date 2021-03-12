@@ -68,15 +68,15 @@
  <br>
  
 #### :round_pushpin: 중간 연산
-##### filter(), map()
-##### 조건에 맞는 요소를 추출(filter()) 하거나 요소를 변환함(map())
-##### 스트림에서의 구현부는 람다식으로
-##### 문자열의 길이가 5이상인 요소만 출력하기
+* ##### filter(), map()
+* ##### 조건에 맞는 요소를 추출(filter()) 하거나 요소를 변환함(map())
+* ##### 스트림에서의 구현부는 람다식으로
+* ##### 문자열의 길이가 5이상인 요소만 출력하기
           
           추출 filter
           sList.stream(). filter(s-> s.length() >= 5). forEach(s -> System.out.println(s));
           --스트림생성--   ---------중간연산----------   --------------최종연산--------------
-##### 고객 클래서에서 고객 이름만 가져오기
+* ##### 고객 클래서에서 고객 이름만 가져오기
 
           변환 map
           customerList.stream(). map(c-> c.getName( )). forEach(S -> System.out.println(s));
@@ -102,7 +102,10 @@
 
           Array.stream(arr).reduce(초기값, (전달되는 요소) -> (각 요소가 수행해야 할 기능)); 
           Array.stream(arr).reduce(0, (a,b) -> (a+b));
-#### :triangular_flag_on_post: reduce()이용해 길이 제일 긴 단어 고르기
+	  
+<br>
+	  
+##### :triangular_flag_on_post: reduce()이용해 길이 제일 긴 단어 고르기
 **reduce 연산 사용법 1**
 ```java
 public class ReduceTest{
