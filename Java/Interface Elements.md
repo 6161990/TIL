@@ -1,10 +1,13 @@
-### 인터페이스 요소 Interface Elements
+## :pushpin: 인터페이스 요소 Interface Elements
 #
 * ###### 선 참고 : [인터페이스 Interface](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 * ###### 후 참고 : [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 #
 * #### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
-**사칙연산 로직이 있는 인터페이스 Calc**
+
+<br>
+
+#### :round_pushpin: 사칙연산 로직이 있는 인터페이스 Calc
 ```java
  public interface Calc {
 	
@@ -21,7 +24,7 @@
 	}
 }
 ```
-**그 중 더하기와 빼기만 구현한 추상클래스, Calaulator**
+#### 그 중 더하기와 빼기만 구현한 추상클래스, Calaulator
 ```java   
 public abstract class Calculator implements Calc{
 	@Override
@@ -35,7 +38,7 @@ public abstract class Calculator implements Calc{
 	}
 }
 ```  
-**그 Calculator를 상속받아 나머지 곱하기, 나누기를 구현한 CompleteCalc 클래스**
+#### 그 Calculator를 상속받아 나머지 곱하기, 나누기를 구현한 CompleteCalc 클래스
 ```java
 public class CompleteCalc extends Calculator{
 
@@ -56,7 +59,10 @@ public class CompleteCalc extends Calculator{
 	}
 }
 ```  
-**디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출**
+
+<br>
+
+#### 디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출
 ```java
 public class CalcTest {
 
@@ -74,11 +80,13 @@ public class CalcTest {
 	}
 }  
 ```
-#
 
-* #### 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
-  ###### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
-  ###### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
+<br>
+
+
+* #### :triangular_flag_on_post: 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
+  ##### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
+  ##### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
 ```java
  public interface Calc {
 	
@@ -127,13 +135,15 @@ public class CalcTest {
 
 }
 ```
-#
-* #### private메서드 : 인터페이스 내에서 사용하기 위해 구현한 메서드. 구현하는 클래스에서 재정의 할 수 없음.
-  ###### static private 메서드는 일반 메소드에서 호출할 수 없음. static 메소드는 인스턴스를 생성하지 않으므로. 
-  ###### 1. 일반 private
-  ###### 2. 정적 private
+
+<br>
+
+* #### :round_pushpin: private메서드 : 인터페이스 내에서 사용하기 위해 구현한 메서드. 구현하는 클래스에서 재정의 할 수 없음.
+  ##### static private 메서드는 일반 메소드에서 호출할 수 없음. static 메소드는 인스턴스를 생성하지 않으므로. 
+  ##### 1. 일반 private
+  ##### 2. 정적 private
   
-**1. 일반 private**
+##### 1. 일반 private
 ```java
  public interface Calc {
 	
@@ -159,7 +169,7 @@ public class CalcTest {
 	}
 }
 ```
-**2. 정적 private**
+##### 2. 정적 private
 ```java
  public interface Calc {
 	
