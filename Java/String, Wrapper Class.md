@@ -31,7 +31,7 @@ public class StringTest {
 * ##### String 클래스의 concat()메서드 혹은 "+"를 이용하여 String을 연결하는 경우 문자열은 새로 생성됨.
 * ##### concat : 괄호 안 문자열을 전부 결합해서 반환하는 함수
 * ##### 합쳐진 String hashCode()확인할 수 없는 이유 : overwrite, 어떤 장소에 기록되어 있는 정보 위에 중복 기록 함으로써
-                                              원래의 정보가 소실되어(파괴되어)버리는 기록방법.
+  #####                                             원래의 정보가 소실되어(파괴되어)버리는 기록방법.
 ```java
 public class StringTest2 {
 
