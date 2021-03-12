@@ -117,7 +117,7 @@ public class ThreadTest {
 ##### 임계 영역에 여러 thread가 접근하는 경우, 한 thread가 수행하는 동안 공유 자원을 lock하려 다른 thread의 접근을 막음
 ##### 잘못 구현하면 deadlock에 빠질 수 있음
 
-**자바에서 동기화구현**
+#### 자바에서 동기화구현
 ##### synchronized 수행문과 synchronized 메서드를 이용
  * ##### synchronized 메서드 : 현재 이 메서드가 속해있는 객체에 lock을 건다. 
    #####                       synchronized메서드 내에서 다른 synchronized 메서드를 호출하지 않는다.(deadlock 방지위해)
@@ -126,13 +126,14 @@ public class ThreadTest {
 	    => 참조형 수식에 해당되는 객체에 lock을 건다
 	
 	
-##### deadlock
+#### deadlock
 
 <img src="https://user-images.githubusercontent.com/74708028/110880759-792c3880-8322-11eb-9551-32e4a6841fa5.jpg" width="800" height="480"/>
 
-**동기화구현**
-[Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍.pdf](https://github.com/6161990/TIL/files/6127417/Chapter.15.Thread.-.03.multi-thread.pdf)
-	
+**동기화구현 해보기**
+
+![Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍_페이지_07](https://user-images.githubusercontent.com/74708028/110888289-39b81900-832f-11eb-9052-7aa526a7487c.png)
+
 
 ----------------------
 #### Thread의 여러가지 메서드 활용
