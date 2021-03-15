@@ -59,7 +59,7 @@ public class SystemInTest2 {
 	}
 }
 ```
-##### :triangular_flag_on_post: '끝'이라고 입력할 때까지만 입력한다고 했는데, 콘솔창에 계속 입력가능. why?
+##### :interrobang: '끝'이라고 입력할 때까지만 입력한다고 했는데, 콘솔창에 계속 입력가능. why?
 #####    '끝'은 한글. 한글은 2byte씩 읽는데, System.in.read()는 1byte씩 밖에 못읽음.
 #####     muti byte로 읽을 수 있게 (문자로 바로 읽을 수 있게 바꿔줘야함)
 #####     보조스트림필요 InputStreamReader
