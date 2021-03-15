@@ -1,23 +1,31 @@
-### 예외 Exception
+## :pushpin: 예외 Exception
 <img src="https://user-images.githubusercontent.com/74708028/110581279-9390d580-81ad-11eb-837c-5d74a03f35b1.jpg" width="500" height="300">
 
-#### 오류란 무엇인가?
-* ###### 컴파일 오류 :  프로그램 코드 작성 중 발생하는 문법적 오류
-* ###### 실행 오류 : 실행 중인 프로그램이 의도하지 않은 동작을 하거나 (bug), 프로그램이 중지되는 오류 (runtime error)
-  ###### 자바는 예외 처리를 통하여 프로그램의 비정상 종료를 막고 log를 남길 수 있음
-  ###### log를 잘 남겨야 예외 처리가 수월함
-#### 오류와 예외 클래스
-* ###### 시스템 오류 (error) : 가상 머신에서 발생, 프로그래머가 처리할 수 없음
-  ######                      동적 메모리를 다 사용한 경우, stack over flow 등
-* ###### 예외 ( Exception ) : 프로그램에서 제어할 수 있는 오류
-     ######                  읽으려는 파일이 없는 경우, 네트윅이나 소켓 연결 오류 등
-     ######                  자바 프로그램에서는 예외에 대한 처리를 수행함
-#     
-#### 예외 클래스
-###### 모든 예외 클래스의 최상위 클래스는 Exception 클래스
+<br>
 
+### :round_pushpin: 오류란 무엇인가?
+* #### 컴파일 오류 :  프로그램 코드 작성 중 발생하는 문법적 오류
+* #### 실행 오류 : 실행 중인 프로그램이 의도하지 않은 동작을 하거나 (bug), 프로그램이 중지되는 오류 (runtime error)
+  ##### 자바는 예외 처리를 통하여 프로그램의 비정상 종료를 막고 log를 남길 수 있음
+  ##### log를 잘 남겨야 예외 처리가 수월함
+  
+  <br>
+  
+### :round_pushpin: 오류와 예외 클래스
+* #### 시스템 오류 (error) : 가상 머신에서 발생, 프로그래머가 처리할 수 없음
+  ####                      동적 메모리를 다 사용한 경우, stack over flow 등
+* #### 예외 ( Exception ) : 프로그램에서 제어할 수 있는 오류
+     ####                  읽으려는 파일이 없는 경우, 네트윅이나 소켓 연결 오류 등
+     ####                  자바 프로그램에서는 예외에 대한 처리를 수행함
 
-**try - catch 문으로 예외 처리 하기**
+<br>
+
+### :round_pushpin: 예외 클래스
+#### 모든 예외 클래스의 최상위 클래스는 Exception 클래스
+
+<br>
+
+#### :round_pushpin: try - catch 문으로 예외 처리 하기
 
       try{
         예외가 발생할 수 있는 코드 부분    
@@ -43,7 +51,10 @@ public class ArrayExceptionTest {
 	}
 }
 ```
-**try - catch - finally 문으로 예외 처리 하기**
+
+<br>
+
+#### :round_pushpin: try - catch - finally 문으로 예외 처리 하기
 
               try{
                 예외가 발생할 수 있는 코드 부분    
@@ -77,16 +88,20 @@ public class ExceptionTest {
   System.out.println("end");  
 }
 ```
- #            
- **try - with - resources 문**
- ###### 리소스를 자동으로 해제하도록 제공해주는 구문,finally가 필요없게됨
- ###### 해당 리소스가 AutoCloseable을 구현한 경우 close()를 명시적으로 호출하지 않아도
- ###### try{}블록에서 오픈된 리소스는 정산적인 경우나 예외가 발생한 경우 모두 자동으로 close()가 호출됨
- ###### 자바 7부터 제공됨
- ###### FileInputStream의 경우 AutoCloseable을 구현하고있음
+
+<br>
+
+### :round_pushpin: try - with - resources 문
+ * ##### 리소스를 자동으로 해제하도록 제공해주는 구문, finally가 필요없게됨
+ * ##### 해당 리소스가 AutoCloseable을 구현한 경우 close()를 명시적으로 호출하지 않아도
+   ##### try{}블록에서 오픈된 리소스는 정산적인 경우나 예외가 발생한 경우 모두 자동으로 close()가 호출됨
+ * ##### 자바 7부터 제공됨
+ * ##### FileInputStream의 경우 AutoCloseable을 구현하고있음
  
-*  ##### AutoCloseable 인터페이스 사용하기
- ###### AutoCloseable 인터페이스를 구현한 클래스를 만들고 close()가 잘 호출되는지 확인해본다
+ <br>
+ 
+:triangular_flag_on_post: #### AutoCloseable 인터페이스 사용하기
+ ##### AutoCloseable 인터페이스를 구현한 클래스를 만들고 close()가 잘 호출되는지 확인해본다
       public class AutoCloseObj implements AutoCloseable{
         @Override
         publid void close( ) throws Exception{
@@ -117,16 +132,18 @@ public class AutoCloseTest {
 }
 ```
       
- **향상된 try - with - resources 문**
- ##### 자바 9에서 제공되는 구문
- * ###### 자바 9이전
+      <br>
+      
+### :round_pushpin: 향상된 try - with - resources 문
+ #### 자바 9에서 제공되는 구문
+ * ##### 자바 9이전
           AutoCloseObj obj = new AutoCloseObj();
           try (AutoCloseObj obj2 = obj){
             throw new Exception( );
           }catch(Exception e){
             System.out.println("예외 부분입니다");
           }
-  * ###### 자바 9 이후
+  * ##### 자바 9 이후
           AutoCloseObj obj = new AutoCloseObj();
           try (obj){--------------외부에서 선언한 변수를 그대로 쓸 수 있음 
             throw new Exception( );
@@ -134,12 +151,14 @@ public class AutoCloseTest {
             System.out.println("예외 부분입니다");
           }
             
-#
-#### 예외 처리 미루기
-###### throws를 사용하여 예외처리 미루기
-* ###### try{} 블록으로 예외를 처리하지않고, 메서드 선언부에 throws 를 추가
-* ###### 예외가 발생한 메서드에서 예외 처리를 하지 않고 이 메서드를 호출한 곳에서 예외처리를 한다는 의미
-* ###### main()에서 throws를 사용하면 가상머신에서 처리됨
+
+<br>
+
+### :round_pushpin: 예외 처리 미루기
+#### throws를 사용하여 예외처리 미루기
+* ##### try{} 블록으로 예외를 처리하지않고, 메서드 선언부에 throws 를 추가
+* ##### 예외가 발생한 메서드에서 예외 처리를 하지 않고 이 메서드를 호출한 곳에서 예외처리를 한다는 의미
+* ##### main()에서 throws를 사용하면 가상머신에서 처리됨
 ```java
 public class ThrowsException {
 
@@ -167,12 +186,14 @@ public class ThrowsException {
 
 }
 ```
-#
-#### 다중 예외처리하기
-* ###### 하나의 try{}블록에서 여러 예외가 발생하는 경우 catch{} 블록 한곳에서 처리하거나 
-###### 여러 catch{} 블록으로 나누어 처리할 수 있음
-* ###### 가장 최상위 클래스인 Exception 클래스는 가장 마지막 블록에 위치해야함.
-###### => 모든 것을 포함하는 예외클래스이지만, 상황에 맞는 log를 남기기위해 하위 예외를 사용하는 것임
+
+<br>
+
+### :round_pushpin: 다중 예외처리하기
+* #### 하나의 try{}블록에서 여러 예외가 발생하는 경우 catch{} 블록 한곳에서 처리하거나 
+  #### 여러 catch{} 블록으로 나누어 처리할 수 있음
+* #### 가장 최상위 클래스인 Exception 클래스는 가장 마지막 블록에 위치해야함.
+  #### => 모든 것을 포함하는 예외클래스이지만, 상황에 맞는 log를 남기기위해 하위 예외를 사용하는 것임
   
    	public static void main(String[] args){
 	  ThrowsException test = new ThrowsException();
@@ -186,7 +207,9 @@ public class ThrowsException {
 	   e.printStackTrace( );
 	  }
 	 } 
-**한꺼번에 다중처리**	 
+	 
+	 
+#### 한꺼번에 다중처리하기	 
 ```java
 public static void main(String[] args){
 	  ThrowsException test = new ThrowsException();
@@ -196,11 +219,13 @@ public static void main(String[] args){
 	   e.printStackTrace( );
 	  }
 ```
-#	 
-#### 사용자 정의 예외	 
-* ###### JDK에서 제공되는 예외 클래스 외에 사용자가 필요에 의해 클래스를 정의하여 사용
-* ###### 기존 JDK 클래스에서 상속받아 예외 클래스 만듦.
-* ###### throw 키워드로 예외를 발생시킴, throws는 던지는 것.
+
+<br>
+
+### :round_pushpin: 사용자 정의 예외	 
+* #### JDK에서 제공되는 예외 클래스 외에 사용자가 필요에 의해 클래스를 정의하여 사용
+* #### 기존 JDK 클래스에서 상속받아 예외 클래스 만듦.
+* #### throw 키워드로 예외를 발생시킴, throws는 던지는 것.
 
 	   public class IDFormatException extends Exception{
 	     public IDFormatException(String message){--------생성자의 매개변수로, 예외 상황 메세지를 받음
@@ -259,9 +284,13 @@ public class IDFormatTest {
 }
 ```
 
+<br>
+
 -------------------------------------------
 ## 예외 총정리
-#
+
+<br>
+
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_13](https://user-images.githubusercontent.com/74708028/110584864-3e57c280-81b3-11eb-999b-93e68e6f7be7.png)
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_14](https://user-images.githubusercontent.com/74708028/110584872-4283e000-81b3-11eb-8c76-e26327713ae9.png)
 ![Chapter 13 예외 처리 - 01 예외와 예외 처리_페이지_15](https://user-images.githubusercontent.com/74708028/110584875-444da380-81b3-11eb-8f62-4bae0cb80ab8.png)
