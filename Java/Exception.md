@@ -195,18 +195,18 @@ public class ThrowsException {
 * #### 가장 최상위 클래스인 Exception 클래스는 가장 마지막 블록에 위치해야함.
   #### => 모든 것을 포함하는 예외클래스이지만, 상황에 맞는 log를 남기기위해 하위 예외를 사용하는 것임
   
-   	public static void main(String[] args){
-	  ThrowsException test = new ThrowsException();
-	  try {
-	   test.loadClass("a.txt","java.lang.String");
-	  } catch (FileNotFoundException e){
-	   e.printStackTrace( );
-	  } catch (ClassNotFoundException e){
-	   e.printStackTrace( );
-	  } catch(Exception e){ ---------Exception 클래스로 그 외 예외상황처리
-	   e.printStackTrace( );
-	  }
-	 } 
+   		public static void main(String[] args){
+		  ThrowsException test = new ThrowsException();
+		  try {
+		   test.loadClass("a.txt","java.lang.String");
+		  } catch (FileNotFoundException e){
+		   e.printStackTrace( );
+		  } catch (ClassNotFoundException e){
+		   e.printStackTrace( );
+		  } catch(Exception e){ ---------Exception 클래스로 그 외 예외상황처리
+		   e.printStackTrace( );
+		  }
+		 } 
 	 
 	 
 #### 한꺼번에 다중처리하기	 
