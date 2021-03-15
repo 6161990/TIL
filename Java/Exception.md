@@ -6,17 +6,17 @@
 ### :round_pushpin: 오류란 무엇인가?
 * #### 컴파일 오류 :  프로그램 코드 작성 중 발생하는 문법적 오류
 * #### 실행 오류 : 실행 중인 프로그램이 의도하지 않은 동작을 하거나 (bug), 프로그램이 중지되는 오류 (runtime error)
-  ##### 자바는 예외 처리를 통하여 프로그램의 비정상 종료를 막고 log를 남길 수 있음
-  ##### log를 잘 남겨야 예외 처리가 수월함
+  ###### 자바는 예외 처리를 통하여 프로그램의 비정상 종료를 막고 log를 남길 수 있음
+  ###### log를 잘 남겨야 예외 처리가 수월함
   
   <br>
   
 ### :round_pushpin: 오류와 예외 클래스
 * #### 시스템 오류 (error) : 가상 머신에서 발생, 프로그래머가 처리할 수 없음
-  ####                      동적 메모리를 다 사용한 경우, stack over flow 등
+  ######                      동적 메모리를 다 사용한 경우, stack over flow 등
 * #### 예외 ( Exception ) : 프로그램에서 제어할 수 있는 오류
-     ####                  읽으려는 파일이 없는 경우, 네트윅이나 소켓 연결 오류 등
-     ####                  자바 프로그램에서는 예외에 대한 처리를 수행함
+     ######                  읽으려는 파일이 없는 경우, 네트윅이나 소켓 연결 오류 등
+     ######                  자바 프로그램에서는 예외에 대한 처리를 수행함
 
 <br>
 
@@ -98,9 +98,9 @@ public class ExceptionTest {
  * ##### 자바 7부터 제공됨
  * ##### FileInputStream의 경우 AutoCloseable을 구현하고있음
  
- <br>
+<br>
  
-:triangular_flag_on_post: #### AutoCloseable 인터페이스 사용하기
+#### :triangular_flag_on_post: AutoCloseable 인터페이스 사용하기
  ##### AutoCloseable 인터페이스를 구현한 클래스를 만들고 close()가 잘 호출되는지 확인해본다
       public class AutoCloseObj implements AutoCloseable{
         @Override
@@ -132,7 +132,7 @@ public class AutoCloseTest {
 }
 ```
       
-      <br>
+<br>
       
 ### :round_pushpin: 향상된 try - with - resources 문
  #### 자바 9에서 제공되는 구문
