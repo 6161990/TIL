@@ -209,7 +209,7 @@ public class ThrowsException {
 		 } 
 	 
 	 
-#### 한꺼번에 다중처리하기	 
+#### :triangular_flag_on_post: 한꺼번에 다중처리하기	 
 ```java
 public static void main(String[] args){
 	  ThrowsException test = new ThrowsException();
