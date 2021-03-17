@@ -3,10 +3,10 @@
 <img src="https://user-images.githubusercontent.com/74708028/110875195-85ab9380-8318-11eb-9b00-1c3f786c6478.jpg" width="500" height="300"/>
 
 
-* ### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
-  ### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
-* ### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
-  ### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
+* #### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
+  #### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
+* #### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
+  #### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
 
 <br>
 
