@@ -1,6 +1,6 @@
 ## :pushpin: 바이트 단위 입출력 스트림 Byte IO Stream
-* ### InputStream : 바이트 단위 입력 스트림 최상위 클래스
-* ### OutputStream : 바이트 단위 출력 스트림 최상위 클래스 
+* #### InputStream : 바이트 단위 입력 스트림 최상위 클래스
+* #### OutputStream : 바이트 단위 출력 스트림 최상위 클래스 
   #### => 위 기반 클래스는 추상 메서드를 포함한 추상 클래스로, 아래 하위 클래스가 구현하여 사용 
 #### :round_pushpin: 입력 보조 스트림
 * ##### FileInputStream : 파일에서 바이트 단위로 자료를 읽습니니다
