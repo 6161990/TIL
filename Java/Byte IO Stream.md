@@ -2,10 +2,16 @@
 * #### InputStream : 바이트 단위 입력 스트림 최상위 클래스
 * #### OutputStream : 바이트 단위 출력 스트림 최상위 클래스 
   #### => 위 기반 클래스는 추상 메서드를 포함한 추상 클래스로, 아래 하위 클래스가 구현하여 사용 
+  
+ <br>
+ 
 #### :round_pushpin: 입력 보조 스트림
 * ##### FileInputStream : 파일에서 바이트 단위로 자료를 읽습니니다
 * ##### ByteArrayInputStream : Byte 배열 메모리에서 바이트 단위로 자료를 읽습니다
 * ##### FilterInputStream : 기반 스트림에서 자료를 읽을 때 추가 기능을 제공하는 보조 스트림의 상위 클래스입니다
+
+<br>
+
 #### :round_pushpin: 출력 보조 스트림
 * ##### FileOutputStream : 바이트 단위로 파일에 자료를 씁니다
 * ##### ByteArrayOutputStream : Byte 배열에 바이트 단위로 자료를 씁니다
@@ -177,6 +183,8 @@ public class FileOutputTest1 {
 }
 ```
 
+-----------------------------------------------------------
+
 <br>
 
 ### :round_pushpin: FileInputStream & FileOutputStream 같이 
@@ -208,6 +216,8 @@ public class FileOutputTest2 {
 
 }
 ```
+
+-----------------------------------------------------------
 
 <br>
 
