@@ -1,14 +1,16 @@
-### 쓰레드 Thread
+## :pushpin: 쓰레드 Thread
 
 <img src="https://user-images.githubusercontent.com/74708028/110875195-85ab9380-8318-11eb-9b00-1c3f786c6478.jpg" width="500" height="300"/>
 
 
-* #### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
-  #### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
-* #### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
-  #### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
-#
-**자바 Thread클래스로 부터 상속받아 구현**
+* ### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
+  ### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
+* ### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
+  ### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
+
+<br>
+
+### :round_pushpin: 자바 Thread클래스로 부터 상속받아 구현
 ```java
 class MyThread extends Thread {
   
@@ -47,8 +49,11 @@ public class ThreadTest {
 ```
 ##### => 자바는 다중 상속이 허용되지 않으므로 이미 다른 클래스를 상속한 경우, 
 #####     thread를 만들려면 Runnable interface를 implements 하도록한다.
-#
-**Runnable 인터페이스로 구현**
+
+
+<br>
+
+### :round_pushpin: Runnable 인터페이스로 구현
 ```java
 class MyThread implements Runnable{  // 상속은 하나밖에 못하기 때문에 이미 어떤 class를 상속받았다면 Runnable로 구현
 
@@ -91,8 +96,14 @@ public class ThreadTest {
 
 }
 ```
+
+<br>
+
 -------------------------
-#### Multi-thread 프로그래밍
+
+<br>
+
+### :round_pushpin: Multi-thread 프로그래밍
 #### 동시에 여러 개의 Thread가 수행되는 프로그래밍
 * ##### Thread는 각각의 작업공간(context)를 가짐 -> thread가 swith되면 작업공간도 swith 된다.
 * ##### 공유 자원이 있는 경우 race condition이 발생
@@ -100,24 +111,29 @@ public class ThreadTest {
 
 <img src="https://user-images.githubusercontent.com/74708028/110875364-d3c09700-8318-11eb-95f3-571fc78c57fe.jpg" width="350" height="200"/>
 
-#
-#### critical section(임계 영역)? 
+
+<br>
+
+#### :triangular_flag_on_post: critical section(임계 영역)? 
 ##### 두 개 이상의 thread가 동시에 접근하게 되는 리소스(자바로 예를 들면 static 키워드를 가진 객체들)
 ##### shared resource는 여러가지 thread가 있을 떄, 공유하는 자원. 같이 쓰다보니까 오류가 날 수도 있다.  
 ##### 이런 영역에 대해 순서를 지켜주자는 것이 동기화 synchronization.
 ##### "네가 먼저 ~하고, 내가 나중에 ~할게" 하면서 race condition. 그래서 critical section에는 한번에 하나만 들어갈 수 있음
 
-#
-**순자척인 임계영역 접근**
+<br>
+
+#### :triangular_flag_on_post: 순자척인 임계영역 접근
 
 <img src="https://user-images.githubusercontent.com/74708028/110880049-5a797200-8321-11eb-9211-d6073a6fabac.jpg" width="700" height="350"/>
 
-#
-#### 동기화 (synchronization)? 
-##### 임계 영역에 여러 thread가 접근하는 경우, 한 thread가 수행하는 동안 공유 자원을 lock하려 다른 thread의 접근을 막음
-##### 잘못 구현하면 deadlock에 빠질 수 있음
 
-#### 자바에서 동기화구현
+<br>
+
+### :round_pushpin: 동기화 (synchronization)? 
+#### 임계 영역에 여러 thread가 접근하는 경우, 한 thread가 수행하는 동안 공유 자원을 lock하려 다른 thread의 접근을 막음
+#### 잘못 구현하면 deadlock에 빠질 수 있음
+
+#### :triangular_flag_on_post: 자바에서 동기화구현
 ##### synchronized 수행문과 synchronized 메서드를 이용
  * ##### synchronized 메서드 : 현재 이 메서드가 속해있는 객체에 lock을 건다. 
    #####                       synchronized메서드 내에서 다른 synchronized 메서드를 호출하지 않는다.(deadlock 방지위해)
@@ -126,26 +142,32 @@ public class ThreadTest {
 	    => 참조형 수식에 해당되는 객체에 lock을 건다
 	
 	
-#### deadlock
+#### :triangular_flag_on_post:deadlock
 
 <img src="https://user-images.githubusercontent.com/74708028/110880759-792c3880-8322-11eb-9551-32e4a6841fa5.jpg" width="800" height="480"/>
 
-**동기화구현 해보기**
+### :computer: 동기화구현 해보기
 
 ![Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍_페이지_07](https://user-images.githubusercontent.com/74708028/110888289-39b81900-832f-11eb-9052-7aa526a7487c.png)
 
+<br>
 
-----------------------
-#### Thread의 여러가지 메서드 활용
-**Thread status**
+-------------------------------------------
+
+<br>
+
+
+### :round_pushpin: Thread의 여러가지 메서드 활용
+#### Thread status
 
 <img src="https://user-images.githubusercontent.com/74708028/110876513-f6ec4600-831a-11eb-9236-72b117739c4e.jpg" width="800" height="480"/>
 
-#
-**Thread 우선순위**
-##### Thread.MIN PRIORITY(=1) ~ Thread.MAX PRIORITY(=10)
-##### 디폴트 우선 순위 : Thread.NORM_PRIORITY (=5)
-##### 우선 순위가 높은 thread는 CPU를 배분 받을 확률이 높음(주려면 높게 확 주어야함)
+<br>
+
+### :round_pushpin: Thread 우선순위
+#### Thread.MIN PRIORITY(=1) ~ Thread.MAX PRIORITY(=10)
+#### 디폴트 우선 순위 : Thread.NORM_PRIORITY (=5)
+#### 우선 순위가 높은 thread는 CPU를 배분 받을 확률이 높음(주려면 높게 확 주어야함)
 	 setPriority(int newPriority)
 	 int getPriority()
 	
@@ -163,8 +185,10 @@ public class ThreadTest {
 	}
 }
 ```
-#
-**wait()/notify() 메서드(Object의 메서드)**
+
+<br>
+
+#### :triangular_flag_on_post: wait()/notify() 메서드(Object의 메서드)
 * ##### wait(): 리소스가 더 이상 유효하지 않은 경우 리소스가 사용 가능할 때까지 기다리기위해
   ##### thread를 non-runnable 상태로 전환.
   ##### wait()상태가 된 thread은 notify()가 호출될 때까지 기다린다.
@@ -173,11 +197,12 @@ public class ThreadTest {
   ##### notify() 보다 notifyAll()사용권장. 
   ##### 특정 thread가 통지를 받도록 제어할 수 없으므로 모두 깨운 후 scheduler에 CPU를 점유하는 것이 좀 더 공평하다고함.
   
-  **wait()/notify() 메서드 사용해보기**
+  #### :computer: wait()/notify() 메서드 사용해보기
   ![Chapter 15 자바 Thread 프로그래밍 - 03 multi-thread 프로그래밍_페이지_11](https://user-images.githubusercontent.com/74708028/110888090-d1693780-832e-11eb-9e63-aca5f0ec4361.png)
 
-#
-**join() 메서드**
+<br>
+
+#### :triangular_flag_on_post: join() 메서드
 
 <img src="https://user-images.githubusercontent.com/74708028/110876621-34e96a00-831b-11eb-88ef-11e7942185b5.jpg" width="430" height="300"/>
 
@@ -226,8 +251,10 @@ public class JoinTest extends Thread {
 	}
 }
 ```
-#
-**interrupt() 메서드**
+
+<br>
+
+#### :triangular_flag_on_post: interrupt() 메서드
 * ##### 다른 thread에 예외를 발생시키는 interrupt를 보냄
 * ##### thread가 join(), sleep(), wait() 메서드에 의해 블럭킹 되었다면 interrupt에 의해 다시 runnable상태가 될 수 있음
 
@@ -262,10 +289,12 @@ public class InterruptTest extends Thread{
 
 }
 ```
-#
-**thread 종료하기**
-* ##### 데몬 등 무한반복하는 thread가 종료될 수 있도록 run() 메서드 내의 while 문을 활용.
-* ##### Thread.stop()은 사용하지않음
+
+<br>
+
+### :round_pushpin: thread 종료하기
+* #### 데몬 등 무한반복하는 thread가 종료될 수 있도록 run() 메서드 내의 while 문을 활용.
+* #### Thread.stop()은 사용하지않음
 ```java
 public class TerminateThread extends Thread{
 
