@@ -1,5 +1,5 @@
 
-### 데코레이터 패턴 Decorator Pattern 
+## :pushpin: 데코레이터 패턴 Decorator Pattern 
 ###### 참고: [보조 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Decorator%20Stream.md)
 #### 자바의 입출력 스트림은 데코레이터 패턴을 사용
 #### 실제 입출력 기능을 가진 객체(컴포넌트)와 그 외 다양한 기능을 제공하는 데코레이터(보조스트림)을 사용하여
@@ -10,8 +10,9 @@
 
 <img src="https://user-images.githubusercontent.com/74708028/110743740-e2a53c00-827b-11eb-85a9-fc3a25893147.jpg" width="700" height="430"/>
 
-#
-**데코레이터 패턴을 활용하여 프로그래밍**
+<br>
+
+#### 💻 데코레이터 패턴을 활용하여 프로그래밍
 
 <img src="https://user-images.githubusercontent.com/74708028/110743992-4def0e00-827c-11eb-95d3-3c82c6262296.jpg" width="700" height="430"/>
 
