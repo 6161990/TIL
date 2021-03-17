@@ -153,6 +153,8 @@ public class FileInputTest3 {
 }
 ```
 
+------------------------------------------------
+
 <br>
 
 ### :round_pushpin: FileOutputStream
@@ -177,7 +179,7 @@ public class FileOutputTest1 {
 
 <br>
 
-### :round_pushpin: FileInputStrea & FileOutputStream 같이 
+### :round_pushpin: FileInputStream & FileOutputStream 같이 
 ```java
 public class FileOutputTest2 {
 
