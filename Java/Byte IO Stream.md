@@ -109,7 +109,7 @@ public class FileInputTest1 {
 <br>
 
 
-### :round_pushpin: try-with-resources(Auto Close)
+### :triangular_flag_on_post: try-with-resources(Auto Close)
 ```java
 public class FileInputTest2 {
 
@@ -131,7 +131,7 @@ public class FileInputTest2 {
 
 <br>
 
-### :round_pushpin: read 메소드 byte array(한 바이트씩 읽는 것보다 빠름)
+### :triangular_flag_on_post: read 메소드 byte array(한 바이트씩 읽는 것보다 빠름)
 ```java
 public class FileInputTest3 {
 
