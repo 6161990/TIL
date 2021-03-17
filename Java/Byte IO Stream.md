@@ -5,17 +5,17 @@
   
  <br>
  
-#### :round_pushpin: 입력 보조 스트림
-* ##### FileInputStream : 파일에서 바이트 단위로 자료를 읽습니니다
-* ##### ByteArrayInputStream : Byte 배열 메모리에서 바이트 단위로 자료를 읽습니다
-* ##### FilterInputStream : 기반 스트림에서 자료를 읽을 때 추가 기능을 제공하는 보조 스트림의 상위 클래스입니다
+### :round_pushpin: 입력 보조 스트림
+* #### FileInputStream : 파일에서 바이트 단위로 자료를 읽습니니다
+* #### ByteArrayInputStream : Byte 배열 메모리에서 바이트 단위로 자료를 읽습니다
+* #### FilterInputStream : 기반 스트림에서 자료를 읽을 때 추가 기능을 제공하는 보조 스트림의 상위 클래스입니다
 
 <br>
 
-#### :round_pushpin: 출력 보조 스트림
-* ##### FileOutputStream : 바이트 단위로 파일에 자료를 씁니다
-* ##### ByteArrayOutputStream : Byte 배열에 바이트 단위로 자료를 씁니다
-* ##### FilterOutputStream : 기반 스트림에서 자료를 쓸 때 추가 기능을 제공하는 보조 스트림의 상위 클래스입니다
+### :round_pushpin: 출력 보조 스트림
+* #### FileOutputStream : 바이트 단위로 파일에 자료를 씁니다
+* #### ByteArrayOutputStream : Byte 배열에 바이트 단위로 자료를 씁니다
+* #### FilterOutputStream : 기반 스트림에서 자료를 쓸 때 추가 기능을 제공하는 보조 스트림의 상위 클래스입니다
 
 <br>
 
