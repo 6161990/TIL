@@ -9,14 +9,14 @@
 
 #### :round_pushpin: 객체 지향 언어다.
 ##### 프로그램을 개발하는 기법으로 부품에 해당하는 객체들을 먼저 만들고 이것들을 하나씩 조립해서 프로그램을 완성하는 것을 OOP라고 한다.
-##### 일단 설계도인 클래스를 작성해야하고, 캡슐화, 상속, 다형성 기능을 지원한다.
+##### 일단 설계도인 클래스를 작성해야하고, 캡슐화, [상속](https://github.com/6161990/TIL/blob/main/Java/Inheritance.md), [다형성](https://github.com/6161990/TIL/blob/main/Java/Polymorphism.md) 기능을 지원한다.
 
 <br>
 
 #### :round_pushpin: 함수적 스타일 코딩을 지원한다.
 ##### Lisp 또는 Scheme와 같은 함수적 프로그래밍 언어가 있었는데 학계를 제외하곤 인기가 없었다. 
 ##### 최근들어 함수적 프로그램이 부각되고 있는데 대용량 데이터 병렬처리, 이벤트 지향 프로그램에 적합하다.
-##### 함수적 프로그램 람다식을 8부터 지원한다.
+##### 함수적 프로그램 [람다식](https://github.com/6161990/TIL/blob/main/Java/Lambda%20Expression.md)을 8부터 지원한다.
 ##### 람다식을 사용하면 컬렉션의 요소를 필터링, 매핑, 집계처리 하는데 쉬워지고 코드가 간결해진다.
 
 <br>
@@ -35,7 +35,7 @@
 
 <br>
 
-#### :round_pushpin: 멀티 쓰레드(Multi-Thread)를 쉽게 구현할 수 있다.
+#### :round_pushpin: 멀티 [Thread](https://github.com/6161990/TIL/blob/main/Java/Thread.md)(Multi-Thread)를 쉽게 구현할 수 있다.
 ##### 하나의 프로그램이 동시에 여러가지 작업을 처리해야할 경우, 대용량 작업을 빨리 처리하기 위해 서브작업으로 분리해서 병렬처리하려면 멀티스레드 프로그램이 필요하다.
 
 <br>
@@ -73,7 +73,7 @@
 <br>
 
 #### :triangular_flag_on_post: API : Application Programming Interface
-#####     ***Interface*** : 대화하다
+#####     ***Interface : 대화하다 *** 
 ##### => '어플리케이션과 대화하기 위한 도구'
 ##### 자바 프로그램을 개발하기 위해서 JDK에서 제공하는 표준 클래스 라이브러리
 
