@@ -68,6 +68,7 @@
 
 #### :triangular_flag_on_post: 자바 애플리케이션을 개발하고 실행하기 위한 자바 플랫폼의 3대 구성 요소 JRE & JDK & JVM
 * ###### 참고 : [JRE란 무엇인가?](https://www.itworld.co.kr/t/62076/%EA%B0%80%EC%83%81%ED%99%94/110768)
+* ###### 참고 : [JRE & JDK & JVM](https://wikidocs.net/257)
 ##### 자바 개발 키트(Java Development Kit, JDK), 
 ##### 자바 가상 머신(Java Virtual Machine, JVM), 
 ##### 자바 런타임 환경(Java Runtime Environment, JRE)
