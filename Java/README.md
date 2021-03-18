@@ -66,16 +66,23 @@
 
 <br>
 
-#### :triangular_flag_on_post: JRE & JDK
-##### JRE : JVM + 표준 클래스 라이브러리
-##### JDK : JRE + 개발에 필요한 도구
+#### :triangular_flag_on_post: 자바 애플리케이션을 개발하고 실행하기 위한 자바 플랫폼의 3대 구성 요소 JRE & JDK & JVM
+* ###### 참고 : [JRE란 무엇인가?](https://www.itworld.co.kr/t/62076/%EA%B0%80%EC%83%81%ED%99%94/110768)
+##### 자바 개발 키트(Java Development Kit, JDK), 
+##### 자바 가상 머신(Java Virtual Machine, JVM), 
+##### 자바 런타임 환경(Java Runtime Environment, JRE)
+* ##### JRE : JVM + 표준 클래스 라이브러리
+* ##### JDK : JRE + 개발에 필요한 도구
 
 <br>
 
 #### :triangular_flag_on_post: API : Application Programming Interface
-#####     ***Interface : 대화하다 *** 
+#####     ***Interface : 대화하다*** 
 ##### => '어플리케이션과 대화하기 위한 도구'
 ##### 자바 프로그램을 개발하기 위해서 JDK에서 제공하는 표준 클래스 라이브러리
+##### “내가 만든 프로그램이 개인 개발자, 기업, 기관이 제공하는 기능, 프로그램 등을 활용할 수 있게끔 도와주는 중간 매개체”
+##### “운영체제나 프로그래밍 언어가 제공하는 기능”을 SK의 날씨정보, Daum의 지도정보, 카카오페이로 두고, “응용 프로그램”을 우리가 만든 서비스라고 생각.
+* ###### [참고](https://dydrlaks.medium.com/api-%EB%9E%80-c0fd6222d34c)
 
 <br>
 
