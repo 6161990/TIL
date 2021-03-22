@@ -112,6 +112,7 @@ public static void setSerialNum(int serialNum) {
 }
 ```   
  <br>
+ 
 ### :pushpin: method 메서드 
 ##### 수학의 함수와 비슷하여 호출을 통해 사용한다. 전달 값이 없는 상태로 호출을 하거나, 어떤 값을 전달하여 호출을 하면, 
 ##### 함수 내에 작성된 연산을 수행하거나 수행 후 결과값을 반환하는 것을 말한다. 즉, 클래스의 소속된 함수를 ***메소드***라한다.
@@ -127,6 +128,7 @@ public static void setSerialNum(int serialNum) {
 ##### 일반적으로 캡슐화된 객체지향일때는 메소드를 public 형으로 만들어서, 외부에서 메소드를 사용하도록 하고 
 ##### 메소드가 접근 못하는, private된 필드의 값을 처리하는 구조로 되어있는 것이 메소드 
 
+<br>
 
 ### :pushpin:  static 메서드
 * #### static 변수를 위한 기능을 제공하는 static 메서드 
