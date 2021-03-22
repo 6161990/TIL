@@ -130,6 +130,13 @@ public static void setSerialNum(int serialNum) {
 
 <br>
 
+#### :triangular_flag_on_post: return
+##### STACK 메모리 안에서 호출되면 들어와(push) 자신을 호출한 메소드에게 return 값을 주고 메모리공간을 나간다(pop)
+##### => 해당 메소드를 종료하고, 자신을 호출한 메소드로 돌아가는 예약어. 
+##### => 반환값(리턴값)을 가지고 자신을 호출한 메소드로 돌아갈 수 있다. 
+
+<br>
+
 ### :pushpin:  static 메서드
 * #### static 변수를 위한 기능을 제공하는 static 메서드 
 * #### static 메서드에서는 인스턴스 변수를 사용할 필요 없음 
