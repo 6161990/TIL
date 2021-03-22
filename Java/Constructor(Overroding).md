@@ -1,4 +1,5 @@
 ### :pushpin: 생성자 Constructor
+* ##### 일반적으로 어디서든 클래스에 대한 객체 생성이 가능하도록 public
 * ##### 객체를 생성할 때 new 키워드와 함께 노출 (객체 생성 외에는 호출할 수 없음)
 * ##### 인스턴스를 초기화 하는 코드가 구현됨 (주로 멤버 변수 초기화)
 * ##### 반환 값이 없음, 상속되지 않음.
@@ -24,9 +25,9 @@ public class Student {
 ##### 클래스에 다른 생성자가 있는 경우 디폴트 생성자는 제공되지 않음
 ```java
 public class Student {
-  public int studentID;
-  public String studentName;
-  public String address;
+  public int studentID;          // 여기 변수들은 인스턴스 생성시, 힙 메모리에 할당할 때 자동 초기화된다
+  public String studentName;     // 보통 int = 0 , String = null 로.
+  public String address;         // 전달받은 값이 있다면 그 값으로. 
   
   // public Student(){}
   
