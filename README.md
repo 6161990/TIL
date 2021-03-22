@@ -8,7 +8,7 @@
 * [참조자료형](https://github.com/6161990/TIL/blob/main/Java/Reference.md)
 * [접근제어자와 정보은닉](https://github.com/6161990/TIL/blob/main/Java/Information%20Hiding.md)
 * [this](https://github.com/6161990/TIL/blob/main/Java/This.md)
-* [Static 변수, 메소드](https://github.com/6161990/TIL/blob/main/Java/Static.md)
+* [메소드, Static 변수&메소드](https://github.com/6161990/TIL/blob/main/Java/Static.md)
 * [배열](https://github.com/6161990/TIL/blob/main/Java/Array.md)
 * [객체배열](https://github.com/6161990/TIL/blob/main/Java/Object%20Array.md)
 * [ArrayList](https://github.com/6161990/TIL/blob/main/Java/Array%20List.md)
