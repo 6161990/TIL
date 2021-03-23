@@ -1,4 +1,5 @@
 ## :pushpin: 객체 지향 언어의 메모리 구조와 특징 OOP Memory 
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
 ### :round_pushpin: 정적 메모리와 동적 메모리
 * ##### 정적 메모리 : 이미 메모리 공간의 크기가 정해져있는 고정적 메모리 영역이다.
     * #####              프로그램 구동 내내 사용할 수 있어서 하나의 정보를 여러 대상이 공유할 목적일 때 사용한다.
