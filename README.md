@@ -5,7 +5,7 @@
 
 ### [JAVA](https://github.com/6161990/TIL/tree/main/Java/README.md)   
 * [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
-* [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
+* [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * [생성자와 생성자 오버라이딩](https://github.com/6161990/TIL/blob/main/Java/Constructor(Overroding).md)
 * [참조자료형](https://github.com/6161990/TIL/blob/main/Java/Reference.md)
 * [접근제어자와 정보은닉](https://github.com/6161990/TIL/blob/main/Java/Information%20Hiding.md)
