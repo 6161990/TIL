@@ -1,4 +1,5 @@
 ## :pushpin: 상속inheritance
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 클래스에서 상속의 의미
   #### 새로운 클래스를 정의할 때 이미 구현된 클래스를 상속(inheritance)받아서 속성이나 기능이 확장되는 클래스를 구현함. 
   #### 단순한 코드의 재사용을 뜻하는 것이 아니라, 
