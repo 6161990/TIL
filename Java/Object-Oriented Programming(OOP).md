@@ -1,17 +1,16 @@
 ## :pushpin: 객체 지향 프로그래밍 Object-Oriented Programming(OOP)
-#### 객체란
 
 <img width="600" height="300" src="https://user-images.githubusercontent.com/74708028/112074532-dc875780-8bb9-11eb-8127-cdbc71a02607.jpg">
 
+#### 객체란
 ##### 현실에 존재하는 독립적이면서 하나로 취급되는 사물이나 개념을 말한다. 
 ##### 객체 지향 언어에서 객체의 개념은 클래스의 의해 메모리에 할당된 결과물(Object)이다.
 
 <br>
 
+<img width="600" height="200" src="https://user-images.githubusercontent.com/74708028/112074753-53245500-8bba-11eb-88f8-5d4141f8ee9b.jpg"/>
+
 #### 객체의 할당
-
-<img width="600" height="300" src="https://user-images.githubusercontent.com/74708028/112074753-53245500-8bba-11eb-88f8-5d4141f8ee9b.jpg"/>
-
 ##### new연산자와 생성자를 사용하여 객체를 생성하면 
 ##### heap 메모리 공간에 서로 다른 자료형의 데이터가 연속으로 나열 할당된 객체 공간이 만들어진다.
 ##### 이것을 인스턴스Instance 라고 한다.
