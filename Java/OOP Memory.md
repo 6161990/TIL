@@ -1,6 +1,5 @@
 ## :pushpin: 객체 지향 언어의 메모리 구조와 특징 OOP Memory 
 ### :round_pushpin: 정적 메모리와 동적 메모리
-//정적동적 
 * ##### 정적 메모리 : 이미 메모리 공간의 크기가 정해져있는 고정적 메모리 영역이다.
   #####              프로그램 구동 내내 사용할 수 있어서 하나의 정보를 여러 대상이 공유할 목적일 때 사용한다.
   #####              static이 여기에 해당된다. 
@@ -14,7 +13,9 @@
   <br>
   
 ### :round_pushpin: static vs. HEAP vs. STACK
-// 램 구조 
+
+<img width="300" height="400" src="https://user-images.githubusercontent.com/74708028/112102497-b37fba80-8beb-11eb-956e-e0e677971007.jpg"/>
+
 ##### 1. static : main()이 start 될 때 static 예약어로 설정된 클래스 변수, 클래스 메소드가 자동 할당되는 공간.
 #####            프로그램이 종료될 때 자동소멸되며, 딱 한번에 한 개만 할당되므로 프로그램 구동되는 동안 공유할 대상에 적용되어 이용하는 메모리
 ##### 2. HEAP : new 연산자에 의해 동적 할당하고 생성된 주소(위치정보)로 접근할 수 있는 공간
@@ -25,7 +26,9 @@
 <br>
 
 ### :round_pushpin: 객체 할당 메모리 구조 
-//객체 메모리 구조 
+
+<img width="600" height="220" src="https://user-images.githubusercontent.com/74708028/112074753-53245500-8bba-11eb-88f8-5d4141f8ee9b.jpg"/>
+
 * ##### 클래스에 선언된 필드들이 선언 순서대로 힙 영역에 배열처럼 연속 할당되며, 생성된 시작 위치(주소)가 스택의 레퍼런스에 저장된다. 
 
 <br>
@@ -65,7 +68,12 @@
 
 <br>
 
-### :pushpin: 기본 자료형 2차원 배열[][] 메모리구조
+### :pushpin: 기본 자료형 배열[ ], 2차원 배열 메모리구조
+
+<img width="600" height="400" src="https://user-images.githubusercontent.com/74708028/112102753-14a78e00-8bec-11eb-8198-42f2c77c9981.jpg"/>
+
+<img width="600" height="400" src="https://user-images.githubusercontent.com/74708028/112102757-16715180-8bec-11eb-9af5-91ab0a308ce0.jpg"/>
+
 * ##### 배열[][] 의 차원 갯수는 주소를 몇번 참조하느냐!! 다. 
 * ##### 2차원 배열은 시작되는 주소값을 0x678(0x698) 레퍼런스에 기록하되, 각 1차원 배열의 주소들을 다시 배열(0x123)로 묶어주는 형태다.
     ##### => 2차원 배열은 레퍼런스(주소) 변수에 대한 배열이다. 
