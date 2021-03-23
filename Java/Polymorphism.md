@@ -1,4 +1,5 @@
 ## :pushpin: Polymorphism 다형성
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 하나의 코드가 여러 자료형으로 구현되어 실행되는 것.같은 코드인데도 실행 결과는 여러개. 
 * #### 객체지향 프로그래밍의 유연성, 재활용성, 유지보수성에 기본이 되는 특징임. 
 * #### 여러클래스가 하나의 데이터 타입으로 묶여 한 코드로 여러 클래스의 실행 결과를 출력할 수 있음. 
