@@ -1,4 +1,5 @@
 ## :pushpin: 객체 지향 프로그래밍 Object-Oriented Programming(OOP)
+* ###### 참고 : [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 
 #### :round_pushpin: 객체란
 
