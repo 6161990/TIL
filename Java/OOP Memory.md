@@ -11,6 +11,7 @@
   
   
   <br>
+  <br>
   
 ### :round_pushpin: static vs. HEAP vs. STACK
 
@@ -18,8 +19,10 @@
 
 ##### 1. static : main()이 start 될 때 static 예약어로 설정된 클래스 변수, 클래스 메소드가 자동 할당되는 공간.
 #####            프로그램이 종료될 때 자동소멸되며, 딱 한번에 한 개만 할당되므로 프로그램 구동되는 동안 공유할 대상에 적용되어 이용하는 메모리
+#
 ##### 2. HEAP : new 연산자에 의해 동적 할당하고 생성된 주소(위치정보)로 접근할 수 있는 공간
 #####            자바에서는 객체(인스턴스), 배열 공간은 모두 이 메모리 영역에 할당하도록 정해져있음.
+#
 ##### 3. STACK : non_static 메소드 실행시 메소드 호출 스택(method call stack)에 메소드 영역이 할당되며, 
 #####            해당 메소드의 지역변수와 매개변수(parameter)가 영역 안에 할당됨. 메소드 리턴(종료)시 자동 소멸됨.
 
@@ -57,7 +60,7 @@
 }
 ```
 * ##### static과 HEAP의 기본값
-    ###### JVM에 의해 static메모리와 heap 메모리 영역에 할당되는 필드에 초기값 선언이 없을 시에는 준비된 기본값으로 자동 초기화됨.
+    ##### JVM에 의해 static메모리와 heap 메모리 영역에 할당되는 필드에 초기값 선언이 없을 시에는 준비된 기본값으로 자동 초기화됨.
      - boolean : false
      - char : '\u0000'
      - byte, short, int, long : 0
@@ -70,9 +73,9 @@
 
 ### :pushpin: 기본 자료형 배열[ ], 2차원 배열 메모리구조
 
-<img width="600" height="400" src="https://user-images.githubusercontent.com/74708028/112102753-14a78e00-8bec-11eb-8198-42f2c77c9981.jpg"/>
+<img width="500" height="250" src="https://user-images.githubusercontent.com/74708028/112102753-14a78e00-8bec-11eb-8198-42f2c77c9981.jpg"/>
 
-<img width="600" height="400" src="https://user-images.githubusercontent.com/74708028/112102757-16715180-8bec-11eb-9af5-91ab0a308ce0.jpg"/>
+<img width="500" height="250" src="https://user-images.githubusercontent.com/74708028/112102757-16715180-8bec-11eb-9af5-91ab0a308ce0.jpg"/>
 
 * ##### 배열[][] 의 차원 갯수는 주소를 몇번 참조하느냐!! 다. 
 * ##### 2차원 배열은 시작되는 주소값을 0x678(0x698) 레퍼런스에 기록하되, 각 1차원 배열의 주소들을 다시 배열(0x123)로 묶어주는 형태다.
