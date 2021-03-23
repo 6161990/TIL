@@ -5,7 +5,7 @@
 ###### private 멤버 변수가 클래스 안으로 들어오게 된 배경에는 멤버에 접근하기위해서 멤버 함수가 클래스에 들어가게 되었기 때문.
 ###### 참고 : [객체지향 프로그래밍](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
   
-     <br>
+ <br>
      
 ### :pushpin: 정보은닉 information hiding
 * #### private키워드를 지정해 외부에서 클래스 내부의 정보에 접근하지 못하도록함.
