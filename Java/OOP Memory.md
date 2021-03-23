@@ -75,7 +75,7 @@
 
 <img width="500" height="250" src="https://user-images.githubusercontent.com/74708028/112102753-14a78e00-8bec-11eb-8198-42f2c77c9981.jpg"/>
 
-<img width="500" height="250" src="https://user-images.githubusercontent.com/74708028/112102757-16715180-8bec-11eb-9af5-91ab0a308ce0.jpg"/>
+<img width="500" height="290" src="https://user-images.githubusercontent.com/74708028/112102757-16715180-8bec-11eb-9af5-91ab0a308ce0.jpg"/>
 
 * ##### 배열[][] 의 차원 갯수는 주소를 몇번 참조하느냐!! 다. 
 * ##### 2차원 배열은 시작되는 주소값을 0x678(0x698) 레퍼런스에 기록하되, 각 1차원 배열의 주소들을 다시 배열(0x123)로 묶어주는 형태다.
