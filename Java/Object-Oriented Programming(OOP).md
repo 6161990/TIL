@@ -1,6 +1,6 @@
 ## :pushpin: 객체 지향 프로그래밍 Object-Oriented Programming(OOP)
 
-<img width="600" height="300" src="https://user-images.githubusercontent.com/74708028/112074532-dc875780-8bb9-11eb-8127-cdbc71a02607.jpg">
+<img width="500" height="250" src="https://user-images.githubusercontent.com/74708028/112074532-dc875780-8bb9-11eb-8127-cdbc71a02607.jpg">
 
 #### :round_pushpin: 객체란
 ##### 현실에 존재하는 독립적이면서 하나로 취급되는 사물이나 개념을 말한다. 
@@ -8,7 +8,7 @@
 
 <br>
 
-<img width="600" height="200" src="https://user-images.githubusercontent.com/74708028/112074753-53245500-8bba-11eb-88f8-5d4141f8ee9b.jpg"/>
+<img width="600" height="220" src="https://user-images.githubusercontent.com/74708028/112074753-53245500-8bba-11eb-88f8-5d4141f8ee9b.jpg"/>
 
 #### :round_pushpin: 객체의 할당
 ##### new연산자와 생성자를 사용하여 객체를 생성하면 
