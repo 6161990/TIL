@@ -1,4 +1,5 @@
 ### :pushpin: 참조자료형 reference data type
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 클래스를 자료형으로 선언함. 그때의 변수는 레퍼런스(참조) 변수
 * #### 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조자료형은 클래스에 따라 다름.
 * #### 기본 자료형은 실제 데이터(값)을 저장하지만, 참조자료형은 할당된 객체(인스턴스)의 주소를 저장함.
