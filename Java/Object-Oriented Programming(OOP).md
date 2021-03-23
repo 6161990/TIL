@@ -111,3 +111,11 @@
             //Sonata 클래스가 Car 클래스의 후손임
             Car c = new Sonata();
             (Car)c).moveSonata();
+###### :triangular_flag_on_post: instanceof 연산자
+###### 주로 down casting 할 때, 현재 레퍼런스가 어떤 클래스형의 객체 주소를 참조하고 있는지 확인이 필요할 때 사용함.
+```java
+if(레퍼런스 instanceof  클래스 타입){
+  참일 때 처리할 내용
+  //해당 클래스 타입으로 down casting
+}
+```
