@@ -1,4 +1,5 @@
 ### :pushpin: this
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 자신의 메모리를 가리킴.
 * #### 셍성자에서 다른 생성자를 호출함.
 	##### 생성자 오버로딩에서 한 생성자가 다른 생성자 호출하는 경우. 
