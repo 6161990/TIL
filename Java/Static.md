@@ -1,4 +1,5 @@
 ### :pushpin: static 변수
+* ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 클래스 소속 변수 "해당 변수를 모든 인스턴스에서 공유한다."
 
 <br>
