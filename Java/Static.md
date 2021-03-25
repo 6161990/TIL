@@ -131,6 +131,16 @@ public static void setSerialNum(int serialNum) {
 
 <br>
 
+#### :triangular_flag_on_post: 메소드 예약어
+* ##### static : static 영역에 할당하여 객체 없이 사용함
+* ##### final : 종단의 의미, 상속시 오버라이딩 불가능
+* ##### abstract : 미완성된, 상속하여 오버라이딩으로 완성시켜 사용해야함.
+ 	######	   메소드 내용(body)가 없으며, 클래스에도 abstract명시해야한다. 
+* ##### syncronized : 동기화처리, 공유 자원에 한 개의 쓰레드만 접근가능함
+* ##### static final : static , final 의미를 둘 다 가진다. => static 메모리에, 상속 할 수 없게.
+
+<br>
+
 #### :triangular_flag_on_post: return
 ##### STACK 메모리 안에서 호출되면 들어와(push) 자신을 호출한 메소드에게 return 값을 주고 메모리공간을 나간다(pop)
 ##### => 해당 메소드를 종료하고, 자신을 호출한 메소드로 돌아가는 예약어. 
@@ -138,9 +148,27 @@ public static void setSerialNum(int serialNum) {
 
 <br>
 
-### :pushpin:  static 메서드
+#### :round_pushpin: static 메서드
 * #### static 변수를 위한 기능을 제공하는 static 메서드 
 * #### static 메서드에서는 인스턴스 변수를 사용할 필요 없음 
 	* #####  static은 인스턴스 생성과 상관 없이 사용되고, 인스턴스는 new 되어야 생성되기 때문에 static메서드 안에서 인스턴스 변수 사용불가
 	* #####  but! 일반 메소드 안에서 static 변수 사용할 수 있음. static 변수는 그 전에 생성되기 때문에 (로드될 때)
 * #### 클래스 이름으로 참조하여 사용하는 메서드 (클래스 메서드, 정적 메서드라고도 함)
+
+<br>
+
+#### :round_pushpin: setter와 getter 메소드 
+* ##### setter 필드에 변경할 값을 전달 받아서 필드값을 변경하는 메소드 , 필드 값 변경이 목적이다.
+######   ***this ? 매개변수를 가지는 생성자에서 매개변수명이 필드명과 같을 경우,***
+######  ***매개변수의 변수명이 우선하기 때문에 this객체를 활용해서 대입되는 변수가 필드라는 것을 구분해준다.***
+```java
+접근제한자 void set 필드명 (자료형 변수) {
+	(this.)필드명 = 자료형 변수.
+}
+```
+* ##### getter 필드에 기록된 값을 읽어서 요구하는 쪽으로 읽은 값을 넘기는 메소드 표현식
+```java
+접근제한자 반환형 get필드명() {
+	return 필드명;
+}
+```
