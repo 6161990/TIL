@@ -1,8 +1,10 @@
 ### :pushpin: this
 * ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
-* #### 자신의 메모리를 가리킴.
-* #### 셍성자에서 다른 생성자를 호출함.
-	##### 생성자 오버로딩에서 한 생성자가 다른 생성자 호출하는 경우. 
+# 
+* #### 모든  인스턴스의 메소드에 숨겨진 채 존재하는 레퍼런스로, 할당된 객체를 가르킨다. 
+* #### 함수 실행시 전달되는 객체의 주소를 자동으로 받는다.
+* #### 성자에서 다른 생성자를 호출함.
+	###### 생성자 오버로딩에서 한 생성자가 다른 생성자 호출하는 경우. 
 * #### 인스턴스 자신의 주소를 반환.
   
    <br>
@@ -31,7 +33,7 @@ public class MyDateTest {
 
    <br>
    
-#### :round_pushpin: this역할2. 생성자에 다른 생성자를 호출
+#### :round_pushpin: this역할2. 같은 클래스의 다른 생성자를 호출할 때, 반드시 첫번째 줄에서.
 
 ```java
 public class Person {
