@@ -145,7 +145,7 @@ public class House {
 	public House(int price) {
 		//지역변수가 우선순위가 높기 때문에 자기 자신 클래스의 변수를 가리키는 this를 명시해주어야한다.
 		//this.price=price; //but 이것은 효율이 떨어짐
-		this(price,32,"동판교","빌라");  //thid()함수를 사용
+		this(price,32,"동판교","빌라");  //this()함수를 사용
 	}
 	
 	public House(int price, int size) {
@@ -156,7 +156,7 @@ public class House {
 	}
 	
 	public House (int price, int size, String dong, String kind) {
-		//this. : 변수, 메소드
+						//this. : 변수, 메소드
 		this.price = price;
 		this.size = size;
 		this.dong = dong;
