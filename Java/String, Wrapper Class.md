@@ -1,6 +1,6 @@
 ## :pushpin: String Class
 * ###### 참고: [내장클래스](https://github.com/6161990/TIL/blob/main/Java/%EB%82%B4%EC%9E%A5%ED%81%B4%EB%9E%98%EC%8A%A4.md)
-* #
+#
 * #### 객체 지향의 모든 클래스들은 반드시 new를 통해 해당 클래스에 대한 인스턴스를 heap 메모리에 생성한 후에 레퍼런스에 의해 참조되는 것이 원칙.
 * #### But, String  클래스는 예외, 기본 자료형처럼 문자열을 바로 기록할 수 있음. JAVA가 그렇게 허락함.
 
