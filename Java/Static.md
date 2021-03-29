@@ -198,7 +198,7 @@ public static void setSerialNum(int serialNum) {
 * ##### setter : 필드에 변경할 값을 전달 받아서 필드값을 변경하는 메소드 , 필드 값 변경이 목적이다.
 ######   this ? 매개변수를 가지는 생성자에서 매개변수명이 필드명과 같을 경우,
 ######  매개변수의 변수명이 우선하기 때문에 this객체를 활용해서 대입되는 변수가 필드라는 것을 구분해준다.
-* ###### 참고 : [this](https://github.com/6161990/TIL/blob/main/Java/This.md)
+ ###### * 참고 : [this](https://github.com/6161990/TIL/blob/main/Java/This.md)
 #
 ```java
 접근제한자 void set 필드명 (자료형 변수) {
