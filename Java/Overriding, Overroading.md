@@ -62,7 +62,7 @@
 -------------------------------------------
 
 ### :pushpin: (method) Overriding 오버라이딩
-* #### 재정의, 새롭게 정의한다. => super의 기능을 변경핟다.
+* #### 재정의, 새롭게 정의한다. => super의 기능을 변경한다.
 * #### @overriding 애노테이션
 * #### 부모클래스도 가지고있고, 자식 클래스도 가지고 있는 메소드를 자식 클래스에서 재정의하게되면, 
   #### 부모클래스에서 정의한 메소드는 무시가 되고, 자식 클래스에서 정의한 메소드가 호출된다. 
@@ -88,7 +88,7 @@ public class VIPCustomer extends Customer {
    @Override
 	  public int CalPrice(int price) {
 		  bonusPoint += price * bonusRatio;
-		return price= (int)(price *salesRatio);
+		return price = (int)(price *salesRatio);
 	}
 }
 ```   
