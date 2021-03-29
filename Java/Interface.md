@@ -100,7 +100,7 @@
 <br>
 
 #### :round_pushpin: 추상 클래스와 인터페이스의 차이
-      ###### abstract vs. interface
+         abstract vs. interface
 * ##### abstract 클래스는 클래스이고, interface는 interface라는 class가 아닌 고유한 형태이다.
 * ##### abstract는 extends 사용, interface는 implements사용한다.
 * ##### abstract는 abstract 메소드가 0개 이상, interface는 모든 메소드가 abstract이다.
