@@ -50,6 +50,55 @@
  
 <br>
 
+#### :triangular_flag_on_post: 기본형 매개변수와 참조형 매개변수
+* ##### 기본형 매개변수 : 값을 읽기만 할 수 있다.
+
+```java
+public class ParameterTest {
+
+	public static void main(String[] args) {
+		Data d = new Data();
+		d.x = 10;
+		System.out.println("main:x=" + d.x);
+		change(d.x);
+		System.out.println("After change(d.x)");
+		System.out.println("main:x=" + d.x);
+	}
+	
+	
+	//기본형 매개변수 값을 읽기만 할 수 있다. 
+	public static void change(int x) {
+		x = 1000;
+		System.out.println("change(): x="+x);
+	}
+
+}
+```
+
+* ##### 참조형 매개변수 : 값을 읽고 쓸 수 있다. 
+
+```java
+public class ParameterTest2 {
+
+	public static void main(String[] args) {
+		Data d = new Data();
+		d.x=10;
+		System.out.println("main():x"+d.x);
+		change(d);
+		System.out.println("After change(d.x)");
+		System.out.println("main():x="+d.x);
+	}
+
+	//참조형 매개변수 변수의 값을 읽고 변경할 수 있다. 
+	public static void change(Data d) {
+		d.x=1000;
+		System.out.println("change():x="+d.x);
+	}
+}
+```
+
+<br>
+
 ### :round_pushpin: static 예약어
 * ##### 필드와 메소드에 사용할 수 있으며, 같은 타입의 여러 객체가 공유할 목적인 대상에 적용하며, 프로그램 start시에 정적 메모리 영역에 자동 할당된다. 
 * ##### {} : 클래스의 멤버 변수를 초기화 시키는 블록.
