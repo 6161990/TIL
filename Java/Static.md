@@ -16,12 +16,14 @@
   ##### 메소드가 접근 못하는, private된 필드의 값을 처리하는 구조로 되어있는 것이 메소드 
 
 <br>
+
 #### :round_pushpin: 함수의 유형 네가지
 * #####	1. return 타입 존재, 파라미터도 존재 o
 * ##### 2. return 타입 존재, 파라미터 존재 x
 * ##### 3. return 타입 존재 x, 파라미터 존재 o
 * ##### 4. return 타입 존재 x, 파라미터 존재 x
 
+<br>
 
 #### :triangular_flag_on_post: 메소드 예약어
 * ##### static : static 영역에 할당하여 객체 없이 사용함
