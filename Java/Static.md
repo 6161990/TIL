@@ -1,3 +1,66 @@
+ 
+### :pushpin: method 메서드 
+#### 작업을 수행하기 위한 명령문의 집합
+* ##### 수학의 함수와 비슷하여 호출을 통해 사용한다. 전달 값이 없는 상태로 호출을 하거나, 어떤 값을 전달하여 호출을 하면, 
+  ##### 함수 내에 작성된 연산을 수행하거나 수행 후 결과값을 반환하는 것을 말한다. 즉, 클래스의 소속된 함수를 ***메소드***라한다.
+
+<br>
+
+#### :round_pushpin: 메소드 표현식
+```java
+[접근제한자] [예약어] 반환명 메소드명 {
+     실행내용작성;
+}
+```
+* ##### 일반적으로 캡슐화된 객체지향일때는 메소드를 public 형으로 만들어서, 외부에서 메소드를 사용하도록 하고 
+  ##### 메소드가 접근 못하는, private된 필드의 값을 처리하는 구조로 되어있는 것이 메소드 
+
+<br>
+
+#### :triangular_flag_on_post: 메소드 예약어
+* ##### static : static 영역에 할당하여 객체 없이 사용함
+* ##### final : 종단의 의미, 상속시 오버라이딩 불가능
+* ##### abstract : 미완성된, 상속하여 오버라이딩으로 완성시켜 사용해야함.
+ 	#####	   메소드 내용(body)이 없으며, 클래스에도 abstract명시해야한다. 
+* ##### syncronized : 동기화처리, 공유 자원에 한 개의 쓰레드만 접근가능함
+* ##### static final : static , final 의미를 둘 다 가진다. => static 메모리에, 상속 할 수 없게. => 실질적으로 '상수'가 되어버림
+
+<br>
+
+#### :triangular_flag_on_post: return
+##### STACK 메모리 안에서 호출되면 들어와(push) 자신을 호출한 메소드에게 return 값을 주고 메모리공간을 나간다(pop)
+##### => 해당 메소드를 종료하고, 자신을 호출한 메소드로 돌아가는 예약어. 
+##### => 반환값(리턴값)을 가지고 자신을 호출한 메소드로 돌아갈 수 있다. 
+* ##### 규칙 1. 반환값과 메소드 타입이 반드시 일치 해야한다. 
+* ##### 규칙 2. 반환값이 있는 메서드는 모든 경우에 return 문이 있어야한다.
+
+```java
+
+	public static int max(int a, int b) {
+		if(a>b) 
+			return a;
+		else 
+			return b;
+	}
+```
+
+* ##### 규칙 3. return 갯수는 최소화한다. (반드시 하나만 있어야 하는 것은 아니다. if 사용시 모든 경우(else if, else)도 return 이 반드시 있어야 한다. 
+
+* ##### 규칙 2. 반환값이 있는 메서드는 모든 경우에 return 문이 있어야한다.
+```java
+
+    public static int max (int a, int b) {
+	int result =0;
+	if(a>b) {
+		result =a;
+	}else {
+		result = b;
+	}
+	return result;
+	}
+```
+
+<br>
 ### :pushpin: static 변수
 * ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
 * #### 클래스 소속 변수 "해당 변수를 모든 인스턴스에서 공유한다."
@@ -113,69 +176,7 @@ public static void setSerialNum(int serialNum) {
 }
 ```   
  <br>
- 
-### :pushpin: method 메서드 
-#### 작업을 수행하기 위한 명령문의 집합
-* ##### 수학의 함수와 비슷하여 호출을 통해 사용한다. 전달 값이 없는 상태로 호출을 하거나, 어떤 값을 전달하여 호출을 하면, 
-  ##### 함수 내에 작성된 연산을 수행하거나 수행 후 결과값을 반환하는 것을 말한다. 즉, 클래스의 소속된 함수를 ***메소드***라한다.
 
-<br>
-
-#### :round_pushpin: 메소드 표현식
-```java
-[접근제한자] [예약어] 반환명 메소드명 {
-     실행내용작성;
-}
-```
-* ##### 일반적으로 캡슐화된 객체지향일때는 메소드를 public 형으로 만들어서, 외부에서 메소드를 사용하도록 하고 
-  ##### 메소드가 접근 못하는, private된 필드의 값을 처리하는 구조로 되어있는 것이 메소드 
-
-<br>
-
-#### :triangular_flag_on_post: 메소드 예약어
-* ##### static : static 영역에 할당하여 객체 없이 사용함
-* ##### final : 종단의 의미, 상속시 오버라이딩 불가능
-* ##### abstract : 미완성된, 상속하여 오버라이딩으로 완성시켜 사용해야함.
- 	#####	   메소드 내용(body)이 없으며, 클래스에도 abstract명시해야한다. 
-* ##### syncronized : 동기화처리, 공유 자원에 한 개의 쓰레드만 접근가능함
-* ##### static final : static , final 의미를 둘 다 가진다. => static 메모리에, 상속 할 수 없게. => 실질적으로 '상수'가 되어버림
-
-<br>
-
-#### :triangular_flag_on_post: return
-##### STACK 메모리 안에서 호출되면 들어와(push) 자신을 호출한 메소드에게 return 값을 주고 메모리공간을 나간다(pop)
-##### => 해당 메소드를 종료하고, 자신을 호출한 메소드로 돌아가는 예약어. 
-##### => 반환값(리턴값)을 가지고 자신을 호출한 메소드로 돌아갈 수 있다. 
-* ##### 규칙 1. 반환값과 메소드 타입이 반드시 일치 해야한다. 
-* ##### 규칙 2. 반환값이 있는 메서드는 모든 경우에 return 문이 있어야한다.
-
-```java
-
-	public static int max(int a, int b) {
-		if(a>b) 
-			return a;
-		else 
-			return b;
-	}
-```
-
-* ##### 규칙 3. return 갯수는 최소화한다. (반드시 하나만 있어야 하는 것은 아니다. if 사용시 모든 경우(else if, else)도 return 이 반드시 있어야 한다. 
-
-* ##### 규칙 2. 반환값이 있는 메서드는 모든 경우에 return 문이 있어야한다.
-```java
-
-    public static int max (int a, int b) {
-	int result =0;
-	if(a>b) {
-		result =a;
-	}else {
-		result = b;
-	}
-	return result;
-	}
-```
-
-<br>
 
 #### :round_pushpin: static 메서드
 * #### static 변수를 위한 기능을 제공하는 static 메서드 
