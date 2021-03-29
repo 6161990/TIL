@@ -90,6 +90,8 @@ public class SystemInTest2 {
 <br>
 
 ### :round_pushpin: Scanner 클래스
+* ###### 참고:  [내장 클래스](https://github.com/6161990/TIL/blob/main/Java/%EB%82%B4%EC%9E%A5%ED%81%B4%EB%9E%98%EC%8A%A4.md)
+#
 * #### java.util 패키지에 있는 입력 클래스
 * #### 문자뿐 아니라 정수, 실수등 다양한 자료형을 읽을 수 있음
 * #### 생성자가 다양하여 여러 소스로부터 자료를 읽을 수 있음
