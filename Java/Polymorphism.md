@@ -87,8 +87,8 @@ public class AnimalTest {
 
 <br>
 
-### :round_pushpin: S-A(상속)와 HAS-A(composition)
-* #### S-A관계( is a relationship : inheritance)
+### :round_pushpin: IS-A(상속)와 HAS-A(composition)
+* #### IS-A관계( is a relationship : inheritance)
   * ##### 일반적인(general)개념과 구체적인(specific) 개념과의 관계가 성립될 때 써야함.
   * ##### 단순한 코드의 재사용이 아님 
 
