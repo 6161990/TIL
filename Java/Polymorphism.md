@@ -95,7 +95,39 @@ public class AnimalTest {
 * #### HAS-A (composition) :
   * ##### 한 클래스가 다른 클래스를 소유한 관계.
   * ##### 내가 필요한 클래스가 있다고 하면 그 클래스를 포함해서 쓰는 방식
-  * ##### ArrayList가 필요하다고해서 그 ArrayList 클래스를 따로 생성해 사용하지 않고 클래스 내부에서 사용하는 것처럼.    
+  * ##### ArrayList가 필요하다고해서 그 ArrayList 클래스를 따로 생성해 사용하지 않고 클래스 내부에서 사용하는 것처럼.
+```java
+//부분(점)
+public class Point {
+	
+	int x, y;
+
+}
+
+```
+```java
+//Has-a 관계 (소유, 포함의 관계)
+//전체(원)
+public class Circle {
+	
+	Point p;
+	int r;
+	
+	public Circle() {
+		p = new Point();
+	}
+
+	public static void main(String[] args) {
+		Circle c = new Circle();
+		c.p.x=10;
+		c.p.y=10;
+		c.r=5;
+		System.out.println(c.p.x);
+		System.out.println(c.p.y);
+		System.out.println(c.r);
+	}
+}
+```
 
 #### :triangular_flag_on_post: 설계 단계에서 상속을 사용할 것인지 일반 HAS로 갈 것인지 잘 생각해야함.
 ####    상속으로 갈거면 어떤 메소드를 오버라이딩(재정의)할 것인지도...!
