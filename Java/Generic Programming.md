@@ -12,8 +12,8 @@
 
  #### :triangular_flag_on_post: 제네릭 프로그래밍의 효용:
  * ##### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
-  ##### 그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
-  ##### 타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
+    #####   그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
+    #####   타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
  * ##### 컬렉션에 저장된 여러 종류의 객체를 꺼내서 사용할 때, 객체의 종류에 따라 매번 형변환을 해야하기 때문에 코드가 복잡해지는데 제네릭을 이용하면 타입 변환을 따로 하지 않아도 된다.
  ```java 
  //제네릭 사용 x
@@ -32,6 +32,7 @@
   #####     => 기본 데이터 타입의 제네릭 사용법?
   #####        객체인 것 처럼 꾸미는 객체를 이용 [Wrapper](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
 
+#
 
 <br>
 
@@ -133,6 +134,17 @@ public class Point<T, V>{
 #### :round_pushpin: 제너릭 메서드
 * ##### 일반 클래스에서 쓰일 수 있음. 
 * ##### 메서드의 매개 변수를 자료형 매개 변수로 사용하는 메서드
+```java
+ArrayList<Book> list = new ArrayList<Book>();  //제네릭이 설정된 레퍼런스 
+BookManager bm = new BookManager();
+bm.printInfomation(list);
+
+//BookManager의 클래스
+public void printInformation(ArrayList<Book> list){  // 가 인자로 넘어올 때 
+	...
+}
+```
+##### => 제네릭이 설정된 레퍼런스를 인자로 넘기는 경우 메소드 쪽에서 받아주는 매개변수도 제네릭이 적용되어야 한다. 
 ```java
 public class GenericMethod{
   public static <T, V> double makeRectangle(Point<T, V> p1, Point<T, V> p2){
