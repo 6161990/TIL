@@ -1,5 +1,19 @@
 ## :pushpin: Set Interface
 ###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
+#### :round_pushpin: Set 인터페이스 
+* ##### Collection 하위의 인터페이스
+* ##### 중복을 허용하지 않음(null 값 조차도 중복 불가)
+* ##### List는 순서기반의 인터페이스지만, Set은 순서가 없음
+* ##### get(i)메서드가 제공되지 않음(Iterator로 순회)
+* ##### 저장된 순서와 출력순서는 다를 수 있음
+* ##### 아이디, 주민번호, 사번 등 유일한 값이나 객체를 관리할 때 사용
+* ##### HashSet, TreeSet 클래스
+  * ###### HashSet은 중복인지 아닌지 알기위해, equals와 hashCode.
+  * ###### LinkedSet set은 원래 저장순서가 유지안되는데 그걸 보완.
+  * ###### TreeSet은 정렬하기 위해서, Comparable와 Comparator.
+  * 
+<br>  
+  
 ### Collection의 개체를 순회하는 인터페이스
 * #### iterator()메서드 호출 : Set은 순서가 없기 때문에 지정해서 꺼낼 수 없으므로 iterator를 이용한다.
 
@@ -10,26 +24,15 @@
 
 <br>
 
-#### :round_pushpin: Set 인터페이스 
-* ##### Collection 하위의 인터페이스
-* ##### 중복을 허용하지 않음
-* ##### List는 순서기반의 인터페이스지만, Set은 순서가 없음
-* ##### get(i)메서드가 제공되지 않음(Iterator로 순회)
-* ##### 저장된 순서와 출력순서는 다를 수 있음
-* ##### 아이디, 주민번호, 사번 등 유일한 값이나 객체를 관리할 때 사용
-* ##### HashSet, TreeSet 클래스
-  * ###### HashSet은 중복인지 아닌지 알기위해, equals와 hashCode.
-  * ###### TreeSet은 정렬하기 위해서, Comparable와 Comparator.
-
-
-<br>
-
 
 #### :round_pushpin: HashSet
-##### Set 인터페이스를 구현한 클래스
-##### 중복을 허용하지 않으므로 저장되는 객체의 동일함 여부를 알기위해
-##### equals()와 hashCode()메서드를 재정의 해야함.
-
+* ##### Set 인터페이스를 구현한 클래스
+* ##### 객체를 저장할 때 hash를 사용하여 처리속도가 빠르다. 
+* ##### 중복을 허용하지 않으므로 저장되는 객체의 동일함 여부를 알기위해사용
+* ##### 동일 객체 뿐 아니라 동등 객체도 중복하여 저장하지 않는다.
+* ##### equals()와 hashCode()메서드를 재정의 해야함.
+* ##### 저장순서가 없으므로 하나씩 저장된 객체 조회기능이 없다. 
+  ##### 목록 만들기를 통해서 연속으로 하나씩 처리할 수 있게 iterator()사용한다.
 ```java
 public class HashSetTest {
 
@@ -53,6 +56,24 @@ public class HashSetTest {
 		}	
 	}
 }
+```
+#
+#### toArray()
+##### Collection의 메소드,
+##### 참조변수에 저장된 객체를 Object배열로 바꿔서 그 안에 있는 것들을 하나씩 꺼내 출력.
+```java
+Public class TestHashSet{
+	public static void main(String[] args){
+	    HashSet hset = new HashSet();
+	    
+	          (객체 저장 생략)
+	    Objcet[] arr = hset.toArray();
+	    for(Object o : arr){
+	    	System.out.println(o);
+	    }
+	}
+}
+
 ```
 
 ### :computer: 프로그래밍해보기
@@ -185,6 +206,8 @@ public class MemberHashSetTest {
 #### :round_pushpin: TreeSet
 ##### 객체의 정렬(Tree)에 사용되는 클래스
 * ##### 중복을 허용하지 않으면서 오름차순이나 내림차순으로 객체를 정렬함
+* ##### desendingIterator 제공된다. 
+* ##### 같은 타입만 저장할 수 있다.
 * ##### 내부적으로 이진 검색 트리(binary search tree)로 구현되어있음
 * ##### 이진 검색 트리에 자료가 저장될 때 비교하여 저장될 위치를 정함
 * ##### 객체 비교를 위해 Comparable이나 Comparator 인터페이스를 구현해야함
