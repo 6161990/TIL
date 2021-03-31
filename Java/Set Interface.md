@@ -1,5 +1,15 @@
 ## :pushpin: Set Interface
 ###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
+###:triangular_flag_on_post: Collection의 개체를 순회하는 인터페이스
+* #### iterator()메서드 호출 : Set은 순서가 없기 때문에 지정해서 꺼낼 수 없으므로 iterator를 이용한다.
+
+        Iterator ir = memberArrayList.iterator();  
+* #### Iterator에 선언된 메서드
+   * ##### boolean hashNext() : 이후에 요소가 더 있는지를 체크하는 메서드이며, 요소가 있다면 true를 반환
+   * ##### E next() : 다음에 있는 요소를 반환
+
+<br>
+
 #### :round_pushpin: Set 인터페이스 
 * ##### Collection 하위의 인터페이스
 * ##### 중복을 허용하지 않음(null 값 조차도 중복 불가)
@@ -13,16 +23,6 @@
   * ###### TreeSet은 정렬하기 위해서, Comparable와 Comparator.
   * 
 <br>  
-  
-### Collection의 개체를 순회하는 인터페이스
-* #### iterator()메서드 호출 : Set은 순서가 없기 때문에 지정해서 꺼낼 수 없으므로 iterator를 이용한다.
-
-        Iterator ir = memberArrayList.iterator();  
-* #### Iterator에 선언된 메서드
-   * ##### boolean hashNext() : 이후에 요소가 더 있는지를 체크하는 메서드이며, 요소가 있다면 true를 반환
-   * ##### E next() : 다음에 있는 요소를 반환
-
-<br>
 
 
 #### :round_pushpin: HashSet
@@ -58,7 +58,7 @@ public class HashSetTest {
 }
 ```
 #
-#### toArray()
+#### :triangular_flag_on_post: toArray()
 ##### Collection의 메소드,
 ##### 참조변수에 저장된 객체를 Object배열로 바꿔서 그 안에 있는 것들을 하나씩 꺼내 출력.
 ```java
