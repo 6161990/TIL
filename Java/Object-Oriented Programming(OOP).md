@@ -174,7 +174,7 @@ public class 클래스명 {
             Car c = new Sonata();
             (Car)c.moveSonata();
    ###### (( 주의 )) 같은 층위의 객체끼리는 업, 다운 캐스팅을 할 수 없다. 
-   
+* ###### 참고 [업다운캐스팅](https://github.com/6161990/TIL/blob/main/Java/UpDownCasting%2C%20instanceof.md)
   #
 ###### :triangular_flag_on_post: instanceof 연산자
 ###### 주로 down casting 할 때, 현재 레퍼런스가 어떤 클래스형의 객체 주소를 참조하고 있는지 확인이 필요할 때 사용함.
