@@ -152,6 +152,8 @@ public void printInformation(ArrayList<Book> list){  // 가 인자로 넘어올 
 }
 ```
 ##### => 제네릭이 설정된 레퍼런스를 인자로 넘기는 경우 메소드 쪽에서 받아주는 매개변수도 제네릭이 적용되어야 한다. 
+#
+
 ```java
 public class GenericMethod{
   public static <T, V> double makeRectangle(Point<T, V> p1, Point<T, V> p2){
