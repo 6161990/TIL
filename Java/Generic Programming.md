@@ -32,16 +32,15 @@
  ```
   #
  ##### :triangular_flag_on_post: ( 주의 )제네릭은 참조 자료형만 가능, 기본 자료형 (int, char ...) 은 자바 안에서 객체가 아니기 때문에 불가능. 
-  #####     => 기본 데이터 타입의 제네릭 사용법?
-  #####        객체인 것 처럼 꾸미는 객체를 이용 [Wrapper](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
+  #####     => 기본 데이터 타입의 제네릭 사용법? 객체인 것 처럼 꾸미는 객체를 이용 [Wrapper](https://github.com/6161990/TIL/blob/main/Java/String%2C%20Wrapper%20Class.md)
 
 #
 
 <br>
 
 #### :round_pushpin: 자료형 매개변수 <T>
-##### 여러 참조 자료형으로 대체될 수 있는 부분을 하나의 문자로 표현
-##### (type의 의미로 대개 T 사용)
+*  ##### 여러 참조 자료형으로 대체될 수 있는 부분을 하나의 문자로 표현
+   ###### (type의 의미로 대개 T 사용)
 ```java
             public class GenericPrinter<T>{  //클래스형 
                        private T mateial;
@@ -59,9 +58,9 @@
 
 
 #### :round_pushpin: 제네릭과 상속 <T extends 클래스(interface)> 
-##### T 대신에 사용될 자료형을 제한하기 위해 사용.  
-##### 중괄호 {}안에서 타입 파라미터 변수로 사용 가능한 것은 상위탕비의 멤버(필드, 메소드)로 제한되어, 하위 타입에만 있는 필드와 메소드는 사용할 수 없다. 
-#### class extends
+* ##### T 대신에 사용될 자료형을 제한하기 위해 사용.  
+ ##### 중괄호 {}안에서 타입 파라미터 변수로 사용 가능한 것은 상위탕비의 멤버(필드, 메소드)로 제한되어, 하위 타입에만 있는 필드와 메소드는 사용할 수 없다. 
+#### :triangular_flag_on_post: class extends
 ```java
 abstract class Info{                   //abstract 
   public abstract int getLevel();
@@ -89,7 +88,7 @@ class Person<T extends Info> {      //제네릭 T로 올 수 있는 데이터타
      } 
   }
 ```
-**interface extends**
+#### :triangular_flag_on_post: interface extends
 ```java
 interface Info{         //interface
   int getLevel();
