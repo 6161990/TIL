@@ -42,16 +42,18 @@
 #### :round_pushpin: 자료형 매개변수 <T>
 ##### 여러 참조 자료형으로 대체될 수 있는 부분을 하나의 문자로 표현
 ##### (type의 의미로 대개 T 사용)
-            클래스형 : public class GenericPrinter<T>{
+```java
+            public class GenericPrinter<T>{  //클래스형 
                        private T mateial;
             }
             
-            매개변수 형 : public void setMaterial(T material){
+            public void setMaterial(T material){  //매개변수 형 
                           this.material = material;
             }
-            반환형: public T getMaterial(){
+            public T getMaterial(){   //반환형
                     return material;
             }
+```
 
 <br>
 
