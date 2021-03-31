@@ -7,6 +7,81 @@
      * #### 명시적인 다운캐스팅:VIPCustomer vCustomer = (VIPCustomer)vc;  
    #### But, 위 방법은 오류가 날 수도 있음. 인스턴스에 맞지않는 형 변환을 하려고 시도할 때. 
             Rabbit humanWalking = (Rabbit)human;
+
+---------------------------------
+* ###### 참고 [객체지향프로그래밍](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md#1-%ED%81%B4%EB%9E%98%EC%8A%A4-%ED%98%95%EB%B3%80%ED%99%98-up-casting-%EC%9E%91%EC%9D%80-%EA%B2%83%EC%97%90%EC%84%9C-%EB%A7%8E%EC%9D%80-%EA%B2%83%EC%9C%BC%EB%A1%9C-%ED%95%99%EC%9E%A5)
+```java
+
+public class CastingTest {
+
+	public static void main(String[] args) {
+		//Person = 부모 , President/Student = 자식
+
+		
+		President president1 = new President();
+		//president1 객체를 상위클래스인 Person 클래스 레퍼런스 변수에 참조시킴.
+		
+		//부모가 아직 생성되지 않은 상태면 다른 타입을 참조가능하다. 
+		Person person1 = president1; //자식이 가지고 있는 변수 , 메소드는 사라짐 (축소)
+		//persident1 객체가 자동으로 Person 타입으로 UpCasting 되면서 참조됨.
+		
+		
+		President president2 = (President)person1; 
+		//(확장) down. person1이 객체가 생성되지 않았기 때문에 가능(heap에 메모리공간이 아직 만들어지지 않았기 때문에)
+		//person1 레퍼런스 변수의 참조값을 President 타입의 레퍼런스 변수에 할당함
+		//부모 클래스 타입의 참조값을 자식 클래스 타입의 참조변수에 할당하므로 명시적 캐스팅
+		
+		
+		
+		Person person2 = new Person();
+		//객체생성
+		System.out.println(person2.getAge());
+		
+		President president3 = new President();
+		//president3 = (President)person2; // 이미 person 의 메모리 공간이 19라인에서 만들어졌기때문에 불가능. 13라인과 대조적.
+		//Person의 객체를 President 타입의 레퍼런스 변수에 참조시킴
+		
+		//Student student = (Student) president2;
+		//같은 부모클래스를 상속받는 클래스 타입끼리 캐스팅. 불가. 같은 층위에서 업다운 캐스팅불가.
+		//상속관계에서만 업다운 캐스팅이 가능하다. 
+		
+		//President president4 = new Student();
+	}
+
+}
+
+```
+ ```java
+ public class InstanceOfTest {
+
+	public static void main(String[] args) {
+		//Person = 부모 , President/Student = 자식
+		
+		President president1 = new President();
+		
+		Person person1 = president1;
+		
+		if(person1 instanceof President) {
+			President president2 = (President) person1;
+			System.out.println("person1을 President타입으로 캐스팅성공");
+		}else {
+			System.out.println("person1을 캐스팅 할 수 없다.");
+		}
+		
+		Person person2 = new Person();
+		if(person2 instanceof President) {
+			President president3 = (President) person2;
+			System.out.println("person2를 President타입으로 캐스팅 성공");
+		}else {
+			System.out.println("person2를 캐스팅할 수 없다.");
+		}
+	
+	}
+
+		
+}
+
+ ```
 -----------------------------------------------------------------
 
 ### :computer: 프로그래밍하기 
@@ -86,10 +161,10 @@ public class AnimalTest {
  #### :triangular_flag_on_post: instanceof가 하는 일
  #### A instanceof B : A가 정말 B의 인스턴스였느냐!!!! 대답으로 true/false를 반환.
  #### 매개변수가 잘못 넘어올 수 있기 때문에 안정적으로 하기 위해서 사용. 
-    
+ 
  <br> 
-     
-#### instanceof를 이용해 각자가 가진 차별 메소드 출력하기
+### :computer: 프로그래밍하기      
+#### instanceof를 이용해 각자가 가진 차별 메소드 출력하기 (Animal)
   ```java    
 public class AnimalTest {
 
