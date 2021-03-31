@@ -1,5 +1,8 @@
 ### :pushpin: 제네릭 프로그래밍 Generic Programming
 ###### Generic : 일반적인, 포괄적인
+
+	클래스명<클래스타입> 레퍼런스 = new 생성자<클래스타입>();
+	
 * #### 클래스 내부에서 사용할 데이터 타입을 외부에서 확정하는 기법
 * #### jdk1.5 부터 제공되는 기능으로 컬렉션 클래스를 이용해서 객체를 저장할 때, 저장할 객체(클래스타입)을 제한하는 기능으로, 한가지 종류의 클래스만 저장할 수 있게 해놓은 기능이다. 
 
@@ -55,6 +58,7 @@
 
 #### :round_pushpin: 제네릭과 상속 <T extends 클래스> (interface)
 ##### T 대신에 사용될 자료형을 제한하기 위해 사용. 
+##### 중괄호 {}안에서 타입 파라미터 변수로 사용 가능한 것은 상위탕비의 멤버(필드, 메소드)로 제한되어, 하위 타입에만 있는 필드와 메소드는 사용할 수 없다. 
 #### class extends
 ```java
 abstract class Info{                   //abstract 
@@ -62,6 +66,7 @@ abstract class Info{                   //abstract
 }
 class EmployeeInfo extends Info{      //추상 클래스를 상속하기
   public int rank;
+  
   EmployeeInfo(int rank){ 
     this.rank = rank;
   }
@@ -112,8 +117,8 @@ class Person<T extends Info> {          //그럼 얘도 implements여야 하는�
 #### :round_pushpin: 자료형 매개 변수가 두 개 이상일 때
 ```java
 public class Point<T, V>{
-  T x;
-  V y;
+  private T x;
+  private V y;
   
   Point(T x, V y){
     this.x = x;
