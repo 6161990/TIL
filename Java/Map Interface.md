@@ -2,6 +2,8 @@
 ###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
 * ##### key-value pair 의 객체를 관리하는데 필요한 메서드가 정의됨
 * ##### key는 중복될 수 없음, 중복되는 경우 기존에 있는 키에 해당하는 값을 덮어씀
+* ##### Key-Value 한쌍을 묶어서 Entry라고 부름. Entry는 Map 인터페이스의 내부클래스이다. Map.Entry를 Set으로 바꾸는 과정 
+	ex) Set<Map.Entry<String, Iterator>> entries = map.entrySet();
 * ##### 구현 클래스는 HashMap, HashTable, LinkedHashMap, Properties, TreeMap등이 있다.
 * ##### 검색을 위한 자료구조
 * ##### key를 이용하여 값을 저장하거나 검색, 삭제할 때 사용하면 편리함
