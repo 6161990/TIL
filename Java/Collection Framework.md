@@ -50,6 +50,27 @@
 
 <br>
 
+#### :round_pushpin: Collection List와 TreeSet, TreeMap의 정렬
+* ##### Collection List의 정렬
+    * ##### list는 set(TreeSet),map(TreeMap)과 다르게, 객체 안에 필드 값이 여러개 있기 때문에 어떤 필드를 기준으로 오름차순 할건지 내림차순할 건지 결정해야한다. => comparable사용하는 이유
+    * #####  java.util.Comparator 인터페이스 상속받는다. 
+    * #####  public int compare(Object o1, Object o2){} 메소드 오버라이딩한다.
+    * #####  객체의 정렬 기준 필드들의 값 비교 연산 결과를 리턴한다. 
+```java
+@Override
+public int compare(Object o1, Object o2){
+//Customer의 name 필드를 기준으로 오름차순 정렬정리하기
+  Customer cob1 = (Customer)o1;
+  Customer cob2 = (Customer)o2;
+  return cob1.getName().compareTo(cob2.getName());
+}
+```
+* ##### TreeSet, TreeMap의 정렬
+    * #####  TreeSet의 객체와 TreeMap의 key는 저장과 동시에 자동 오름차순 정렬이된다.
+    * #####  숫자(Integer, Double)타입일 경우에는 값으로 정렬되고 문자열(String) 타입일 경우에는 유니코드로 정렬된다. 
+    * ##### 정렬을 위해 java.lang.Comparable을 구현한 객체를 요구하기 때문에 Integer,Double, String은 모두 Comparable 인터페이스를 구현해야한다. (ClassCastException 발생)
+
+<br>
 
 #### :triangular_flag_on_post: 맛보기 정리
 
