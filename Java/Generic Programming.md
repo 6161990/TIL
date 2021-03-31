@@ -11,9 +11,22 @@
 <br>
 
  #### :triangular_flag_on_post: 제네릭 프로그래밍의 효용:
-  ##### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
+ * ##### 모든 데이터 타입을 수용하기위해 or 중복을 제거하기위해 Object를 데이터 타입으로두면, 엉뚱한 data type이 오는 것을 수용해버릴수도..
   ##### 그건, 변수의 베이터 타입을 제한해서 얻을 수 있는 type 안정성을 잃어버릴수도 있다는 것을 의미.
   ##### 타입이 안전해질 수 있고,  코드의 중복을 제거할 수도 있는 '제네릭'이용.
+ * ##### 컬렉션에 저장된 여러 종류의 객체를 꺼내서 사용할 때, 객체의 종류에 따라 매번 형변환을 해야하기 때문에 코드가 복잡해지는데 제네릭을 이용하면 타입 변환을 따로 하지 않아도 된다.
+ ```java 
+ //제네릭 사용 x
+ List list = new ArrayList();
+ liat.add("Hello");
+ String str = (String)list.get(0);
+ ```
+ ```java
+ //제네릭 사용
+ List<String> list = new ArrayList<String>();
+ liat.add("Hello");
+ String str = list.get(0);  //(형변환 필요 없음)
+ ```
   #
  ##### :triangular_flag_on_post: ( 주의 )제네릭은 참조 자료형만 가능, 기본 자료형 (int, char ...) 은 자바 안에서 객체가 아니기 때문에 불가능. 
   #####     => 기본 데이터 타입의 제네릭 사용법?
