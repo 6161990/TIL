@@ -27,10 +27,11 @@ public class CastingTest {
 
 		
 		President president1 = new President();
-		=>president1 객체를 상위클래스인 Person 클래스 레퍼런스 변수에 참조시킴.
+		
 		
 		* *부모객체가 아직 생성되지 않은 상태면 다른 타입 참조가능하다. * *
 		Person person1 = president1; 
+		=>president1 객체를 상위클래스인 Person 클래스 레퍼런스 변수에 참조시킴.
 		=> 자식(president1)이 가지고 있는 변수 , 메소드는 사라진다. (축소, 자식이 부모타입으로 up)
 		=> persident1 객체가 자동으로 Person 타입으로 UpCasting 되면서 참조된다.
 		
