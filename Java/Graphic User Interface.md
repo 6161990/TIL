@@ -58,4 +58,22 @@ public class 클래스명 {
   }
 }
 ```
+#
+#####  3. JFrame 상속 받은 클래스 작성하고, 실행용 클래스가 실행
+```java
+import javax.swing.*;
+
+public class extends JFrame {
+   public 클래스명(){
+    super();
+    //세부 속성 지정
+  }
+}
+
+public class 클래스명{
+ public static void main(String[] args){
+    클래스명 레퍼런스 new 클래스명();
+  }
+}
+```
 
