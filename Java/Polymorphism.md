@@ -1,18 +1,114 @@
-## :pushpin: Polymorphism 다형성
+### :pushpin: Polymorphism 다형성
 * ###### 참고 : [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md), [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
-* #### 하나의 코드가 여러 자료형으로 구현되어 실행되는 것.같은 코드인데도 실행 결과는 여러개. 
-* #### 객체지향 프로그래밍의 유연성, 재활용성, 유지보수성에 기본이 되는 특징임. 
-* #### 여러클래스가 하나의 데이터 타입으로 묶여 한 코드로 여러 클래스의 실행 결과를 출력할 수 있음. 
-* #### 다양한 여러 클래스를 하나의 자료형(상위 클래스)로 선언하거나, 형 변환하여 각 클래스가 동일한 메서드를 오버라이딩 한 경우.
-  #### 하나의 코드가 다양한 구현을 실행할 수 있음. 
-* #### 다형성의 장점 : 유사한 클래스가 추가되는 경우 유지보수에 용이하고, 각 자료형마다 다른 메서드를 호출하지 않으므로 코드에서 많은 if문이 사라짐.
-* #### 다형성의 원리 : 상속, 형 변환, 오버라이딩, 가상함수를 이용해 객체지향 프로그래밍을 한다. 
+* ##### 하나의 코드가 여러 자료형으로 구현되어 실행되는 것.같은 코드인데도 실행 결과는 여러개. 
+* ##### 객체지향 프로그래밍의 유연성, 재활용성, 유지보수성에 기본이 되는 특징임. 
+* ##### 여러클래스가 하나의 데이터 타입으로 묶여 한 코드로 여러 클래스의 실행 결과를 출력할 수 있음. 
+* ##### 다양한 여러 클래스를 하나의 자료형(상위 클래스)로 선언하거나, 형 변환하여 각 클래스가 동일한 메서드를 오버라이딩 한 경우.
+  ##### 하나의 코드가 다양한 구현을 실행할 수 있음. 
+* ##### 다형성의 장점 : 유사한 클래스가 추가되는 경우 유지보수에 용이하고, 각 자료형마다 다른 메서드를 호출하지 않으므로 코드에서 많은 if문이 사라짐.
+* ##### 다형성의 원리 : 상속, 형 변환, 오버라이딩, 가상함수를 이용해 객체지향 프로그래밍을 한다. 
              1. 상속-> 
                  2. overriding을 통한 재정의 -> 
                       3. 형 변환 (업 캐스팅) -> 
                           4. 가상함수 을 이용한 유기적 연결이 있음. 
 
 
+<br>
+
+#### :triangular_flag_on_post: 객체의 다형성
+```java
+
+public class ChildMethodCall {
+
+	public static void main(String[] args) {
+		//부모 Person, 자식 Student
+		
+		//Person person = new Student(); 와 아래 두 줄은 같다.
+		Student student = new Student();
+		Person person = student;
+		
+	//error person.study(); 이건 오버라이드 안했음. 일반 함수임(Student에서)
+		person.showSleepStyle(); //이건 오버라이드 해놓았음. (Student에서)  
+    	// 	=> 학생의 showSpeepStyle가 출력됨
+		
+		
+	}
+
+}
+
+```
+```java
+public class OverridingTest {
+
+	public static void main(String[] args) {
+		//부모 Person, 자식 Employee
+		
+		Employee employee = new Employee();
+		Person person = employee;
+		System.out.println("employee="+ employee.x); 	//employee=500
+		System.out.println("person="+ person.x); 	//person=0
+		employee.sleep();
+		person.sleep(); 
+	 // => 직장인 클래스의 sleep 메소드가 출력
+     	// => 다른 코딩인데 결과가 같다. 
+	
+	}
+
+}
+```
+
+<br>
+
+#### :triangular_flag_on_post: 매개변수(파라미터)의 다형성
+```java
+
+public class PersonInfo {
+	public void showSleepingType(Person person) { 
+	//Person person = (Person) employee, student, president
+	
+	person.showSleepStyle();
+	}
+
+}
+```
+```java
+
+public class ParameterPolyTest {
+ 
+	public static void main(String[] args) {
+		PersonInfo pf = new PersonInfo();
+		Person person = new Person();
+		Employee employee = new Employee();
+		Student student = new Student();
+		President president = new President();
+		pf.showSleepingType(person);
+		pf.showSleepingType(employee);
+		pf.showSleepingType(student);
+		pf.showSleepingType(president);
+	}
+
+}
+```
+
+#### :triangular_flag_on_post: 배열의 다형성
+```java
+
+public class ArrayPolyTest {
+ 
+	public static void main(String[] args) {
+		//부모 Person, 자식 Employee,Student,President
+		
+		Person[] pArray = new Person[3];
+		
+		pArray[0] = new Employee(); //Employee가 재정의한 메소드가 출력
+		pArray[1] = new Student();  //Employee가 재정의한 메소드가 출력
+		pArray[2] = new President(); //Employee가 재정의한 메소드가 출력
+		for(int i =0; i<pArray.length;i++) {
+			pArray[i].showSleepStyle();
+		}		
+	}
+}
+```
 -----------------------------------
 ### :computer: 프로그래밍하기
 #### 다형성을 이용해 동물들의 습성 프로그래밍
