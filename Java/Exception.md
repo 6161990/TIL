@@ -94,7 +94,7 @@ public class ExceptionTest {
 ### :round_pushpin: try - with - resources 문
  * ##### 리소스를 자동으로 해제하도록 제공해주는 구문, finally가 필요없게됨
  * ##### 해당 리소스가 AutoCloseable을 구현한 경우 close()를 명시적으로 호출하지 않아도
-   ##### try{}블록에서 오픈된 리소스는 정산적인 경우나 예외가 발생한 경우 모두 자동으로 close()가 호출됨
+   ##### try{}블록에서 오픈된 리소스는 정상적인 경우나 예외가 발생한 경우 모두 자동으로 close()가 호출됨
  * ##### 자바 7부터 제공됨
  * ##### FileInputStream의 경우 AutoCloseable을 구현하고있음
  
@@ -102,12 +102,14 @@ public class ExceptionTest {
  
 #### :triangular_flag_on_post: AutoCloseable 인터페이스 사용하기
  ##### AutoCloseable 인터페이스를 구현한 클래스를 만들고 close()가 잘 호출되는지 확인해본다
+```java
       public class AutoCloseObj implements AutoCloseable{
         @Override
         publid void close( ) throws Exception{
           System.out.println("리소스가 close() 되었습니다.");
         }
       }
+ ```
  ```java
  public class AutoCloseObj implements AutoCloseable{
 
