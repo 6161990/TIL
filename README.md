@@ -32,7 +32,7 @@
 * [Stack, Queue](https://github.com/6161990/TIL/blob/main/Java/Stack%2C%20Queue.md)
 * [Set 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Set%20Interface.md)
 * [Map 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Map%20Interface.md)
-* [Inner Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
+* [Inner, Anonymous Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
 * [람다식](https://github.com/6161990/TIL/blob/main/Java/Lambda%20Expression.md)
 * [연산 스트림](https://github.com/6161990/TIL/blob/main/Java/Stream.md)
 * [예외](https://github.com/6161990/TIL/blob/main/Java/Exception.md)
