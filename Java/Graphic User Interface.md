@@ -6,7 +6,7 @@
 #
 ##### :round_pushpin: Swing
 * ##### 자바 AWT를 확장한 GUI 프로그래밍 도구이다. AWT보다 더 많은 종료의 컴포넌트를 제공하며,  
-##### OS용 컴포넌트를 사용하지 않고 Java 전용 컴포넌트를 사용한다는 것이 특징이다.
+  ##### OS용 컴포넌트를 사용하지 않고 Java 전용 컴포넌트를 사용한다는 것이 특징이다.
 * ##### OS가 달라져도 자바 컴포넌트의 GUI 모양이 달라지지 않는다. Swing J 컴포넌트는 AWT 컴포넌트의 후손이다. 
 * ##### 클래스명 앞에 J를 붙여서 AWT와 구분한다. 
 
@@ -96,7 +96,8 @@ public class 클래스명{
 
 #### :checkered_flag: 2단계 ) 컨테이너 배치 방식 지정
 ##### 1. BorderLayOut
-<img width="562" alt="22" src="https://user-images.githubusercontent.com/74708028/113367074-10baff00-9396-11eb-95ed-5a110b1bdccd.png">
+<img width="233" alt="626262" src="https://user-images.githubusercontent.com/74708028/113371971-82994580-93a2-11eb-9782-35942b3b3d82.png">
+
 
 ##### 모두 5개 영역으로 나누고, 각 영역에 하나의 컴포넌트를 넣을 수 있다. 한 영역에 하나 이상의 컴포넌트를 넣고 싶으면 Panel을 사용한다.
 ##### 2. FlowLayout
@@ -105,7 +106,8 @@ public class 클래스명{
 
 ##### 컴포넌트를 워드프로세서와 같은 방식, 즉 왼쪽에서 오른쪽으로 배치한다. 3가지 정렬방식(왼쪽, 가운데, 오른쪽)이 가능하다.
 ##### 3. GridLayout
-<img width="514" alt="44" src="https://user-images.githubusercontent.com/74708028/113367085-17497680-9396-11eb-8f2d-2bca2326ba0a.png">
+<img width="210" alt="65616" src="https://user-images.githubusercontent.com/74708028/113371976-85943600-93a2-11eb-87d9-de9673e8345b.png">
+
 
 ##### 컴포넌트를 가로, 세로의 일정 수만큼 배치하고자 할 때 주로 사용한다. 행과 열을 지정하고, 각 컴포넌트는 동일한 사이즈를 가진다.
 ##### 4. CardLayout
