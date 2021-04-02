@@ -1,12 +1,23 @@
-## :pushpin: 쓰레드 Thread
+### :pushpin: 쓰레드 Thread
 
 <img src="https://user-images.githubusercontent.com/74708028/110875195-85ab9380-8318-11eb-9b00-1c3f786c6478.jpg" width="500" height="300"/>
 
 
 * #### Process : 실행중인 프로그램, OS로부터 메모리를 할당 받음
   #### => 하나의 프로그램은 process가 돼서 메모리에 올라가게됨. process가 실행되는 단계가 thread 
-* #### Thread : 실제 프로그램이 수행되는 작업의 최소 단위, 하나의 프로세스는 하나 이상의 Thread를 가지게됨.
+* #### Thread : 프로세스 내에서 실제 작업을 수행하는 작업단위 , 모든 프로세스는 하나 이상의 Thread와 할당받은 자원(메모리 등)을 가지고 독립적인 작업 단위를 가진다.
   #### => cpu를 점유하는 scheduler가 thread에 cpu할당을 통해 thread가 수행되도록함.
+* #### 프로세스 종료 : 싱글 스레드의 경우 메인 스레드가 종료하면 프로세스도 종료되지만, 멀티 스레드의 경우 실행 중인 스레드가 하나라도 있다면 프로세스가 종료되지 않는다.
+
+<br>
+
+### :round_pushpin: main thread와 daemon thread
+* ##### main thread : 모든 자바 프로그램은 메인 스레드가 main() 메소드를 실행하며 시작한다. main()메소드의 첫 코드부터 아래로 순차적으로 실행되고, return을 만나면 실행을 종료시킨다.
+* ##### daemon thread : 주 스레드의 작업을 돕는 보조적인 역할을 수행하는 스레드이다. 주 스레드가 종료되면 데몬 스레드는 강제적으로 자동 종료된다. 
+    * ##### 데몬스레드 만들기
+      ##### 데몬 스레드가 될 스레드의 레퍼런스 변수에 setDaemon(true)를 호출하여 생성한다. 
+      ##### 단, start() 메소드 호출 전에 setDaemon(true)메소드를 호출해야한다. (lllegalThreadStareException이 발생한다.)
+
 
 <br>
 
@@ -105,6 +116,7 @@ public class ThreadTest {
 
 ### :round_pushpin: Multi-thread 프로그래밍
 #### 동시에 여러 개의 Thread가 수행되는 프로그래밍
+* ##### 자원을 보다 효율적으로 사용할 수 있고 작업이 분리되어 코드가 간결해진다.
 * ##### Thread는 각각의 작업공간(context)를 가짐 -> thread가 swith되면 작업공간도 swith 된다.
 * ##### 공유 자원이 있는 경우 race condition이 발생
 * ##### critical section에 대한 동기화(synchronization)의 구현이 필요, 아니면 충돌한다.
@@ -113,6 +125,9 @@ public class ThreadTest {
 
 
 <br>
+
+#### :triangular_flag_on_post:  멀티 프로세스 vs. 멀티 스레드
+##### 독립적으로 프로그램을 실행하는 것을 멀티 프로세스라고 하고, 한 개의 프로그램을 실행하고 내부적으로 여러가지 작업을 처리하는 것을 멀티스레드라고한다. 
 
 #### :triangular_flag_on_post: critical section(임계 영역)? 
 ##### 두 개 이상의 thread가 동시에 접근하게 되는 리소스(자바로 예를 들면 static 키워드를 가진 객체들)
