@@ -13,6 +13,8 @@
 <br>
 
 ####  :round_pushpin: Container와 Conponent
+<img width="501" alt="11" src="https://user-images.githubusercontent.com/74708028/113366441-24fdfc80-9394-11eb-80b4-b8f09094b376.png">
+
 * ##### Container : 다른 컴포넌트를 포함할 수 있는 GUI 컴포넌트이다.다른 컨테이너에 포함될 수도 있다. 다른 컨테이너에 속하지 않고 
   ##### 독립적으로 존재 가능하며, 스스로 화면에 자기 자신을 출력하는 컨테이너로는 JFrame, JDialog, JApplet이 있다.
 * ##### Conponent : 컨테이너에 포함되어 화면에 출력되는 GUI 객체이다. GUI 컴포넌트의 최상위 클래스는 java.awt.Component클래스이다.
@@ -30,7 +32,7 @@
 
 <br>
 
-#### :checkered_flag: 1단계 ) 컨테이너 객체 생성하기
+#### :checkered_flag: 1단계 ) 컨테이너 객체 생성
 #####  1. JFrame 상속을 이용한 방법
 ```java
 import javax.swing.*;
@@ -76,4 +78,39 @@ public class 클래스명{
   }
 }
 ```
+#
+1단계 ) 컨테이너 세부 속성 지정
+* setLocation(int x, int y)  : 프레임 위치 설정
+* setSize(int width, ing height) : 프레임 사이즈 설정
+* setBounds(int x, int y, int width, int height) : 프레임의 위치와 사이즈 동시 설정
+* setTitle(String title) : 프레임의 제목 설정
+* setIconImage(IconImage) : 프레임 아이콘 이미지 설정
+* setDefaultCloseOperation(JFrame, EXIT_ON_CLOSE): 프레임 닫기 버튼 클릭시 종료 기능 연결 동작 설정
+* setVisiable(true) : 프레임 보이게 설정(반드시 true)
+* setResizable(true) : 프레임 사이즈 조정 활성화 
+
+
+<br>
+
+#### :checkered_flag: 2단계 ) 컨테이너 배치 방식 지정
+##### 1. BorderLayOut
+<img width="562" alt="22" src="https://user-images.githubusercontent.com/74708028/113367074-10baff00-9396-11eb-95ed-5a110b1bdccd.png">
+
+##### 모두 5개 영역으로 나누고, 각 영역에 하나의 컴포넌트를 넣을 수 있다. 한 영역에 하나 이상의 컴포넌트를 넣고 싶으면 Panel을 사용한다.
+##### 2. FlowLayout
+<img width="576" alt="33" src="https://user-images.githubusercontent.com/74708028/113367082-131d5900-9396-11eb-9d98-221ec680ef58.png">
+
+##### 컴포넌트를 워드프로세서와 같은 방식, 즉 왼쪽에서 오른쪽으로 배치한다. 3가지 정렬방식(왼쪽, 가운데, 오른쪽)이 가능하다.
+##### 3. GridLayout
+<img width="514" alt="44" src="https://user-images.githubusercontent.com/74708028/113367085-17497680-9396-11eb-8f2d-2bca2326ba0a.png">
+
+##### 컴포넌트를 가로, 세로의 일정 수만큼 배치하고자 할 때 주로 사용한다. 행과 열을 지정하고, 각 컴포넌트는 동일한 사이즈를 가진다.
+##### 4. CardLayout
+<img width="490" alt="55" src="https://user-images.githubusercontent.com/74708028/113367091-1adcfd80-9396-11eb-971a-62682a39ae8a.png">
+
+##### 여러 컨테이너를 슬라이드처럼 바꿔가며 보여줄 수 있다. 앨범이나 퀴즈 또는 설치 프로그램에 주로 사용된다.
+##### 5. GridbagLayout
+<img width="216" alt="777" src="https://user-images.githubusercontent.com/74708028/113367108-229ca200-9396-11eb-9f6c-90439417b040.png">
+
+##### 컴포넌트의 위치와 크기를 자유롭게 만들 수 있다. 사용하기 매우 복잡하다.
 
