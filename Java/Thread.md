@@ -14,7 +14,7 @@
 ### :round_pushpin: main thread와 daemon thread
 * ##### main thread : 모든 자바 프로그램은 메인 스레드가 main() 메소드를 실행하며 시작한다. main()메소드의 첫 코드부터 아래로 순차적으로 실행되고, return을 만나면 실행을 종료시킨다.
 * ##### daemon thread : 주 스레드의 작업을 돕는 보조적인 역할을 수행하는 스레드이다. 주 스레드가 종료되면 데몬 스레드는 강제적으로 자동 종료된다. 
-    * ##### 데몬스레드 만들기
+    * ##### 데몬스레드 만들기 ?
       ##### 데몬 스레드가 될 스레드의 레퍼런스 변수에 setDaemon(true)를 호출하여 생성한다. 
       ##### 단, start() 메소드 호출 전에 setDaemon(true)메소드를 호출해야한다. (lllegalThreadStareException이 발생한다.)
 
@@ -123,11 +123,13 @@ public class ThreadTest {
 
 <img src="https://user-images.githubusercontent.com/74708028/110875364-d3c09700-8318-11eb-95f3-571fc78c57fe.jpg" width="350" height="200"/>
 
-
 <br>
+
 
 #### :triangular_flag_on_post:  멀티 프로세스 vs. 멀티 스레드
 ##### 독립적으로 프로그램을 실행하는 것을 멀티 프로세스라고 하고, 한 개의 프로그램을 실행하고 내부적으로 여러가지 작업을 처리하는 것을 멀티스레드라고한다. 
+
+<br>
 
 #### :triangular_flag_on_post: critical section(임계 영역)? 
 ##### 두 개 이상의 thread가 동시에 접근하게 되는 리소스(자바로 예를 들면 static 키워드를 가진 객체들)
