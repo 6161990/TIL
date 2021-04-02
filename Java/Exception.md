@@ -102,14 +102,6 @@ public class ExceptionTest {
  
 #### :triangular_flag_on_post: AutoCloseable 인터페이스 사용하기
  ##### AutoCloseable 인터페이스를 구현한 클래스를 만들고 close()가 잘 호출되는지 확인해본다
-```java
-      public class AutoCloseObj implements AutoCloseable{
-        @Override
-        public void close( ) throws Exception{
-          System.out.println("리소스가 close() 되었습니다.");
-        }
-      }
- ```
  ```java
  public class AutoCloseObj implements AutoCloseable{
 
@@ -229,15 +221,10 @@ public static void main(String[] args){
 * #### 기존 JDK 클래스에서 상속받아 예외 클래스 만듦.
 * #### throw 키워드로 예외를 발생시킴, throws는 던지는 것.
 
-	   public class IDFormatException extends Exception{
-	     public IDFormatException(String message){--------생성자의 매개변수로, 예외 상황 메세지를 받음
-	     super(message);
-	     }
-	   }
 ```java
 public class IDFormatException extends Exception{
 	
-	public IDFormatException(String message) {
+	public IDFormatException(String message) {--------생성자의 매개변수로, 예외 상황 메세지를 받음
 		super(message);
 	}
 }
