@@ -78,8 +78,10 @@ public class 클래스명{
   }
 }
 ```
+
 #
-1단계 ) 컨테이너 세부 속성 지정
+
+#### 1단계 ) 컨테이너 세부 속성 지정
 * setLocation(int x, int y)  : 프레임 위치 설정
 * setSize(int width, ing height) : 프레임 사이즈 설정
 * setBounds(int x, int y, int width, int height) : 프레임의 위치와 사이즈 동시 설정
@@ -98,7 +100,8 @@ public class 클래스명{
 
 ##### 모두 5개 영역으로 나누고, 각 영역에 하나의 컴포넌트를 넣을 수 있다. 한 영역에 하나 이상의 컴포넌트를 넣고 싶으면 Panel을 사용한다.
 ##### 2. FlowLayout
-<img width="576" alt="33" src="https://user-images.githubusercontent.com/74708028/113367082-131d5900-9396-11eb-9d98-221ec680ef58.png">
+<img width="171" alt="dfagd" src="https://user-images.githubusercontent.com/74708028/113367362-c423f380-9396-11eb-9402-e36cf0974523.png">
+
 
 ##### 컴포넌트를 워드프로세서와 같은 방식, 즉 왼쪽에서 오른쪽으로 배치한다. 3가지 정렬방식(왼쪽, 가운데, 오른쪽)이 가능하다.
 ##### 3. GridLayout
@@ -113,4 +116,27 @@ public class 클래스명{
 <img width="216" alt="777" src="https://user-images.githubusercontent.com/74708028/113367108-229ca200-9396-11eb-9f6c-90439417b040.png">
 
 ##### 컴포넌트의 위치와 크기를 자유롭게 만들 수 있다. 사용하기 매우 복잡하다.
+
+<br>
+
+#### :checkered_flag: 3단계 ) 컴포넌트 객체 생성함
+
+<img width="485" alt="888" src="https://user-images.githubusercontent.com/74708028/113367454-03524480-9397-11eb-82ea-4e6cb13e3d4d.png">
+
+<br>
+
+#### :checkered_flag: 4단계 )  지정된 배치 방식에 따라 컨테이너 컴포넌트 배치함 (add)
+<img width="550" alt="20210402060653" src="https://user-images.githubusercontent.com/74708028/113367533-2d0b6b80-9397-11eb-8fa3-7fdb236b5299.png">
+<img width="523" alt="20210402060748" src="https://user-images.githubusercontent.com/74708028/113367538-309ef280-9397-11eb-9711-87a445abbbe3.png">
+
+<br>
+
+#### :checkered_flag: 5단계 )  컴포넌트에 마우스나 키보드 반응에 대한 이벤트 연결 처리함
+* ##### 이벤트 기반 프로그래밍
+  ##### Event Driven 방식의 프로그래밍, 이벤트 발생에 의해 프로그램 흐름이 결정된다.
+  ##### 이벤트가 발생하면 이벤트를 처리하는 루틴(이벤트 리스너)이 실행된다. 
+* ##### 이벤트의 종류
+  ##### 1. 사용자의 입력 : 마우스 드래그, 마우스 클릭, 키보드 누름 등
+  ##### 2. 센서의 입력, 네트워크로부터 데이터 송수싱
+  ##### 3. 다른 응용프로그램이나 다른 스레드로부터의 메세지 
 
