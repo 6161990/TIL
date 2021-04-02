@@ -81,15 +81,15 @@ public class 클래스명{
 
 #
 
-#### 1단계 ) 컨테이너 세부 속성 지정
-* setLocation(int x, int y)  : 프레임 위치 설정
-* setSize(int width, ing height) : 프레임 사이즈 설정
-* setBounds(int x, int y, int width, int height) : 프레임의 위치와 사이즈 동시 설정
-* setTitle(String title) : 프레임의 제목 설정
-* setIconImage(IconImage) : 프레임 아이콘 이미지 설정
-* setDefaultCloseOperation(JFrame, EXIT_ON_CLOSE): 프레임 닫기 버튼 클릭시 종료 기능 연결 동작 설정
-* setVisiable(true) : 프레임 보이게 설정(반드시 true)
-* setResizable(true) : 프레임 사이즈 조정 활성화 
+#### :checkered_flag: 1단계 ) 컨테이너 세부 속성 지정
+* ##### setLocation(int x, int y)  : 프레임 위치 설정
+* ##### setSize(int width, ing height) : 프레임 사이즈 설정
+* ##### setBounds(int x, int y, int width, int height) : 프레임의 위치와 사이즈 동시 설정
+* ##### setTitle(String title) : 프레임의 제목 설정
+* ##### setIconImage(IconImage) : 프레임 아이콘 이미지 설정
+* ##### setDefaultCloseOperation(JFrame, EXIT_ON_CLOSE): 프레임 닫기 버튼 클릭시 종료 기능 연결 동작 설정
+* ##### setVisiable(true) : 프레임 보이게 설정(반드시 true)
+* ##### setResizable(true) : 프레임 사이즈 조정 활성화 
 
 
 <br>
