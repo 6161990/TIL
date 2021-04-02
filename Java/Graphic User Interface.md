@@ -127,7 +127,8 @@ public class 클래스명{
 
 #### :checkered_flag: 4단계 )  지정된 배치 방식에 따라 컨테이너 컴포넌트 배치함 (add)
 <img width="550" alt="20210402060653" src="https://user-images.githubusercontent.com/74708028/113367533-2d0b6b80-9397-11eb-8fa3-7fdb236b5299.png">
-<img width="523" alt="20210402060748" src="https://user-images.githubusercontent.com/74708028/113367538-309ef280-9397-11eb-9711-87a445abbbe3.png">
+<img width="444" alt="xxx" src="https://user-images.githubusercontent.com/74708028/113369813-2ed82d80-939d-11eb-9bef-b7d68bd49c6b.png">
+
 
 <br>
 
