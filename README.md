@@ -43,7 +43,7 @@
 * [보조 스트림](https://github.com/6161990/TIL/blob/main/Java/Decorator%20Stream.md)
 * [직렬화](https://github.com/6161990/TIL/blob/main/Java/Serialization.md)
 * [Thread](https://github.com/6161990/TIL/blob/main/Java/Thread.md)
-* [](https://github.com/6161990/TIL/blob/main/Java/Thread.md)
+* [GUI](https://github.com/6161990/TIL/blob/main/Java/Graphic%20User%20Interface.md)
 
 --------------   
 
