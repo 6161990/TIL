@@ -44,15 +44,15 @@ public class Question1 {
 		
 	//Bubble Sort
 		for (int i = 0; i < inputInt.length; i++) {
-            for (int j = 0; j < inputInt.length-1; j++) { // 배열 0부터 끝까지 한번 돌면 제일 큰 수는 맨 끝에 자리하게 되어 있으니 그 다음부터는 그 수 비교 하지 않아도 되므로  -1
-                if (inputInt[j]> inputInt[j+1]) { //비교 후 큰 수를 
-                    int bubbleSort = inputInt[j]; // 변수에 임시로 담고 (큰 수를 잠시 다른 공간에 이사시키고)
-                    inputInt[j] = inputInt[j+1]; //그 다음 수를 변수로 간 수의 배열 자리에 옮겨넣기  (그 자리에 작은 값 땡겨주고)
-                    inputInt[j+1] = bubbleSort; // 다음 원소의자리에 커서 옮겨간 수를 다시 꺼내 배열에 넣어주기 (다시 큰 수를 배열 넣어주기, 자리바꿈이 일어남)
-                }
-            }
+                   for (int j = 0; j < inputInt.length-1; j++) { // 배열 0부터 끝까지 한번 돌면 제일 큰 수는 맨 끝에 자리하게 되어 있으니 그 다음부터는 그 수 비교 하지 않아도 되므로  -1
+               	     if (inputInt[j]> inputInt[j+1]) { //비교 후 큰 수를 
+                        int bubbleSort = inputInt[j]; // 변수에 임시로 담고 (큰 수를 잠시 다른 공간에 이사시키고)
+                        inputInt[j] = inputInt[j+1]; //그 다음 수를 변수로 간 수의 배열 자리에 옮겨넣기  (그 자리에 작은 값 땡겨주고)
+                        inputInt[j+1] = bubbleSort; // 다음 원소의자리에 커서 옮겨간 수를 다시 꺼내 배열에 넣어주기 (다시 큰 수를 배열 넣어주기, 자리바꿈이 일어남)
+                     }
+                  }
            
-        }
+              }
 		
 		System.out.print("정렬된 결과: ");
 		for(int bSortInt : inputInt) {
