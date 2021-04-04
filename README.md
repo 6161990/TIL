@@ -54,3 +54,9 @@
 * [Template Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Template%20Pattern.md)
 * [Strategy Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Strategy%20Pattern.md)
 * [Decorator Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
+
+
+---
+
+### [Algorithm](https://github.com/6161990/TIL/tree/main/Algorithm)
+* [Bubble Sort](https://github.com/6161990/TIL/blob/main/Algorithm/Bubble%20Sort.md)
