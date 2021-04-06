@@ -43,8 +43,8 @@ public class Question1 {
 		}
 		
 	//Bubble Sort
-		for (int i = 0; i < inputInt.length; i++) {
-                   for (int j = 0; j < inputInt.length-1; j++) { // 배열 0부터 끝까지 한번 돌면 제일 큰 수는 맨 끝에 자리하게 되어 있으니 그 다음부터는 그 수 비교 하지 않아도 되므로  -1
+		for (int i = 0; i < inputInt.length-1; i++) {
+                   for (int j = 0; j < (inputInt.length-i)-1; j++) { // 배열 0부터 끝까지 한번 돌면 제일 큰 수는 맨 끝에 자리하게 되어 있으니 그 다음부터는 그 수 비교 하지 않아도 되므로  -1
                	     if (inputInt[j]> inputInt[j+1]) { //비교 후 큰 수를 
                         int bubbleSort = inputInt[j]; // 변수에 임시로 담고 (큰 수를 잠시 다른 공간에 이사시키고)
                         inputInt[j] = inputInt[j+1]; //그 다음 수를 변수로 간 수의 배열 자리에 옮겨넣기  (그 자리에 작은 값 땡겨주고)
