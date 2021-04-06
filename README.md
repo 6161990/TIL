@@ -30,6 +30,7 @@
 * [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
 * [List 인터페이스](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md)
 * [Stack, Queue](https://github.com/6161990/TIL/blob/main/Java/Stack%2C%20Queue.md)
+* [Iterator 인터페이스](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md)
 * [Set 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Set%20Interface.md)
 * [Map 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Map%20Interface.md)
 * [Inner, Anonymous Class](https://github.com/6161990/TIL/blob/main/Java/Inner%20Class.md)
