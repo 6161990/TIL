@@ -1,13 +1,7 @@
-## :pushpin: Set Interface
+### :pushpin: Set Interface
 ###### 참고: [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
-### :triangular_flag_on_post: Collection의 개체를 순회하는 인터페이스
-* #### iterator()메서드 호출 : Set은 순서가 없기 때문에 지정해서 꺼낼 수 없으므로 iterator를 이용한다.
-
-        Iterator ir = memberArrayList.iterator();  
-* #### Iterator에 선언된 메서드
-   * ##### boolean hashNext() : 이후에 요소가 더 있는지를 체크하는 메서드이며, 요소가 있다면 true를 반환
-   * ##### E next() : 다음에 있는 요소를 반환
-
+###### 참고: [Iterator 인터페이스](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md
+)
 <br>
 
 #### :round_pushpin: Set 인터페이스 
