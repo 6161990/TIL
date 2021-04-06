@@ -21,7 +21,7 @@
 
 <br>
 
-### :round_pushpin: 자바 Thread클래스로 부터 상속받아 구현
+#### :round_pushpin: 자바 Thread클래스로 부터 상속받아 구현
 ```java
 
 public class MyThread extends Thread{
@@ -50,6 +50,7 @@ public class MyThread extends Thread{
 }
 
 ```
+#### :round_pushpin: 자바 Thread클래스로 부터 상속받아 구현, multiThread
 ```java
 class MyThread extends Thread {
   
@@ -92,7 +93,7 @@ public class ThreadTest {
 
 <br>
 
-### :round_pushpin: Runnable 인터페이스로 구현
+#### :round_pushpin: Runnable 인터페이스로 구현
 ```java
 class MyThread implements Runnable{  // 상속은 하나밖에 못하기 때문에 이미 어떤 class를 상속받았다면 Runnable로 구현
 
