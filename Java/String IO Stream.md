@@ -27,3 +27,118 @@
 ![Chapter 14 자바 입출력 - 04 문자 단위 입출력 스트림_페이지_5](https://user-images.githubusercontent.com/74708028/110724091-7a912e80-8258-11eb-9700-346556461fe3.png)
 
 
+---
+
+### 💻  프로그래밍 해보기
+#### 사용자 정보 출력
+```java
+
+public class User {
+	private String id;
+	private String passwd;
+	private String dong;
+	private int age;
+	private String name;
+	
+	public User() {
+		super();
+	}
+	public User(String id, String passwd, String dong, int age, String name) {
+		super();
+		this.id = id;
+		this.passwd = passwd;
+		this.dong = dong;
+		this.age = age;
+		this.name = name;
+	}
+	
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+	public String getDong() {
+		return dong;
+	}
+	public void setDong(String dong) {
+		this.dong = dong;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "아이디=" + id + ", 비밀번호=" + passwd + ", 동=" + dong + ", 나이=" + age + ", 이름="+name;
+	}
+
+}
+
+```
+```java
+
+public class InputStreamReaderTest {
+
+	InputStreamReader isr; //클래스 인스턴스 생성시 자동 초기화되니 null필요없음
+	BufferedReader bfr;
+	
+	
+	public static void main(String[] args) {
+      InputStreamReaderTest isrt = new InputStreamReaderTest();
+      User user = isrt.getUserInfo();
+      System.out.println("입력한 사용자 정보: ");
+      System.out.println(user);
+	}
+
+	private User getUserInfo() {
+		
+			User user = null;
+			isr = new InputStreamReader(System.in);
+			bfr = new BufferedReader(isr);
+      try {	
+        System.out.println("사용자 정보를 입력하세요: ");
+        System.out.println("아이디 : ");
+        String id = bfr.readLine();
+        System.out.println("비밀번호  : ");
+        String passwd = bfr.readLine();
+        System.out.println("동 : ");
+        String dong = bfr.readLine();
+        System.out.println("나이 : ");
+        int age = Integer.parseInt(bfr.readLine());
+        System.out.println("이름 : ");
+        String name = bfr.readLine();
+        user = new User(id, passwd, dong, age, name);
+      } catch (NumberFormatException e) {
+        e.printStackTrace();
+      } catch (IOException e) {
+        e.printStackTrace();
+      } finally {
+        try {
+          isr.close();
+          bfr.close();
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+      return user;
+	}
+}
+
+```
