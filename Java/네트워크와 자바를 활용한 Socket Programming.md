@@ -1,4 +1,4 @@
-### :pushpin: 자바를 활용한 Socket Programming
+### :pushpin: 네트워크와 자바를 활용한 Socket Programming
 
 #### :round_pushpin: 네트워크 Network, 서버와 클라이언트
 * ##### 네트워크 : 여러 대의 컴퓨터를 통신 회선으로 연결한 것을 말한다. 홈 네트워크, 지역 네트워트, 인터넷 등이 해당된다.
