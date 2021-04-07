@@ -12,6 +12,124 @@
 * ##### IP주소 : 네트워크 상에서 컴퓨터를 식별하는 번호로 네트워크 어댑터(랜카드)마다 고유의 번호를 할당하여 통신에 사용한다.
 * ##### 포트 (port) : 같은 컴퓨터 내에서 프로그램을 식별하는 번호이다. 클라이언트 서버 연결 요청시 IP 주소와 port 번호를 알아야 한다.
 
+#### :round_pushpin: URL 클래스 
+##### 특정 URL 주소를 다루기 위해 자바에서 제공되는 클래스
+```java
+public class UrlTest {
+
+	public static void main(String[] args) {
+		InputStream is = null;
+		InputStreamReader isr = null;
+		BufferedReader br = null;
+		
+		try {
+			URL url = new URL("https://github.com/6161990/TIL"); //https는 s: 시큐리티, 보안이 들어감
+			is = url.openStream();
+			isr = new InputStreamReader(is, "UTF-8");
+			br = new BufferedReader(isr);
+			String str = "";	
+			while((str = br.readLine())!=null) {
+				System.out.println(str);
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				is.close();
+				isr.close();
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+```
+
+<br>
+
+#### :round_pushpin: URLConnetion 클래스 
+##### 추상클래스이므로 생성자를 사용해서 객체를 생성할 수는 없으며, URL 객체의 openConnection()메소드를 이용해서 생성할 수 있다. 
+##### 또한, URLConnetion 객체가 생성되면 connect 메소드를 호출하여 URL객체에 설정되어 있는 URL에 연결할 수 있다. 
+```java
+public class UrlConnectionTest {
+
+	public static void main(String[] args) {
+		InputStream is = null;
+		InputStreamReader isr = null;
+		BufferedReader br = null;
+		
+		try {
+			URL url = new URL("https://github.com/6161990/TIL");
+			URLConnection conn = url.openConnection();
+			is = conn.getInputStream();
+			isr = new InputStreamReader(is, "UTF-8");
+			br = new BufferedReader(isr);
+			String str = "";
+			String contentType = conn.getContentType();
+			System.out.println("contentType= "+contentType);
+			while((str=br.readLine())!=null) {
+				System.out.println(str);
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				is.close();
+				isr.close();
+				br.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+```
+<br>
+
+#### :round_pushpin: InetAddress 클래스 
+##### 특정 IP주소를 다루기 위한 클래스로, InetAddress 클래스 객체는 생성자로 생성할 수 없으며 자바에서 제공되는 여러 개의 static 메소드에서의 의해서 생성된다.
+
+```java
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class InetAddressTest {
+
+	public static void main(String[] args) {
+		InetAddress ia = null;
+		try {
+			ia = InetAddress.getLocalHost(); //DESKTOP-4730154/192.168.0.101
+			System.out.println(ia);
+			
+			ia = InetAddress.getByName("www.google.or.kr");  //DNS
+			System.out.println(ia); //www.google.or.kr
+			
+			InetAddress[] aia = InetAddress.getAllByName("www.google.or.kr"); //IP //도메인을 IP로 바꿔줌
+			for(int i = 1; i<aia.length; i++) { 
+				System.out.println(aia[i]); //221.143.20.101
+			}
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+
+```
+
 <br>
 
 #### :round_pushpin: Socket Programming
