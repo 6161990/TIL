@@ -232,7 +232,7 @@ public class FileOutputTest1 {
 
 	public static void main(String[] args) {
 
-    //출력스트림(output)은 파일이 없는 경우 생성하여 출력
+  		 //출력스트림(output)은 파일이 없는 경우 생성하여 출력
 		try(FileOutputStream fos = new FileOutputStream("output.txt", true)){  //true라고 하면 append되어서 출력
 			
 			fos.write(65);
@@ -243,6 +243,60 @@ public class FileOutputTest1 {
 			System.out.println(e);
 		}
 	}
+}
+```
+
+#### :round_pushpin: ByteArray
+```java
+public class ByteArrayOutputStreamTest {
+
+	public static void main(String[] args) {
+		String msg = "ByteArrayOutputStreamTest";
+		ByteArrayOutputStream bao = null;		
+		try {
+			bao = new ByteArrayOutputStream();
+			bao.write(msg.getBytes()); //getBytes는 배열로 바꾸는 것. string을 배열로 바꿈
+			System.out.println("bao= "+bao);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				bao.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}
+```
+
+#### :round_pushpin: FileOutputStream과 ByteArray
+```java
+public class FileOutPutStreamTest {
+
+	public static void main(String[] args) {
+		FileOutputStream fo = null; //파일 아웃풋 스트림은 파일이 없을 시, 파일을 생성해 출력시킨다.
+		String msg = "FileOutputStreamTestkkkkyj";  // 메세지 내용
+		byte[] byteArray = msg.getBytes(); //문자열(2byte)을 배열로 1byte로 쪼개서 배열방에 넣고, getBytes는 배열로 바꾸는 것. string을 배열로 바꿈 
+		try {
+			fo = new FileOutputStream("c:\\kh\\fileoutput.txt",true);
+			fo.write(byteArray); //byte로 된 것을 fo안에 넣는다. 
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				fo.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 }
 ```
 
