@@ -26,6 +26,7 @@
 
 
 #### :round_pushpin: Buffered 사용하기 
+* ###### 참고: [Scanner](https://github.com/6161990/TIL/blob/main/Java/Standard%20InputOutput%20Stream.md#round_pushpin-scanner-%ED%81%B4%EB%9E%98%EC%8A%A4)
 ```java
 public class BufferedReaderTest {
 
