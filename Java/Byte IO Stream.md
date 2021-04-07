@@ -222,9 +222,12 @@ public class SequenceInputStream1 {
 
 }
 ```
-------------------------------------------------
 
+<br>
 
+----
+
+<br>
 
 #### :round_pushpin: FileOutputStream
 ```java
@@ -245,6 +248,8 @@ public class FileOutputTest1 {
 	}
 }
 ```
+
+<br>
 
 #### :round_pushpin: ByteArray
 ```java
@@ -273,6 +278,8 @@ public class ByteArrayOutputStreamTest {
 }
 ```
 
+<br>
+
 #### :round_pushpin: FileOutputStream과 ByteArray
 ```java
 public class FileOutPutStreamTest {
@@ -299,8 +306,6 @@ public class FileOutPutStreamTest {
 
 }
 ```
-
------------------------------------------------------------
 
 <br>
 
@@ -334,7 +339,9 @@ public class FileOutputTest2 {
 }
 ```
 
------------------------------------------------------------
+<br>
+
+---
 
 <br>
 
