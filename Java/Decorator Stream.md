@@ -1,19 +1,18 @@
-![asf](https://user-images.githubusercontent.com/74708028/113797848-04b3b080-978d-11eb-8bba-f06d904f2d15.png)
-## :pushpin: 보조 스트림 Decorator Stream
+### :pushpin: 보조 스트림 Decorator Stream
 
 ###### 참고: [데코레이터 패턴](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
 
-###  실제 읽고 쓰는 스트림이 아닌 보조적인 기능을 추가하는 스트림 
-* #### FilterInputStream 과 FilterOutputStream이 보조스트림의 상위 클래스
-* #### 생성자의 매개 변수로 또 다른 스트림을 가짐
+####  실제 읽고 쓰는 스트림이 아닌 보조적인 기능을 추가하는 스트림 
+* ##### FilterInputStream 과 FilterOutputStream이 보조스트림의 상위 클래스
+* ##### 생성자의 매개 변수로 또 다른 스트림을 가짐
   * ###### protected FilterInputStream(InputStream in) : 생성자의 매개변수로 InputStream을 받습니다.
   * ###### public FilterOutputStream(OutputStream out) : 생성자의 매개변수로 OutputStream을 받습니다.
-* #### :triangular_flag_on_post: 데코레이터 패턴 (Decorator Pattern) 
+* ##### :triangular_flag_on_post: 데코레이터 패턴 (Decorator Pattern) 
 <img src="https://user-images.githubusercontent.com/74708028/110726518-dd84c480-825c-11eb-8973-5e9f9186dad2.jpg" width="700" height="305"/>  
 
 <br>
 
-### :round_pushpin:여러가지 보조스트림 사용하기
+#### :round_pushpin:여러가지 보조스트림 사용하기
 * ##### InputStreamReader / OutputStreamWriter : 소스 스트림이 바이트 기반 스트림이지만 데이터가 문자일경우 사용한다. Reader와 Writer는 문자 단위로 입출력을 하기 때문에 데이터가 문자인 경우에 바이트 기반 스트림보다 편리하게 사용할 수 있다. 
 * ##### Buffered 스트림 : 느린 속도로 인해 입출력 성능에 영향을 미치는 입출력 소스를 이용하는 경우(하드디스크, 느린 네트워크)사용한다. 입출력 소스와 직접 작업하지 않고 버퍼에 데이터를 모아 한꺼번에 작업을 하여 실행 성능이 향상된다. ( 내부에 8192 바이트 배열을 가지고 있어, 입출력 속도를 줄인다.)
 * ##### DataInputStream/ DataOutputStream : 자료가 저장된 상태 그대로 자료형을 유지하며 읽거나 쓰는 기능을 제공하는 스트림, 입력된 자료형의 순서와 출력될 자료형의 순서가 일치해야한다.
