@@ -159,6 +159,51 @@ public class InetAddressTest {
    ##### 6. 보조스트림을 통해 성능을 개선시킨다.
    ##### 7. 스트림을 통해 읽고 쓰기를 한다.
    ##### 8. 통신을 종료한다.
+   
+```java
+
+public class TCPServer extends Thread { //통신을 하려면 멀티 처리가 되어야하므로 
+	private InputStream is;
+	private OutputStream os;
+	private ServerSocket serverSocket;
+	private ObjectInputStream ois;
+	private ObjectOutputStream oos;
+	private Socket socket;
+	
+	@Override
+	public void run() {
+		try {
+			serverSocket = new ServerSocket(5000); //1~1000까지는 예약포트라서 피하고 10000이하의 아무 포트나 골라쓰면 된다.
+			while(true) {
+				System.out.println("요청 대기 : "); //서버는 항상 대기 접속이 될 때 그것을 받아주고 서비스 제공(정보 제공), 웹 브라우저로 날라온다.
+				socket = serverSocket.accept(); // accept : 접속하겠다. 
+				System.out.println("접속한 클라이언트 : "+ socket.getInetAddress());
+				is = socket.getInputStream();
+				os = socket.getOutputStream();
+				ois = new ObjectInputStream(is);
+				oos = new ObjectOutputStream(os);
+				String msg = (String) ois.readObject();
+				System.out.println("클라이언트에서 보낸 메세지 : "+msg);
+				String retMsg = "서버로부터 되돌아온 메세지 : " + msg;
+				oos.writeObject(retMsg);
+				socket.close();
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+	}
+	
+	public static void main(String[] args) {
+		new TCPServer().start();
+	}
+
+}
+
+```
+
+
 #
 * ##### TCP 소켓 프로그래밍 순서(클라이언트용)
   ##### 1. 서버의 IP 주소와 서버가 정한 port 번호를 매개변수로 하여 클라이언트용 소켓 객체를 생성한다.
@@ -166,6 +211,68 @@ public class InetAddressTest {
   ##### 3. 보조스트림을 붙여 성능을 개선한다.
   ##### 4. 스트림을 통해 읽고 쓰기를 한다.
   ##### 5. 통신을 종료한다.
+```java
+
+public class TCPClient {
+	private InputStream is;
+	private OutputStream os;
+	private Socket socket;
+	private ObjectInputStream ois;
+	private ObjectOutputStream oos;
+	public BufferedReader input;
+	private String rMsg;
+	
+	public void start() {
+		try {
+			socket = new Socket("125.178.1.44", 5000); //5000포트로 들우가
+			sendMessage(socket);
+			receiveMessage(socket);
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				socket.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private void receiveMessage(Socket socket) {
+		try {
+			is = socket.getInputStream();
+			ois = new ObjectInputStream(is);
+			rMsg =(String) ois.readObject();
+			System.out.println(rMsg);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void sendMessage(Socket socket) {
+		try {
+			os = socket.getOutputStream();
+			oos = new ObjectOutputStream(os);
+			input = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("보낼 메세지");
+			String sMsg = input.readLine(); //버퍼드 리더가 지원하는 메소드 리드 라인
+			oos.writeObject(sMsg);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void main(String[] args) {
+		TCPClient tcp = new TCPClient();
+		tcp.start();
+	}
+}
+
+```
+
 
 <br>
 
