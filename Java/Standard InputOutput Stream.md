@@ -1,4 +1,4 @@
-## :pushpin: 표준 입출력 스트림 Standard InputOutput Stream
+### :pushpin: 표준 입출력 스트림 Standard InputOutput Stream
 ###### 참고 : [I/O 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/IO%20Stream.md)
 #### System 클래스의 표준 입출력 멤버 : static이기 때문에 생성자없이 쓸 수 있었음
 
@@ -10,11 +10,11 @@
  
 <br>
 
-### :round_pushpin: System.in 사용하여 입력 받기
-* #### 한 바이트씩 읽어들임
-* #### read() 의 데이터 타입은 int : 파일의 끝에 도달해 더이상 읽을 것이 없을 때 -1을 반환해야하기때문
-* #### 한글과 같은 여러 바이트로 된 문자를 읽기 위해서는 InputStreamReader와 같은 보조 스트림을 사용해야함
-* #### System.in은 InputStream임.
+#### :round_pushpin: System.in 사용하여 입력 받기
+* ##### 한 바이트씩 읽어들임
+* ##### read() 의 데이터 타입은 int : 파일의 끝에 도달해 더이상 읽을 것이 없을 때 -1을 반환해야하기때문
+* ##### 한글과 같은 여러 바이트로 된 문자를 읽기 위해서는 InputStreamReader와 같은 보조 스트림을 사용해야함
+* ##### System.in은 InputStream임.
 
 <br>
 
