@@ -12,7 +12,7 @@
 
 <br>
 
-#### :round_pushpin:여러가지 보조스트림 사용하기
+#### :round_pushpin: 여러가지 보조스트림 사용하기
 * ##### InputStreamReader / OutputStreamWriter : 소스 스트림이 바이트 기반 스트림이지만 데이터가 문자일경우 사용한다. Reader와 Writer는 문자 단위로 입출력을 하기 때문에 데이터가 문자인 경우에 바이트 기반 스트림보다 편리하게 사용할 수 있다. 
 * ##### Buffered 스트림 : 느린 속도로 인해 입출력 성능에 영향을 미치는 입출력 소스를 이용하는 경우(하드디스크, 느린 네트워크)사용한다. 입출력 소스와 직접 작업하지 않고 버퍼에 데이터를 모아 한꺼번에 작업을 하여 실행 성능이 향상된다. ( 내부에 8192 바이트 배열을 가지고 있어, 입출력 속도를 줄인다.)
 * ##### DataInputStream/ DataOutputStream : 자료가 저장된 상태 그대로 자료형을 유지하며 읽거나 쓰는 기능을 제공하는 스트림, 입력된 자료형의 순서와 출력될 자료형의 순서가 일치해야한다.
@@ -23,8 +23,52 @@
 <br>
 
 ![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_5](https://user-images.githubusercontent.com/74708028/110728099-c693a180-825f-11eb-90fb-462e242bbe79.png)
+
+
+#### :round_pushpin: Buffered 사용하기 
+```java
+public class BufferedReaderTest {
+
+	public static void main(String[] args) {
+		
+		FileInputStream fi = null; //1바이트에서 
+		InputStreamReader isr = null; //2 바이트로 : 한글도 읽어올 수 있음
+		BufferedReader  bfr = null; //빠르게 성능 업 
+		/*BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("입력하숑");
+		input.readLine();*/  //Scanner 말고 성능 좋게 이용하는 키보드 입력기능 
+			
+	 	try {
+			fi = new FileInputStream("c:\\kh\\bufferedReader.txt");
+			isr = new InputStreamReader(fi);
+			bfr = new BufferedReader(isr);
+			String str = null;
+			while((str = bfr.readLine())!=null) { //라인 별로 끝까지 읽어오는 기능 
+				System.out.println(str);
+		    }
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fi.close();
+				isr.close();
+				bfr.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
+
+```
+
 ![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_6](https://user-images.githubusercontent.com/74708028/113797861-09786480-978d-11eb-9856-6b1f285a211e.png)
 
+
+#### :round_pushpin: DataInputStream & DataOutputStream 사용하기 
 ```java
 
 import java.io.DataInputStream;
@@ -37,42 +81,43 @@ import java.io.IOException;
 public class DataStreamTest {
 
 	public static void main(String[] args) {
-    FileOutputStream fo = null;
-    FileInputStream fi = null;
-    DataOutputStream dos = null;
-    DataInputStream dis = null;
-		
-    try {
-       fo = new FileOutputStream("c:\\kh\\dataFile.txt"); //아웃풋은 생성기능 있음 파일 만듦.
-       fi = new FileInputStream("c:\\kh\\dataFile.txt");
-       dos = new DataOutputStream(fo);
-       dis = new DataInputStream(fi);
+		    FileOutputStream fo = null;
+		    FileInputStream fi = null;
+		    DataOutputStream dos = null;
+		    DataInputStream dis = null;
 
-       dos.writeShort(-1);
-       dos.writeByte(2);
-       dos.writeDouble(3.14);
-       dos.writeLong(30);
-       dos.writeUTF("dataStreamTest");
-       System.out.println(dis.readUnsignedShort()); //2바이트의 입력데이터를 읽기, 0~65535범위의 int값을 return 합니다. 
-       dis.skip(1); //현재 읽고 있는 위치에서 지정된 숫자만큼 건너뛴다.
-       System.out.println(dis.readDouble());
-       System.out.println(dis.readLong());
-       System.out.println(dis.readUTF());
-    } catch (FileNotFoundException e) {
-       e.printStackTrace();
-    } catch (IOException e) {
-       e.printStackTrace();
-    } finally {
-       try {
-          fi.close();
-          fo.close();
-          dos.close();
-     } catch (IOException e) {
-          e.printStackTrace();
-     }
-    }
+		    try {
+			      fo = new FileOutputStream("c:\\kh\\dataFile.txt"); //아웃풋은 생성기능 있음 파일 만듦.
+			      fi = new FileInputStream("c:\\kh\\dataFile.txt");
+			      dos = new DataOutputStream(fo);
+			      dis = new DataInputStream(fi);
 
-   }
+			      dos.writeShort(-1);
+			      dos.writeByte(2);
+			      dos.writeDouble(3.14);
+			      dos.writeLong(30);
+		       	      dos.writeUTF("dataStreamTest");
+			      System.out.println(dis.readUnsignedShort()); //2바이트의 입력데이터를 읽기, 0~65535범위의 int값을 return 합니다. 
+			      dis.skip(1); //현재 읽고 있는 위치에서 지정된 숫자만큼 건너뛴다.
+			      System.out.println(dis.readDouble());
+			      System.out.println(dis.readLong());
+			      System.out.println(dis.readUTF());
+			      
+		    } catch (FileNotFoundException e) {
+		      	      e.printStackTrace();
+		    } catch (IOException e) {
+		              e.printStackTrace();
+		    } finally {
+		       try {
+			      fi.close();
+			      fo.close();
+			      dos.close();
+		     } catch (IOException e) {
+			  e.printStackTrace();
+		     }
+		    }
+
+		   }
 
 }
 
