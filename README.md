@@ -45,7 +45,7 @@
 * [직렬화](https://github.com/6161990/TIL/blob/main/Java/Serialization.md)
 * [Thread](https://github.com/6161990/TIL/blob/main/Java/Thread.md)
 * [GUI](https://github.com/6161990/TIL/blob/main/Java/Graphic%20User%20Interface.md)
-* [자바를 활용한 소켓 프로그래밍](https://github.com/6161990/TIL/blob/main/Java/%EC%9E%90%EB%B0%94%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Socket%20Programming.md)
+* [네트워크와 자바를 활용한 소켓 프로그래밍](https://github.com/6161990/TIL/blob/main/Java/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%99%80%20%EC%9E%90%EB%B0%94%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Socket%20Programming.md)
 
 --------------   
 
