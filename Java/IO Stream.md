@@ -33,7 +33,7 @@
 * ##### 스트림의 예 
 * ##### 입력 스트림 : FileInPutStream, FileReader, BufferedInputStream, BufferedReader 등
 * ##### 출력 스트림 : FileOutputStream, FileWriter, BufferedOutputStream, BufferedWriter 등
-   ###### 접미사 InPutStream, FileOutputStream 은 Byte 단위.
+   ###### 접미사 InPutStream, OutputStream 은 Byte 단위.
    ###### 접미사 Reader, Writer 는 문자 단위. 
    ###### 접두사 File은 어떤 목적지가 있는 기반스트림.
    ###### 접두사 Buffered는 버퍼링 제공하는 보조스트림.
