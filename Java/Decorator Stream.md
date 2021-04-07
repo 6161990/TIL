@@ -1,3 +1,4 @@
+![asf](https://user-images.githubusercontent.com/74708028/113797848-04b3b080-978d-11eb-8bba-f06d904f2d15.png)
 ## :pushpin: 보조 스트림 Decorator Stream
 
 ###### 참고: [데코레이터 패턴](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
@@ -23,6 +24,58 @@
 <br>
 
 ![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_5](https://user-images.githubusercontent.com/74708028/110728099-c693a180-825f-11eb-90fb-462e242bbe79.png)
-![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_6](https://user-images.githubusercontent.com/74708028/110728114-ceebdc80-825f-11eb-928b-d6fe8869d18a.png)
+![Chapter 14 자바 입출력 - 05 보조 스트림_페이지_6](https://user-images.githubusercontent.com/74708028/113797861-09786480-978d-11eb-9856-6b1f285a211e.png)
 
+```java
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DataStreamTest {
+
+	public static void main(String[] args) {
+    FileOutputStream fo = null;
+    FileInputStream fi = null;
+    DataOutputStream dos = null;
+    DataInputStream dis = null;
+		
+    try {
+       fo = new FileOutputStream("c:\\kh\\dataFile.txt"); //아웃풋은 생성기능 있음 파일 만듦.
+       fi = new FileInputStream("c:\\kh\\dataFile.txt");
+       dos = new DataOutputStream(fo);
+       dis = new DataInputStream(fi);
+
+       dos.writeShort(-1);
+       dos.writeByte(2);
+       dos.writeDouble(3.14);
+       dos.writeLong(30);
+       dos.writeUTF("dataStreamTest");
+       System.out.println(dis.readUnsignedShort()); //2바이트의 입력데이터를 읽기, 0~65535범위의 int값을 return 합니다. 
+       dis.skip(1); //현재 읽고 있는 위치에서 지정된 숫자만큼 건너뛴다.
+       System.out.println(dis.readDouble());
+       System.out.println(dis.readLong());
+       System.out.println(dis.readUTF());
+    } catch (FileNotFoundException e) {
+       e.printStackTrace();
+    } catch (IOException e) {
+       e.printStackTrace();
+    } finally {
+       try {
+          fi.close();
+          fo.close();
+          dos.close();
+     } catch (IOException e) {
+          e.printStackTrace();
+     }
+    }
+
+   }
+
+}
+
+```
 
