@@ -21,13 +21,13 @@
  ```java 
  //제네릭 사용 x
  List list = new ArrayList();
- liat.add("Hello");
+ list.add("Hello");
  String str = (String)list.get(0);
  ```
  ```java
  //제네릭 사용
  List<String> list = new ArrayList<String>();
- liat.add("Hello");
+ list.add("Hello");
  String str = list.get(0);  //(형변환 필요 없음)
  ```
   #
@@ -59,7 +59,7 @@
 
 #### :round_pushpin: 제네릭과 상속 <T extends 클래스(interface)> 
 * ##### T 대신에 사용될 자료형을 제한하기 위해 사용.  
- ##### 중괄호 {}안에서 타입 파라미터 변수로 사용 가능한 것은 상위탕비의 멤버(필드, 메소드)로 제한되어, 하위 타입에만 있는 필드와 메소드는 사용할 수 없다. 
+  ##### 중괄호 {}안에서 타입 파라미터 변수로 사용 가능한 것은 상위탕비의 멤버(필드, 메소드)로 제한되어, 하위 타입에만 있는 필드와 메소드는 사용할 수 없다. 
 #### :triangular_flag_on_post: class extends
 ```java
 abstract class Info{                   //abstract 
