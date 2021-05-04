@@ -141,6 +141,8 @@ public class MultiArray {
 ```java
 public class test7 {
 	public static void main(String[] args) {
+	
+		//System.arraycopy
 		String[] arr = {"사과","딸기","수박"};
 		String[] copy= new String[3];
 		
@@ -163,6 +165,7 @@ public class test7 {
 			System.out.println(copy[i]);
 		}
 		
+		/////////  clone()
 		
 		int[] arr1 = {10,20,30,40,50};
 		int[] arr2 = arr1.clone();
