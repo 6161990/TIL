@@ -141,28 +141,7 @@ public class ArrayCopy {
 #### :round_pushpin: 객체 배열 복사 (깊은 복사)
 * #####  깊은 복사 : 인스턴트가 구별되는 복사. 
 * #####  그래서 깊은 복사 후 , 원본에서 데이터를 수정하면 카피본에서는 영향 없음. 서로가 서로에게 영향을 끼치지 않음. 
-* ##### 깊은 복사를 할 수 있는 방법 네 가지
-  ##### 1. for문
-  ##### 2. System.arraycopy(arr1, 0, arr2, 0, arr1.length);
-  ##### 3. arr2 = Arrays.copyOf(arr1, arr1.length);
-  ##### 4. arr2 = arr1.clone();
-```java
-public class ArrayCopy {
 
-	public static void main(String[] args) {
-		int[] arr1 = {10,20,30,40,50};
-		int[] arr2 = {1,2,3,4,5};
-		
-		System.arraycopy(arr1, 0, arr2, 1,3);
-                 //(뭐를, 어디서부터, 어디로, 어디부터, 어디까지)
-                 //(-----arr1-----), (----------arr2----------)
-		
-		for(int i =0; i<arr2.length; i++) {
-			System.out.println(arr2[i]);
-		}
-	}
-}
-```    
 ```java
 public class Copy {
 	
