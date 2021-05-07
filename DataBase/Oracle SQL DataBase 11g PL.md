@@ -2,6 +2,8 @@
 
 <br>
 
+<img src="https://user-images.githubusercontent.com/74708028/117399494-a9b3db80-af3b-11eb-9271-503cd03616f1.jpg" width="400" height="200">
+
 SQL용어 | 관계형데이터베이스용어 | 설명 
  -- | -- | --
  로우 | 튜플 또는 레코드 | 하나의 항목을 대표하는 데이터
