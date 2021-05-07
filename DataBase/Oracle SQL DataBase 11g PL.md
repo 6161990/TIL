@@ -27,3 +27,28 @@ SQL용어 | 관계형데이터베이스용어 | 설명
  DESC [테이블명];
 ```
 <img width="223" alt="20210507113223" src="https://user-images.githubusercontent.com/74708028/117389841-fdb4c500-af27-11eb-9df1-bb13345bf66c.png">
+
+
+<br>
+
+#### :round_pushpin: SQL 명령문
+* ##### 관계형 데이터 베이스 관리 시스템에서 데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어
+* ##### SQL 문은 표준 언어와 비표준 언어로 나뉘며 표준 언어는 모든 RDBMS 제품군들이 지원하고 비 표준 언어는 특정 RDBMS에서만 지원됨
+
+<br>
+
+#### :triangular_flag_on_post: DDL(Data Definition Language(데이터 정의어))
+* ##### 테이블과 인덱스의 구조를 관리하는 언어
+* ##### create, drop, alter 등
+
+<br>
+
+#### :triangular_flag_on_post: DML(Data Manipulation Language(데이터 조작어))
+* ##### 테이블 등에 데이터를 저장, 수정, 삭제, 추출 등을 처리하는 언어
+* ##### insert, update, delete, select 등
+
+<br>
+
+#### :triangular_flag_on_post: DCL(Data Control Language(데이터 제어어))
+* ##### 사용자 권한, 작업의 취소 등을 처리할 수 있는 언어 
+* ##### grant, revoke, commit, rollback 등
