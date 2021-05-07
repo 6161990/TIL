@@ -118,3 +118,42 @@ SELECT EMPNO, ENAME, JOB, SAL FROM EMP WHERE ENAME='김제니';
 SELECT EMPNO, ENAME, HIREDATE FROM EMP WHERE HIREDATE >= '21/05/07';
 ```
 <img width="429" alt="20210507134400" src="https://user-images.githubusercontent.com/74708028/117399140-c7cd0c00-af3a-11eb-992f-bf2cf9c2c490.png">
+
+<br>
+
+ ##### :round_pushpin: 논리연산자 , 논리연산자를 사용하면 여러 조건식을 묶어 하나의 조건식으로 만들 수 있다. 
+ ##### and(좌우 조건식 모두 참), or(좌우 조건식 둘 중 하나가 참이면 참), not(조건식의 결과를 부정), between and(범위조건), in(항목조건)
+ ```
+-- SELECT [컬럼명] FROM [테이블명] WHERE [조건절 (논리연산자) 조건절]
+-- 303 부서에 근무하고 있는 직무가 연극팀인 사원의 사원번호, 이름, 근무부서, 직무를 가져온다.
+SELECT EMPNO, ENAME, DEPTNO FROM EMP WHERE DEPTNO=303 AND JOB='연극팀';
+```
+ <img width="470" alt="20210507174011" src="https://user-images.githubusercontent.com/74708028/117425440-bf39fd00-af5d-11eb-8053-6df7d6542e4b.png">
+ 
+ <br>
+  ```
+-- SELECT [컬럼명] FROM [테이블명] WHERE [조건절 (논리연산자) 조건절]
+--입사년도가 21인 사원 중에 급여가 400 이상인 사원의 사원번호, 이름, 급여, 입사일을 가져온다. 
+SELECT EMPNO, ENAME, SAL, HIREDATE FROM EMP WHERE HIREDATE >= '21/01/01' AND HIREDATE <= '21/12/31' AND SAL >= 300;
+SELECT EMPNO, ENAME, SAL, HIREDATE FROM EMP WHERE HIREDATE BETWEEN '21/01/01' AND '21/12/31' AND SAL >= 300;
+```
+<img width="659" alt="20210507174442" src="https://user-images.githubusercontent.com/74708028/117425763-14760e80-af5e-11eb-93d8-a6cae4308702.png">
+
+ <br>
+  ```
+-- SELECT [컬럼명] FROM [테이블명] WHERE [조건절 (논리연산자) 조건절]
+--급여가 300보다 크거나 500보다 작지 않은 사원의 사원번호, 이름, 급여를 가져온다.
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE NOT (SAL >= 300 AND SAL <= 500);
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE NOT (SAL BETWEEN 300 AND  500);
+```
+<img width="396" alt="20210507175138" src="https://user-images.githubusercontent.com/74708028/117425781-18a22c00-af5e-11eb-9358-3fd977150223.png">
+
+ <br>
+  ```
+-- SELECT [컬럼명] FROM [테이블명] WHERE [조건절 (논리연산자) 조건절]
+--부서 번호가 304, 303,309 가 아닌 사원들의 사원번호, 이름을 가져온다.
+SELECT EMPNO, ENAME FROM EMP WHERE DEPTNO <> 304 AND DEPTNO <> 303 AND DEPTNO <> 309;
+SELECT EMPNO, ENAME FROM EMP WHERE NOT (DEPTNO = 304 OR DEPTNO = 303 OR DEPTNO = 309);
+SELECT EMPNO, ENAME FROM EMP WHERE NOT (DEPTNO IN(304,303,309));
+```
+<img width="527" alt="20210507175558" src="https://user-images.githubusercontent.com/74708028/117425807-1e980d00-af5e-11eb-9dd5-d1ca0e912571.png">
