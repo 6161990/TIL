@@ -46,7 +46,7 @@ SQL용어 | 관계형데이터베이스용어 | 설명
 <br>
 
 #### :triangular_flag_on_post: DML(Data Manipulation Language(데이터 조작어))
-* ###### [DML, 기본 쿼리문 및 SELECT](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
+###### * 참고: [DML, 기본 쿼리문 및 SELECT](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
 * ##### 테이블 등에 데이터를 저장, 수정, 삭제, 추출 등을 처리하는 언어
 * ##### insert, update, delete, select 등
 
