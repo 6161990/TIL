@@ -19,6 +19,7 @@ SQL용어 | 관계형데이터베이스용어 | 설명
 ```
 <img width="278" alt="20210423085720" src="https://user-images.githubusercontent.com/74708028/117389835-fab9d480-af27-11eb-81e7-30187f89ee24.png">
 
+<br>
 
 * #### 테이블 정보 조회 
   #####  : 원하는 테이블의 구조를 조회
