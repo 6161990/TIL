@@ -44,7 +44,7 @@ SELECT SAL, COMM, SAL+COMM  FROM EMP;
  ##### => 데이터 베이스의 정보를 저장하게 되면 row 단위로 저장이 된다. 일부 컬럼은 값을 저장하지 못하는 경우가 발생할 수 있는데, 이 때는 NULL 값이 들어간다. 
  ##### NULL은 '무한대' 또는 '무의미'의 값을 뜻한다. 보통 지금 당장 넣을 값이 없을 때 이용한다. 
  ##### 그러나 연산시 주의할 점은 어떤 값과 NULL을 연산하면 결과는 NULL이 나오게 된다. 
-  #####따라서 연산이 필요할 것 같은 경우 NULL을 0으로 사용하고 싶을 때, **NVL** 을 이용한다. 
+ ##### 따라서 연산이 필요할 것 같은 경우 NULL을 0으로 사용하고 싶을 때, **NVL** 을 이용한다. 
 ```
 -- NVL을 이용한 커미션, 급여+ 커미션 액수 산술연산 
 SELECT SAL, NVL(COMM,0), SAL+NVL(COMM,0) FROM EMP;
@@ -54,7 +54,7 @@ SELECT SAL, NVL(COMM,0), SAL+NVL(COMM,0) FROM EMP;
 
 <br>
 
-  ##### :round_pushpin: ConCat 연산자를 사용하면 문자열과 컬럼의 값을 연결하여 하나의 문자열로 가져올 수 있다. 
+  ##### :round_pushpin: ConCat 연산자를 사용하면 문자열과 컬럼의 값을 연결하여 하나의 문자열로 가져올 수 있음
 ```
 -- 문자열 || 컬럼 || 문자열 || 컬럼
 --사원들의 이름과 직무를 다음 양식으로 가져온다.
@@ -65,7 +65,7 @@ SELECT ENAME || '사원의 담당 직무는 ' || JOB || '입니다' FROM EMP;
 
 <br>
 
-  ##### :round_pushpin: Distinct를 사용하면 가져온 로우들 중 중복된 로우를 제거하여 가져올 수 있다.
+  ##### :round_pushpin: Distinct를 사용하면 가져온 로우들 중 중복된 로우를 제거하여 가져올 수 있음
 ```
 -- SELECT DISTINCT [컬럼명] FROM [테이블명]
 --사원들이 근무하고 있는 근무 부서의 번호를 가져온다.
@@ -74,3 +74,47 @@ SELECT DISTINCT DEPTNO FROM EMP;
 ```
 <img width="289" alt="20210507131445" src="https://user-images.githubusercontent.com/74708028/117397282-b71a9700-af36-11eb-9863-b7a911f0e9a7.png">
 <img width="294" alt="20210507131436" src="https://user-images.githubusercontent.com/74708028/117397284-b84bc400-af36-11eb-89c3-afb76e770276.png">
+
+<br>
+
+  ##### :round_pushpin: 조건절 , SQL 문은 테이블 내의 모든 로우에 대해 적용을 하게되므로, 어떤 조건에 맞는 로우에 대해서만 작업을 하고 싶을 때 조건절을 이용함.
+* ##### SELECT ~ FROM 까지를 통해 모든 로우를 가져오고 각 로우를 조건절과 비교하여 참인 로우만 남겨주고 거짓 로우는 제거한다.
+* ##### 비교연산자 : < , > , <= , >= , = , (<>,!=,^= : '다르다') 
+```
+-- SELECT [컬럼명] FROM [테이블명] WHERE [조건절]
+--근무 부서가 303번인 사원들의 번호, 이름, 근무부서를 가져온다
+SELECT EMPNO, ENAME, DEPTNO FROM EMP WHERE DEPTNO=303;
+```
+<img width="337" alt="20210507133858" src="https://user-images.githubusercontent.com/74708028/117399045-95231380-af3a-11eb-8615-5a41be316efa.png">
+
+<br>
+
+```
+--근무 부서 번호가 10번이 아닌 사원들의 사원번호, 이름, 근무부서를 가져온다.
+SELECT EMPNO, ENAME, DEPTNO FROM EMP WHERE DEPTNO <> 303;
+```
+<img width="396" alt="20210507133956" src="https://user-images.githubusercontent.com/74708028/117399072-a835e380-af3a-11eb-96b9-2fde8f9d3e43.png">
+
+<br>
+
+```
+--급여가 300이상인 사원들의 사원번호, 이름, 급여를 가져온다.
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL >=300;
+```
+<img width="334" alt="20210507134116" src="https://user-images.githubusercontent.com/74708028/117399094-b2f07880-af3a-11eb-96c2-2771acabb4b8.png">
+
+<br>
+
+```
+--이름이 김제니인 사원의 사원번호, 이름, 직무, 급여를 가져온다.
+SELECT EMPNO, ENAME, JOB, SAL FROM EMP WHERE ENAME='김제니';
+```
+<img width="367" alt="20210507134220" src="https://user-images.githubusercontent.com/74708028/117399107-bc79e080-af3a-11eb-82d8-e5d871954aae.png">
+
+<br>
+
+```
+--2021년 0507 이후에 입사한 사원의 사원번호, 이름, 입사일을 가져온다.
+SELECT EMPNO, ENAME, HIREDATE FROM EMP WHERE HIREDATE >= '21/05/07';
+```
+<img width="429" alt="20210507134400" src="https://user-images.githubusercontent.com/74708028/117399140-c7cd0c00-af3a-11eb-992f-bf2cf9c2c490.png">
