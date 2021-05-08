@@ -169,3 +169,121 @@ SELECT MOD(10,3), MOD(10,4) FROM DUAL;
 ```
 
 <img width="258" alt="20210508105841" src="https://user-images.githubusercontent.com/74708028/117522312-97927580-afed-11eb-98d7-60975d7a5e4d.png">
+
+<br>
+
+  #### :round_pushpin: 문자열함수
+  * ##### 컬럼에 저장되어 있는 문자열에 대해 처리를 하여 값을 가져올 수 있는 함수들을 의미한다.
+
+<br>
+
+```
+-- 대문자를 소문자로
+SELECT 'ABcdEF', lower('ABcdEF') FROM DUAL;
+```
+
+<img width="258" alt="20210508175011" src="https://user-images.githubusercontent.com/74708028/117534861-2cb55e80-b02e-11eb-8145-edc83ddd21a7.png">
+
+<br>
+
+```
+--소문자를 대문자로
+SELECT 'abcdef', UPPER ('abcdef') FROM DUAL;
+```
+
+<img width="264" alt="20210508174929" src="https://user-images.githubusercontent.com/74708028/117534867-30e17c00-b02e-11eb-8b31-023f43fbd7c2.png">
+
+<br>
+
+```
+--첫 글자만 대문자로, 나머지는 소문자로
+SELECT 'aBCDEF', INITCAP('aBCDEF') FROM DUAL;
+```
+
+<img width="261" alt="20210508175024" src="https://user-images.githubusercontent.com/74708028/117534903-553d5880-b02e-11eb-88c5-efc4f35e8e25.png">
+
+
+<br>
+
+```
+--문자열 연결
+SELECT CONCAT('ABC','DEF') FROM DUAL;
+SELECT CONCAT('KKK',CONCAT('ABC','DEF')) FROM DUAL;
+SELECT CONCAT(CONCAT('KKK',CONCAT('ABC','DEF')),'ZZZ') FROM DUAL;
+--아래와 위 방법과 같음 취사선택
+SELECT '사원들의 이름은' || '이효리' || '이다' FROM DUAL; 
+```
+
+<img width="365" alt="20210508180026" src="https://user-images.githubusercontent.com/74708028/117534912-61c1b100-b02e-11eb-8079-303fbdf2c062.png">
+<img width="368" alt="20210508180313" src="https://user-images.githubusercontent.com/74708028/117534914-69815580-b02e-11eb-892d-ceaa42e6aa15.png">
+
+<br>
+
+```
+--문자열의 길이 (LENGTHB- BYTE 수 , 한글은 2BYTE)
+SELECT LENGTH('ABCD'), LENGTHB('ABCD'),LENGTH('안녕하세용'),LENGTHB('안녕하세용') FROM DUAL;
+```
+
+<img width="484" alt="20210508180459" src="https://user-images.githubusercontent.com/74708028/117534925-700fcd00-b02e-11eb-879e-a5b96c2ff2ab.png">
+
+<br>
+
+```
+--문자열 잘라내기 (SUBSTRB- BYTE 수 , 한글은 2BYTE)
+SELECT SUBSTR('ABCD',3),SUBSTRB('ABCD',3), SUBSTR('안녕하세용',3),SUBSTRB('안녕하세용',3) FROM DUAL;
+
+SELECT SUBSTR('ABCDEFGHI',3,4), SUBSTR('동해물과 백두산이',3,4) FROM DUAL;
+```
+
+<img width="532" alt="20210508180831" src="https://user-images.githubusercontent.com/74708028/117534929-730abd80-b02e-11eb-831b-39c8ad270c5c.png">
+
+<img width="402" alt="20210508181000" src="https://user-images.githubusercontent.com/74708028/117534947-86b62400-b02e-11eb-8174-e46a8ee85fa2.png">
+
+<br>
+
+```
+--문자열 찾기 (인덱스번호가 나옴)
+SELECT INSTR('ABCDABCDABCD','CD') FROM DUAL;
+SELECT INSTR('ABCDABCDABCD','BC'), INSTR('ABCDABCDABCD','BC',3) FROM DUAL; --3번째 글자 이후의 'BC' 찾기
+SELECT INSTR('ABCDABCDABCD','BC',3), INSTR('ABCDABCDABCD','BC',3,2) FROM DUAL; --3번째 글자 이후의 2번째 'BC'묶음 찾기
+```
+
+<img width="626" alt="20210508182405" src="https://user-images.githubusercontent.com/74708028/117534956-933a7c80-b02e-11eb-9aed-bc830113b5ba.png">
+
+<br>
+
+```
+--사원의 이름 중에 'E'가 두번째 이후에 나타나는 사원의 이름을 가져온다.
+SELECT ENAME, SAL  FROM EMP WHERE INSTR(ENAME,'E') >1 ;
+```
+
+<img width="383" alt="20210508182731" src="https://user-images.githubusercontent.com/74708028/117534966-9afa2100-b02e-11eb-856a-e657afef28fb.png">
+
+<br>
+
+
+```
+--특정 문자여롤 채우기
+SELECT '문자열', LPAD('LEFT PAD',15), RPAD('RIGHT PAD',20) FROM DUAL;
+SELECT '문자열', LPAD('LEFT PAD',15,'_'), RPAD('RIGHT PAD',20) FROM DUAL;
+```
+
+<img width="399" alt="20210508183418" src="https://user-images.githubusercontent.com/74708028/117534973-a2212f00-b02e-11eb-85ba-5326e16bba68.png">
+<br>
+
+```
+--공백제거
+SELECT '       문자열      ', LTRIM('      LEFT TRIM       '), RTRIM('     RIGHT TRIM      '), TRIM('      TRIM   ') FROM DUAL;
+```
+
+<img width="689" alt="20210508183956" src="https://user-images.githubusercontent.com/74708028/117534979-aa796a00-b02e-11eb-9a60-3702c066887c.png">
+
+<br>
+
+```
+--문자열 변경
+SELECT '김준희', REPLACE('김준희','준','수한무거북이와') FROM DUAL;
+```
+
+<img width="348" alt="20210508184057" src="https://user-images.githubusercontent.com/74708028/117534983-aea58780-b02e-11eb-8fd7-bc2093e82129.png">
+
