@@ -77,3 +77,93 @@ SELECT ENAME, EMPNO , SAL FROM EMP ORDER BY SAL DESC, ENAME ASC;
 ```
 
 <img width="550" alt="20210508102347" src="https://user-images.githubusercontent.com/74708028/117521413-9a3e9c00-afe8-11eb-97dc-6e248d30ffbe.png">
+
+
+
+<br>
+
+  ##### :round_pushpin: 숫자함수
+  * ##### 컬럼에 저장되어 있는 숫자 값에 대해 처리를 하여 값을 가져올 수 있는 함수들을 의미한다.
+  * ##### 가상테이블 **DUAL**
+  ```
+  --가상의 테이블 ( 어떤 테이블을 적기 애매할 때 데려다 쓰는 DUAL TABLE)
+  SELECT 10+10 FROM DUAL;
+  ```
+
+<img width="367" alt="20210508103652" src="https://user-images.githubusercontent.com/74708028/117522162-b93f2d00-afec-11eb-9742-1787671e01e3.png">
+
+  * ##### 절대값 구하기
+  ```
+  --절대값 구하기 ABS
+  SELECT -10, ABS(-10) FROM DUAL;
+  ```
+  
+  <img width="214" alt="20210508103741" src="https://user-images.githubusercontent.com/74708028/117522180-d247de00-afec-11eb-89c0-66549746c92e.png">
+
+<br>
+
+```
+--전직원의 급여를 300 삭감하고 삭감한 급여액의 절대값을 구한다.
+SELECT SAL, SAL -300, ABS(SAL-300) FROM EMP;
+```
+
+<img width="327" alt="20210508104003" src="https://user-images.githubusercontent.com/74708028/117522269-526e4380-afed-11eb-8b71-bbd735cf1a1b.png">
+
+<br>
+
+```
+--소수점 이하 버림
+SELECT 12.3456, FLOOR(12.3456) FROM DUAL; --12
+--소수점 이하 버림 , 자리수 지정 
+SELECT 1223.3456, TRUNC(1223.3456),TRUNC(1223.3456, 2),TRUNC(1223.3456,-2) FROM DUAL;
+```
+
+<img width="483" alt="20210508105755" src="https://user-images.githubusercontent.com/74708028/117522253-3ec2dd00-afed-11eb-8849-0a6f99c93591.png">
+
+<br>
+
+```
+--급여가 300이상인 사원의 급여를 15% 삭감한다. 단 소수점 이하는 버린다.
+SELECT ENAME ,SAL, SAL*0.85, FLOOR(SAL * 0.85) FROM EMP WHERE SAL >= 300;
+```
+
+<img width="441" alt="20210508104556" src="https://user-images.githubusercontent.com/74708028/117522274-5b5f1500-afed-11eb-9461-17fdc29d5b2b.png">
+
+<br>
+
+```
+--반올림
+SELECT 12.8888, ROUND (12.8888) FROM DUAL;
+-- 반올림 자리수 지정 (소수점 이하)
+SELECT 12.8888, ROUND (12.8888), ROUND(12.8888, 3) FROM DUAL;
+```
+
+<img width="340" alt="20210508105128" src="https://user-images.githubusercontent.com/74708028/117522276-5e5a0580-afed-11eb-8375-74cb1db8b70e.png">
+
+<br>
+
+```
+-- 반올림 자리수 지정 (소수점 이상)
+SELECT 777.8888, ROUND (777.8888), ROUND(777.8888, -2) FROM DUAL;
+```
+
+<img width="367" alt="20210508105147" src="https://user-images.githubusercontent.com/74708028/117522278-6023c900-afed-11eb-93c4-fa9728dd534a.png">
+
+
+<br>
+
+```
+--급여가 400이하인 사원들의 급여를 20%씩 인상한다. 단 1의 자리를 기준으로 반올림한다.
+SELECT ENAME, SAL, SAL*1.2, ROUND(SAL*1.2, -1) FROM EMP WHERE SAL <=400;
+```
+
+<img width="437" alt="20210508105500" src="https://user-images.githubusercontent.com/74708028/117522281-62862300-afed-11eb-9d71-930def0b0135.png">
+
+<br>
+
+```
+--나머지 구하기
+SELECT MOD(10,3), MOD(10,4) FROM DUAL;
+```
+
+![Uploading 20210508105841.png…]()
