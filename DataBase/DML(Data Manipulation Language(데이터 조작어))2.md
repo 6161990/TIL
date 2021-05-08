@@ -3,7 +3,7 @@
 
 <br>
 
-  ##### :round_pushpin: 정렬
+  #### :round_pushpin: 정렬
   * ##### SELECT 문을 통해 얻어온 결과를 특정 컬럼을 기준으로 오름차순 혹은 내림차순으로 정렬할 수 있다.
   * ##### 숫자, 문자열, 날짜 등 모든 타입의 데이터를 정렬할 수 있다.
   * ##### SELECT [컬럼명] FROM [테이블명] WHERE (조건절) ORDER BY [컬럼명] (ASC|DESC)
@@ -82,7 +82,7 @@ SELECT ENAME, EMPNO , SAL FROM EMP ORDER BY SAL DESC, ENAME ASC;
 
 <br>
 
-  ##### :round_pushpin: 숫자함수
+  #### :round_pushpin: 숫자함수
   * ##### 컬럼에 저장되어 있는 숫자 값에 대해 처리를 하여 값을 가져올 수 있는 함수들을 의미한다.
   * ##### 가상테이블 **DUAL**
   ```
@@ -101,6 +101,8 @@ SELECT ENAME, EMPNO , SAL FROM EMP ORDER BY SAL DESC, ENAME ASC;
   <img width="214" alt="20210508103741" src="https://user-images.githubusercontent.com/74708028/117522180-d247de00-afec-11eb-89c0-66549746c92e.png">
 
 <br>
+
+ * ##### 기타
 
 ```
 --전직원의 급여를 300 삭감하고 삭감한 급여액의 절대값을 구한다.
@@ -166,4 +168,4 @@ SELECT ENAME, SAL, SAL*1.2, ROUND(SAL*1.2, -1) FROM EMP WHERE SAL <=400;
 SELECT MOD(10,3), MOD(10,4) FROM DUAL;
 ```
 
-![Uploading 20210508105841.png…]()
+<img width="258" alt="20210508105841" src="https://user-images.githubusercontent.com/74708028/117522312-97927580-afed-11eb-98d7-60975d7a5e4d.png">
