@@ -40,7 +40,7 @@ SELECT SAL, COMM, SAL+COMM  FROM EMP;
 ```
   <img width="305" alt="20210507125615" src="https://user-images.githubusercontent.com/74708028/117396115-43778a80-af34-11eb-8fdc-a14a415f8b7c.png">
 
- #### :triangular_flag_on_post: NVL의 이용
+ ##### :triangular_flag_on_post: NVL의 이용
  ##### => 데이터 베이스의 정보를 저장하게 되면 row 단위로 저장이 된다. 일부 컬럼은 값을 저장하지 못하는 경우가 발생할 수 있는데, 이 때는 NULL 값이 들어간다. 
  ##### NULL은 '무한대' 또는 '무의미'의 값을 뜻한다. 보통 지금 당장 넣을 값이 없을 때 이용한다. 
  ##### 그러나 연산시 주의할 점은 어떤 값과 NULL을 연산하면 결과는 NULL이 나오게 된다. 
@@ -163,3 +163,86 @@ SELECT EMPNO, ENAME FROM EMP WHERE NOT (DEPTNO IN(304,303,309));
 ```
 
 <img width="527" alt="20210507175558" src="https://user-images.githubusercontent.com/74708028/117425807-1e980d00-af5e-11eb-9dd5-d1ca0e912571.png">
+
+
+<br>
+
+  ##### :round_pushpin: 문자열 비교, 조건문에서 문자열 컬럼도 = 과 <>로 비교가 가능하다.
+  * ##### 만약 문자열 컬럼에 저장되어 있는 값이 특정 문자열을 포함하고 있는지 파악하고 싶을 때 like 연산자를 사용한다. 
+  * ##### like 연산자 
+    ##### SELECT [컬럼명] FROM [테이블명] WHERE [컬럼명] LIKE '와일드카드'
+      * ##### _ : 글자 하나를 의미
+      * ##### % : 글자 0개 이상을 의미
+
+<br>
+
+```
+--이름이 '이'로 시작하는 사원의 이름과 사원 번호를 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '이%';
+```
+
+<img width="338" alt="20210508100105" src="https://user-images.githubusercontent.com/74708028/117520697-8f820800-afe4-11eb-8fb8-71a756e581d3.png">
+
+ <br>
+ 
+  ```
+--이름이 '니'로 끝나는 사원의 이름과 사원 번호를 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '%니';
+```
+
+<img width="322" alt="20210508100125" src="https://user-images.githubusercontent.com/74708028/117520701-9577e900-afe4-11eb-8d88-3728b40d7395.png">
+
+ <br>
+ 
+  ```
+--이름에 '교'가 포함되어있는 사원의 이름과 사원 번호를 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '%교%';
+```
+
+<img width="331" alt="20210508100147" src="https://user-images.githubusercontent.com/74708028/117520702-990b7000-afe4-11eb-8aa3-c9680ef1519d.png">
+
+ <br>
+ 
+  ```
+--이름의 두번째 글자가 '우'인 사원의 사원 이름, 사원 번호를 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '_우%';
+```
+
+<img width="365" alt="20210508100208" src="https://user-images.githubusercontent.com/74708028/117520706-9c066080-afe4-11eb-95f2-084f519db44d.png">
+
+ <br>
+ 
+  ```
+--이름이 4글자인 사원의 사원 이름, 사원 번호를 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE ENAME LIKE '____';
+```
+
+<img width="327" alt="20210508100230" src="https://user-images.githubusercontent.com/74708028/117520709-9e68ba80-afe4-11eb-99ac-05289e061b18.png">
+
+
+<br>
+
+  ##### :round_pushpin: NULL 비교, NULL은 정해져 있지 않은 값 혹은 무한대의 의미를 갖는 값이다.
+  * ##### NULL은 = 이나 <>를 통해 컬럼의 값이 NULL인지 연산할 수 없다. 
+  * ##### NULL 비교는 IS NULL 이나 IS NOT NULL을 이용해야한다.
+  
+ <br>
+ 
+  ```
+--사원 중에 커미션을 받는 사원의 사원번호, 이름, 커미션을 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE COMM <> NULL; (ERROR)
+SELECT ENAME, EMPNO FROM EMP WHERE COMM IS NOT NULL;
+```
+
+<img width="388" alt="20210508095637" src="https://user-images.githubusercontent.com/74708028/117520660-37e39c80-afe4-11eb-9e36-5670b500eece.png">
+
+ <br>
+ 
+ 
+  ```
+--사원 중에 커미션을 받지 않는 사원의 사원번호, 이름, 커미션을 가져온다.
+SELECT ENAME, EMPNO FROM EMP WHERE COMM = NULL; (ERROR)
+SELECT ENAME, EMPNO FROM EMP WHERE COMM IS NULL;
+```
+
+<img width="365" alt="20210508095657" src="https://user-images.githubusercontent.com/74708028/117520662-3ade8d00-afe4-11eb-8060-f34602cf898c.png">
