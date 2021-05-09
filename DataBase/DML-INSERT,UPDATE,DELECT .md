@@ -1,6 +1,7 @@
 #### :pushpin: DML(Data Manipulation Language(데이터 조작어)) 
 * ##### INSERT : 테이블에 새로운 로우를 추가하는 구문
-      ##### INSERT INTO 테이블명 (컬럼명) VALUES (값)
+
+      INSERT INTO 테이블명 (컬럼명) VALUES (값)
 
 <br>
 
@@ -63,10 +64,10 @@ SELECT * FROM EMP02;
 <br>
 
   #### :round_pushpin: 서브쿼리로 데이터 저장하기
-  * ##### INSERT INTO 테이블명 서브쿼리
-  * ##### INSERT ALL INTO 테이블명 (컬럼명) VALUES (컬럼명) 
-    #####             INTO 테이블명(컬럼명) VALUES(컬럼명)
-    ##### 서브쿼리
+      INSERT INTO 테이블명 서브쿼리
+      INSERT ALL INTO 테이블명 (컬럼명) VALUES (컬럼명) 
+                 INTO 테이블명(컬럼명) VALUES(컬럼명)
+             서브쿼리
 
 ```
 --서브쿼리 이용해 한꺼번에 DATA 삽입
