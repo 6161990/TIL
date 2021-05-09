@@ -70,3 +70,4 @@
 * [DML-SELECT 2 (정렬과 숫자함수, 문자열함수)](https://github.com/6161990/TIL/blob/main/DataBase/DML-SELECT%202.mdd)
 * [DML-SELECT 3 (날짜함수, DECODE, CASE)](https://github.com/6161990/TIL/blob/main/DataBase/DML-SELECT%203.md)
 * [DML-SELECT 4 (그룹함수, HAVING, JOIN, SET, SERVE QUERY)](https://github.com/6161990/TIL/blob/main/DataBase/DML-SELECT%204.md)
+* [DML-INSERT, UPDATE, DELETE](https://github.com/6161990/TIL/blob/main/DataBase/DML-INSERT,UPDATE,DELECT%20.md)
