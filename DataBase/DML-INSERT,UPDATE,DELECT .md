@@ -131,6 +131,7 @@ UPDATE EMP01 SET MGR = (), SAL = () WHERE DEPTNO =20; --헷갈리는 경우 이�
     SELECT MAX(SAL) FROM EMP01;
 ```   
 
+<img width="502" alt="20210510082505" src="https://user-images.githubusercontent.com/74708028/117590211-40191480-b169-11eb-8fbd-5b372daf2529.png">
 
 
 <br>
