@@ -170,12 +170,91 @@ SELECT TO_DATE('2018-04-30 03:39:20 오후', 'YYYY-MM-DD HH:MI:SS AM') FROM DUAL
 
 <img width="429" alt="20210508204038" src="https://user-images.githubusercontent.com/74708028/117538051-51fe9880-b03f-11eb-9dde-096e0b684b38.png">
 
+
+<br>
+
+  #### :round_pushpin: DECODE
+  * ##### 값에 따라 반환값이 결정되는 구문
+  * ##### DECODE(컬럼명, 값1, 반환값1, 값2, 반환값2, 값3, 반환값3)
+
+
+```
+--각 사원의 부서 이름을 가져온다.
+SELECT EMPNO, ENAME, 
+       DECODE(DEPTNO, 301,'예술팀', 
+                      302,'공연팀', 
+                      303,'연극팀', 
+                      305,'마케팅팀',
+                      309,'해외개발팀',
+                      310,'페스티벌팀')
+FROM EMP;
+```
+
+<img width="235" alt="20210509085937" src="https://user-images.githubusercontent.com/74708028/117556817-ed2b5880-b0a7-11eb-9d3d-7212d1d38202.png">
+
 <br>
 
 
 ```
---사원들의 입사일을 다음과 같은 양식으로 가져온다.
-SELECT HIREDATE, TO_CHAR(HIREDATE, 'YYYY-MM-DD') FROM EMP;
+--업무에 따라 인상된 급여액을 가져온다.
+--예술팀 : 5%
+--공연팀 : 10%
+--연극팀 : 15%
+--마케팅팀 : 5%
+--해외개발팀 : 5%
+--페스티벌팀 : 8%
+
+SELECT EMPNO, ENAME, JOB,
+       DECODE(JOB,'예술팀', SAL * 1.05, 
+                      '공연팀', SAL * 1.1, 
+                      '연극팀', SAL * 1.15, 
+                      '마케팅팀', SAL * 1.05,
+                      '해외개발팀', SAL * 1.05,
+                      '페스티벌팀', SAL * 1.08)
+FROM EMP;
+```
+<img width="558" alt="20210509090647" src="https://user-images.githubusercontent.com/74708028/117556827-ffa59200-b0a7-11eb-8298-c78c04642944.png">
+
+
+
+
+<br>
+
+  #### :round_pushpin: CASE
+  * ##### 조건에 따라 반환값이 결정되는 구문
+  * ##### CASE WHEN 조건식1 THEN 반환값1
+         ##### WHEN 조건식2 THEN 반환값2
+    ##### END
+    
+<br>
+    
+```
+--급여액 별 등급을 가져온다.
+-- 300 미만 : C등급
+-- 300 이상, 500미만 : B등급
+-- 500 이상 : A등급
+SELECT EMPNO, ENAME, CASE WHEN SAL < 300 THEN 'C등급'
+                          WHEN SAL >= 300 AND SAL < 500 THEN 'B등금'
+                          WHEN SAL >= 500 THEN 'A등급'
+                     END
+FROM EMP;
 ```
 
-<img width="322" alt="20210508204201" src="https://user-images.githubusercontent.com/74708028/117538056-56c34c80-b03f-11eb-84b2-dd7d02271c57.png">
+ <img width="376" alt="20210509091240" src="https://user-images.githubusercontent.com/74708028/117556829-02a08280-b0a8-11eb-8a4f-efc80a5b12f9.png">
+   
+<br>
+    
+```
+--직원들의 급여를 다음과 같이 인상한다.
+-- 300 미만 : 100%
+-- 300 이상, 500미만 : 20%
+-- 500 이상 : 10%
+SELECT EMPNO, ENAME, 
+       CASE WHEN SAL <= 300 THEN SAL * 2
+            WHEN SAL > 300 AND SAL <= 500 THEN SAL *1.02
+            WHEN SAL >= 500 THEN SAL * 1.01
+        END
+FROM EMP;
+```
+
+<img width="442" alt="20210509091807" src="https://user-images.githubusercontent.com/74708028/117556831-059b7300-b0a8-11eb-9f27-4e0ed9027dfb.png">
