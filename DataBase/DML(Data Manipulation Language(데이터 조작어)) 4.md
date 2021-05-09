@@ -162,3 +162,67 @@ SELECT SUM(SAL) FROM EMP WHERE JOB='마케팅팀' GROUP BY DEPTNO HAVING MIN(SAL
 ```
 
 <img width="460" alt="20210509171018" src="https://user-images.githubusercontent.com/74708028/117564956-d574c400-b0e9-11eb-90e5-ca653e085b61.png">
+
+
+
+<br>
+
+  #### :round_pushpin: JOIN
+  * ##### 두 개 이상의 테이블에 있는 컬럼의 값을 한번에 가져오기위해 사용하는 것이 조인이다.
+  * ##### SELECT 컬럼명 FROM 테이블 1, 테이블 2 ; 
+  * ##### 두 개 이상의 테이블을 조인하게 되면 다대다의 관계로 가져오기 때문에 테이블 1의 로우의 수 X 테이블 2의 로우이 수 만큼 로우를 가져오게 된다.
+  * ##### 조건 : 두 개 이상의 테이블에서 가져온 결과 중에 정확한 결과면 가져오기 위해 공통부 부분을 이용한 조건문이 반드시 필요하다
+
+
+<br>
+
+```
+--공통부 DEPTNO
+SELECT * FROM EMP, DEPT WHERE EMP.DEPTNO = DEPT.DEPTNO;
+SELECT * FROM EMP A1, DEPT A2 WHERE A1.DEPTNO = A2.DEPTNO; --별칭사용
+```
+
+<img width="419" alt="20210509175507" src="https://user-images.githubusercontent.com/74708028/117566127-c729a680-b0ef-11eb-8cb5-e0e827052546.png">
+
+<br>
+
+```
+--사원의 사원번호, 이름, 근무부서 이름을 가져온다.
+SELECT A1.EMPNO, AL.ENAME, A2.DNAME FROM EMP A1, DEPT A2 WHERE A1.DEPTNO = A2.DEPTNO;
+```
+
+<img width="462" alt="20210509175514" src="https://user-images.githubusercontent.com/74708028/117566129-c98c0080-b0ef-11eb-8001-ba5ce659ab71.png">
+
+
+<br>
+
+```
+--DALLAS에 근무하고 있는 사원들의 사원번호, 이름, 직무를 가져온다.
+SELECT A1.EMPNO, AL.ENAME, A1.JOB FROM EMP A1, DEPT A2 WHERE A1.DEPTNO = A2.DEPTNO AND A2.LOC = 'DALLAS';
+```
+
+<img width="568" alt="20210509175527" src="https://user-images.githubusercontent.com/74708028/117566132-cb55c400-b0ef-11eb-9e33-3d8955c89e38.png">
+
+
+<br>
+
+```
+--각 사원들의 사원번호, 이름, 급여, 급여등급을 가져온다.
+SELECT A1.EMPNO, A1.ENAME, A1.SAL, A2.GRADE FROM EMP A1, SALGRADE A2 
+       WHERE A1.SAL BETWEEN A2.LOSAL AND A2.HISAL;
+
+```
+
+<img width="370" alt="20210509175534" src="https://user-images.githubusercontent.com/74708028/117566135-cd1f8780-b0ef-11eb-9b48-71be3ce0d452.png">
+
+
+<br>
+
+```
+--SALES 부서에 근무하고 있는 사원의 사원번호, 이름, 급여등급을 가져온다.
+SELECT A1.EMPNO, A1.ENAME, A2.GRADE FROM EMP A1, SALGRADE A2, DEPT A3
+       WHERE A1.SAL BETWEEN A2.LOSAL AND A2.HISAL AND A1.DEPTNO = A3.DEPTNO
+       AND A3.DNAME ='SALES';
+```
+
+<img width="412" alt="20210509175539" src="https://user-images.githubusercontent.com/74708028/117566136-d01a7800-b0ef-11eb-92a4-bdf4906c9253.png">
