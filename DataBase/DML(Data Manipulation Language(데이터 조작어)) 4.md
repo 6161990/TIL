@@ -226,3 +226,50 @@ SELECT A1.EMPNO, A1.ENAME, A2.GRADE FROM EMP A1, SALGRADE A2, DEPT A3
 ```
 
 <img width="412" alt="20210509175539" src="https://user-images.githubusercontent.com/74708028/117566136-d01a7800-b0ef-11eb-92a4-bdf4906c9253.png">
+
+
+
+<br>
+
+  #### :round_pushpin: SELF JOIN , 같은 테이블을 두 번 이상 조인하는 것. 
+  * ##### OUTER JOIN : 조인 조건에 해당하지 않기 때문에 결과에 포함되지 않는 로우까지 가져오는 조인
+  
+  
+  
+
+<br>
+
+```
+--SMITH 사원의 사원번호, 이름, 직속상관 이름을 가져온다.
+-- A1 ; SMITH 사원의 정보
+-- A2 ; 직속상관의 정보
+SELECT A1.EMPNO, A1.ENAME, A2.ENAME FROM EMP A1, EMP A2 WHERE A1.MGR = A2.EMPNO AND A1.ENAME='SMITH';
+```
+
+  <img width="554" alt="20210509180712" src="https://user-images.githubusercontent.com/74708028/117566471-b843f380-b0f1-11eb-9536-c84dea9a87ba.png">
+
+  
+
+<br>
+
+```
+--FORD 사원 밑에서 일하는 사원들의 사원번호, 이름 , 직무를 가져온다.
+-- A1 ; FORD 의 정보
+-- A2 ; 부하 직원의 정보
+SELECT A2.EMPNO, A2.ENAME, A2.JOB FROM EMP A1, EMP A2 WHERE A1.EMPNO = A2.MGR AND A1.ENAME='FORD';
+```
+
+<img width="549" alt="20210509180717" src="https://user-images.githubusercontent.com/74708028/117566477-b9752080-b0f1-11eb-916a-6c72313cce6f.png">
+
+
+<br>
+
+```
+--각 사원의 이름, 사원번호, 직장상사 이름을 가져온다. 단 직속 상관이 없는 사원도 가져온다.
+-- A1 ; 각 사원의 정보
+-- A2 ; 직장상사의 정보 
+SELECT A1.ENAME, A1.EMPNO, A2.ENAME FROM EMP A1, EMP A2 WHERE A1.MGR = A2.EMPNO(+); --직속상관이 없는 쪽(NULL)에 +
+```
+
+<img width="615" alt="20210509180723" src="https://user-images.githubusercontent.com/74708028/117566480-c09c2e80-b0f1-11eb-8887-52e1e7c51e3b.png">
+<img width="197" alt="20210509180407" src="https://user-images.githubusercontent.com/74708028/117566486-c560e280-b0f1-11eb-9823-f2d6c66d4de1.png">
