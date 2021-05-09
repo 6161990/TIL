@@ -69,4 +69,4 @@
 * [DML, SELECT 1 (기본쿼리문, 연산자, 비교, NVL)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
 * [DML, SELECT 2 (정렬과 숫자함수, 문자열함수)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))2.md)
 * [DML, SELECT 3 (날짜함수, DECODE, CASE)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))%203.md)
-* [DML, SELECT 4 (그룹함수, )] (https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))%204.md)
+* [DML, SELECT 4 (그룹함수, )](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))%204.md)
