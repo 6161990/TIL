@@ -272,3 +272,85 @@ SELECT A1.ENAME, A1.EMPNO, A2.ENAME FROM EMP A1, EMP A2 WHERE A1.MGR = A2.EMPNO(
 
 <img width="615" alt="20210509180723" src="https://user-images.githubusercontent.com/74708028/117566480-c09c2e80-b0f1-11eb-8887-52e1e7c51e3b.png">
 <img width="197" alt="20210509180407" src="https://user-images.githubusercontent.com/74708028/117566486-c560e280-b0f1-11eb-9823-f2d6c66d4de1.png">
+
+
+
+<br>
+
+#### :round_pushpin: 서브쿼리, 쿼리문 안에 들어가는 쿼리문. 쿼리문 작성시 사용되는 값을 다른 쿼리문을 통해 구해야 할 경우 사용한다.
+
+<br>
+
+```
+--SCOTT 사원이 근무하고 있는 부서의 이름을 가져온다.
+SELECT DNAME FROM DEPT WHERE DEPTNO = (SELECT DEPTNO FROM EMP WHERE ENAME = 'SCOTT');
+SELECT A2.DNAME FROM AMP A1, DEPT A2 WHERE A1.DEPTNO = A2.DEPTNO AND A1.ENAME = 'SCOTT'; --JOIN문을 이용해도됨
+```
+
+<img width="589" alt="20210509190633" src="https://user-images.githubusercontent.com/74708028/117568077-b5e59780-b0f9-11eb-9c76-65ba27b510cd.png">
+
+
+<br>
+
+```
+--MARTIN과 같은 직무를 가지고 있는 사원들의 사원번호, 이름, 직무를 가져온다.
+SELECT EMPNO, ENAME, JOB FROM EMP WHERE JOB =(SELECT JOB FROM EMP WHERE ENAME ='MARTIN');
+```
+
+<img width="480" alt="20210509190639" src="https://user-images.githubusercontent.com/74708028/117568080-b8e08800-b0f9-11eb-9a81-a64e1e2ec5d7.png">
+
+
+<br>
+
+```
+--CHICAGO 지역에 근무하는 사원들 중 BLAKE가 직속상관인 사원들의 사원번호, 이름, 직무를 가져온다.
+SELECT EMPNO, ENAME, JOB FROM EMP WHERE DEPTNO = (SELECT DEPTNO FROM DEPT WHERE LOC='CHICAGO') 
+                                        AND MGR = (SELECT EMPNO FROM EMP WHERE ENAME ='BLAKE');
+```
+
+<img width="513" alt="20210509190645" src="https://user-images.githubusercontent.com/74708028/117568083-bb42e200-b0f9-11eb-965d-aea6abb3342e.png">'
+
+
+
+<br>
+
+#### :round_pushpin: 결과가 하나 이상인 서브쿼리 연산자 이용 : 서브쿼리를 통해 가져온 결과가 하나 이상인 경우 결과를 모두 만족하거나 결과 중 하나만 만족하거나 해야하는 경우
+  * ##### IN : 서브쿼리의 결과 중 하나라도 일치하면 조건은 참이 된다.
+  * ##### ANY, SOME : 서브쿼리의 결과와 하나이상 일치하면 조건은 참이된다. 
+  * ##### ALL : 서브쿼리의 결과와 모두 일치해야 조건은 참이된다. 
+
+<br>
+
+```
+-- 3000 이상의 급여를 받는 사원들과 같은 부서에 근무하고 있는 사원의 사원번호, 이름, 급여를 가져온다.
+--ERROR QUERY. WHY? 뒤의 서브쿼리가 결과가 2개 이상이 나오기 때문에 그 중 어떤 하나를 기준으로 WHERE해야하는지 알 수 없기에
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE DEPTNO =( SELECT DEPTNO FROM EMP WHERE SAL >= 3000);
+--아래와 같이 수정해야함 IN
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE DEPTNO IN ( SELECT DEPTNO FROM EMP WHERE SAL >= 3000);
+```
+
+<img width="606" alt="20210509194038" src="https://user-images.githubusercontent.com/74708028/117569028-7ec5b500-b0fe-11eb-88fc-f6c1f7a97a86.png">
+
+<br>
+
+```
+--각 부서별 급여 평균보다 더 많이 받는 사원의 사원번호, 이름, 급여를 가져온다.
+--각 DEPTNO의 평균 급여를 구한 후 , 모든 부서 평균보다 급여가 높은 사원을 가져와야하기 때문에 ALL
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL > ALL (SELECT AVG(SAL) FROM EMP GROUP BY DEPTNO);
+-- 즉, 모든 부서에서 최고 급여 평균 값보다 높은 사원을 구하면 되는 것이므로 MAX
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL > (SELECT MAX(AVG(SAL)) FROM EMP GROUP BY DEPTNO);
+-- 각 부서별 급여 평균보다 더 적게 받는 사원의 사원번호, 이름, 급여를 가져온다. MIN
+SELECT EMPNO, ENAME, SAL FROM EMP WHERE SAL < (SELECT MIN(AVG(SAL)) FROM EMP GROUP BY DEPTNO);
+```
+
+<img width="509" alt="20210509194050" src="https://user-images.githubusercontent.com/74708028/117569030-81c0a580-b0fe-11eb-84b1-b3c892b026c9.png">
+
+<br>
+
+```
+-- DALLAS에 근무하고 있는 사원들 중 가장 나중에 입사한 사원의 입사 날짜보다 더 먼저 입사한 사원들의 사원번호, 이름, 입사일을 가져온다.
+SELECT EMPNO, ENAME, HIREDATE FROM EMP WHERE HIREDATE < ANY (SELECT HIREDATE FROM EMP WHERE DEPTNO = (SELECT DEPTNO FROM DEPT WHERE LOC='DALLAS'));
+```
+
+
+<img width="784" alt="20210509194057" src="https://user-images.githubusercontent.com/74708028/117569033-84bb9600-b0fe-11eb-8448-2d9773b941bf.png">
