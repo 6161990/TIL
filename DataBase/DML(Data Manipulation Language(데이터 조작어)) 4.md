@@ -96,3 +96,69 @@ SELECT MAX(SAL), MIN(sAL) FROM EMP;
 ```
 
 <img width="208" alt="20210509094609" src="https://user-images.githubusercontent.com/74708028/117557251-fae2dd00-b0ab-11eb-90d5-50ae141048f1.png">
+
+
+<br>
+
+  #### :round_pushpin: GROUP BY, 그룹함수를 사용할 경우, SELECT ~ FROM ~ WHERE 절까지 모두 수행하여 가져온 결과를 하나의 그룹으로 묶어 총합, 평균 등을 구할 수 있다.
+  * ##### GROUP BY 절을 사용하면 SELECT문을 수행하여 가져온 하나의 결과를 여러 그룹으로 나눠 그룹 각각의 총합과 평균 등을 구할 수 있다.
+  * ##### SELECT 컬럼명 FROM 테이블명 WHERE 조건절 GROUP BY 그룹기준 ORDER BY 정렬기준
+
+<br>
+
+```
+-- 각 부서별 사원들의 급여 평균을 구한다.
+SELECT JOB, SUM(SAL) FROM EMP GROUP BY JOB;
+
+```
+
+
+<img width="270" alt="20210509165019" src="https://user-images.githubusercontent.com/74708028/117564602-d147a700-b0e7-11eb-9689-50853f9b2621.png">
+
+<br>
+
+```
+--300 이상 급여를 받는 사원들의 부서별 급여 평균을 구한다.
+SELECT DEPTNO, AVG(SAL) FROM EMP WHERE SAL >= 300 GROUP BY DEPTNO;
+```
+
+
+<img width="381" alt="20210509165535" src="https://user-images.githubusercontent.com/74708028/117564598-cd1b8980-b0e7-11eb-9b2f-9971b8b9e3c4.png">
+
+
+
+
+<br>
+
+  #### :round_pushpin: HAVING
+  * ##### GROUP BY로 묶인 각 그룹들 중에 실제 가져올 그룹을 선택할 조건을 HAVING 절에 작성한다.
+  * ##### HAVING은 GROUP BY 절의 조건이 된다. 
+  * ##### WHERE은 ROW의 조건, HAVING은 GROUP BY의 조건
+
+
+<br>
+
+```
+--부서별 평균 급여가 400이상인 부서의 급여 평균을 가져온다.
+SELECT DEPTNO, AVG(SAL) FROM EMP GROUP BY DEPTNO HAVING AVG(SAL) >= 400; 
+```
+
+<img width="397" alt="20210509170325" src="https://user-images.githubusercontent.com/74708028/117564952-d0177980-b0e9-11eb-8afa-eca1567969b3.png">
+
+<br>
+
+```
+--부서별 최대 급여액이 300이하인 부서의 급여 총합을 가져온다.
+SELECT SUM(SAL) FROM EMP GROUP BY DEPTNO HAVING MAX(SAL) >= 300;
+```
+
+<img width="379" alt="20210509170450" src="https://user-images.githubusercontent.com/74708028/117564954-d279d380-b0e9-11eb-96e1-6dd705f91944.png">
+
+<br>
+
+```
+--부서별 최소 급여액이 300이하인 부서에서 직무가 마케팅팀인 사원들의 급여 총합을 구한다.
+SELECT SUM(SAL) FROM EMP WHERE JOB='마케팅팀' GROUP BY DEPTNO HAVING MIN(SAL) <=300;
+```
+
+<img width="460" alt="20210509171018" src="https://user-images.githubusercontent.com/74708028/117564956-d574c400-b0e9-11eb-90e5-ca653e085b61.png">
