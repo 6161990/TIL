@@ -354,3 +354,40 @@ SELECT EMPNO, ENAME, HIREDATE FROM EMP WHERE HIREDATE < ANY (SELECT HIREDATE FRO
 
 
 <img width="784" alt="20210509194057" src="https://user-images.githubusercontent.com/74708028/117569033-84bb9600-b0fe-11eb-8448-2d9773b941bf.png">
+
+
+
+<br>
+
+#### :round_pushpin: SET, 두 SELECT 문을 통해 얻어온 결과에 대해 집합 연산을 할 수 있는 명령문 
+  * ##### 두 SELECT 문을 통해 가져온 컬럼의 형태가 완전히 일치해야한다.
+  * ##### UNION : 합집합
+  * ##### UNION ALL : 합집합, 중복된 데이터까지 모두 가져온다.
+  * ##### INTERSECT : 교집합
+  * ##### MINUS : 차집합
+
+
+<br>
+
+```
+--10번 부서에 근무하고 있는 사원의 사원번호, 이름, 직무, 근무부서 번호를 가져온다.
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10;
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE JOB='CLERK';
+
+--SET 이용
+--UNION (중복 X)
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10 
+        UNION SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE JOB='CLERK';
+        
+--UNION ALL (중복 허용)
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10 
+        UNION ALL SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE JOB='CLERK';
+
+--INTERSECT (교집합)
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10 
+        INTERSECT SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE JOB='CLERK';
+        
+--MINUS (차집합)
+SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE DEPTNO=10 
+        MINUS SELECT EMPNO, ENAME, JOB, DEPTNO FROM EMP WHERE JOB='CLERK';
+```
