@@ -149,3 +149,46 @@ UPDATE EMP01 SET(JOB,SAL) = (SELECT JOB, SAL FROM EMP01 WHERE SAL =(SELECT MAX(S
 ```   
 
 <img width="519" alt="20210510082033" src="https://user-images.githubusercontent.com/74708028/117590195-22e44600-b169-11eb-8394-640d0a6a274e.png">
+
+
+
+<br>
+
+  #### :round_pushpin: DELETE, 테이블 내의 로우를 삭제하는 구문
+      DELETE FROM 테이블명 WHERE 조건문
+
+<br>
+
+```
+--조건절을 사용하지 않으면 테이블의 모든 데이터가 삭제된다.
+DELETE FROM EMP01; 
+```   
+
+<img width="303" alt="20210510083006" src="https://user-images.githubusercontent.com/74708028/117590404-42c83980-b16a-11eb-85ed-fb5a02783083.png">
+
+<br>
+
+```
+-- 사원번호가 7499인 사원의 정보를 삭제한다.
+DELETE FROM EMP01 WHERE EMPNO = 7499;
+```   
+
+<img width="291" alt="20210510082917" src="https://user-images.githubusercontent.com/74708028/117590401-3e9c1c00-b16a-11eb-8415-e5e3f1c8cd4b.png">
+
+<br>
+
+```
+--사원의 급여가 평균 급여 이하인 사원의 정보를 삭제한다.
+DELETE FROM EMP01 WHERE SAL <= (SELECT AVG(SAL) FROM EMP01);
+```   
+
+<img width="345" alt="20210510083016" src="https://user-images.githubusercontent.com/74708028/117590411-49ef4780-b16a-11eb-85b6-cc44bb2b9bed.png">
+
+<br>
+
+```
+--커미션을 받지 않는 사원들의 정보를 삭제한다.
+DELETE FROM EMP01 WHERE COMM IS NULL;
+```   
+
+<img width="233" alt="20210510083022" src="https://user-images.githubusercontent.com/74708028/117590414-4cea3800-b16a-11eb-8615-f33e08c0f7fa.png">
