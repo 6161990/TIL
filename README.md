@@ -66,6 +66,6 @@
 
 ### [DataBase](https://github.com/6161990/TIL/tree/main/DataBase)   
 * [Oracle DataBase PL/SQL](https://github.com/6161990/TIL/blob/main/DataBase/Oracle%20SQL%20DataBase%2011g%20PL.md)
-* [DML, 기본 쿼리문 및 SELECT](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
-* [DML, 기본 쿼리문 및 SELECT 2 (정렬과 숫자함수, 문자열함수)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))2.md)
-* [DML, 기본 쿼리문 및 SELECT 3 ()](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))%203.md)
+* [DML, SELECT 1](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
+* [DML, SELECT 2 (정렬과 숫자함수, 문자열함수)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))2.md)
+* [DML, SELECT 3 (날짜함수, DECODE, CASE)](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4))%203.md)
