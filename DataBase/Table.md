@@ -82,3 +82,4 @@ FROM EMP
 GROUP BY DEPTNO;
 ```
 
+![Uploading 20210510085002.png…]()
