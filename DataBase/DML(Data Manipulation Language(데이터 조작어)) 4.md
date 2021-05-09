@@ -232,10 +232,6 @@ SELECT A1.EMPNO, A1.ENAME, A2.GRADE FROM EMP A1, SALGRADE A2, DEPT A3
 <br>
 
   #### :round_pushpin: SELF JOIN , 같은 테이블을 두 번 이상 조인하는 것. 
-  * ##### OUTER JOIN : 조인 조건에 해당하지 않기 때문에 결과에 포함되지 않는 로우까지 가져오는 조인
-  
-  
-  
 
 <br>
 
@@ -263,6 +259,9 @@ SELECT A2.EMPNO, A2.ENAME, A2.JOB FROM EMP A1, EMP A2 WHERE A1.EMPNO = A2.MGR AN
 
 
 <br>
+
+#### :round_pushpin: SELF JOIN , 같은 테이블을 두 번 이상 조인하는 것. 
+  * ##### OUTER JOIN : 조인 조건에 해당하지 않기 때문에 결과에 포함되지 않는 로우까지 가져오는 조인
 
 ```
 --각 사원의 이름, 사원번호, 직장상사 이름을 가져온다. 단 직속 상관이 없는 사원도 가져온다.
