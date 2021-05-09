@@ -69,6 +69,8 @@ SELECT * FROM EMP02;
                  INTO 테이블명(컬럼명) VALUES(컬럼명)
              서브쿼리
 
+<br>
+
 ```
 --서브쿼리 이용해 한꺼번에 DATA 삽입
 INSERT ALL 
@@ -81,3 +83,68 @@ SELECT * FROM EMP04;
 ```
 
 <img width="411" alt="20210510073322" src="https://user-images.githubusercontent.com/74708028/117589358-ec57fc80-b163-11eb-80eb-8118ab1dc9db.png">
+
+
+<br>
+
+  #### :round_pushpin: UPDATE, 로우 내의 컬럼 값을 수정하는 구문
+      UPDATE 테이블명 SET 컬럼 = 값, 컬럼 = 값.. WHERE 조건문
+ 
+ 
+<br>
+
+```
+--사원들의 직무를 개발로 변경한다.
+UPDATE EMP01 SET JOB = '개발';
+SELECT * FROM EMP01;
+```     
+
+<img width="174" alt="20210510075222" src="https://user-images.githubusercontent.com/74708028/117590116-e3b5f500-b168-11eb-8dfa-d2026d634b70.png">
+
+<br>
+
+```
+--사원들의 사원번호, 이름, 직무를 변경한다.
+UPDATE EMP01 SET EMPNO = 777, ENAME ='제니' , JOB = '개발';
+```   
+
+<img width="323" alt="20210510075540" src="https://user-images.githubusercontent.com/74708028/117590127-eca6c680-b168-11eb-9d92-01ccef5ca87d.png">
+
+
+<br>
+
+```
+--연극팀 부서에 근무하고 있는 사원들의 급쳐를 전체 평균 급여로 설정한다. 
+UPDATE EMP SET SAL = (SELECT TRUNC(AVG(SAL)) FROM EMP) WHERE JOB='연극팀';
+```   
+
+<img width="406" alt="20210510080638" src="https://user-images.githubusercontent.com/74708028/117590149-faf4e280-b168-11eb-9146-a7c7af66bb2d.png">
+
+
+
+<br>
+
+```
+--20번 부서에 근무하고 있는 사원들의 직속상관을 KING 으로 하고 급여를 전체 급여의 최고액으로 설정한다.
+UPDATE EMP01 SET MGR = (), SAL = () WHERE DEPTNO =20; --헷갈리는 경우 이렇게 만들어놓고
+    SELECT EMPNO FROM EMP01 WHERE ENAME = 'KING'; --괄호에 들어갈 정보를 하나씩 채우기
+    SELECT MAX(SAL) FROM EMP01;
+```   
+
+
+
+<br>
+
+```
+--직무가 CLERK 인 사원들의 직무와 급여를 최고액을 받는 사원의 직무와 급여액으로 변경한다.
+--직무와 급여 따로 
+UPDATE EMP01 SET JOB=(SELECT JOB FROM EMP01 WHERE SAL =(SELECT MAX(SAL) FROM EMP01)), 
+                 SAL=(SELECT SAL FROM EMP01 WHERE SAL =(SELECT MAX(SAL) FROM EMP01))
+WHERE JOB = 'CLERK';
+
+--직무 급여 한꺼번에 UPDATE
+UPDATE EMP01 SET(JOB,SAL) = (SELECT JOB, SAL FROM EMP01 WHERE SAL =(SELECT MAX(SAL) FROM EMP01))
+        WHERE JOB ='CLERK';
+```   
+
+<img width="519" alt="20210510082033" src="https://user-images.githubusercontent.com/74708028/117590195-22e44600-b169-11eb-8394-640d0a6a274e.png">
