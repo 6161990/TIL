@@ -1,11 +1,11 @@
-## :pushpin: Object Class 
- ### 모든 클래스의 최상위 클래스, 객체지향에서의 object처럼 추상적 의미 아님. 
- * #### java.lang.Object 클래스. import하지 않아도 됨.
- * #### 모든 클래스는 사실 Object 클래스에서 암시적으로 상속 받고있음.  
+### :pushpin: Object Class 
+ #### 모든 클래스의 최상위 클래스, 객체지향에서의 object처럼 추상적 의미 아님. 
+ * ##### java.lang.Object 클래스. import하지 않아도 됨.
+ * ##### 모든 클래스는 사실 Object 클래스에서 암시적으로 상속 받고있음.  
 
             class A  => 실상은 class A (extends Object) 
- * #### 모든 클래스는 Object 클래스의 메서드를 사용할 수 있음.
- * #### 모든 클래스는 Object 클래스의 일부 메서드를 재정의하여 사용할 수 있음(final로 선언된 메서드 제외하고!)
+ * ##### 모든 클래스는 Object 클래스의 메서드를 사용할 수 있음.
+ * ##### 모든 클래스는 Object 클래스의 일부 메서드를 재정의하여 사용할 수 있음(final로 선언된 메서드 제외하고!)
 
 <br>
 
