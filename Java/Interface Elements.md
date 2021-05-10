@@ -3,7 +3,10 @@
 * ###### 선 참고 : [인터페이스 Interface](https://github.com/6161990/TIL/blob/main/Java/Interface.md)
 * ###### 후 참고 : [인터페이스 구현과 클래스 상속 함께 사용하기](https://github.com/6161990/TIL/blob/main/Java/Interface%20and%20Inheritance.md)
 #
-* #### 디폴트 메서드 : 기본 구현을 가지는 메서드. 구현하는 클래스에서 재정의할 수 있음
+* #### 디폴트 메서드 : 기본 구현을 가지는 메서드.
+	* ##### 인터페이스를 구현하는 클래스에서 공통으로 사용할 수 있는 기본 메서드
+	* ##### 재정의 할 수 있음.
+	* ##### 인터페이스를 구현한 클래스의 인스턴스가 생성되어야 사용 가능함
 
 <br>
 
@@ -20,7 +23,7 @@
 	int times(int num1, int num2);
 	int divide(int num1, int num2);
 	
-	default void description() {                        //디폴트 메서드 
+	default void description() {         //디폴트 메서드 
 		System.out.println("정수 계산기를 구현합니다.");
 	}
 }
@@ -63,7 +66,7 @@ public class CompleteCalc extends Calculator{
 
 <br>
 
-#### :round_pushpin: 디폴트 메서드 ; 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출
+#### :round_pushpin: 디폴트 메서드 : 인터페이스와 재정의한 오버라이딩메서드 중 호출은 재정의한 오버라이딩 인스턴스가 호출
 ```java
 public class CalcTest {
 
@@ -86,8 +89,8 @@ public class CalcTest {
 
 
 * #### :round_pushpin: 정적 메서드 : 인스턴스 생성과 상관없이 인터페이스 타입으로 호출하는 메서드
-  ##### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
-  ##### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
+  	* ##### 디폴트로 데려다 쓰려면 하나하나 오버라이딩 필요(at. CompleteCalc), 인스턴스 생성도 필요(at. CalcTest)
+  	* ##### static(정적) 메서드 이용하면 static제공으로 인터페이스 타입(Calc)으로 가져다 쓰게 할 수 있음. 
 ```java
  public interface Calc {
 	
@@ -139,10 +142,11 @@ public class CalcTest {
 
 <br>
 
-* #### :round_pushpin: private메서드 : 인터페이스 내에서 사용하기 위해 구현한 메서드. 구현하는 클래스에서 재정의 할 수 없음.
-  ##### static private 메서드는 일반 메소드에서 호출할 수 없음. static 메소드는 인스턴스를 생성하지 않으므로. 
-  ##### 1. 일반 private
-  ##### 2. 정적 private
+* #### :round_pushpin: private메서드 : 인터페이스 내의 디폴트 or 정적 메소드 내에서 사용하기 위해 구현한 메서드. 
+   * #####구현하는 클래스에서 재정의 할 수 없음.
+   * ##### static private 메서드는 일반 메소드에서 호출할 수 없음. static 메소드는 인스턴스를 생성하지 않으므로. 
+   * ##### 1. 일반 private
+   * ##### 2. 정적 private
   
 ##### 1. 일반 private
 ```java
