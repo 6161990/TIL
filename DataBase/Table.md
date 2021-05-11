@@ -360,3 +360,52 @@ DROP CONSTRAINT TEST_TABLE20_DATA5_CK;
 ```
 
 <img width="406" alt="20210511125007" src="https://user-images.githubusercontent.com/74708028/117755610-7f259380-b257-11eb-93da-2c2e6a86ce18.png">
+
+
+
+
+<br>
+
+  #### :round_pushpin: 제약조건활성/ 비활성
+   * ##### DISABLE을 사용하면 제약조건이 비활성화되고 ENABLE을 사용하면 제약조건이 활성화된다.
+        * ALTER TABLE [테이블명] ENABLE [제약조건]
+        * ALTER TABLE [테이블명] DISABLE [제약조건]
+   * ###### 주의: 제약조건의 비활성으로 변경 한 뒤 데이터를 삽입/수정하고 다시 제약조건을 활성화 시킬경우, 다시 전에 데이터들을 제약조건에 맞춰 검사한다. 이때 제약조건에 위배되는 데이터가 있을 경우 활성화가 불가능하다. 
+<img width="425" alt="20210511125759" src="https://user-images.githubusercontent.com/74708028/117756272-d6783380-b258-11eb-9a4a-e04715254a71.png">
+
+
+<br>
+
+
+
+```
+CREATE TABLE TEST_TABLE40(
+    DATA1 NUMBER CONSTRAINT TEST_TABLE40_DATA1_PK PRIMARY KEY,
+);
+
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (100);
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (100); --ERROR : PRIMARY KEY, 중복불가능
+
+--제약조건 비활성 
+ALTER TABLE TEST_TABLE40 
+DISABLE CONSTRAINT TEST_TABLE40_DATA1_PK; 
+
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (100); --중복가능해짐
+
+--제약조건 다시 활성화 
+ALTER TABLE TEST_TABLE40 
+ENABLE CONSTRAINT TEST_TABLE40_DATA1_PK;  --다시 활성화 불가능.
+
+--테이블 내의 데이터 삭제 후 다시 데이터 삽입
+DELETE FROM TEST_TABLE40;
+
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (100);
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (200); 
+
+ALTER TABLE TEST_TABLE40 
+ENABLE CONSTRAINT TEST_TABLE40_DATA1_PK;  
+
+INSERT INTO TEST_TABLE40 (DATA1) VALUES (200); --ERROR : PRIMAEY KEY가 활성화되었으므로, 중복불가
+```
+<img width="475" alt="20210511130053" src="https://user-images.githubusercontent.com/74708028/117756415-13442a80-b259-11eb-95e6-8b1d413ce1a6.png">
+
