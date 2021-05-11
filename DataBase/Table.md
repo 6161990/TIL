@@ -117,6 +117,8 @@ INSERT INTO TEST_TABLE(DATA1) VALUES(200);
 INSERT INTO TEST_TABLE(DATA2) VALUES(201);  --DATA2만 넣으면 오류 없음. DATA1은 NULL을 허용하기때문
 ```
 
+<img width="517" alt="20210511091833" src="https://user-images.githubusercontent.com/74708028/117739783-019f5a80-b23a-11eb-8f3b-026d49d06fde.png">
+
 <br>
 
 
@@ -134,6 +136,8 @@ CREATE TAVLE TEST_TABLE2(
 );
 ```
 
+<img width="322" alt="20210511091849" src="https://user-images.githubusercontent.com/74708028/117739789-049a4b00-b23a-11eb-9396-0acb191ab2db.png">
+
 <br>
 
   * #### PRIMARY KEY: 중복된 값을 허용하지 않으며 NULL 값을 허용하지 않음. 각 로우를 구분하기 위한 유일한 값을 저장하기 위해 사용함.
@@ -148,6 +152,7 @@ CREATE TABLE TEST_TABLE3(
 );
 ```
 
+<img width="352" alt="20210511091854" src="https://user-images.githubusercontent.com/74708028/117739796-07953b80-b23a-11eb-9082-7c2fe7138057.png">
 
 <br>
 
@@ -155,8 +160,6 @@ CREATE TABLE TEST_TABLE3(
   
      * ##### 참조하는 컬럼에 저장되어 있는 값만 컬럼에 저장할 수 있음. 
      * ##### 일반적으로 PRIMARY KEY 제약조건이 설정된 컬럼을 참조.
-
-
 
  <br>
 
@@ -174,6 +177,8 @@ CREATE TABLE TEST_TABLE5(
 );
 ```
 
+<img width="411" alt="20210511091906" src="https://user-images.githubusercontent.com/74708028/117739823-1845b180-b23a-11eb-9ee2-0d7700ffb3f3.png">
+
 <br>
 
 
@@ -188,5 +193,64 @@ CREATE TABLE TEST_TABLE5(
 CREATE TABLE TEST_TABLE6(
 DATA1 NUMBER CONSTRAINT TEST_TABLE6_DATA1_CK CHECK (DATA1 BETWEEN 1 AND 10),
 DATA2 NUMBER CONSTRAINT TEST_TABLE6_DATA2_CK CHECK (DATA2 IN (10,20,30))
+);
+```
+
+<img width="411" alt="20210511091920" src="https://user-images.githubusercontent.com/74708028/117739826-1aa80b80-b23a-11eb-9cbd-e8b6c13574cb.png">
+
+<br>
+
+  #### :round_pushpin: 테이블 레벨 제약조건
+   * ##### 제약 조건을 설정할 때 각 컬럼마다 지정할 수도 있지만 하단 부분에 몰아서 지정할 수도 있다.
+   * ##### 컬럼명 옆에 기술하는 것을 컬럼 레벨, 하단에 몰아서 기술하는 것을 테이블 레벨 제약 조건이라고 부른다.
+ 
+<br>
+
+```
+--컬럼 레벨 제약조건
+CREATE TABLE TEST_TABLE10(
+    DATA1 NUMBER CONSTRAINT TEST_TABLE10_DATA1_PK PRIMARY KEY,
+    DATA2 NUMBER NOT NULL CONSTRAINT TEST_TABLE10_DATA2_UK UNIQUE,
+    DATA3 NUMBER NOT NULL CONSTRAINT TEST_TABLE10_DATA3_FK
+                           REFERENCES EMP(EMPNO),
+    DATA4 NUMBER NOT NULL CONSTRAINT TEST_TABLE10_DATA4_CK  CHECK (DATA4 BETWEEN 1 AND 10),
+    DATA5 NUMBER NOT NULL CONSTRAINT TEST_TABLE10_DATA5_CK CHECK (DATA5 IN (10,20,30))
+);
+
+``` 
+  
+  
+<br>
+
+
+```
+--테이블 레벨 제약조건
+CREATE TABLE TEST_TABLE10(
+    DATA1 NUMBER ,
+    DATA2 NUMBER NOT NULL,
+    DATA3 NUMBER NOT NULL,
+    DATA4 NUMBER NOT NULL,
+    DATA5 NUMBER NOT NULL,
+    
+    CONSTRAINT TEST_TABLE10_DATA1_PK PRIMARY KEY(DATA1),
+    CONSTRAINT TEST_TABLE10_DATA2_UK UNIQUE (DATA2),
+    CONSTRAINT TEST_TABLE10_DATA3_FK FOREIGN KEY (DATA3) REFERENCES EMP(EMPNO),
+    CONSTRAINT TEST_TABLE10_DATA4_CK CHECK (DATA4 BETWEEN 1 AND 10),
+    CONSTRAINT TEST_TABLE10_DATA5_CK CHECK (DATA5 IN (10,20,30))
+);
+```
+
+<br>
+
+  #### :round_pushpin: 복합키
+   * ##### 테이블 레벨 제약조건을 설정할 때 하나이상의 컬럼을 하나의 PRIMARY KEY로 묶어서 사용할 수 있다. 
+   * ##### 복합키의 경우 각 컬럼에 중복된 데이터가 허용이 되지만, 한 로우의 모든 복합키 컬럼이 중복되는 것은 허용하지 않는다.
+
+
+```
+CREATE TABLE TEST_TABLE11(
+    DATA1 NUMBER ,
+    DATA2 NUMBER ,
+    CONSTRAINT TEST_TABLE11_COMBO_PK PRIMARY KEY(DATA1, DATA2)
 );
 ```
