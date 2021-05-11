@@ -248,6 +248,9 @@ CREATE TABLE TEST_TABLE10(
 
 
 ```
+--DATA1과 DATA1의 데이터 삽입시 같은 값 같이 넣을 수 없음. 
+-- EX) ...(100,100) -> X
+-- EX) ...(100,200) AND 또다시 (100,200) -> O
 CREATE TABLE TEST_TABLE11(
     DATA1 NUMBER ,
     DATA2 NUMBER ,
