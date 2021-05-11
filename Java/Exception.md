@@ -96,7 +96,7 @@ public class ExceptionTest {
  * ##### 해당 리소스가 AutoCloseable을 구현한 경우 close()를 명시적으로 호출하지 않아도
    ##### try{}블록에서 오픈된 리소스는 정상적인 경우나 예외가 발생한 경우 모두 자동으로 close()가 호출됨
  * ##### 자바 7부터 제공됨
-       * ###### FileInputStream의 경우 AutoCloseable을 구현하고있음
+    * ##### FileInputStream의 경우 AutoCloseable을 구현하고있음
  
 <br>
  
