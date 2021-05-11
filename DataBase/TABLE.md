@@ -82,3 +82,41 @@ GROUP BY DEPTNO;
 
 <img width="504" alt="20210511082347" src="https://user-images.githubusercontent.com/74708028/117736320-41fada80-b232-11eb-8ec7-7ec9d36972b9.png">
 
+<br>
+
+  #### :round_pushpin: 테이블 구조 변경하기 
+  * ##### ALTER 구문을 이용하면 테이블 구조를 변경할 수 있다.
+  * ##### ALTER TABLE[테이블명] ADD (컬럼명 자료형 제약조건)
+  * ##### ALTER TABLE[테이블명] MODIFY (컬럼명 자료형 제약조건)
+  * ##### ALTER TABLE[테이블명] RENAME TO [테이블명]
+  * ##### ALTER TABLE[테이블명] RENAME COLUMN 컬럼명1 TO 컬럼명2
+  * ##### ALTER TABLE[테이블명] DROP COLUMN 컬럼명
+  * ##### DROP TABLE[테이블명]
+  
+  
+```
+CREATE TABLE TEST_TABLE20(
+    DATA1 NUMBER NOT NULL,
+    DATA2 NUMBER NOT NULL
+);
+--컬럼 추가
+ALTER TABLE TEST_TABLE1 ADD(DATA3 NUMBER NOT NULL);
+
+--컬럼의 데이터 타입 변경
+ALTER TABLE TEST_TABLE1 MODIFY (DATA3 VARCHAR2(100));
+
+--테이블 이름 변경
+ALTER TABLE TEST_TABLE1 RENAME TO TEST_TABLE2;
+
+--컬럼 이름 변경
+ALTER TABLE TEST_TABLE1 RENAME RENAME COLUMN DATA3 TO DATA4;
+
+--컬럼 삭제
+ALTER TABLE TEST_TABLE1 DROP COLUMN DATA4;
+
+--테이블 삭제
+DROP TABLE TEST_TABLE1;
+```
+
+<img width="368" alt="20210511140645" src="https://user-images.githubusercontent.com/74708028/117761336-227ba600-b262-11eb-8ef3-1888e8e9ab0c.png">
+
