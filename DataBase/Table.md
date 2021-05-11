@@ -219,7 +219,8 @@ CREATE TABLE TEST_TABLE10(
 
 ``` 
   
-  
+  <img width="492" alt="20210511092652" src="https://user-images.githubusercontent.com/74708028/117740792-2399dc80-b23c-11eb-8cd5-dc086ec2ceb4.png">
+
 <br>
 
 
@@ -240,6 +241,8 @@ CREATE TABLE TEST_TABLE10(
 );
 ```
 
+<img width="431" alt="20210511092659" src="https://user-images.githubusercontent.com/74708028/117740797-25fc3680-b23c-11eb-9fe3-950f2f21ec4f.png">
+
 <br>
 
   #### :round_pushpin: 복합키
@@ -257,3 +260,5 @@ CREATE TABLE TEST_TABLE11(
     CONSTRAINT TEST_TABLE11_COMBO_PK PRIMARY KEY(DATA1, DATA2)
 );
 ```
+
+<img width="355" alt="20210511093027" src="https://user-images.githubusercontent.com/74708028/117740802-2a285400-b23c-11eb-9bb4-8fcb2d3272fd.png">
