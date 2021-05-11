@@ -72,5 +72,5 @@
 * [DML-SELECT 3 (날짜함수, DECODE, CASE)](https://github.com/6161990/TIL/blob/main/DataBase/DML-SELECT%203.md)
 * [DML-SELECT 4 (그룹함수, HAVING, JOIN, SET, SERVE QUERY)](https://github.com/6161990/TIL/blob/main/DataBase/DML-SELECT%204.md)
 * [DML-INSERT, UPDATE, DELETE](https://github.com/6161990/TIL/blob/main/DataBase/DML-INSERT,UPDATE,DELECT%20.md)
-* [TABLE](https://github.com/6161990/TIL/blob/main/DataBase/TABLE.md)
+* [TABLE 생성과 구조변경](https://github.com/6161990/TIL/blob/main/DataBase/TABLE.md)
 * [CONSTRAINT 제약조건](https://github.com/6161990/TIL/blob/main/DataBase/CONSTRAINT.md)
