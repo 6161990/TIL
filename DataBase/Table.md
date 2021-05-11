@@ -262,3 +262,101 @@ CREATE TABLE TEST_TABLE11(
 ```
 
 <img width="355" alt="20210511093027" src="https://user-images.githubusercontent.com/74708028/117740802-2a285400-b23c-11eb-9bb4-8fcb2d3272fd.png">
+
+
+<br>
+
+  #### :round_pushpin: 제약조건추가, 제거 
+   * ##### 테이블을 생성한 후 제약 조건을 추가하거나 제거하고 싶다면 ALTER 구문을 이용.
+   * ##### 추가 : ALTER TABLE [테이블명] ADD [제약조건]
+   * ##### 제거 : ALTER TABLE [테이블명] DROP [제약조건]
+
+<br>
+
+```
+--제약조건 없이 테이블생성
+CREATE TABLE TEST_TABLE20(
+    DATA1 NUMBER ,
+    DATA2 NUMBER ,
+    DATA3 NUMBER ,
+    DATA4 NUMBER ,
+    DATA5 NUMBER 
+);
+
+--NOT NULL 제약조건 추가
+ALTER TABLE TEST_TABLE20 
+MODIFY DATA1 NOT NULL;
+
+INSERT INTO TEST_TABLE20 (DATA1) VALUES (NULL); --ERROR
+
+
+--NOT NULL제약조건 제거(NULL 허용하는 컬럼으로 수정)
+ALTER TABLE TEST_TABLE20 
+MODIFY DATA1 NULL;
+
+```
+
+<img width="308" alt="20210511124939" src="https://user-images.githubusercontent.com/74708028/117755579-71700e00-b257-11eb-8085-8ea3a2581750.png">
+
+<br>
+
+```
+--PRIMARY KEY 제약조건 추가
+ALTER TABLE TEST_TABLE20
+ADD CONSTRAINT TEST_TABLE20_DATA2_PK PRIMARY KEY(DATA2);
+
+
+--PRIMARY KEY 제약조건 제거
+ALTER TABLE TEST_TABLE20 
+DROP CONSTRAINT TEST_TABLE20_DATA2_PK;
+```
+
+<img width="294" alt="20210511124946" src="https://user-images.githubusercontent.com/74708028/117755589-7634c200-b257-11eb-943f-59179a4e5e77.png">
+
+<br>
+
+```
+--FOREIGN KEY 제약조건 추가
+ALTER TABLE TEST_TABLE20
+ADD CONSTRAINT TEST_TABLE20_DATA3_FK FOREIGN KEY(DATA3)
+               REFERENCES EMP(EMPNO);
+               
+        
+--FOREIGN KEY 제약조건 제거
+ALTER TABLE TEST_TABLE20 
+DROP CONSTRAINT TEST_TABLE20_DATA3_FK;
+```
+
+<img width="332" alt="20210511124951" src="https://user-images.githubusercontent.com/74708028/117755594-78971c00-b257-11eb-9020-fb310d5271f4.png">
+
+<br>
+
+```
+--UNIQUE 제약조건 추가
+ALTER TABLE TEST_TABLE20
+ADD CONSTRAINT TEST_TABLE20_DATA4_UK UNIQUE(DATA4);
+
+--UNIQUE 제약조건 제거
+ALTER TABLE TEST_TABLE20 
+DROP CONSTRAINT TEST_TABLE20_DATA4_UK;
+
+```
+
+<img width="293" alt="20210511124957" src="https://user-images.githubusercontent.com/74708028/117755604-7c2aa300-b257-11eb-9c39-af2185f1ac2b.png">
+
+<br>
+
+
+
+```
+--CHECK 제약조건 추가
+ALTER TABLE TEST_TABLE20
+ADD CONSTRAINT TEST_TABLE20_DATA5_CK CHECK(DATA5 BETWEEN 1 AND 10);
+
+--CHECK 제약조건 제거
+ALTER TABLE TEST_TABLE20 
+DROP CONSTRAINT TEST_TABLE20_DATA5_CK;
+
+```
+
+<img width="406" alt="20210511125007" src="https://user-images.githubusercontent.com/74708028/117755610-7f259380-b257-11eb-93da-2c2e6a86ce18.png">
