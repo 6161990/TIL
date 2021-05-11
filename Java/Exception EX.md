@@ -125,8 +125,17 @@ public class Run2 {
 			System.out.println("국어 점수 : "+ score.getKor());
 			System.out.println("영어 점수 : "+ score.getEng());
 			System.out.println("수학 점수 : "+ score.getMath());
-			System.out.println("총점 : "+score.total());
-			System.out.println("평균 : "+score.avg());
+			try {
+				System.out.println("총점 : "+score.total());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			try {
+				System.out.println("평균 : "+score.avg());
+			} catch (ArithmeticException e) {
+				e.printStackTrace();
+			}
 		}catch(InputMismatchException e) {
 			e.printStackTrace();
 			System.out.println("예외처리완료");
