@@ -1,10 +1,10 @@
-## :pushpin: List 인터페이스
- ### Collection 하위 인터페이스 [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
- ### 객체를 순서에 따라 저장하고 관리하는데 필요한 메서드가 선언된 인터페이스
+### :pushpin: List 인터페이스
+ #### Collection 하위 인터페이스 [컬렉션 프레임워크](https://github.com/6161990/TIL/blob/main/Java/Collection%20Framework.md)
+ ##### 객체를 순서에 따라 저장하고 관리하는데 필요한 메서드가 선언된 인터페이스
  
   #### :round_pushpin: Set과의 차이 : 1. 순서 2. 중복의 유무 
-* #### 배열의 기능을 구현하기 위한 메서드가 선언됨.
-* #### ArrayList, Vector, LinkedList
+* ##### 배열의 기능을 구현하기 위한 메서드가 선언됨.
+* ##### ArrayList, Vector, LinkedList
 
 <br>
 
