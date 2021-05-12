@@ -90,9 +90,11 @@ SELECT INDEX_NAME, TABLE_NAME, COLUMN_NAME FROM USER_IND_COLUMNS;
    * ##### 뷰 생성 권한 설정 : 일반 계정의 경우 뷰를 생성할 수 있는 권한이 없기 때문에 뷰 생성 권한을 설정해줘야함.
       #####     시스템계정으로 DB에 접속한 후, GRANT CREATE VIEW TO [계정이름]
       
-![KakaoTalk_20210512_094533195](https://user-images.githubusercontent.com/74708028/117901756-041bb600-b307-11eb-865b-5bd8798b3e13.jpg)
+<br>
+ <img display=inline width="413" alt="20210512094225" src="https://user-images.githubusercontent.com/74708028/117901756-041bb600-b307-11eb-865b-5bd8798b3e13.jpg">     
 
-![KakaoTalk_20210512_094533555](https://user-images.githubusercontent.com/74708028/117901772-0aaa2d80-b307-11eb-90f8-dcfb07486397.jpg)
+ <img display=inline width="413" alt="20210512094225" src="https://user-images.githubusercontent.com/74708028/117901772-0aaa2d80-b307-11eb-90f8-dcfb07486397.jpg">   
+
 
 <br>
 
