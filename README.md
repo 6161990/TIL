@@ -75,3 +75,4 @@
 * [DML-INSERT, UPDATE, DELETE](https://github.com/6161990/TIL/blob/main/DataBase/DML-INSERT,UPDATE,DELECT%20.md)
 * [TABLE 생성과 구조변경](https://github.com/6161990/TIL/blob/main/DataBase/TABLE.md)
 * [CONSTRAINT 제약조건](https://github.com/6161990/TIL/blob/main/DataBase/CONSTRAINT.md)
+* [Transaction, Sequence, Index, View](https://github.com/6161990/TIL/blob/main/DataBase/Transaction%2C%20Sequence%2C%20Index%2C%20View.md)
