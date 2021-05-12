@@ -40,14 +40,14 @@
 #### :round_pushpin: Collection 인터페이스
 ##### **하나의 객체** 관리를 위해 선언된 인터페이스로 필요한 기본 메서드가 선언되어있음
 ##### 하위에 List, Set 인터페이스가 있음
-* ##### List 인터페이스 : 순서가 있는 자료관리, 중복 허용. 이 인터페이스를 구현한 클래스는 [ArrayList](https://github.com/6161990/TIL/blob/main/Java/Array%20List.md), Vector, LinkedList, Stack, Queue 등이 있음.
+* ##### [List 인터페이스](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md) : 순서가 있는 자료관리, 중복 허용. 이 인터페이스를 구현한 클래스는 [ArrayList](https://github.com/6161990/TIL/blob/main/Java/Array%20List.md), [Vector](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md#round_pushpin-arraylist%EC%99%80-vector), [LinkedList](https://github.com/6161990/TIL/blob/main/Java/List%20Interface.md#round_pushpin-arraylist%EC%99%80-linkedlist), [Stack](https://github.com/6161990/TIL/blob/main/Java/Stack%2C%20Queue.md#pushpin-stack), [Queue](https://github.com/6161990/TIL/blob/main/Java/Stack%2C%20Queue.md#pushpin-queue) 등이 있음.
     * ###### ArrayList와 Vector : 둘 다 List의 후손이지만, Vector는 동기화를 제공한다. 따라서 List객체들 중에서 가장 성능이 좋지 않다. 
     * ###### LinkedList : List의 후손으로, 인접 참조 링크해서 체인처럼 관리한다. 특정 인덱스에서 객체를 제거하거나 추가하게 되면 바로 앞/뒤 링크만 변경하면 되기 때문에 객체 삭제와 삽입이 빈번하게 일어나는 곳에서는 ArrayList보다 성능이 좋다. 
-* ##### Set 인터페이스 : 순서가 정해져있지않음, 중복을 허용하지 않음. 이 인터페이스를 구현한 클래스는 HashSet, TreeSet 등이 있음.
+* ##### [Set 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Set%20Interface.md#pushpin-set) : 순서가 정해져있지않음, 중복을 허용하지 않음. 이 인터페이스를 구현한 클래스는 HashSet, TreeSet 등이 있음.
 
 <br>
 
-#### :round_pushpin: Map 인터페이스
+#### :round_pushpin: [Map 인터페이스](https://github.com/6161990/TIL/blob/main/Java/Map%20Interface.md#pushpin-map-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4)
 ##### **쌍으로 이루어진** 객체를 관리하는데 필요한 여러 메서드가 선언되어있음
 ##### Map을 사용하는 객체는 key-value 쌍으로 되어 있고 key는 중복될 수 없음
 ##### 하위에 Hashtable, HashMap, TreeMap이 있음.
