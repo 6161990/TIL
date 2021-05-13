@@ -37,7 +37,7 @@
 * [연산 스트림](https://github.com/6161990/TIL/blob/main/Java/Stream.md)
 * [예외](https://github.com/6161990/TIL/blob/main/Java/Exception.md)
 * [예외 프로그래밍 예제](https://github.com/6161990/TIL/blob/main/Java/Exception%20EX.md)
-* [I/O 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/IO%20Stream.md)
+* [I/O 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/IO%20Stream.md)ㅇ
 * [표준 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Standard%20InputOutput%20Stream.md)
 * [바이트 단위 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/Byte%20IO%20Stream.md)
 * [문자 단위 입출력 스트림](https://github.com/6161990/TIL/blob/main/Java/String%20IO%20Stream.md)
@@ -65,7 +65,7 @@
 * [Queue](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Queue.md)
 * [Stack](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Stack.md)
 * [Tree](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/Tree.md)
-* [시간복잡도](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84.m
+* [시간복잡도](https://github.com/6161990/Algorithm/blob/main/Data%20Structure/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84.md)
 
 ### [Algorithm](https://github.com/6161990/Algorithm/blob/main/README.md)
 * [Bubble Sort](https://github.com/6161990/Algorithm/blob/main/Algorithm%20-%20Bubble%20Sort.md)
