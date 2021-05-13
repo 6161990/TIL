@@ -62,7 +62,7 @@
 ---
 
 ### [Algorithm](https://github.com/6161990/Algorithm/blob/main/README.md)
-* [Bubble Sort](https://github.com/6161990/TIL/blob/main/Algorithm/Bubble%20Sort.md)
+* [Bubble Sort](https://github.com/6161990/Algorithm/Bubble%20Sort.md)
 
 ---
 
