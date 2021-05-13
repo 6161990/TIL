@@ -1,10 +1,10 @@
 # TIL
 ### Today I Learn 🌏
-#### 오늘, 학습한 내용을 내가 이해한대로 정리하기
---------------   
+#### 오늘, 학습한 내용을 내가 이해한대로 정리하기 
 
 <details markdown="1">
-<summary><b><font-color="red"> <a src="https://github.com/6161990/TIL/tree/main/Java/README.md">JAVA</a></b></summary>
+<summary><b>JAVA 클릭</b></summary>
+
 
 ### [JAVA](https://github.com/6161990/TIL/tree/main/Java/README.md)   
 * [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
@@ -55,7 +55,7 @@
 
 </details>
 
---------------   
+
 
 ### [Design Pattern](https://github.com/6161990/TIL/tree/main/DesignPattern)  
 **[디자인패턴의 효용](https://github.com/6161990/TIL/blob/main/DesignPattern/README.md)**
@@ -65,12 +65,11 @@
 * [Decorator Pattern](https://github.com/6161990/TIL/blob/main/DesignPattern/Decorator%20Pattern.md)
 
 
----
 
 ### [Algorithm](https://github.com/6161990/Algorithm/blob/main/README.md)
 * [Bubble Sort](https://github.com/6161990/Algorithm/blob/main/Algorithm%20-%20Bubble%20Sort.md)
 
----
+
 
 ### [DataBase](https://github.com/6161990/TIL/tree/main/DataBase)   
 * [Oracle DataBase PL/SQL](https://github.com/6161990/TIL/blob/main/DataBase/Oracle%20SQL%20DataBase%2011g%20PL.md)
