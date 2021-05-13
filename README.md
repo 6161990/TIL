@@ -1,8 +1,6 @@
 # Today I Learn 🌏
 #### 오늘, 학습한 내용을 내가 이해한대로 정리하기 
 
-<br>
-
 ### [JAVA](https://github.com/6161990/TIL/tree/main/Java/README.md)   
 * [객제 지향 언어 OOP](https://github.com/6161990/TIL/blob/main/Java/Object-Oriented%20Programming(OOP).md)
 * [객제 지향 언어의 메모리 구조와 특징](https://github.com/6161990/TIL/blob/main/Java/OOP%20Memory.md)
