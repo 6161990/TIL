@@ -61,7 +61,7 @@
 
 ---
 
-### [Algorithm](https://github.com/6161990/TIL/tree/main/Algorithm)
+### [Algorithm](https://github.com/6161990/Algorithm)
 * [Bubble Sort](https://github.com/6161990/TIL/blob/main/Algorithm/Bubble%20Sort.md)
 
 ---
