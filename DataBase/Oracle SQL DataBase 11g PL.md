@@ -41,17 +41,17 @@ SQL용어 | 관계형데이터베이스용어 | 설명
 
 #### :triangular_flag_on_post: DDL(Data Definition Language(데이터 정의어))
 * ##### 테이블과 인덱스의 구조를 관리하는 언어
-* ##### create, drop, alter 등
+* ##### CREATE, DROP, ALTER 등
 
 <br>
 
 #### :triangular_flag_on_post: DML(Data Manipulation Language(데이터 조작어))
 ###### * 자세히 : [DML, 기본 쿼리문 및 SELECT](https://github.com/6161990/TIL/blob/main/DataBase/DML(Data%20Manipulation%20Language(%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A1%B0%EC%9E%91%EC%96%B4)).md)
 * ##### 테이블 등에 데이터를 저장, 수정, 삭제, 추출 등을 처리하는 언어
-* ##### insert, update, delete, select 등
+* ##### INSERT, UPDATE, DELETE, SELECT 등
 
 <br>
 
 #### :triangular_flag_on_post: DCL(Data Control Language(데이터 제어어))
 * ##### 사용자 권한, 작업의 취소 등을 처리할 수 있는 언어 
-* ##### grant, revoke, commit, rollback 등
+* ##### GRANT, REVOKE, COMMIT, ROLLBACK 등
