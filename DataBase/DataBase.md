@@ -1,4 +1,4 @@
-### :pushpin: 오라클 데이터 베이스 Oracle SQL DataBase
+### :pushpin: 데이터 베이스 DataBase
 
 <br>
 
