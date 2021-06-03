@@ -119,4 +119,4 @@ public class Main {
 }
 ```
 
-##### => 자기 자신(Cleaner) 은 변하지 않고 중간에 인터페이스로 맞추는 형식 = adepter pattern
+##### => 자기 자신(220v의 Cleaner, AirConditioner 클래스) 은 변하지 않고 중간에 인터페이스(SocketAdepter)로 맞추는 형식 = adepter pattern
