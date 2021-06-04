@@ -11,7 +11,7 @@
 <br>
 <br>
 
-##### Electronic110v 인터페이스
+##### ❗ Electronic110v 인터페이스
 
 ```java
 public interface Electronic110v {
@@ -22,7 +22,7 @@ public interface Electronic110v {
 ```
 
 
-##### Electronic220v 인터페이스
+##### ❗ Electronic220v 인터페이스
 
 ```java
 public interface Electronic220v {
@@ -31,7 +31,7 @@ public interface Electronic220v {
 }
 ```
 
-##### Electronic110v 인터페이스를 구현한 HairDryer 클래스
+##### ❗ Electronic110v 인터페이스를 구현한 HairDryer 클래스
 
 ```java
 public class HairDryer implements Electronic110v{
@@ -43,7 +43,7 @@ public class HairDryer implements Electronic110v{
 ```
 
 
-##### Electronic220v 인터페이스를 구현한 AirConditioner 클래스
+##### ❗ Electronic220v 인터페이스를 구현한 AirConditioner 클래스
 
 ```java
 public class AirConditioner implements Electronic220v{
@@ -54,7 +54,7 @@ public class AirConditioner implements Electronic220v{
 }
 ```
 
-##### Electronic220v 인터페이스를 구현한 Cleaner 클래스
+##### ❗ Electronic220v 인터페이스를 구현한 Cleaner 클래스
 
 ```java
 public class Cleaner implements Electronic220v{
@@ -66,7 +66,7 @@ public class Cleaner implements Electronic220v{
 }
 ```
 
-##### 220v를 110v로 바꿔주는 어뎁터 클래스
+##### ❗ 220v를 110v로 바꿔주는 어뎁터 클래스
 
 ```java
 package com.company.design.adepter;
@@ -87,7 +87,7 @@ public class SocketAdepter implements Electronic110v{
 
 ```
 
-##### Main 클래스
+##### ❗ Main 클래스
 
 ```java
 public class Main {
