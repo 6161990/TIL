@@ -156,6 +156,7 @@ public class Main {
 //        browser.show();
 //        browser.show();
 //        browser.show();
+
           한번 로딩해온 html을 저장해두고 사용한다.
 
           BrowserProxy loading html from : www.naver.com
@@ -196,21 +197,22 @@ public class Main {
 <br>
 <br>
 
-##### 결과 1
+##### Browser browser = new Browser("www.naver.com") 결과 1
 
 <img width="328" alt="다운로드 (1)" src="https://user-images.githubusercontent.com/74708028/120800791-51dcb480-c57b-11eb-98b1-79d14424a053.png">
 <br>
 
-##### 결과 2
+##### IBrowser browser = new BrowserProxy("www.naver.com") 결과 2
 
 <img width="405" alt="다운로드 (2)" src="https://user-images.githubusercontent.com/74708028/120800864-6751de80-c57b-11eb-9993-cac1b17d11f1.png">
 <br>
 
-##### 결과 3
+##### IBrowser aopBrowser = new AopBrowser("www.naver.com" ...생략) 결과 3
 <img width="332" alt="다운로드 (3)" src="https://user-images.githubusercontent.com/74708028/120800894-7042b000-c57b-11eb-9d8d-8667c06df6ea.png">
 
 
 <br>
+
 ##### 📢 AOP는 특정한 메소드가 있으면 이 메소드에 실행시간이라던지, 
 ##### 특정한 패키지의 특정한 메소드의 실행시간 전후로 기능을 넣을 수 있어서 메소드를 측정할 때 쓰인다.
 ##### show라는 메소드가 걸린 시간이 처음엔 1.5(1513)초
