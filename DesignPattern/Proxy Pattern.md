@@ -197,17 +197,17 @@ public class Main {
 <br>
 <br>
 
-##### Browser browser = new Browser("www.naver.com") 결과 1
+##### 📍  Browser browser = new Browser("www.naver.com") 결과 1
 
 <img width="328" alt="다운로드 (1)" src="https://user-images.githubusercontent.com/74708028/120800791-51dcb480-c57b-11eb-98b1-79d14424a053.png">
 <br>
 
-##### IBrowser browser = new BrowserProxy("www.naver.com") 결과 2
+##### 📍  IBrowser browser = new BrowserProxy("www.naver.com") 결과 2
 
 <img width="405" alt="다운로드 (2)" src="https://user-images.githubusercontent.com/74708028/120800864-6751de80-c57b-11eb-9993-cac1b17d11f1.png">
 <br>
 
-##### IBrowser aopBrowser = new AopBrowser("www.naver.com" ...생략) 결과 3
+##### 📍  IBrowser aopBrowser = new AopBrowser("www.naver.com" ...생략) 결과 3
 <img width="332" alt="다운로드 (3)" src="https://user-images.githubusercontent.com/74708028/120800894-7042b000-c57b-11eb-9d8d-8667c06df6ea.png">
 
 
