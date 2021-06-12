@@ -8,7 +8,7 @@
   * ###### protected FilterInputStream(InputStream in) : 생성자의 매개변수로 InputStream을 받습니다.
   * ###### public FilterOutputStream(OutputStream out) : 생성자의 매개변수로 OutputStream을 받습니다.
 * ##### :triangular_flag_on_post: 데코레이터 패턴 (Decorator Pattern) 
-<img src="https://user-images.githubusercontent.com/74708028/110726518-dd84c480-825c-11eb-8973-5e9f9186dad2.jpg" width="700" height="305"/>  
+<img src="https://user-images.githubusercontent.com/74708028/110726518-dd84c480-825c-11eb-8973-5e9f9186dad2.jpg" width="600" height="205"/>  
 
 <br>
 
