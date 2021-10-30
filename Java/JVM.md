@@ -18,7 +18,7 @@
 
 #### :round_pushpin: 실행 환경 적인 면에서 다른 언어와의 차이점 (컴파일 되는 과정, 바이트 코드)
 
-<img width="800" height="350" src="https://user-images.githubusercontent.com/74708028/139528715-8d3c7660-7d9d-4414-9f58-63d3952584d4.jpg">
+<img width="900" height="450" src="https://user-images.githubusercontent.com/74708028/139528715-8d3c7660-7d9d-4414-9f58-63d3952584d4.jpg">
 
 ##### 플랫폼에 독립적인 프로그래밍을 할 수 있다. 
 ##### c 소스 코드를 실행하려할 때, 윈도우에서 실행하고 싶다면 윈도우 형 컴파일러에서 컴파일을 실행해야하고 
