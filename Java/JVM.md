@@ -1,6 +1,6 @@
 ## :pushpin: JVM (Java Virtual Machine) 자바 가상 머신
 
-#### :round_pushpin: JVM 이란 무엇인가?
+### :round_pushpin: JVM 이란 무엇인가?
 * ##### 자바 프로그램의 실행을 위해 물리적 환경과 유사하게 소프트웨어로 구현한 것이다. 
 * ##### 바이너리 코드를 읽고 검증하고 실행하는 역할을 한다.
 * ##### Java와 OS사이에서 중개자 역할을 수행하며 OS에 구애받지 않고 재사용을 가능하게 해준다. 
@@ -9,7 +9,7 @@
 <br>
 <br>
 
-#### :round_pushpin: JVM의 실행 
+### :round_pushpin: JVM의 실행 
 
 <img width="600" height="550" src="https://user-images.githubusercontent.com/74708028/139566142-00f65022-74cc-4924-9a52-15ef105287b6.jpg">
 
@@ -29,7 +29,7 @@
 <br>
 <br>
 
-#### :round_pushpin: 실행 환경 적인 면에서 다른 언어와의 차이점 (컴파일 되는 과정, 바이트 코드)
+### :round_pushpin: 실행 환경 적인 면에서 다른 언어와의 차이점 (컴파일 되는 과정, 바이트 코드)
 
 <img width="900" height="450" src="https://user-images.githubusercontent.com/74708028/139528715-8d3c7660-7d9d-4414-9f58-63d3952584d4.jpg">
 
@@ -48,7 +48,7 @@
 <br>
 <br>
 
-#### :round_pushpin: 자바 프로그램 실행되는 과정
+### :round_pushpin: 자바 프로그램 실행되는 과정
 
 
 <img width="800" height="450" src="https://user-images.githubusercontent.com/74708028/139566814-807914f9-957d-44ff-b779-a0202104ec91.jpg">
@@ -66,7 +66,7 @@
 <br>
 <br>
 
-#### :round_pushpin: JIT 컴파일러란 무엇이며 어떻게 동작하는지
+### :round_pushpin: JIT 컴파일러란 무엇이며 어떻게 동작하는지
 
 * ##### 자바 바이트코드(.class 파일)을 명령어 단위로 읽어서 네이티브 코드(기계어)로 번역하고 실행한다. 
 * ##### 실행엔진은 자바 바이트 코드를 실제 OS에서 인식할 수 있는 기계어로 변환을 시도하는데 그 중 한가지 방법이 JIT 컴파일러다.
@@ -79,7 +79,7 @@
 <br>
 <br>
 
-#### :round_pushpin: JVM 구성 요소
+### :round_pushpin: JVM 구성 요소
 
 ![JVM-Architecture](https://user-images.githubusercontent.com/74708028/139567319-274d61db-2929-4802-af09-4d4f31355b84.png)
 * ##### Class Loader : 클래스 로더는 클래스를 로드할 때 이미 로드된 클래스인지 확인하기 위해 네임스페이스에 보관된 FQCN(Fully Qualified Class Name)을 기준(패키지이름, 클래스이름)으로 클래스를 찾고 FQCN이 같더라도 네임스페이스가 다르면 다른 클래스로 간주하여 로드한다. 즉 각각의 클래스 로더가 각자 네임 스페이스를 가지고 있기 때문에 패키지 명까지 같은 즉, FQCN이 같은 클래스라도 다른 클래스가 된다. 
@@ -93,7 +93,7 @@
 <br>
 
 
-#### :round_pushpin: JDK와 JRE의 차이 자바
+### :round_pushpin: JDK와 JRE의 차이 자바
 ![image](https://user-images.githubusercontent.com/74708028/139568109-73f1d146-acea-4f98-a9b6-4b3ddd3c1958.png)
 
 
